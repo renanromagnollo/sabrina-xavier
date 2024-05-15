@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import GlobalStyle from '../styles/global'
 import StyledComponentsRegistry from "../../lib/registry";
 import Providers from "@/providers";
+import Analytics from "@/components/Analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
             <GlobalStyle/>
             {children}
         </Providers>
+        <Analytics/>
           {/* </StyledComponentsRegistry> */}
 
       </body>
