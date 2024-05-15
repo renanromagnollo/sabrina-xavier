@@ -1,3 +1,4 @@
+import { DefaultTheme } from 'styled-components';
 
 
 export function fontAtributes(fontFamily: string, fontStyle: string, fontWeight: number,
@@ -22,12 +23,12 @@ export default {
       light: '#D4CCC4',
       dark: '#766556'
     },
-    secondary: {
+    secundary: {
       default: '#A188A8',
       light: '#D0C4D4',
       dark: '#6F5676'
     },
-    action: {
+    actions: {
       sucess: '#3BB554',
       danger: '#C83437',
       disabled: '#E8E8E8'
