@@ -57,12 +57,14 @@ export function UnderConstruction(props : UnderConstructionProps){
                         src='/constructor_working.gif'
                         width='150'
                         height='150'
-                    />
+                        unoptimized
+                        />
                     <Image 
                         alt="constructor-bye" 
                         src='/alert.gif'
                         width='200'
                         height='200'
+                        unoptimized
                     />
 
                 </Constructors>
