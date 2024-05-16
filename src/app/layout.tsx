@@ -4,6 +4,7 @@ import GlobalStyle from '../styles/global'
 import StyledComponentsRegistry from "../../lib/registry";
 import Providers from "@/providers";
 import Analytics from "@/components/Analytics";
+import { Header } from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
           {/* <StyledComponentsRegistry> */}
         <Providers>
             <GlobalStyle/>
+            <Header/>
             {children}
         </Providers>
         <Analytics/>
