@@ -13,6 +13,19 @@ export default createGlobalStyle`
   :root {
     font-size: 62.5%;
   }
+
+  ::-webkit-scrollbar {
+        width: 8px;
+        height: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: ${({theme}) => theme.colors.primary.default};
+        border-radius: 0;
+    }
+    ::-webkit-scrollbar-track {
+        background: ${({theme}) =>  theme.colors.primary.light};
+    }
+
   body {
     background-color: ${props => props.theme.colors.background};
   }
