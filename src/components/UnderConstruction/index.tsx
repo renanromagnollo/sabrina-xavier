@@ -33,6 +33,13 @@ const Constructors = styled.div`
 
 const InstagramButton = styled.div`
     width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        color: ${({theme}) => theme.colors.primary.dark};
+    }
     /* background-color: gray; */
     /* border-radius: 25px; */
     /* padding: 20px; */
@@ -69,10 +76,10 @@ export function UnderConstruction(props : UnderConstructionProps){
 
                 </Constructors>
                 <h5>Clique no link abaixo e siga o nosso perfil e acompanhe nosso trabalho!</h5>
-                <InstagramButton style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <InstagramButton>
                     
                     <a href="https://www.instagram.com/sabrinaxxavier/" target="_blank">
-                        <IconInstagram/><h4>@sabrinaxxavier</h4>
+                        <IconInstagram/><h4>sabrinaxxavier</h4>
                     </a>
 
                 </InstagramButton>
