@@ -31,11 +31,15 @@ const Constructors = styled.div`
     justify-content: space-evenly;
 `
 
-const InstagramButton = styled.div`
-    width: 400px;
+const InstagramButton = styled.a`
+    /* width: 400px; */
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid ${({theme}) => theme.colors.primary.dark};
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
 
     svg {
         color: ${({theme}) => theme.colors.primary.dark};
@@ -76,11 +80,12 @@ export function UnderConstruction(props : UnderConstructionProps){
 
                 </Constructors>
                 <h5>Clique no link abaixo e siga o nosso perfil e acompanhe nosso trabalho!</h5>
-                <InstagramButton>
+                <InstagramButton href="https://www.instagram.com/sabrinaxxavier/" target="_blank">
                     
-                    <a href="https://www.instagram.com/sabrinaxxavier/" target="_blank">
                         <IconInstagram/><h4>sabrinaxxavier</h4>
-                    </a>
+                    {/* <a href="https://www.instagram.com/sabrinaxxavier/" target="_blank">
+                        <IconInstagram/><h4>sabrinaxxavier</h4>
+                    </a> */}
 
                 </InstagramButton>
                 
