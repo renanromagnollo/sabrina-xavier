@@ -8,6 +8,7 @@ interface HeaderProps {
 }
 
 const HeaderContainer = styled.header`
+  /* display: block; */
   width: 100vw;
   height: 38px;
   background-color: ${({theme}) => theme.colors.primary.light};
@@ -15,9 +16,14 @@ const HeaderContainer = styled.header`
   justify-content: flex-end;
   align-items: center;
   padding: 0 30px;
+  margin-bottom: 30px;
 
   svg {
     color: ${({theme}) => theme.colors.primary.default};
+  }
+
+  @media (max-width: 700px) {
+    margin-bottom: 15px;
   }
 
 `

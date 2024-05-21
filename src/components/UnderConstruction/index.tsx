@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 import styled from "styled-components"
-import { Logo } from "../Logo"
+import { LogoVertical } from "../Logo/LogoVertical"
 import { IconInstagram } from "../Icons/Instagram"
 
 interface UnderConstructionProps {
@@ -57,7 +57,7 @@ const InstagramButton = styled.a`
 export function UnderConstruction(props : UnderConstructionProps){
     return(
         <Container>
-            <Logo width="300px"/>
+            <LogoVertical width="300px"/>
                 <h4>Olá! O site está em fase de desenvolvimento.</h4>
                 <h4>Estaremos divulgando a data de lançamento em nosso Instagram.
                 </h4>
