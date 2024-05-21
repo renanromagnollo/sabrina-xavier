@@ -2,13 +2,13 @@
 import styled from "styled-components"
 
 interface LogoProps {
-  width: string
+  width?: number
 }
 
 const Logomarca = styled.div`
   user-select: none;
 `
-export function LogoVertical({width}: LogoProps){
+export function LogoVertical({width=300}: LogoProps){
     return(
         <Logomarca>
           <svg width={width} viewBox="0 0 3591 1050" fill="none" xmlns="http://www.w3.org/2000/svg">

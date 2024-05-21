@@ -4,7 +4,7 @@ import { Logotipo } from "@/components/Logo/Logotipo";
 import Image from "next/image";
 import styled from "styled-components";
 import { Featured } from "./Featured";
-import { MenuVertical } from "@/app/components/Menu/MenuVertical";
+import { MenuHero } from "./MenuHero";
 
 interface HeroProps {
 
@@ -18,13 +18,22 @@ const HeroContainer = styled.section`
   justify-content: space-between;
   /* align-items: center; */
   /* background-color: pink; */
+  
+  @media (max-width: 1400px) {
+    width: 90vw;
+  }
+  @media (max-width: 800px) {
+    width: 100vw;
+    justify-content: space-evenly;
+    padding: 0 20px;
+  }
 
 `
 export function Hero(props : HeroProps){
     return(
       <HeroContainer>
         <Featured/>
-        <MenuVertical/>
+        <MenuHero/>
       </HeroContainer>
     )
 }

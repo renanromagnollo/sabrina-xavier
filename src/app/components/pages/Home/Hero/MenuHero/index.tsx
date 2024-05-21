@@ -23,13 +23,25 @@ const Menu = styled.nav`
   /* background-color: darkblue; */
 
 `
-export function MenuVertical(props : MenuVerticalProps){
+
+const DivMenu = styled.div`
+  display: flex;
+  justify-self: flex-end;
+
+  @media (max-width: 1020px) {
+    display: none;
+  }
+`
+export function MenuHero(props : MenuVerticalProps){
     return(
+      <DivMenu>
         <Menu>
             <div><h4>Serviços</h4></div>
             <div><h4>Estúdio</h4></div>
             <div><h4>Dicas</h4></div>
             <div><h4>Contato</h4></div>
         </Menu>
+
+      </DivMenu>
     )
 }

@@ -22,6 +22,10 @@ const HeaderContainer = styled.header`
     color: ${({theme}) => theme.colors.primary.default};
   }
 
+  @media (max-width: 700px) {
+    margin-bottom: 15px;
+  }
+
 `
 export function Header(props : HeaderProps){
     return(

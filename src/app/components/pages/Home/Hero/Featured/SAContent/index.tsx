@@ -2,6 +2,8 @@
 import { LogoName } from "@/components/Logo/LogoName"
 import { Logotipo } from "@/components/Logo/Logotipo"
 import styled from "styled-components"
+import { ButtonsSA } from "./ButtonsSA"
+import { LogoVertical } from "@/components/Logo/LogoVertical"
 
 interface SAContentProps {
 
@@ -16,6 +18,21 @@ const SAContainer = styled.div`
   justify-content: flex-end;
   /* background-color: lightblue; */
   /* flex-direction: column; */
+  /* background-color: orangered; */
+  
+  @media (max-width: 1400px) {
+    justify-content: center;
+  }
+  @media (max-width: 1200px) {
+    width: 60%;
+  }
+  @media (max-width: 1100px) {
+    width: 50%;
+  }
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+
 `
 const NameStyleMake = styled.div`
   padding-top: 20px;
@@ -31,6 +48,10 @@ const NameStyleMake = styled.div`
   span {
     color: ${({theme}) => theme.colors.primary.dark}
   }
+
+  @media (max-width: 1400px) {
+    display: none;
+  }
 `
 
 const TextsContainer = styled.div `
@@ -41,6 +62,18 @@ const TextsContainer = styled.div `
   justify-content: space-between;
   align-items: flex-end;
   margin-right: 10px;
+  /* background-color: darkorange; */
+
+  @media (max-width: 1400px) {
+    width: 80%;
+  }
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
+  @media (max-width: 700px) {
+    width: 90%;
+    justify-content: center;
+  }
 `
 
 const TextFeat = styled.div`
@@ -49,6 +82,16 @@ const TextFeat = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   color: ${({theme}) => theme.colors.primary.default};
+  
+  @media (max-width: 810px) {
+    h1 {
+      font-size: 4.5rem;
+    }
+  }
+  @media (max-width: 700px) {
+    justify-content: center;
+    /* align-items: center; */
+  }
 
 `
 const LogotipoArea = styled.div`
@@ -56,50 +99,33 @@ const LogotipoArea = styled.div`
     display: block;
     left: 70px;
     top: 20px;
+
+    @media (max-width: 1400px) {
+      display: none;
+    }
 `
 
-const ButtonsContent = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-  /* align-content: flex-start; */
-  align-self: flex-start;
-  button {
-    border-radius: 3px;
-  }
-`
+const DivLogoVertical = styled.div`
+  display: none;
+  /* background-color: lightblue; */
 
-const ButtonMoreAboutMe = styled.button`
-  width: 120px;
-  color: ${({theme}) => theme.colors.primary.default};
-  /* padding: 5px 10px; */
-  border: 2px solid ${({theme}) => theme.colors.primary.default};
-  background-color: transparent;
-  /* box-sizing: border-box; */
-  h5 {
-    padding: 5px 10px;
+  @media (max-width: 1400px) {
+    display: flex;
   }
-  
-  :hover {
-    color: ${({theme}) => theme.colors.light.default};
-    background-color: ${({theme}) => theme.colors.primary.default};
+  @media (max-width: 1069px) {
+    justify-content: flex-end;
+    svg {
+      width: 80%;
+      /* background-color: blueviolet; */
+    }
   }
-`
-const ButtonContact = styled.button`
-  width: 120px;
-  /* padding: 5px 10px; */
-  border: none;
-  color: ${({theme}) => theme.colors.light.default};
-  background-color: ${({theme}) => theme.colors.secundary.dark};
-  text-decoration: none;
-  /* background-color: transparent; */
-  /* box-sizing: border-box; */
-  h5 {
-    padding: 5px 10px;
+  @media (max-width: 900px) {
+    svg {
+      width: 100%;
+    }
   }
-  
-  :hover {
-    background-color: ${({theme}) => theme.colors.actions.sucess};
+  @media (max-width: 700px) {
+    display: none;
   }
 `
 
@@ -114,13 +140,13 @@ export function SAContent(props : SAContentProps){
             <LogoName/>
             <h4>hair style <br /><span>&</span> make up</h4>
           </NameStyleMake>
+          <DivLogoVertical>
+            <LogoVertical width={400}/>
+          </DivLogoVertical>
           <TextFeat>
             <h1>"SEJA VOCÊ O SEU PADRÃO DE BELEZA"</h1>
             <h5>- Sabrina Xavier</h5>
-            <ButtonsContent>
-              <ButtonMoreAboutMe><h5>sobre mim</h5></ButtonMoreAboutMe>
-              <ButtonContact><h5>contato</h5></ButtonContact>
-            </ButtonsContent>
+            <ButtonsSA/>      
           </TextFeat>
         </TextsContainer>
 
