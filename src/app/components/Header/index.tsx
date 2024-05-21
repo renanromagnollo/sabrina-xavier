@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const HeaderContainer = styled.header`
   /* display: block; */
-  width: 100vw;
+  /* width: 100%; */
   height: 38px;
   background-color: ${({theme}) => theme.colors.primary.light};
   display: flex;
