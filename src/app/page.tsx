@@ -8,6 +8,8 @@ import { DefaultTheme, ThemeProvider } from "styled-components";
 import { useState } from "react";
 import { Hero } from "./components/pages/Home/Hero";
 import { AlgunsTrabalhos } from "./components/pages/Home/AlgunsTrabalhos";
+import { Studio } from "./components/pages/Home/Studio";
+import { Instagram } from "./components/pages/Home/Instagram";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
@@ -23,6 +25,8 @@ export default function Home() {
       }}>
         <Hero/>
         <AlgunsTrabalhos/>
+        <Studio/>
+        <Instagram/>
           {/* <UnderConstruction/> */}
       </div>
         // </ThemeProvider>
