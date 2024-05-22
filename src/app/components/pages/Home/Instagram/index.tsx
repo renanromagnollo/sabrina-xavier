@@ -2,6 +2,7 @@
 
 import styled from "styled-components"
 import { Feedback } from "./Feedback"
+import { InstaPhotos } from "./InstaPhotos"
 
 interface InstagramProps {
 
@@ -20,6 +21,7 @@ export function Instagram(props : InstagramProps){
     return(
         <InstagramSection>
           <Feedback/>
+          <InstaPhotos/>
         </InstagramSection>
     )
 }

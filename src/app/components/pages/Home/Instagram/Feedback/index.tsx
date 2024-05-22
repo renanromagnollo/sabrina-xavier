@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image"
 import styled from "styled-components"
 
@@ -43,6 +44,10 @@ const Text = styled.div`
   justify-content: center;
   align-items: flex-end;
   text-align: center;
+
+  h5 {
+    color: ${({theme}) => theme.colors.dark.default};
+  }
 `
 export function Feedback(props : FeedbackProps){
     return(
