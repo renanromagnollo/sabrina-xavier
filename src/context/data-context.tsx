@@ -1,5 +1,5 @@
 import { InstagramPostProps } from "@/types/post-instagram-types"
-import { ReactNode, createContext, useState } from "react"
+import { ReactNode, createContext, useEffect, useState } from "react"
 
 interface dataProps {
   instagramPosts: InstagramPostProps[]
@@ -18,7 +18,12 @@ function DataProvider({children}: {children: ReactNode}) {
 
   const [state, setState] = useState(data)
 
+  useEffect(() => {
+    console.log('state of DataProvider: ', state)
+}, [state])
+
   function updateState(key: string, value: any) {
+    console.log('values: ', value)
     setState({
       ...state,
       [key]: value

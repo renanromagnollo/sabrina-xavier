@@ -1,11 +1,13 @@
 import Image from "next/image"
 import styled from "styled-components"
+import {cleanText} from '../../../../../../utils/cleanText'
 
 interface CardJobProps {
     width?: number
     height?: number
     src?: string
     rotate?: string
+    text?: string
 
 }
 
@@ -32,19 +34,50 @@ const ImgCard = styled.div`
     /* margin: 10px; */
     /* flex-grow: 2; */
     overflow: hidden;
+    writing-mode: vertical-rl;
+    /* img {
+        image-resolution: from-image;
+
+    } */
+    /* image-resolution: 300dpi;
+    image-resolution: from-image 300dpi;
+    image-resolution: 300dpi snap; */
 
 `
 
 const TextCard = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    /* align-items: flex-start; */
+    padding: 10px;
     width: 100%;
-    height: 20%;
+    height: 25%;
     color: ${({theme}) => theme.colors.primary.dark};
+    /* background-color: blue; */
+    h5 {
+        width: 100%;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        text-align: center;
+        
+        /* white-space: nowrap; */
+        /* text-overflow: ellipsis; */
+    }
+
 `
 
-export function CardJob({width=280, height=310, src, rotate} : CardJobProps){
+export function CardJob({width=280, height=310, src, rotate, text} : CardJobProps){
+    // console.log('src: ', src)
+    // const wordsOfText = text?.split(' ')
+    // console.log(wordsOfText?.filter(word => word.includes('@')))
+    // const clientInstagram = wordsOfText?.filter(word => word.includes('@'))
+    const clientInstagram = text?.match(/@[\.a-z0-9_-]{2,}/g)
+    // const regexHashsNArrobas = /(@[\.a-z0-9_-]{2,})|(#.\S{2,})/g
+    // console.log(filteringHashsNArrobas)
+    const cleanedText = cleanText(text)
     return(
         <CardBox rotate={rotate}>
             <ImgCard>
@@ -53,15 +86,17 @@ export function CardJob({width=280, height=310, src, rotate} : CardJobProps){
                     width={width}
                     height={height}
                     alt='job-image'
-                    sizes="100%"
-                    style={{objectFit: 'cover'}}
-                    unoptimized
+                    // sizes="100%"
+                    style={{objectFit: 'cover', objectPosition: 'top'}}
+                    // quality={100}
+                    // unoptimized
+                    // priority
                 />
             </ImgCard>
             <TextCard>
-                <h5>Trabalho</h5>
-
+                <h5>{cleanedText}</h5>
             </TextCard>
+            <h6>{clientInstagram ?? clientInstagram}</h6>
         </CardBox>
     )
 }

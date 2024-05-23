@@ -5,6 +5,10 @@ const nextConfig = {
       {
         protocol: 'http',
         hostname: 'picsum.photos',
+      },
+      {
+        protocol: 'https',
+        hostname: 'scontent.cdninstagram.com',
       }
     ]
   },

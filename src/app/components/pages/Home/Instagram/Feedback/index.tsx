@@ -59,7 +59,7 @@ export function Feedback(props : FeedbackProps){
               width={300}
               height={300}
               sizes="100%"
-              objectFit="cover"
+              style={{objectFit: "cover"}}
               unoptimized
             />
 
