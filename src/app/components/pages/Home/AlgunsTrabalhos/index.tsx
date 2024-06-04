@@ -3,6 +3,11 @@
 import styled from "styled-components"
 import { CardJob } from "./ CardJob"
 import { ArrowRounded } from "@/components/Icons/ArrowRounded"
+import { useContext, useEffect } from "react"
+import { DataContext } from "@/context/data-context"
+import { InstagramPostProps } from "@/types/post-instagram-types"
+import { getFakeData } from "@/utils/fakeServer"
+import { ContentCards } from "./ContentCards"
 
 interface AlgunsTrabalhosProps {
 
@@ -49,19 +54,8 @@ const Carroussel = styled.div`
   /* background-color: darkmagenta; */
 `
 
-const ContentCards = styled.div`
-  /* position: relative; */
-  width: 80vw;
-  padding: 30px 30px;
-  display: flex;
-  gap: 100px;
-  flex-wrap: nowrap;
-  margin-top: 10px;
-  justify-content: space-evenly;
-  /* overflow: hidden; */
-  /* background-color: pink; */
 
-`
+
 const TitleSection = styled.div`
   /* width: 100vw; */
   margin: 0 20px;
@@ -75,9 +69,13 @@ const TitleSection = styled.div`
 export function AlgunsTrabalhos(props : AlgunsTrabalhosProps){
   const rotate = ['-4deg', '3deg', '-6deg']
 
-  // for (let c=0; c===3; c++) {
-  //   cards.push(<CardJob/>)
-  // }
+  const {instagramPosts} = useContext(DataContext)
+
+  useEffect(() => {
+    console.log('posts uped: ', instagramPosts)
+  }, [instagramPosts])
+
+  
     return(
         <ContainerTrabalhos>
           <BGContainer/>
@@ -87,9 +85,7 @@ export function AlgunsTrabalhos(props : AlgunsTrabalhosProps){
           </TitleSection>
             <Carroussel>
               <ArrowRounded direction='left'/>
-              <ContentCards>
-                {rotate.map(r => <CardJob key={r} rotate={r}/>)}
-              </ContentCards>
+              <ContentCards posts={instagramPosts}/>
               <ArrowRounded />
             </Carroussel>
 

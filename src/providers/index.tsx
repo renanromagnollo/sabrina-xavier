@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react"
 import StyledComponentsProvider from "./StyledComponentsProvider"
+import DataProvider from "@/context/data-context"
 
 interface ProvidersProps {
   children: ReactNode
@@ -9,7 +10,10 @@ interface ProvidersProps {
 export default function Providers(props : ProvidersProps){
     return(
         <StyledComponentsProvider>
-          {props.children}
+          <DataProvider>
+            {props.children}
+
+          </DataProvider>
         </StyledComponentsProvider>
     )
 }

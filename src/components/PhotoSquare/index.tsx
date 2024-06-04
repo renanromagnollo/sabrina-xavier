@@ -59,6 +59,7 @@ export function PhotoSquare({src, width, height, position='relative', zindex=0, 
         alt="sabrina-picture"
         sizes="100%"
         style={{objectFit: 'cover'}}
+        priority={true}
         unoptimized
       />    
     </ImgBox>

@@ -40,6 +40,10 @@ export function Studio(props : StudioProps){
               height={296}
               sizes="100%"
               style={{objectFit: 'cover'}}
+<<<<<<< HEAD
+=======
+              priority
+>>>>>>> instagram
               unoptimized
             />
           </div>
