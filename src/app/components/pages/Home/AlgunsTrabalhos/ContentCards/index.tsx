@@ -1,6 +1,8 @@
 import { InstagramPostProps } from "@/types/post-instagram-types"
 import styled from "styled-components"
 import { CardJob } from "../ CardJob"
+import { useState } from "react"
+import { ModalInsta } from "@/app/components/ModalInsta"
 
 interface ContentCardsProps {
   posts: InstagramPostProps[]
@@ -20,22 +22,38 @@ const Container = styled.div`
 `
 
 export function ContentCards({posts} : ContentCardsProps){
+  const [modalOpened, setModalOpened] = useState(false)
+  const [clickedImage, setClickedImage] = useState<InstagramPostProps>()
+
+  function showOnModal(post: InstagramPostProps) {
+    setClickedImage(post)
+    setModalOpened(true)
+  }
 
     const galleryPhotos = posts?.filter(post => post.media_type !== 'VIDEO')
     return(
-        <Container>
+      <>
+        <ModalInsta 
+          key={clickedImage?.id}
+          isOpen={modalOpened}  
+          post={clickedImage}
+          closeModal={close => setModalOpened(close)}
+        />
+      <Container>
           {galleryPhotos?.map((post, i) => {
             if(post.caption.includes('@')) {
-              return <CardJob 
-               key={i} 
-               src={post.media_url} 
-               rotate={''}
-               text={post.caption}
-               />}
-            }       
-          )}
-
+              return (
+                <CardJob
+                  clicked={post => showOnModal(post)} 
+                  key={i}
+                  rotate={''}
+                  post={post}
+                />)
+            }
+          })}
         </Container>
+      
+      </>
     )
 }
 

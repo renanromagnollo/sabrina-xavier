@@ -1,13 +1,16 @@
 import Image from "next/image"
 import styled from "styled-components"
 import {cleanText} from '../../../../../../utils/cleanText'
+import { InstagramPostProps } from "@/types/post-instagram-types"
 
 interface CardJobProps {
     width?: number
     height?: number
-    src?: string
+    // src?: string
     rotate?: string
-    text?: string
+    post: InstagramPostProps
+    // text?: string
+    clicked: (post: InstagramPostProps) => void
 
 }
 
@@ -69,20 +72,22 @@ const TextCard = styled.div`
 
 `
 
-export function CardJob({width=280, height=310, src, rotate, text} : CardJobProps){
+export function CardJob({width=280, height=310, rotate, post, clicked} : CardJobProps){
     // console.log('src: ', src)
     // const wordsOfText = text?.split(' ')
     // console.log(wordsOfText?.filter(word => word.includes('@')))
     // const clientInstagram = wordsOfText?.filter(word => word.includes('@'))
-    const clientInstagram = text?.match(/@[\.a-z0-9_-]{2,}/g)
+    const clientInstagram = post.caption?.match(/@[\.a-z0-9_-]{2,}/g)
     // const regexHashsNArrobas = /(@[\.a-z0-9_-]{2,})|(#.\S{2,})/g
     // console.log(filteringHashsNArrobas)
-    const cleanedText = cleanText(text)
-    return(
-        <CardBox rotate={rotate}>
+    const cleanedText = cleanText(post.caption)
+    return( post &&
+        <CardBox rotate={rotate} onClick={() => clicked(post)}>
+            
             <ImgCard>
+
                 <Image
-                    src={src ?? `http://picsum.photos//${width}/${height}`}
+                    src={post.media_url ?? `http://picsum.photos//${width}/${height}`}
                     width={width}
                     height={height}
                     alt='job-image'
