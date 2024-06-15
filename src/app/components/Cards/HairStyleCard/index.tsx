@@ -1,0 +1,64 @@
+import Image from "next/image"
+import styled from "styled-components"
+
+interface HairStyleCardProps {
+    imgUrl?: string
+    title?: string
+    text?: string
+    link?: string
+}
+
+const BoxCard = styled.div`
+    position: relative;
+    width: 290px;
+    height: 460px;
+    `
+
+const Content = styled.div`
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+    height: 100%;
+    padding: 3rem 15px;
+    
+    div {
+        box-shadow: 2px 1px 5px 2px rgba(0,0,0, .4);
+        border-radius: 5px;
+
+        overflow: hidden;
+    }
+`
+
+const Bg = styled.div`
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 80%;
+    background-color: ${({theme}) => theme.colors.light.dark};
+    bottom: 0;
+`
+export function HairStyleCard(props : HairStyleCardProps){
+    return(
+        <BoxCard>
+            <Content>
+                <div>
+                    <Image
+                        alt="hair-style-image"
+                        width={250}
+                        height={250}
+                        src={props.imgUrl ?? `http://picsum.photos//250/250`}
+                    />
+                </div>
+                <h3>{props.title ?? 'Title'}</h3>
+                <h5>{props.text ?? 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime commodi numquam sequi. Enim, provident earum!'}</h5>
+                <button>Saiba mais</button>
+            </Content>
+            <Bg/>
+        </BoxCard>
+    )
+}

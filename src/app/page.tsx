@@ -12,6 +12,8 @@ import { Studio } from "./components/pages/Home/Studio";
 import { Instagram } from "./components/pages/Home/Instagram";
 import { DataContext } from "@/context/data-context";
 import { getFakeData } from "@/utils/fakeServer";
+import { HairStyle } from "./components/pages/Home/HairStyle";
+import { HairProducts } from "./components/pages/Home/HairProducts";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
@@ -43,6 +45,8 @@ export default function Home() {
         <Hero/>
         <AlgunsTrabalhos/>
         <Studio/>
+        <HairStyle/>
+        <HairProducts/>
         <Instagram/>
           {/* <UnderConstruction/> */}
       </div>
