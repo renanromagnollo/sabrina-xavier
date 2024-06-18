@@ -14,6 +14,7 @@ import { DataContext } from "@/context/data-context";
 import { getFakeData } from "@/utils/fakeServer";
 import { HairStyle } from "./components/pages/Home/HairStyle";
 import { HairProducts } from "./components/pages/Home/HairProducts";
+import { Dicas } from "./components/pages/Home/Dicas";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
@@ -46,8 +47,9 @@ export default function Home() {
         <AlgunsTrabalhos/>
         <Studio/>
         <HairStyle/>
-        <HairProducts/>
         <Instagram/>
+        <Dicas/>
+        <HairProducts/>
           {/* <UnderConstruction/> */}
       </div>
         // </ThemeProvider>

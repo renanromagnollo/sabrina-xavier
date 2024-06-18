@@ -8,7 +8,7 @@ interface HairProductsProps {
 const Container = styled.section`
     width: 100%;
     margin: 20px 0;
-    background-color: ${({theme})=> theme.colors.dark.light};
+    background-color: ${({theme})=> theme.colors.secundary.dark};
     display: flex;
     justify-content: center;
     `
