@@ -85,7 +85,7 @@ export function HairProductCard(props : HairProductCardProps){
                     <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi sequi, culpa, eaque delectus alias, beatae et veniam accusantium corrupti dolor! Exercitationem, suscipit deserunt sunt velit dicta sit nisi voluptatem esse natus ut quo fugiat, dolor harum provident placeat! Ab?</h5>
                 </TextCard>
                 <Buttons>
-                    <ButtonUnselected color="dark">Saiba mais</ButtonUnselected>
+                    <ButtonUnselected color="secundary">Saiba mais</ButtonUnselected>
                     <ButtonBuy/>
                 </Buttons>
             </Container>

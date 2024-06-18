@@ -12,6 +12,12 @@ const ButtonBox = styled.button`
     color: ${({theme}) => theme.colors.light.default};
     border: 2px solid ${({theme}) => theme.colors.actions.sucess};
     border-radius: 5px;
+
+    &:hover {
+        background-color: lightgreen;
+        border-color: lightgreen;
+        color: ${({theme}) => theme.colors.actions.sucess};
+    }
 `
 
 export function ButtonBuy(props : ButtonBuyProps){
