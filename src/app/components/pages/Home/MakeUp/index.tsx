@@ -1,5 +1,8 @@
 import styled from "styled-components"
 import { CardMakeup } from "./CardMakeup"
+import { useContext } from "react"
+import { DataContext } from "@/context/data-context"
+import { randomInstaPosts } from "@/utils/randomInstaPosts"
 
 interface MakeUpProps {
 
@@ -28,7 +31,7 @@ const TextArea = styled.div`
     gap: 70px;
 
     h3 {
-        color: ${({theme}) => theme.colors.primary.dark};
+        color: ${({theme}) => theme.colors.secundary.default};
     }
 `
 
@@ -40,6 +43,10 @@ const ImagesArea = styled.div`
     gap: 40px;
 `
 export function MakeUp(props : MakeUpProps){
+    const {instagramPosts} = useContext(DataContext)
+    const selectMakePosts = instagramPosts?.filter(post => post.caption.includes('make') && post.media_type !== 'VIDEO')
+    // console.log(ImagesMake.length)
+    let selectedRandomPosts = randomInstaPosts(selectMakePosts, 2)
     return(
         <SectionArea>
             <Container>
@@ -48,8 +55,12 @@ export function MakeUp(props : MakeUpProps){
                     <h1>"Realce sua beleza natural com maquiagens e sobrancelhas perfeitas para você."</h1>
                 </TextArea>
                 <ImagesArea>
-                    <CardMakeup/>
-                    <CardMakeup/>
+                    {selectedRandomPosts.map((post, i) => {
+                        let rotateDegree = i % 2 == 0 ? '5' : '3'
+                        return <CardMakeup key={i} post={post} rotate={rotateDegree}/>
+                    })}
+                    {/* <CardMakeup/>
+                    <CardMakeup/> */}
                 </ImagesArea>
             </Container>
         </SectionArea>
