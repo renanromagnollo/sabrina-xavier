@@ -24,6 +24,8 @@ export default function Home() {
   useEffect(() => {
     const getDatas = async () => {
       const dataInstagramPosts = await getFakeData('instagramPosts')
+      const dataHygraphHome = await getFakeData('hygraphHome')
+      console.log(dataHygraphHome)
       if(dataInstagramPosts) {
         console.log('data InstagramPosts: ', dataInstagramPosts)
         setInstagramPosts(dataInstagramPosts)

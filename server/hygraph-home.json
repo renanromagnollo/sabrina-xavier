@@ -1,0 +1,4804 @@
+{
+	"data": {
+		"aboutMe": {
+			"imgAbout": {
+				"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnojtd105kr07kjssistjdh"
+			},
+			"textAboutMe": {
+				"raw": {
+					"children": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Oi, eu sou a Sabrina Xavier! Transformar beleza em autoconfiança é minha paixão, e estou aqui para ajudar você a se sentir incrível. Com mais de 10 anos de experiência no mundo da estética, sou graduada em Estética e especializada em cabelo feminino e maquiagem. Adoro ver o brilho nos olhos das minhas clientes quando se veem lindas e seguras de si."
+								}
+							]
+						},
+						{
+							"type": "heading-four",
+							"children": [
+								{
+									"text": "Minha História"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Desde jovem, já amava me maquiar e maquiar minhas amigas, cuidar e pintar os cabelos delas. Essa paixão só cresceu e, na vida adulta, comecei a atender em casa e na casa das clientes. Decidi profissionalizar essa vocação e me formei em Estética, fazendo inúmeros cursos extras para me especializar e aprimorar minhas técnicas. Estou sempre em busca de novidades, participando de novos cursos e me atualizando constantemente para trazer o que há de melhor para você."
+								}
+							]
+						},
+						{
+							"type": "heading-four",
+							"children": [
+								{
+									"text": "O Que Me Torna Única"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "O meu diferencial? A combinação perfeita de experiência e modernidade. Entendo que cada mulher é única e merece um atendimento personalizado. Dedico tempo para conhecer você, suas necessidades e desejos, adaptando minhas técnicas para realçar o que você tem de mais bonito."
+								}
+							]
+						},
+						{
+							"type": "heading-four",
+							"children": [
+								{
+									"text": "Serviços que Ofereço"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "No meu espaço, você encontra:"
+								}
+							]
+						},
+						{
+							"type": "bulleted-list",
+							"children": [
+								{
+									"type": "list-item",
+									"children": [
+										{
+											"type": "list-item-child",
+											"children": [
+												{
+													"bold": true,
+													"text": "Cabelo Feminino"
+												},
+												{
+													"text": ": Cortes, coloração, tratamentos capilares e penteados que destacam sua beleza natural."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "list-item",
+									"children": [
+										{
+											"type": "list-item-child",
+											"children": [
+												{
+													"bold": true,
+													"text": "Maquiagem"
+												},
+												{
+													"text": ": Para todas as ocasiões – desde eventos especiais até o dia a dia – com técnicas que evidenciam seus traços e sua personalidade."
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading-four",
+							"children": [
+								{
+									"text": "Minha Missão"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Minha missão é simples: fazer você se sentir maravilhosa. Cada atendimento é feito com carinho e atenção aos detalhes, garantindo que você saia daqui se sentindo a melhor versão de si mesma."
+								}
+							]
+						},
+						{
+							"type": "heading-four",
+							"children": [
+								{
+									"text": "Vamos Conversar?"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Quer um atendimento de qualidade, feito por uma profissional experiente e apaixonada pelo que faz? Eu adoraria te conhecer! Vamos juntas descobrir como realçar ainda mais a sua beleza."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": true,
+									"text": "Agende seu horário e venha viver essa experiência transformadora comigo!"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "No meu site, você encontra todos os detalhes sobre os serviços que ofereço, depoimentos de clientes satisfeitas e pode marcar sua consulta. Estou ansiosa para te receber e ajudar você a se sentir ainda mais especial."
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"powerPhrases": [
+			{
+				"phrase": "\"Sua beleza é única, celebre cada detalhe.\"",
+				"author": "Sabrina Xavier"
+			},
+			{
+				"phrase": "\"Transforme-se para refletir a sua verdadeira essência.\"",
+				"author": "Sabrina Xavier"
+			},
+			{
+				"phrase": "\"Realce a beleza que já existe dentro de você.\"",
+				"author": "Sabrina Xavier"
+			},
+			{
+				"phrase": "\"Sinta-se bem, olhe-se bem, seja a sua melhor versão.\"",
+				"author": "Sabrina Xavier"
+			},
+			{
+				"phrase": "\"A beleza começa no momento em que você decide ser você mesma.\"",
+				"author": "Sabrina Xavier"
+			},
+			{
+				"phrase": "\"Acredite na sua beleza e veja o mundo se transformar.\"",
+				"author": "Sabrina Xavier"
+			},
+			{
+				"phrase": "\"Seja você o seu padrão de beleza\"",
+				"author": "Sabrina Xavier"
+			}
+		],
+		"aboutStudio": {
+			"imageMain": {
+				"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxoxmz5z07qm07lwgw2a9mw5"
+			},
+			"title": "Studio",
+			"text": {
+				"raw": {
+					"children": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Bem-vindo ao nosso salão de beleza, onde o seu bem-estar é a nossa prioridade. Aqui, você encontra um ambiente moderno e aconchegante, perfeito para relaxar e se cuidar."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Nossa equipe é formada por profissionais qualificados, prontos para oferecer um atendimento de excelência e resultados incríveis. Utilizamos produtos e técnicas de alta qualidade para garantir que você saia daqui se sentindo renovado e satisfeito."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Venha nos visitar e experimente um novo padrão de cuidado e atenção. Estamos ansiosos para receber você!"
+								}
+							]
+						}
+					]
+				}
+			},
+			"imagesGallery": [
+				{
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxoxrsbc082t07khhzsabhka"
+				},
+				{
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxoxrsbh07uj07lwfb9rc6iu"
+				},
+				{
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxoxrsaz07ui07kive5w3lf8"
+				}
+			]
+		},
+		"makeUp": {
+			"text": "\"Realce sua beleza natural com maquiagens e sobrancelhas perfeitas para você.\""
+		},
+		"testimonials": [
+			{
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxm87a1l09kl07lquh4whd6z"
+				},
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Aquele momento que a gente pensa : o que eu escrevo ?!? PERFEITOOOO😮"
+									}
+								]
+							}
+						]
+					}
+				},
+				"author": "@vanessadiasbeauty",
+				"linkProfile": "https://www.instagram.com/vanessadiasbeauty/",
+				"linkPost": "https://www.instagram.com/p/C4luNxaPRXP/"
+			},
+			{
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxm8e2eu09ld07lto0wvkgml"
+				},
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Depois de muitos anos indo aqui e ali, acertei na minha make e hair 😍😍"
+									}
+								]
+							}
+						]
+					}
+				},
+				"author": "@vihvihangel",
+				"linkProfile": "https://www.instagram.com/vihvihangel/",
+				"linkPost": "https://www.instagram.com/p/C1CpYkYr2v4/"
+			},
+			{
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxm8hecf09u407lqh5osuhrt"
+				},
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Você arrasa demais! 🥰❤️🥰"
+									}
+								]
+							}
+						]
+					}
+				},
+				"author": "@amandamoreira.psicopedagoga",
+				"linkProfile": "https://www.instagram.com/amandamoreira.psicopedagoga/",
+				"linkPost": "https://www.instagram.com/p/CvpRv2yL8XQ/"
+			},
+			{
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxm8l67w09wv07lqoak0r4o7"
+				},
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Maravilhoso!!! Vc arrasa sempre Sabrina!!❤️"
+									}
+								]
+							}
+						]
+					}
+				},
+				"author": "@lufranca_souza",
+				"linkProfile": "https://www.instagram.com/lufranca_souza/",
+				"linkPost": "https://www.instagram.com/p/Cmd5AUqBUpz/"
+			}
+		],
+		"posts": [
+			{
+				"typeServices": [
+					{
+						"name": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnbwir106h307lui1qaxuz5"
+				},
+				"title": "Como Fazer o Cabelo Crescer Mais Rápido?",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Quem nunca sonhou com aqueles fios longos e saudáveis que parecem sair de um conto de fadas? Mas a realidade, muitas vezes, é que o cabelo parece ter uma teimosia própria, não é mesmo? Então, se você está lutando para fazer o seu cabelo crescer mais rápido, este post é para você. Vamos explorar algumas dicas infalíveis e alimentos que podem ser seus aliados nessa missão. Vem comigo!"
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Problema"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Você olha no espelho e percebe que seu cabelo parece estagnado. Os meses passam e nada de mudança significativa. Enquanto isso, suas amigas estão desfilando por aí com madeixas dignas de comercial de shampoo. Dá um desânimo, né? Aí você começa a procurar soluções milagrosas, produtos caros, e nada parece funcionar de verdade."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Agitar"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "E se eu te disser que não precisa ser assim? Que talvez você esteja negligenciando pequenos detalhes do seu dia a dia que fazem toda a diferença? Pois é, muitos de nós desconhecemos que o segredo para um cabelo longo e saudável pode estar nas pequenas mudanças de hábitos e na alimentação correta."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Resolver"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Vamos às dicas práticas para estimular o crescimento do cabelo:"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "1. "
+									},
+									{
+										"bold": true,
+										"text": "Mantenha o Couro Cabeludo Saudável"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Um couro cabeludo saudável é a base para um crescimento capilar eficaz. Massagens regulares no couro cabeludo com óleos essenciais como óleo de alecrim podem melhorar a circulação sanguínea e promover o crescimento."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "2. "
+									},
+									{
+										"bold": true,
+										"text": "Corte Regularmente as Pontas"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Pode parecer contraditório, mas cortar as pontas regularmente evita as temidas pontas duplas e ajuda a manter a saúde dos fios, permitindo que cresçam mais fortes."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "3. "
+									},
+									{
+										"bold": true,
+										"text": "Evite Excesso de Calor e Químicos"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Ferramentas de calor como chapinhas e secadores, além de produtos químicos, podem enfraquecer os fios. Use sempre protetor térmico e tente diminuir a frequência do uso."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "4. "
+									},
+									{
+										"bold": true,
+										"text": "Hidrate, Hidrate e Hidrate"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Manter o cabelo hidratado é essencial. Use máscaras capilares nutritivas semanalmente. Ingredientes naturais como abacate, mel e óleo de coco são ótimos aliados."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "5. "
+									},
+									{
+										"bold": true,
+										"text": "Alimente-se Bem"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Uma alimentação equilibrada é crucial para o crescimento do cabelo. Vamos falar de alguns alimentos poderosos?"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Alimentos que Ajudam no Crescimento do Cabelo"
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "1. "
+									},
+									{
+										"bold": true,
+										"text": "Salmão"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Rico em ômega-3, o salmão ajuda a manter o cabelo brilhante e promove um crescimento saudável."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "2. "
+									},
+									{
+										"bold": true,
+										"text": "Ovos"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Cheios de proteínas e biotina, os ovos são essenciais para a formação dos fios."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "3. "
+									},
+									{
+										"bold": true,
+										"text": "Espinafre"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Uma ótima fonte de ferro, vitaminas A e C, que são vitais para o crescimento capilar."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "4. "
+									},
+									{
+										"bold": true,
+										"text": "Batata-doce"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Contém beta-caroteno que é convertido em vitamina A no organismo, essencial para o crescimento e a saúde do cabelo."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "5. "
+									},
+									{
+										"bold": true,
+										"text": "Frutas Cítricas"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Ricas em vitamina C, ajudam na produção de colágeno, que é fundamental para a estrutura do cabelo."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Conclusão"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Agora que você já sabe como fazer o cabelo crescer mais rápido, é hora de colocar essas dicas em prática. Lembre-se de que a paciência é uma virtude; mudanças não acontecem da noite para o dia, mas com consistência, você verá resultados. Cuide bem do seu cabelo, alimente-se bem, e logo logo, você estará desfilando por aí com as madeixas dos seus sonhos!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Gostou das dicas? Compartilhe com suas amigas e vamos todas conquistar o cabelo dos sonhos juntas!"
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeServices": [
+					{
+						"name": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnc191y064d07lplvhlu1k4"
+				},
+				"title": "Como Tratar Cabelos Danificados?",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Você já olhou no espelho e pensou: \"O que aconteceu com meu cabelo?\" Cabelos danificados podem parecer um pesadelo, mas a boa notícia é que há soluções eficazes para recuperar a saúde e a beleza dos seus fios. Vamos entender as causas dos danos, as rotinas de cuidados e os tratamentos que podem fazer toda a diferença."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Causas de Danos no Cabelo"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Primeiro, vamos falar das vilãs. O que está causando tanto estrago no seu cabelo?"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Calor Excessivo"
+													},
+													{
+														"text": ": O uso frequente de chapinhas, secadores e babyliss pode deixar os fios quebradiços e sem vida. O calor intenso retira a umidade natural do cabelo, tornando-o seco e propenso a quebras."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Produtos Químicos"
+													},
+													{
+														"text": ": Alisamentos, descolorações e tinturas alteram a estrutura do fio, deixando-o frágil. Quem nunca exagerou um pouco na química e se arrependeu depois?"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Fatores Ambientais"
+													},
+													{
+														"text": ": Exposição ao sol, vento, poluição e até água com cloro também prejudicam a saúde capilar. O cabelo acaba ficando ressecado e opaco."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Rotinas de Cuidados e Produtos Recomendados"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Agora que sabemos o que prejudica, vamos falar sobre o que ajuda. Cuidar bem do cabelo envolve uma rotina adequada e os produtos certos."
+									}
+								]
+							},
+							{
+								"type": "numbered-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Hidratação Semanal"
+													},
+													{
+														"text": ": Invista em máscaras hidratantes de boa qualidade. Procure por ingredientes como óleo de argan, queratina e aloe vera. Aplique a máscara uma vez por semana e deixe agir por pelo menos 20 minutos."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Shampoo e Condicionador Apropriados"
+													},
+													{
+														"text": ": Use produtos específicos para cabelos danificados. Eles geralmente são mais ricos em nutrientes e ajudam a reparar os fios."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Protetor Térmico"
+													},
+													{
+														"text": ": Se você não abre mão da chapinha ou do secador, nunca esqueça de aplicar um protetor térmico antes. Ele cria uma barreira que minimiza os danos do calor."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Corte Regular"
+													},
+													{
+														"text": ": Apare as pontas a cada 8 semanas. Isso evita que as pontas duplas se espalhem e deixem o cabelo com um aspecto mais saudável."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Tratamentos Profissionais e Caseiros"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Para quem busca resultados mais rápidos e intensos, tratamentos profissionais são uma excelente opção."
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Cauterização Capilar"
+													},
+													{
+														"text": ": Um tratamento que reconstrói a fibra capilar usando queratina líquida. Ideal para cabelos extremamente danificados."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Botox Capilar"
+													},
+													{
+														"text": ": Hidratação profunda que alinha os fios e reduz o frizz. Seu cabelo fica macio e brilhante."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Mas se você prefere cuidar dos cabelos em casa, também há ótimas alternativas."
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Máscara de Abacate e Mel"
+													},
+													{
+														"text": ": Misture meio abacate com duas colheres de mel e aplique nos cabelos úmidos. Deixe agir por 30 minutos e enxágue bem. Essa mistura é super nutritiva!"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Óleo de Coco"
+													},
+													{
+														"text": ": Uma vez por semana, aplique óleo de coco nos fios antes de dormir. No dia seguinte, lave normalmente. O óleo de coco é ótimo para hidratar profundamente e devolver o brilho."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Conclusão"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Recuperar cabelos danificados não é uma missão impossível. Com os cuidados certos e um pouco de paciência, você pode trazer de volta a vitalidade dos seus fios. Experimente incluir essas dicas na sua rotina e veja a transformação. E lembre-se, cuidar do cabelo também é uma forma de cuidar de si mesma. Se precisar de uma ajudinha extra, não hesite em visitar o salão e conversar com um profissional. Seus cabelos agradecem!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "E aí, pronta para dar aquele up no visual? 💁‍♀️"
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeServices": [
+					{
+						"name": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnc5lpy06qt07luw3xmt61i"
+				},
+				"title": "Qual é o Melhor Corte de Cabelo para o Meu Tipo de Rosto?",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Você já saiu do salão se perguntando se fez a escolha certa para o seu corte de cabelo? Não se preocupe, você não está sozinha! Encontrar o corte perfeito pode parecer uma missão impossível, mas entender o formato do seu rosto pode transformar essa tarefa. Vamos explorar juntos?"
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Identificando o Formato do Seu Rosto"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Antes de mergulharmos nas sugestões de cortes, vamos identificar o formato do seu rosto. Olhe no espelho e prenda o cabelo para trás. Concentre-se nos contornos do seu rosto. Ele pode se encaixar em um desses formatos:"
+									}
+								]
+							},
+							{
+								"type": "numbered-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Oval"
+													},
+													{
+														"text": ": O comprimento é maior que a largura, com a linha do maxilar mais estreita que a testa."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Redondo"
+													},
+													{
+														"text": ": Largura e comprimento têm medidas semelhantes, com bochechas mais proeminentes."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Quadrado"
+													},
+													{
+														"text": ": Largura da testa, bochechas e maxilar são quase iguais, com o maxilar bem definido."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Retangular"
+													},
+													{
+														"text": ": Semelhante ao oval, mas com o rosto mais longo e o maxilar mais quadrado."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Triangular"
+													},
+													{
+														"text": ": Testa estreita e maxilar mais largo."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Diamante"
+													},
+													{
+														"text": ": Testa e maxilar estreitos, com bochechas largas e definidas."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Cortes de Cabelo Ideais para Cada Tipo de Rosto"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Agora que você já identificou o formato do seu rosto, vamos às sugestões de cortes!"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Rosto Oval"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Você é sortuda! O rosto oval combina bem com quase todos os estilos. Para destacar ainda mais a simetria, experimente um "
+									},
+									{
+										"bold": true,
+										"text": "long bob"
+									},
+									{
+										"text": " ou um "
+									},
+									{
+										"bold": true,
+										"text": "pixie cut"
+									},
+									{
+										"text": "."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Rosto Redondo"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "A ideia é criar a ilusão de comprimento. Cortes longos e em camadas funcionam bem. Franjas laterais e um "
+									},
+									{
+										"bold": true,
+										"text": "bob assimétrico"
+									},
+									{
+										"text": " também são excelentes opções."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Rosto Quadrado"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "O objetivo aqui é suavizar as linhas retas. Aposte em camadas suaves, cortes longos ou médios com movimento e franjas longas e desfiadas. Um "
+									},
+									{
+										"bold": true,
+										"text": "corte em camadas"
+									},
+									{
+										"text": " pode fazer maravilhas."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Rosto Retangular"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Para equilibrar as proporções, evite cortes muito longos. O "
+									},
+									{
+										"bold": true,
+										"text": "bob na altura do queixo"
+									},
+									{
+										"text": " e franjas ajudam a encurtar o comprimento do rosto. Camadas suaves ao redor do rosto também são uma boa escolha."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Rosto Triangular"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Cortes que adicionam volume na parte superior do rosto são perfeitos. Experimente um "
+									},
+									{
+										"bold": true,
+										"text": "bob com volume"
+									},
+									{
+										"text": ", camadas suaves e franjas longas para equilibrar as proporções."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Rosto Diamante"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Para destacar as bochechas e equilibrar a testa e o queixo, opte por cortes médios ou longos, com camadas e franjas laterais. Um "
+									},
+									{
+										"bold": true,
+										"text": "corte em camadas"
+									},
+									{
+										"text": " na altura dos ombros é uma ótima opção."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Tendências Atuais de Cortes de Cabelo"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "As tendências de cortes de cabelo mudam rápido, mas aqui estão algumas das mais populares atualmente:"
+									}
+								]
+							},
+							{
+								"type": "numbered-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Shaggy Bob"
+													},
+													{
+														"text": ": Um bob com textura e camadas despojadas."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Curtain Bangs"
+													},
+													{
+														"text": ": Franjas repartidas ao meio, que emolduram o rosto."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Blunt Cut"
+													},
+													{
+														"text": ": Corte reto, especialmente popular em bobs."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Pixie Cut Texturizado"
+													},
+													{
+														"text": ": Um pixie com camadas para dar movimento e volume."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Corte em Camadas Longas"
+													},
+													{
+														"text": ": Para dar volume e movimento aos cabelos mais compridos."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Conclusão"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Encontrar o corte de cabelo perfeito pode parecer complicado, mas entender o formato do seu rosto faz toda a diferença. Experimente, converse com seu cabeleireiro e lembre-se: o mais importante é você se sentir bem e confiante."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Quer um conselho personalizado? Visite nosso salão e deixe nossos especialistas ajudarem você a encontrar o corte perfeito! Venha transformar seu visual e sair daqui se sentindo maravilhosa."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Até a próxima visita!"
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeServices": [
+					{
+						"name": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnc6vfv06h407lpxi5m48a4"
+				},
+				"title": "Como cuidar de cabelos cacheados?",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Oi, pessoal! Hoje vamos falar sobre um assunto que é pura paixão: cuidar dos cabelos cacheados. Sabemos que manter os cachos sempre lindos e saudáveis pode ser um desafio, mas estamos aqui para ajudar com dicas valiosas. Vamos lá?"
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Técnicas de lavagem e finalização"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Lavagem"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "A primeira coisa que você precisa saber é que os cabelos cacheados tendem a ser mais secos. Isso acontece porque a oleosidade natural do couro cabeludo tem mais dificuldade de percorrer o fio devido à sua forma espiralada. Portanto, lavar o cabelo todos os dias não é uma boa ideia. O ideal é lavar de duas a três vezes por semana."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Aqui vão algumas dicas:"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Use água morna a fria:"
+													},
+													{
+														"text": " A água quente resseca ainda mais os fios."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Massageie o couro cabeludo:"
+													},
+													{
+														"text": " Isso ajuda a estimular a circulação sanguínea e a produção de sebo natural."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Prefira shampoos sem sulfato:"
+													},
+													{
+														"text": " Eles limpam sem retirar a oleosidade natural dos cabelos."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Finalização"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "A finalização é onde a mágica acontece! Para definir bem os cachos, é importante seguir alguns passos:"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Desembarace com os dedos:"
+													},
+													{
+														"text": " Ou use um pente de dentes largos para evitar quebrar os fios."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Use um bom leave-in:"
+													},
+													{
+														"text": " Produtos à base de água são ótimos para hidratar sem pesar."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Amasse os cachos de baixo para cima:"
+													},
+													{
+														"text": " Isso ajuda a ativar a forma natural dos cachos."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Produtos específicos para cabelos cacheados"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Nem todos os produtos são iguais, e os cabelos cacheados merecem cuidados especiais. Aqui estão alguns tipos de produtos que você deve procurar:"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Shampoos e condicionadores hidratantes:"
+													},
+													{
+														"text": " Eles ajudam a manter a umidade nos fios."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Máscaras de hidratação:"
+													},
+													{
+														"text": " Use pelo menos uma vez por semana."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Óleos naturais:"
+													},
+													{
+														"text": " Como óleo de coco, argan e jojoba, que ajudam a selar a hidratação."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Géis e cremes modeladores:"
+													},
+													{
+														"text": " Para definição e controle do frizz."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Penteados para cabelos cacheados"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Vamos ser sinceras, a versatilidade dos cabelos cacheados é um espetáculo! Aqui estão alguns penteados que você pode experimentar:"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Coque abacaxi:"
+													},
+													{
+														"text": " Ótimo para o dia a dia e para preservar os cachos durante a noite."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Tranças:"
+													},
+													{
+														"text": " As box braids e tranças embutidas são perfeitas para um visual estiloso e prático."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Semi-preso:"
+													},
+													{
+														"text": " Deixa parte do cabelo solto, dando um charme natural."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Rabo de cavalo alto:"
+													},
+													{
+														"text": " Simples, mas elegante, e perfeito para qualquer ocasião."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Conclusão"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Cuidar dos cabelos cacheados pode parecer trabalhoso, mas com as técnicas certas e os produtos adequados, é possível manter os cachos sempre bonitos e saudáveis. E lembre-se, a chave para cabelos deslumbrantes é a consistência. Não desista!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Se você tem alguma dica ou quer compartilhar a sua experiência, deixe um comentário abaixo. Adoramos ouvir de vocês! Até a próxima!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "E aí, gostou das dicas? Deixe seu comentário e compartilhe este post com as amigas cacheadas. Juntas, vamos arrasar!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Lembrando sempre, cada cabelo é único. O que funciona para uma pessoa pode não funcionar para outra. O importante é conhecer o seu cabelo e entender o que ele precisa. Boa sorte e muitos cachos lindos para você!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Se você gostou deste post, não esqueça de nos seguir nas redes sociais para mais dicas e novidades sobre cuidados com os cabelos. Até breve!"
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeServices": [
+					{
+						"name": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnc8t0y06k807lpt6fh07on"
+				},
+				"title": "Quais São as Tendências de Coloração de Cabelo?",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Olá, maravilhosas! Você já se perguntou quais são as tendências de coloração de cabelo que estão bombando por aí? Se você está pensando em mudar o visual, seja para acompanhar as tendências ou simplesmente para dar uma renovada, este post é pra você. Vamos explorar as cores que estão fazendo a cabeça das mulheres, as técnicas mais populares e, claro, como cuidar das madeixas depois de coloridas. Vamos lá?"
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Cores de Cabelo Que Estão em Alta"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "1. Loiro Platinado"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "O loiro platinado continua sendo uma escolha ousada e elegante. É perfeito para quem quer um visual moderno e sofisticado. Mas, prepare-se, porque essa cor requer cuidados intensivos!"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "2. Rosa Pastel"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Sim, as cores fantasia ainda estão com tudo! O rosa pastel é uma das favoritas, oferecendo um toque de diversão e feminilidade ao look. Ideal para quem gosta de se destacar na multidão."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "3. Chocolate com Caramelo"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Para quem prefere algo mais natural, os tons de chocolate com caramelo são perfeitos. Eles adicionam profundidade e calor ao cabelo, criando um visual rico e vibrante."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "4. Cinza Acinzentado"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Essa tendência é para quem gosta de um look ousado e moderno. O cinza acinzentado tem um ar misterioso e pode ser tanto sutil quanto dramático, dependendo da tonalidade escolhida."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Técnicas de Coloração"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Balayage"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Essa técnica francesa de pintura livre cria um efeito degradê suave, dando ao cabelo um visual natural e iluminado. O balayage é perfeito para quem quer uma manutenção mais baixa, já que o crescimento da raiz não fica tão evidente."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Ombré"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "O ombré é um clássico que nunca sai de moda. Ele cria um efeito de transição de cor gradual, geralmente das raízes mais escuras para as pontas mais claras. É uma escolha versátil que pode ser adaptada para qualquer cor de cabelo."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Babylights"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "As babylights são mechas fininhas que imitam os reflexos naturais do cabelo de criança. Essa técnica adiciona brilho e dimensão ao cabelo, sem criar um contraste muito forte."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Cuidados Pós-Coloração"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Você já conseguiu aquela cor dos sonhos, mas agora vem a parte importante: manter o cabelo saudável e vibrante. Aqui vão algumas dicas essenciais:"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Hidratação é Fundamental"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "A coloração pode deixar o cabelo ressecado, então invista em máscaras hidratantes e óleos capilares. Procure produtos que sejam específicos para cabelos coloridos."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Proteção Térmica Sempre"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Se você usa chapinha, secador ou babyliss, não esqueça de aplicar um protetor térmico. Ele ajuda a evitar danos causados pelo calor, mantendo a cor e a saúde do cabelo."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Evite Lavagens Frequentes"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Lavar o cabelo todos os dias pode desbotar a cor mais rapidamente. Tente lavar em dias alternados e use um shampoo específico para cabelos coloridos."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Visite o Salão Regularmente"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Manutenção é a chave para um cabelo bonito. Agende visitas regulares ao salão para retoques e tratamentos de hidratação profunda."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Conclusão"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Agora que você conhece as tendências de coloração de cabelo, as técnicas mais populares e como cuidar das suas madeixas, está pronta para fazer aquela transformação e arrasar por aí! Lembre-se, a escolha da cor e da técnica certa pode não só realçar sua beleza natural, mas também elevar sua autoestima."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Então, qual tendência você vai experimentar primeiro? Deixe nos comentários, e se precisar de ajuda para decidir ou quer saber mais sobre algum tema específico, passe no nosso salão para uma consulta personalizada. Estamos aqui para transformar seu visual e fazer você se sentir ainda mais incrível!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Até a próxima, belezas! 💖✨"
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeServices": [
+					{
+						"name": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxncaash06mc07lphrm2fazx"
+				},
+				"title": "Como fazer uma escova perfeita em casa?",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Você já tentou fazer uma escova em casa e acabou com os braços cansados e o cabelo longe do esperado? Quem nunca, né? Fazer uma escova perfeita em casa pode parecer desafiador, mas com os produtos certos e algumas dicas, é totalmente possível. Vamos lá?"
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Passo a Passo para Fazer Escova"
+									}
+								]
+							},
+							{
+								"type": "numbered-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"type": "paragraph",
+														"children": [
+															{
+																"bold": true,
+																"text": "Preparação é tudo"
+															},
+															{
+																"text": ": Lave o cabelo com um shampoo e condicionador específicos para seu tipo de cabelo. Seque bem com a toalha, mas deixe-o levemente úmido."
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"type": "paragraph",
+														"children": [
+															{
+																"bold": true,
+																"text": "Proteção térmica"
+															},
+															{
+																"text": ": Aplique um protetor térmico para evitar danos causados pelo calor. Ninguém quer fios ressecados!"
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"type": "paragraph",
+														"children": [
+															{
+																"bold": true,
+																"text": "Divisão e Concentração"
+															},
+															{
+																"text": ": Divida o cabelo em seções. Isso facilita o processo e garante que todos os fios recebam a mesma atenção. Use presilhas para manter as mechas separadas."
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"type": "paragraph",
+														"children": [
+															{
+																"bold": true,
+																"text": "Secagem inicial"
+															},
+															{
+																"text": ": Com um secador, seque o cabelo até ele ficar 80% seco. Use a temperatura média para não danificar os fios."
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"type": "paragraph",
+														"children": [
+															{
+																"bold": true,
+																"text": "Hora da escova"
+															},
+															{
+																"text": ": Comece pela nuca, usando uma escova redonda. Posicione o secador a uma distância segura (uns 15 cm) e siga a direção dos fios, da raiz até as pontas. Puxe a escova devagar, mantendo a tensão."
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"type": "paragraph",
+														"children": [
+															{
+																"bold": true,
+																"text": "Foco nas pontas"
+															},
+															{
+																"text": ": Para um acabamento perfeito, dê uma atenção especial às pontas. Enrole-as na escova e mantenha o calor por alguns segundos, depois solte devagar."
+															}
+														]
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"type": "paragraph",
+														"children": [
+															{
+																"bold": true,
+																"text": "Finalização"
+															},
+															{
+																"text": ": Use um jato de ar frio para fixar o penteado. Isso ajuda a manter a escova por mais tempo e dá brilho aos fios."
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Ferramentas e Produtos Necessários"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Secador"
+													},
+													{
+														"text": ": Escolha um com potência mínima de 1800W e, se possível, com íons negativos para diminuir o frizz."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Escova redonda"
+													},
+													{
+														"text": ": Prefira as de cerâmica ou metálicas, que distribuem melhor o calor."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Protetor térmico"
+													},
+													{
+														"text": ": Essencial para proteger os fios do calor."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Presilhas"
+													},
+													{
+														"text": ": Para dividir as mechas."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Sérum ou óleo finalizador"
+													},
+													{
+														"text": ": Para dar brilho e maciez ao cabelo."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Dicas para Manter a Escova por Mais Tempo"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Evite umidade"
+													},
+													{
+														"text": ": A umidade é a maior inimiga da escova. Use touca de banho durante o banho e evite ambientes muito úmidos."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Capriche na finalização"
+													},
+													{
+														"text": ": Um bom finalizador ajuda a manter o frizz longe e dá aquele acabamento de salão."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Dorme com cuidado"
+													},
+													{
+														"text": ": Use uma fronha de seda ou cetim para evitar atritos que desmancham a escova."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Então, pronta para arrasar com uma escova perfeita feita por você mesma? Com essas dicas e um pouco de prática, seu cabelo vai ficar incrível, como se tivesse saído direto do salão! Boa sorte e mãos à obra!"
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeServices": [
+					{
+						"name": "Make"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxncbz9506nz07lpl6teu6wz"
+				},
+				"title": "Como fazer uma maquiagem para o dia a dia?",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Passo a Passo de Maquiagem Básica"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Ei, você! Já se pegou olhando no espelho de manhã, pensando em como fazer uma maquiagem rápida e eficiente para o dia a dia? Acordar cedo já é um desafio, e ainda ter que pensar em maquiagem pode ser um dilema. Vamos resolver isso de uma vez por todas com um guia prático, que vai te deixar linda e pronta para encarar o dia!"
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "1. Prepare a Pele"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "O primeiro passo é sempre preparar a pele. Lave bem o rosto com um sabonete específico para o seu tipo de pele. Depois, aplique um hidratante leve e um protetor solar, mesmo em dias nublados. Pele bem cuidada é o segredo para uma maquiagem que dura e fica bonita o dia todo!"
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "2. Base e Corretivo"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "A base é essencial para uniformizar o tom da pele. Escolha uma base leve, de preferência com fator de proteção solar. Aplique uma pequena quantidade com um pincel ou esponja, espalhando bem para não deixar marcas. Em seguida, use um corretivo nas olheiras e nas pequenas imperfeições."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "3. Pó Compacto"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Para selar a base e o corretivo, aplique um pó compacto. Ele ajuda a controlar a oleosidade e dá um acabamento aveludado à pele. Um pincel grande e fofo é ideal para essa etapa."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "4. Blush"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Um toque de cor nas maçãs do rosto faz toda a diferença! Escolha um blush em tom suave, como pêssego ou rosado, para um ar de saúde e frescor. Aplique com um pincel, sempre com movimentos leves e circulares."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "5. Sobrancelhas"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Sobrancelhas bem definidas fazem uma grande diferença no visual. Use um lápis ou sombra específica para sobrancelhas para preencher falhas e definir o formato. Não exagere, a ideia é manter um look natural."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "6. Olhos"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Para os olhos, opte por uma sombra neutra. Tons de marrom e bege são perfeitos para o dia a dia. Aplique uma sombra clara em toda a pálpebra e uma mais escura no côncavo para dar profundidade. Finalize com uma camada de máscara de cílios para abrir o olhar."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "7. Lábios"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Nos lábios, um batom nude ou um gloss dão o toque final. Escolha um produto que hidrate e tenha boa durabilidade. E pronto, você está preparada para o dia!"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Produtos Essenciais para uma Maquiagem Simples"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Aqui está uma lista dos produtos essenciais que você vai precisar para essa maquiagem:"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Sabonete facial"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Hidratante"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Protetor solar"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Base leve"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Corretivo"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Pó compacto"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Blush"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Lápis ou sombra para sobrancelhas"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Sombras neutras"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Máscara de cílios"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Batom ou gloss"
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Dicas para uma Maquiagem Duradoura"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Para garantir que sua maquiagem dure o dia todo, siga essas dicas:"
+									}
+								]
+							},
+							{
+								"type": "numbered-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Hidrate bem a pele"
+													},
+													{
+														"text": ": Pele hidratada retém melhor a maquiagem."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Use um primer"
+													},
+													{
+														"text": ": Ele ajuda a fixar a maquiagem e controlar a oleosidade."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Prefira produtos à prova d'água"
+													},
+													{
+														"text": ": Eles resistem melhor ao calor e à umidade."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Finalize com um spray fixador"
+													},
+													{
+														"text": ": Ele sela a maquiagem e prolonga a duração."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Com essas dicas e passos, sua maquiagem vai ficar impecável do início ao fim do dia. Lembre-se, a chave está na simplicidade e nos produtos certos. Agora, é só praticar e arrasar todos os dias!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "E aí, gostou das dicas? Tem algum truque que você adora e não viu aqui? Compartilhe nos comentários! Vamos adorar saber como você faz para ficar ainda mais linda no dia a dia!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": ""
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		],
+		"products": [
+			{
+				"typeProducts": [
+					{
+						"title": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxm9s1zp0ajl07ltu62k9o16"
+				},
+				"name": "Kit Wella Professionals",
+				"size": null,
+				"introText": null,
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Kit de tratamento para cabelos secos, ressecados ou com química em tamanho salão. Nutre e hidrata de maneira intensa para restaurar a saúde dos fios."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Kit Wella Professionals Invigo Nutri-Enrich Salon Duo traz um blend de nutrientes multifuncionais que suavizam a superfície do cabelo para proporcionar muito mais brilho e maciez. A fragrância luxuosa é frutal chipre almiscarado. Seus fios ficam limpos, hidratados, nutridos e desembaraçados."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "“O que eu mais gosto dessa linha, é que ela deixa o cabelo cada vez mais tratado, com um toque sedoso, macio e muito brilho. E ainda é possível intercalar com outros produtos Invigo, como da linha Balance para cuidar do seu couro cabeludo ou a Color Brilliance, para quem tem cabelo colorido, por exemplo”, diz o embaixador de Wella Professionals, Dougllas Dias, que assinou o look da campanha de Invigo Nutri-Enrich."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"bold": true,
+										"text": "Contém"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Goji Berry: uma fruta com alta concentração de vitaminas antioxidantes, minerais e peptídeos que melhoram a saúde do cabelo."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Ácido Oleico e Pantenol: proporcionam hidratação e nutrição de alta performance."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"bold": true,
+										"text": "Ação"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Wella Professionals Invigo Nutri-Enrich - Shampoo 1000ml: hidrata e nutre os fios desde o momento da lavagem."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Wella Professionals Invigo Nutri-Enrich - Condicionador 1000ml: desembaraça e suaviza a superfície do fio para que fique com toque macio."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Wella Professional Invigo Nutri-Rnrich Máscara de tratamento que reconstitui e hidrata profundamente o cabelo seco ou desgastado, deixando-os nutridos e cheios de vitalidade. Com Enrich Complex."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Vitamina E: protege o cabelo de danos futuros."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "COMO USAR"
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"bold": true,
+										"text": "Indicação"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Aplique o shampoo sobre o cabelo úmido. Massageie suavemente e enxágue. Caso necessário, repita o procedimento."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Em seguida, passe a máscara sobre o cabelo limpo e úmido. Distribua pelo comprimento e pontas dos fios e deixe agir por 5 minutos. Enxague."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Depois, espalhe o condicionador no cabelo limpo e úmido, pelo comprimento e pontas. Deixe agir por alguns instantes e, em seguida, enxágue bem."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"bold": true,
+										"text": "Resultado"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Seu cabelo fica limpo, desembaraçado, hidratado e nutrido, com fios muito macios e cheios de brilho."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"bold": true,
+										"text": "Composição"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "A lista de ingredientes atualizada de cada produto encontra-se disponibilizada no rótulo de cada frasco conforme disposto na Resolução da Diretoria Colegiada da ANVISA  752 de 2022 e Art 31º  do Código de Defesa do Consumidor.\n⁠\n⁠O kit contém: 01 Shampoo Wella Invigo Nutri-Enrich 1 Litro 01 Condicionador Wella Invigo Nutri-Enrich 1 Litro 01 Máscara Wella Invigo Nutri-Enrich 500ml"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": ""
+									}
+								]
+							},
+							{
+								"type": "table",
+								"children": [
+									{
+										"type": "table_body",
+										"children": [
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Vantagens do produto"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Alto brilho"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Tipo de material livre"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Sem álcool"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Forma do produto"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Creme"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Marca"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Wella"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Tipo de cabelo"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Seco"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-one",
+								"children": [
+									{
+										"text": "Sobre este item"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Desenvolvida especialmente para os cabelos secos, ressecados ou danificados"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Formulada com a exclusiva tecnologia Triple-BlenD"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Trata os fios profundamente sem comprometer a leveza e o movimento dos cabelos e enriquecida com Extrato de Seda, Extrato de Damasco, Creatina e Pantenol"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Enrich é um tratamento completo reparar e hidratar intensamente os cabelos, deixando-os profundamente hidratado, reparados e cheios de vitalidade"
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": ""
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxn72gwb02i407lpl5q3ffqd"
+				},
+				"name": "OGX Biotin & Collagen Shampoo and Conditioner",
+				"size": null,
+				"introText": null,
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Descrição do produto"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Aumente o volume em cabelos finos com o xampu e condicionador volumizador OGX Thick & Full + Biotina e colágeno. Ideal para cabelos lisos a médios, deixando o cabelo mais cheio e ajudando a criar mechas mais abundantes. A fórmula rica em nutrientes, é infundida com biotina, colágeno e proteína de trigo de vitamina B7, e ajuda a manter o crescimento de cabelos com aparência saudável e mais espessa. Além disso, o aroma de bergamota, jasmim e baunilha torna a espuma uma experiência sensorial completa que deixa mechas com um cheiro irresistivelmente bom. Sem parabenos com surfactantes sem sulfatos, este xampu e condicionador de cabelo grosso ajuda a aumentar o volume em suas madeixas. Para melhores resultados, use este shampoo e condicionador com toda a coleção de cuidados capilares OGX Biotin & Collagen para ajudar a infundir nutrientes em cada fio."
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Detalhes do produto"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Descontinuado pelo fabricante ‏ : ‎ "
+													},
+													{
+														"text": "Não"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Dimensões do produto ‏ : ‎ "
+													},
+													{
+														"text": "28,58 x 20,65 x 6,05 cm; 800 g"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Número do modelo ‏ : ‎ "
+													},
+													{
+														"text": "50378"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "UPC ‏ : ‎ "
+													},
+													{
+														"text": "052800676343"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Fabricante ‏ : ‎ "
+													},
+													{
+														"text": "Vogue International"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "ASIN ‏ : ‎ "
+													},
+													{
+														"text": "B078K4PKKR"
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "País de origem ‏ : ‎ "
+													},
+													{
+														"text": "EUA"
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Ranking dos mais vendidos: "
+													},
+													{
+														"text": "Nº 1.057 em Beleza e Cuidados Pessoais"
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": ""
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxn7a3sy02p607lpwci6fquu"
+				},
+				"name": "Moroccanoil Máscara Hidratante Intensa ",
+				"size": "250ml",
+				"introText": "Para cabelos secos de espessura média a grossa.",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Cuide-se, aplicando uma máscara capilar rápida que revitaliza os fios em cinco minutos. A Máscara de Hidratação Intensa Moroccanoil® é um condicionador de ação profunda rico e cremoso de alto desempenho, formulado para cabelos secos de espessura média a grossa. Com óleo de argan rico em antioxidantes e ingredientes nutritivos, ele hidrata, condiciona e, ao mesmo tempo, melhora radicalmente a textura, a elasticidade, o brilho e a facilidade de manuseio dos cabelos."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Aplique uma quantidade generosa da Máscara de Hidratação Intensa Moroccanoil® aos cabelos secos com a toalha e penteie-os. Deixe o produto agir por 5 a 7 minutos e enxágue bem. Não é necessário aplicar calor. Use de 1 a 2 vezes por semana. DICA: Para um condicionamento de ação mais profunda, misture algumas gotas do Tratamento Moroccanoil ao usar esta máscara capilar."
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxn7rdzx031p07kgjo4i3e3q"
+				},
+				"name": "Mascara Moroccanoil Hydration Weightless Hydrating Mask",
+				"size": "250ml",
+				"introText": "Máscara de hidratação leve para cabelos secos e finos.",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Revitalize cabelos sem vida e secos com esta máscara hidratante de cabelos de ação rápida de cinco minutos. A Máscara de Hidratação Leve Moroccanoil® é um tratamento de condicionamento profundo e cremoso, embora leve, rico em óleo de argan e em ingredientes nutritivos. Esta fórmula de alto desempenho hidrata e condiciona os cabelos finos e, ao mesmo tempo, melhora radicalmente sua textura, elasticidade, brilho e a facilidade de manuseio."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Aplique uma quantidade generosa da Máscara de Hidratação Leve Moroccanoil® aos cabelos secos com a toalha e penteie-os. Deixe o produto agir por 5 a 7 minutos e enxágue bem. Não é necessário aplicar calor. Use de 1 a 2 vezes por semana. DICA: Para um condicionamento de ação mais profunda, misture algumas gotas do Tratamento Moroccanoil a esta máscara capilar."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": ""
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxn85nkh03ie07luso7ofzbf"
+				},
+				"name": "Máscara Reparadora Moroccanoil Restorative Hair Mask",
+				"size": "250ml",
+				"introText": "Para cabelos enfraquecidos e danificados",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Para cabelos danificados que necessitam de restauração imediata. A Máscara Restauradora dos Cabelos Moroccanoil® é um tratamento revitalizador de ação de 5 a 7 minutos que reconstrói os fios e lhes devolve a proteína no caso deles terem sido danificados por tratamentos com produtos químicos ou equipamentos de calor. Sua fórmula de ação restauradora profunda e de alto desempenho é rica em óleo de argan, manteiga de carité e proteínas reparadoras que restauram a elasticidade dos cabelos e reconstroem sua força de dentro para fora."
+									}
+								]
+							},
+							{
+								"type": "heading-three",
+								"children": [
+									{
+										"text": "Como Usar:"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Após lavar os cabelos com shampoo, aplique uma quantidade generosa da Máscara Restauradora dos Cabelos Moroccanoil® nos cabelos secos com a toalha e penteie-os em toda a sua extensão. Deixe o produto ser absorvido pelos fios por 5 a 7 minutos. Enxágue bem. Esta máscara tem uma ação restauradora profunda na estrutura interna dos fios e, após seu uso, os fios devem ser selados com um condicionador. Use este produto uma vez por semana e, à medida que os cabelos apresentem melhoria, com menos frequência. Eis aqui uma dica para os cabelos grossos e ásperos: Misture à máscara, aproximadamente, 1 colher de chá do Tratamento Moroccanoil® para dar mais brilho e elasticidade aos fios."
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxn9v1su04cd07lp4p0m50db"
+				},
+				"name": "Deva Curl SuperCream",
+				"size": "250g",
+				"introText": "Creme de Coco ",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Ativador de cachos para cabelos cacheados em tamanho profissional. "
+									},
+									{
+										"bold": true,
+										"text": "Deva Curl Supercream"
+									},
+									{
+										"text": " deixa o cacho definido, hidratado, nutrido e com o frizz controlado por mais tempo. "
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "O"
+									},
+									{
+										"bold": true,
+										"text": " Ativador de Cachos Deva Curl Supercream"
+									},
+									{
+										"text": " possui em sua fórmula o óleo de coco, rico em ativos que conservam a hidratação por mais tempo na fibra capilar deixando-a macia e emoliente. Além disso, protege os cachos contra os fatores externos causadores de ressecamento.  É liberado para no e low poo por não conter sulfato, parabenos e silicones. "
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Coloque uma pequena quantidade do creme modelador nas mãos e distribua nos fios divididos em mechas preferencialmente. Em seguida, amasse os cachos para ajudar na ativação das curvas. Deixe secar naturalmente ou use o secador com difusor."
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Hair"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxna0cpp050307lu473fe7o6"
+				},
+				"name": "Revlon Escova Oval Alisadora",
+				"size": "1100 watts",
+				"introText": null,
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": ""
+									}
+								]
+							},
+							{
+								"type": "table",
+								"children": [
+									{
+										"type": "table_body",
+										"children": [
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Marca"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Revlon"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Material"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Nylon"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Potência"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "1100 watts"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Fonte de alimentação"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Elétrico com fio"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Número de velocidades"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "2"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": ""
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Make"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnabhat04wp07lpzofohu0h"
+				},
+				"name": "Base Maybelline NY",
+				"size": "30ml",
+				"introText": "Base Líquida Maybelline NY Fit Me Fresh Tint com Vitamina C e FPS50.",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Ingredientes"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "ÁGUA, HOMOSSALATO, DICAPRILIL ÉTER, GLICEROL,DIÓXIDO DE SILÍCIO, ÁLCOOL ETÍLICO, OCTISSALATO, OCTOCRILENO, ISOESTEARATO DE POLIGLICERILA-4, HECTORITA DIESTEARDIMÔNIO, TRIBEENINA, DIPOLI-HIDROXIESTEARATO DE POLIETILENOGLICOL-30, FLUORFLOGOPITA SINTÉTICO, CLORETO DE SÓDIO, FENOXIETANOL, SÍLICA SILILATO, ASCORBIL GLICOSÍDEO, ESTEAROIL GLUTAMATO DISSÓDICO, ETILEXILGLICERINA, ADENOSINA, HIDRÓXIDO DE ALUMÍNIO,TOCOFEROL. PODE CONTER: DIÓXIDO DE TITÂNIO, ÓXIDO DE FERRO AMARELO"
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Descrição do produto"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Maybelline NY apresenta a nova base Fit Me Fresh Tint com vitamina C, FPS 50 e acabamento glow natural para o dia a dia. Essa base inovadora combina o benefício da vitamina C, que é conhecida por sua ação antioxidante que ajuda na renovação da pele, e proteção solar FPS 50. Além disso, sua fórmula exclusiva oferece glow e viço natural, proporcionando uma cobertura uniforme, sem pesar no rosto. A base Fit Me Fresh Tint é indicada para todos os tipos de pele e é indicada para quem deseja um aspecto mais natural no dia a dia, além de manter a pele protegida contra os danos causados pelo sol. Experimente agora mesmo a nova base Fit Me Fresh Tint de Maybelline NY com Vitamina C, FPS 50 e acabamento leve e natural e descubra o segredo para uma pele radiante, saudável e iluminada. Confira os benefícios da Base Líquida Fit Me Fresh Tint de Maybelline NY: - Fórmula com Vitamina C - Possui FPS 50 - Acabamento matte suave: leve e natural - Não obstrui os poros - Testado dermatologicamente - Hipoalergênico - Controle de oleosidade e brilho durante todo o dia - Oil free - Uniformiza o tom da pele"
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Make"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnale0k053a07lplf4555f5"
+				},
+				"name": "e.l.f. Primer Hidratante Facial",
+				"size": null,
+				"introText": "Primer para maquiagem de longa duração.",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": ""
+									}
+								]
+							},
+							{
+								"type": "table",
+								"children": [
+									{
+										"type": "table_body",
+										"children": [
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Marca"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "e.l.f."
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Cobertura"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Lightweight"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Forma do produto"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Creme"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Tipo de pele"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Todas"
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"type": "table_row",
+												"children": [
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Informações de embalagem"
+																	}
+																]
+															}
+														]
+													},
+													{
+														"type": "table_cell",
+														"children": [
+															{
+																"type": "paragraph",
+																"children": [
+																	{
+																		"text": "Tubo"
+																	}
+																]
+															}
+														]
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-one",
+								"children": [
+									{
+										"text": "Sobre este item"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Primer para maquiagem de longa duração: This e.l.f. O primer transforma seu rosto em uma tela lisa e impecável, ideal para aplicação de maquiagem de longa duração."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Fórmula hidratante: a fórmula é infundida com uva e vitaminas A, C e E para ajudar a aumentar a pele e hidratar sua pele."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Ótimo para pele propensa a acne: ótimo para peles propensas a acne, combinação e oleosa."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Emparelhamento perfeito: combine com o e.l.f. Base com acabamento impecável ou corretivo camuflado para um acabamento acetinado durante todo o dia."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"text": "Ingredientes que amam a pele: All e.l.f. os produtos são feitos de ingredientes que amam a pele que você deseja, menos as toxinas que você não deseja, tudo a preços bons para você. Todos os e.l.f. os produtos são 100% livres de crueldade e veganos."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Ingredientes"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "\"Dimeticona, Tridecil Trimellitate, Dimeticona Crosspolymer, Vitis Vinifera (Uva), Fenoxietanol, Caprylyl Glicol, Palmitato de Retinyl (Va), Acetato de Tocoferil (Ve), Palmitato de Ascorbyl (Vc), Silica Dimethyl Silylate"
+									}
+								]
+							},
+							{
+								"type": "heading-two",
+								"children": [
+									{
+										"text": "Descrição do produto"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "A maquiagem perfeita começa com o primer perfeito. Feito com uva e vitaminas A, C e E, nosso primer hidratante dá a você uma tela suave e impecável para aplicação de maquiagem duradoura. Ótimo para iluminar sua pele e minimizar os poros antes de aplicar cosméticos. A elf Cosmetics oferece uma linha completa de maquiagem vegana e sem crueldade e ferramentas profissionais — tudo a um preço extraordinário, então certamente haverá algo para todos. Veja marcadores e imagens para obter mais informações."
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"typeProducts": [
+					{
+						"title": "Make"
+					}
+				],
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnawpuy05vu07lu2ixrxctp"
+				},
+				"name": "Paleta de Sombras Urban Decay",
+				"size": null,
+				"introText": "PALETA DE SOMBRAS NAKED RELOADED URBAN DECAY",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Uma paleta de sombras que redefine o neutro com 12 tons com acabamentos que vão do fosco ao metálico."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "- Repense a neutralidade com sombras projetadas para agradar a todas as idades, sexos e tons de pele."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "- De mates sedosos e metálicos a micro-brilhos, cada tom é feito com uma textura aveludada, cor rica, poder de permanência e capacidade de mistura ideal."
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		],
+		"hairStyles": [
+			{
+				"slug": "alinhamento",
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxovfo1m064g07lwzldj9p6d"
+				},
+				"title": "Alinhamento",
+				"introText": "Cabelos Disciplinados e com Movimento Natural",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Se você quer fios alinhados, sem frizz e com um caimento perfeito, o alinhamento capilar é a escolha certa! No [Nome do Salão], oferecemos um tratamento de alinhamento que vai deixar seu cabelo disciplinado, hidratado e com um brilho incrível, sem perder o movimento natural."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Benefícios do Alinhamento"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Fios Alinhados e Sem Frizz:"
+													},
+													{
+														"text": " O alinhamento capilar deixa os cabelos disciplinados, eliminando o frizz e os arrepiados, para um look impecável."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Brilho e Hidratação:"
+													},
+													{
+														"text": " Além de alinhar os fios, o tratamento proporciona uma hidratação profunda, deixando o cabelo macio e com um brilho deslumbrante."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Movimento Natural:"
+													},
+													{
+														"text": " Diferente de outros tratamentos, o alinhamento mantém o movimento natural dos cabelos, deixando-os soltos e com um caimento perfeito."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Nossa Abordagem"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "No [Nome do Salão], nossos profissionais são experts em alinhamento capilar e utilizam apenas produtos de alta qualidade, que garantem resultados incríveis sem danificar os fios. Avaliamos cuidadosamente o seu tipo de cabelo para oferecer um tratamento personalizado que atende às suas necessidades específicas."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Agende sua Transformação"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Quer um cabelo alinhado e cheio de vida? Agende sua sessão de alinhamento capilar no [Nome do Salão] e sinta a diferença que um tratamento de qualidade pode fazer. Nossa equipe está pronta para te proporcionar uma experiência única e personalizada, para você sair daqui ainda mais linda."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Entre em contato com a gente para mais informações ou para agendar seu horário. Estamos ansiosos para transformar o seu cabelo!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Diga adeus ao frizz e aos fios rebeldes. Venha para o [Nome do Salão] e descubra o poder do alinhamento capilar!",
+										"italic": true
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"slug": "corte",
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxovo8ch068d07lw5ei0n37z"
+				},
+				"title": "Corte",
+				"introText": "Transforme seu Visual com um Corte Perfeito",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Nada como um corte de cabelo bem-feito para renovar o visual e levantar a autoestima! No [Nome do Salão], oferecemos cortes que realçam a sua personalidade e destacam a sua beleza natural. Seja para uma mudança radical ou para manter o estilo, estamos prontos para criar o look perfeito para você."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Benefícios de um Bom Corte"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Realce da Beleza Natural:"
+													},
+													{
+														"text": " Um corte bem-feito valoriza seus traços, destacando o que você tem de melhor."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Praticidade no Dia a Dia:"
+													},
+													{
+														"text": " Com o corte certo, fica muito mais fácil cuidar do cabelo e mantê-lo bonito todos os dias."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Versatilidade:"
+													},
+													{
+														"text": " Do clássico ao moderno, podemos criar cortes que se adaptam ao seu estilo e às suas preferências."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Nossa Abordagem"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "No [Nome do Salão], nossa equipe de cabeleireiros é formada por profissionais talentosos e antenados nas últimas tendências. Antes de começar, conversamos com você para entender seus desejos e avaliar o seu tipo de cabelo. Assim, garantimos um corte que combina perfeitamente com o seu rosto e seu estilo de vida."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Agende sua Transformação"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Quer dar um toque especial ao seu visual? Agende seu corte de cabelo no [Nome do Salão] e sinta a diferença que um corte de qualidade pode fazer. Nossa missão é fazer você se sentir incrível, com um atendimento personalizado e resultados impecáveis."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Entre em contato com a gente para mais informações ou para agendar seu horário. Estamos ansiosos para transformar o seu look!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Renove seu estilo com um corte de cabelo perfeito no [Nome do Salão]. Venha e descubra o poder de um bom corte!",
+										"italic": true
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"slug": "mechas",
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxovte4k06bb07lwuu7nydat"
+				},
+				"title": "Mechas",
+				"introText": "Realce a Beleza do Seu Cabelo com Estilo e Sofisticação",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Que tal dar um up no visual com mechas incríveis que vão iluminar seus cabelos e deixar você ainda mais linda? As mechas são a escolha perfeita para quem quer um look moderno e cheio de personalidade. Aqui, temos várias técnicas de mechas que vão te surpreender e destacar ainda mais a sua beleza natural."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Benefícios das Mechas"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Versatilidade:"
+													},
+													{
+														"text": " Seja qual for o seu tipo ou cor de cabelo, as mechas se adaptam e oferecem infinitas possibilidades de estilo."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Realce da Beleza Natural:"
+													},
+													{
+														"text": " Elas iluminam o rosto, destacam o corte e o movimento dos cabelos, além de dar uma aparência mais jovem e radiante."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Manutenção Fácil:"
+													},
+													{
+														"text": " Com a técnica certa, as mechas podem exigir menos manutenção do que uma coloração completa, facilitando a sua rotina de beleza."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Nossa Abordagem"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Aqui no [Nome do Salão], nossa equipe é formada por profissionais super talentosos e antenados nas últimas tendências. Usamos só produtos top de linha para garantir que suas mechas fiquem lindas e saudáveis. Durante o atendimento, vamos avaliar seu tipo de cabelo, suas preferências e estilo de vida para sugerir a técnica perfeita para você."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Agende sua Transformação"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Pronta para arrasar com um novo visual? Marque uma consulta com nossos especialistas e descubra o poder das mechas para transformar seu cabelo. No [Nome do Salão], nossa missão é fazer você se sentir ainda mais maravilhosa com um atendimento personalizado e de alta qualidade."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Entre em contato com a gente para mais informações ou para agendar seu horário. Estamos ansiosos para ajudar você a brilhar!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Dê um toque de glamour ao seu look. Venha para o [Nome do Salão] e escolha as mechas perfeitas para você!",
+										"italic": true
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			{
+				"slug": "progressiva",
+				"image": {
+					"url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxovxpvo06dx07lw8r1w10rd"
+				},
+				"title": "Progressiva",
+				"introText": "Cabelos Lisos e Brilhantes Como Você Sempre Sonhou",
+				"text": {
+					"raw": {
+						"children": [
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Cansada de lidar com o frizz e os fios rebeldes? A progressiva é a solução perfeita para quem quer cabelos lisos, brilhantes e cheios de vida. No [Nome do Salão], oferecemos o melhor tratamento de progressiva para transformar seu cabelo e facilitar sua rotina de beleza."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Benefícios da Progressiva"
+									}
+								]
+							},
+							{
+								"type": "bulleted-list",
+								"children": [
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Cabelos Lisos e Sem Frizz:"
+													},
+													{
+														"text": " A progressiva alisa os fios, eliminando o frizz e deixando seu cabelo super liso e com movimento natural."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Brilho Intenso:"
+													},
+													{
+														"text": " Além de alisar, a progressiva dá um brilho incrível ao cabelo, deixando-o com uma aparência saudável e radiante."
+													}
+												]
+											}
+										]
+									},
+									{
+										"type": "list-item",
+										"children": [
+											{
+												"type": "list-item-child",
+												"children": [
+													{
+														"bold": true,
+														"text": "Manutenção Fácil:"
+													},
+													{
+														"text": " Com a progressiva, você acorda com o cabelo pronto para arrasar, sem precisar de horas de secador e chapinha."
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Nossa Abordagem"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Tratamentos de alisamento utilizando produtos de alta qualidade, que respeitam a saúde dos seus cabelos. Antes de começar o tratamento, fazemos uma avaliação detalhada para entender a estrutura e as necessidades dos seus fios, garantindo um resultado perfeito e duradouro."
+									}
+								]
+							},
+							{
+								"type": "heading-four",
+								"children": [
+									{
+										"text": "Agende sua Transformação"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Quer cabelos lisos e maravilhosos? Marque agora sua sessão de progressiva no [Nome do Salão] e experimente a liberdade de um cabelo sempre pronto para qualquer ocasião. Nossa equipe está aqui para te proporcionar uma experiência incrível e personalizada."
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Entre em contato com a gente para mais informações ou para agendar seu horário. Estamos ansiosos para ajudar você a alcançar o cabelo dos seus sonhos!"
+									}
+								]
+							},
+							{
+								"type": "paragraph",
+								"children": [
+									{
+										"text": "Transforme seu visual com a progressiva do [Nome do Salão] e tenha cabelos lisos e brilhantes todos os dias!",
+										"italic": true
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		]
+	},
+	"extensions": {
+		"Complexity-Cost-Left": 999999863,
+		"Effective-Complexity-Limit": 1000000000
+	}
+}
