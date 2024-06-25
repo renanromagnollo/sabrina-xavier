@@ -9,6 +9,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'scontent.cdninstagram.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'sa-east-1.graphassets.com'
       }
     ]
   },

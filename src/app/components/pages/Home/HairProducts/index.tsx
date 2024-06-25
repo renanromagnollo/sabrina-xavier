@@ -1,4 +1,7 @@
 import { HairProductCard } from "@/app/components/Cards/HairProductCard"
+import { DataContext } from "@/context/data-context"
+import { HygraphProductProps } from "@/types/hygraph-types"
+import { useContext } from "react"
 import styled from "styled-components"
 
 interface HairProductsProps {
@@ -23,12 +26,15 @@ const ProductsArea = styled.div`
 `
 
 export function HairProducts(props : HairProductsProps){
+
+    const {hygraphHome} = useContext(DataContext)
+
+    const listProducts: HygraphProductProps[] = hygraphHome?.products?.slice(0, 3)
+
     return(
         <Container>
             <ProductsArea>
-                <HairProductCard/>
-                <HairProductCard/>
-                <HairProductCard/>
+                {listProducts?.map((item, i) => <HairProductCard key={i} item={item}/>)}
             </ProductsArea>
         </Container>
     )

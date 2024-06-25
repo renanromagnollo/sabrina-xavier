@@ -1,11 +1,10 @@
+import { HygraphHairStyleProps } from "@/types/hygraph-types"
+import { RichTextHygraph } from "@/utils/richtTextHygraph"
 import Image from "next/image"
 import styled from "styled-components"
 
 interface HairStyleCardProps {
-    imgUrl?: string
-    title?: string
-    text?: string
-    link?: string
+    item: HygraphHairStyleProps
 }
 
 const BoxCard = styled.div`
@@ -42,7 +41,7 @@ const Bg = styled.div`
     background-color: ${({theme}) => theme.colors.light.dark};
     bottom: 0;
 `
-export function HairStyleCard(props : HairStyleCardProps){
+export function HairStyleCard({item} : HairStyleCardProps){
     return(
         <BoxCard>
             <Content>
@@ -51,11 +50,13 @@ export function HairStyleCard(props : HairStyleCardProps){
                         alt="hair-style-image"
                         width={250}
                         height={250}
-                        src={props.imgUrl ?? `http://picsum.photos//250/250`}
+                        style={{objectFit: 'cover'}}
+                        src={item.image.url ?? `http://picsum.photos//250/250`}
                     />
                 </div>
-                <h3>{props.title ?? 'Title'}</h3>
-                <h5>{props.text ?? 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime commodi numquam sequi. Enim, provident earum!'}</h5>
+                <h3>{item.title ?? 'Title'}</h3>
+                {/* <h5><RichTextHygraph content={item.text.raw}/></h5> */}
+                <h5>{item.introText}</h5>
                 <button>Saiba mais</button>
             </Content>
             <Bg/>

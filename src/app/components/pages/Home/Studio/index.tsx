@@ -1,6 +1,10 @@
 'use client'
 
+import { DataContext } from "@/context/data-context"
+import { HygraphAboutStudioProps } from "@/types/hygraph-types"
+import { RichTextHygraph } from "@/utils/richtTextHygraph"
 import Image from "next/image"
+import { useContext } from "react"
 import styled from "styled-components"
 
 interface StudioProps {
@@ -30,11 +34,14 @@ const TextsArea = styled.div`
 
 `
 export function Studio(props : StudioProps){
+  const {hygraphHome} = useContext(DataContext)
+
+  const aboutStudioHygraph: HygraphAboutStudioProps = hygraphHome?.aboutStudio
     return(
         <Container>
           <div>
             <Image 
-              src={`http://picsum.photos//${572}/${296}`}
+              src={aboutStudioHygraph?.imageMain.url ?? `http://picsum.photos//${572}/${296}`}
               alt="studio-image"
               width={572}
               height={296}
@@ -45,8 +52,8 @@ export function Studio(props : StudioProps){
             />
           </div>
           <TextsArea>
-            <h2>Studio</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa eos dolore quas deleniti unde distinctio magni qui, laborum provident cupiditate, quis exercitationem rem delectus doloribus rerum autem expedita quisquam. Aperiam.</p>
+            <h2>{aboutStudioHygraph?.title}</h2>
+            <p><RichTextHygraph content={aboutStudioHygraph?.text.raw}/></p>
           </TextsArea>
         </Container>
     )

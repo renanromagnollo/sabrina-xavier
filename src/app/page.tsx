@@ -19,16 +19,19 @@ import { MakeUp } from "./components/pages/Home/MakeUp";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
-  const {setInstagramPosts} = useContext(DataContext)
+  const {setInstagramPosts, setHygraphHome} = useContext(DataContext)
 
   useEffect(() => {
     const getDatas = async () => {
       const dataInstagramPosts = await getFakeData('instagramPosts')
       const dataHygraphHome = await getFakeData('hygraphHome')
-      console.log(dataHygraphHome)
       if(dataInstagramPosts) {
         console.log('data InstagramPosts: ', dataInstagramPosts)
         setInstagramPosts(dataInstagramPosts)
+      }
+      if(dataHygraphHome) {
+        console.log('data HygraphHome', dataHygraphHome)
+        setHygraphHome(dataHygraphHome)
       }
     }
     getDatas()

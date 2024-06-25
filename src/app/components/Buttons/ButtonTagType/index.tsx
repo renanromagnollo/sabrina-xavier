@@ -31,6 +31,8 @@ const Content = styled.div`
 `
 
 export function ButtonTagType({type='hair'} : ButtonTagTypeProps){
+
+    
     return(
         <ButtonBox type={type}>
             {type === 'hair' ?

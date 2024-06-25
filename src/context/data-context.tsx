@@ -1,14 +1,23 @@
+import { HygraphAboutStudioProps, HygraphHomeProps } from "@/types/hygraph-types"
 import { InstagramPostProps } from "@/types/post-instagram-types"
 import { ReactNode, createContext, useEffect, useState } from "react"
+
+
 
 interface dataProps {
   instagramPosts: InstagramPostProps[]
   setInstagramPosts: (posts: InstagramPostProps[]) => void
+  hygraphHome: HygraphHomeProps | {}
+  setHygraphHome: (hygraphHome: HygraphHomeProps) => void
+  // setHomeContext: (hygraphHome: HygraphHomeProps, posts: InstagramPostProps[]) => void
 }
 
 const data: dataProps = {
   instagramPosts: [],
-  setInstagramPosts: () => {}
+  setInstagramPosts: () => {},
+  hygraphHome: {},
+  setHygraphHome: () => {},
+  // setHomeContext: () => {}
 }
 
 export const DataContext = createContext<dataProps>(data)
@@ -24,16 +33,18 @@ function DataProvider({children}: {children: ReactNode}) {
 
   function updateState(key: string, value: any) {
     console.log('values: ', value)
-    setState({
-      ...state,
+    setState(prevState => ({
+      ...prevState,
       [key]: value
-    })
+    }))
   }
 
   return (
     <DataContext.Provider value={{
       instagramPosts: state.instagramPosts,
-      setInstagramPosts: posts => updateState('instagramPosts', posts)
+      setInstagramPosts: posts => updateState('instagramPosts', posts),
+      hygraphHome: state.hygraphHome,
+      setHygraphHome: hygraphHome => updateState('hygraphHome', hygraphHome)
     }}>
       {children}
     </DataContext.Provider>

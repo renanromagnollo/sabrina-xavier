@@ -2,8 +2,11 @@ import Image from "next/image"
 import styled from "styled-components"
 import { ButtonUnselected } from "../../Buttons/ButtonUnselected"
 import { ButtonBuy } from "../../Buttons/ButtonBuy"
+import { HygraphProductProps } from "@/types/hygraph-types"
+import { RichTextHygraph } from "@/utils/richtTextHygraph"
 
 interface HairProductCardProps {
+    item: HygraphProductProps
 
 }
 
@@ -62,7 +65,7 @@ const TextCard = styled.div`
     }
 `
 
-export function HairProductCard(props : HairProductCardProps){
+export function HairProductCard({item} : HairProductCardProps){
     return(
         <BoxCard>
             <Container>
@@ -72,17 +75,17 @@ export function HairProductCard(props : HairProductCardProps){
                             alt="product-image"
                             width={300}
                             height={250}
-                            src={'http://picsum.photos//290/450'}
-                            style={{objectFit: 'cover'}}
+                            src={item?.image.url ?? 'http://picsum.photos//290/450'}
+                            style={{objectFit: "contain"}}
                         />
                     </ProductImage>
                     <Title>
-                        <h4>Nome do Produto</h4>
-                        <h2>-50%</h2>
+                        <h4>{item?.name}</h4>
+                        {/* <h2>-50%</h2> */}
                     </Title>
                 </FeatureProduct>
                 <TextCard>
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi sequi, culpa, eaque delectus alias, beatae et veniam accusantium corrupti dolor! Exercitationem, suscipit deserunt sunt velit dicta sit nisi voluptatem esse natus ut quo fugiat, dolor harum provident placeat! Ab?</h5>
+                    <h5>{item?.introText}</h5>
                 </TextCard>
                 <Buttons>
                     <ButtonUnselected color="secundary">Saiba mais</ButtonUnselected>
