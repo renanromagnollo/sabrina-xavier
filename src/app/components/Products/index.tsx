@@ -1,4 +1,4 @@
-import { HairProductCard } from "@/app/components/Cards/HairProductCard"
+import { ProductCard } from "@/app/components/Cards/ProductCard"
 import { DataContext } from "@/context/data-context"
 import { HygraphProductProps } from "@/types/hygraph-types"
 import { useContext } from "react"
@@ -11,7 +11,7 @@ interface HairProductsProps {
 const Container = styled.section`
     width: 100%;
     margin: 20px 0;
-    background-color: ${({theme})=> theme.colors.secundary.dark};
+    background-color: ${({theme})=> theme.colors.secundary.default};
     display: flex;
     justify-content: center;
     `
@@ -25,7 +25,7 @@ const ProductsArea = styled.div`
     
 `
 
-export function HairProducts(props : HairProductsProps){
+export function Products(props : HairProductsProps){
 
     const {hygraphHome} = useContext(DataContext)
 
@@ -34,7 +34,7 @@ export function HairProducts(props : HairProductsProps){
     return(
         <Container>
             <ProductsArea>
-                {listProducts?.map((item, i) => <HairProductCard key={i} item={item}/>)}
+                {listProducts?.map((item, i) => <ProductCard key={i} item={item}/>)}
             </ProductsArea>
         </Container>
     )

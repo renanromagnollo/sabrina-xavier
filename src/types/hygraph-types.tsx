@@ -38,6 +38,7 @@ interface HygraphPostProps {
     image: {url: string}
     title: string
     text: {raw: RichTextContent}
+    products: HygraphProductProps[]
 }
 
 interface HygraphProductProps {
@@ -47,6 +48,7 @@ interface HygraphProductProps {
     size?: string
     introText?: string
     text: {raw: RichTextContent}
+    linkAffiliate?: string
 }
 
 interface HygraphHairStyleProps {

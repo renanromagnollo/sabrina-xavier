@@ -4,6 +4,8 @@ import { ButtonTagType } from "../../Buttons/ButtonTagType"
 import { HygraphPostProps } from "@/types/hygraph-types"
 import { RichTextHygraph } from "@/utils/richtTextHygraph"
 import { ButtonUnselected } from "../../Buttons/ButtonUnselected"
+import {slugCreator} from '@/utils/slugCreator'
+import Link from "next/link"
 
 interface DicasCardProps {
     item?: HygraphPostProps
@@ -42,25 +44,29 @@ const ButtonArea = styled.div`
 
 
 export function DicasCard({item} : DicasCardProps){
+    const slug = slugCreator(item?.title)
+    console.log(slug)
     return(
-        <CardBox>
-            <div>
-                <Image
-                    width={290}
-                    height={215}
-                    alt="dica-image"
-                    src={item?.image?.url ?? 'http://picsum.photos//290/215'}
-                    style={{objectFit: 'cover', width: '100%'}}
-                />
-            </div>
-            <Content>
-                <ButtonTagType type='hair'/>
-                <h4>{item?.title ?? 'Title'}</h4>
-                {/* <h5><RichTextHygraph content={item?.text?.raw}/></h5> */}
-            </Content>
-            <ButtonArea>
-                <ButtonUnselected color={"primary"}>Leia</ButtonUnselected>
-            </ButtonArea>
-        </CardBox>
+        <Link href={`/dicas/${slug}` ?? ''}>
+            <CardBox>
+                <div>
+                    <Image
+                        width={290}
+                        height={215}
+                        alt="dica-image"
+                        src={item?.image?.url ?? 'http://picsum.photos//290/215'}
+                        style={{objectFit: 'cover', width: '100%'}}
+                    />
+                </div>
+                <Content>
+                    <ButtonTagType type='hair'/>
+                    <h4>{item?.title ?? 'Title'}</h4>
+                    {/* <h5><RichTextHygraph content={item?.text?.raw}/></h5> */}
+                </Content>
+                <ButtonArea>
+                    <ButtonUnselected color={"primary"}>Leia</ButtonUnselected>
+                </ButtonArea>
+            </CardBox>
+        </Link>
     )
 }
