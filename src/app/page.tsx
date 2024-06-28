@@ -13,7 +13,7 @@ import { Instagram } from "./components/pages/Home/Instagram";
 import { DataContext } from "@/context/data-context";
 import { getFakeData } from "@/utils/fakeServer";
 import { HairStyle } from "./components/pages/Home/HairStyle";
-import { HairProducts } from "./components/pages/Home/HairProducts";
+import { Products } from "./components/Products";
 import { Dicas } from "./components/pages/Home/Dicas";
 import { MakeUp } from "./components/pages/Home/MakeUp";
 
@@ -56,7 +56,7 @@ export default function Home() {
         <MakeUp/>
         <Instagram/>
         <Dicas/>
-        <HairProducts/>
+        <Products/>
           {/* <UnderConstruction/> */}
       </div>
         // </ThemeProvider>

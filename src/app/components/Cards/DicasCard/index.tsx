@@ -47,7 +47,7 @@ export function DicasCard({item} : DicasCardProps){
     const slug = slugCreator(item?.title)
     console.log(slug)
     return(
-        <Link href={`/dicas/${slug}`}>
+        <Link href={`/dicas/${slug}` ?? ''}>
             <CardBox>
                 <div>
                     <Image
