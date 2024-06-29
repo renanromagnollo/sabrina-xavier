@@ -13,7 +13,7 @@ interface DicasCardProps {
 
 const CardBox = styled.div`
     width: 290px;
-    height: 400px;
+    /* height: 330px; */
     overflow: hidden;
     border-radius: 10px;
     background-color: ${({theme}) => theme.colors.light.default};
@@ -42,6 +42,45 @@ const ButtonArea = styled.div`
     /* background-color: pink; */
 `
 
+const ImageArea = styled.div`
+    position: relative;
+    height: 215px;
+`
+
+const TagArea = styled.div`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0.9;
+`
+
+const TagType = styled.h5`
+    left: 20px;
+    bottom: -180px;
+    position: relative;
+    z-index: 1000;
+    color: ${({theme}) => theme.colors.light.default};
+`
+
+
+const TagBG = styled.div`
+    width: 60%;
+    height: 30%;
+    bottom: -160px;
+    left: -30px;
+    position: relative;
+    z-index: 50;
+    background-color: ${({theme}) => theme.colors.secundary.dark};
+    transform: rotate(30deg);
+    color: ${({theme}) => theme.colors.light.default};
+`
+
+const Title = styled.h5`
+    color: ${({theme}) => theme.colors.secundary.dark};
+    text-align: center;
+`
 
 export function DicasCard({item} : DicasCardProps){
     const slug = slugCreator(item?.title)
@@ -49,7 +88,11 @@ export function DicasCard({item} : DicasCardProps){
     return(
         <Link href={`/dicas/${slug}` ?? ''}>
             <CardBox>
-                <div>
+                <ImageArea>
+                    <TagArea>
+                        <TagType>{item?.typeServices[0].name}</TagType>
+                        <TagBG/>
+                    </TagArea>
                     <Image
                         width={290}
                         height={215}
@@ -57,14 +100,14 @@ export function DicasCard({item} : DicasCardProps){
                         src={item?.image?.url ?? 'http://picsum.photos//290/215'}
                         style={{objectFit: 'cover', width: '100%'}}
                     />
-                </div>
+                </ImageArea>
                 <Content>
-                    <ButtonTagType type='hair'/>
-                    <h4>{item?.title ?? 'Title'}</h4>
+                    {/* <ButtonTagType type='hair'/> */}
+                    <Title>{item?.title ?? 'Title'}</Title>
                     {/* <h5><RichTextHygraph content={item?.text?.raw}/></h5> */}
                 </Content>
                 <ButtonArea>
-                    <ButtonUnselected color={"primary"}>Leia</ButtonUnselected>
+                    <ButtonUnselected color={"secundary"}>Leia</ButtonUnselected>
                 </ButtonArea>
             </CardBox>
         </Link>

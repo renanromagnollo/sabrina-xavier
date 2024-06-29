@@ -1,18 +1,21 @@
-export const fetchHygraphQuery = async (query: string) => {
-    const response = await fetch(process.env.HYGRAPH_URL!, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-            Authorization: `Bearer ${process.env.HYGRAPH_TOKNE}`
-        },
-        body: JSON.stringify({ query }),
-        next: {
-            revalidate: 60 * 60 * 24
-        }
-    })
+export const fetchHygraphQuery = async (
+  query: string,
+  revalidate = 60 * 60 * 24
+) => {
+  const response = await fetch(process.env.HYGRAPH_URL!, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+      Authorization: `Bearer ${process.env.HYGRAPH_TOKNE}`,
+    },
+    body: JSON.stringify({ query }),
+    next: {
+      revalidate,
+    },
+  });
 
-    const {data } = await response.json()
+  const { data } = await response.json();
 
-    return data
-}
+  return data;
+};
