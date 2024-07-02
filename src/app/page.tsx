@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -16,50 +16,58 @@ import { HairStyle } from "./components/pages/Home/HairStyle";
 import { Products } from "./components/Products";
 import { Dicas } from "./components/pages/Home/Dicas";
 import { MakeUp } from "./components/pages/Home/MakeUp";
+import { HygraphHomeProps } from "@/types/hygraph-types";
+import { getHygraphPosts } from "@/utils/getHygraphPosts";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
-  const {setInstagramPosts, setHygraphHome} = useContext(DataContext)
+  const { setInstagramPosts, setHygraphHome, setPosts } =
+    useContext(DataContext);
 
   useEffect(() => {
     const getDatas = async () => {
-      const dataInstagramPosts = await getFakeData('instagramPosts')
-      const dataHygraphHome = await getFakeData('hygraphHome')
-      if(dataInstagramPosts) {
-        console.log('data InstagramPosts: ', dataInstagramPosts)
-        setInstagramPosts(dataInstagramPosts)
+      const dataInstagramPosts = await getFakeData("instagramPosts");
+      const dataHygraphHome: HygraphHomeProps = await getFakeData(
+        "hygraphHome"
+      );
+      if (dataInstagramPosts) {
+        console.log("data InstagramPosts: ", dataInstagramPosts);
+        setInstagramPosts(dataInstagramPosts);
+        // console.log(postsWithSlug[0]);
       }
-      if(dataHygraphHome) {
-        console.log('data HygraphHome', dataHygraphHome)
-        setHygraphHome(dataHygraphHome)
+      if (dataHygraphHome) {
+        const postsWithSlug = await getHygraphPosts();
+        console.log("data HygraphHome", dataHygraphHome);
+        setPosts(postsWithSlug);
+        setHygraphHome(dataHygraphHome);
       }
-    }
-    getDatas()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
+    };
+    getDatas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     // <ThemeProvider theme={theme}>
-      <div style={{
-        width: '100vw',
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start', 
-        alignItems: 'center'
-      }}>
-        <Hero/>
-        <AlgunsTrabalhos/>
-        <Studio/>
-        <HairStyle/>
-        <MakeUp/>
-        <Instagram/>
-        <Dicas/>
-        <Products/>
-          {/* <UnderConstruction/> */}
-      </div>
-        // </ThemeProvider>
-
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
+      }}
+    >
+      <Hero />
+      <AlgunsTrabalhos />
+      <Studio />
+      <HairStyle />
+      <MakeUp />
+      <Instagram />
+      <Dicas />
+      <Products />
+      {/* <UnderConstruction/> */}
+    </div>
+    // </ThemeProvider>
   );
 }

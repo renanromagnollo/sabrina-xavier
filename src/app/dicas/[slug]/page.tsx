@@ -7,8 +7,10 @@ import { Dicas } from "@/app/components/pages/Home/Dicas";
 import { DataContext } from "@/context/data-context";
 import { HygraphPostProps, HygraphProductProps } from "@/types/hygraph-types";
 import { getFakeData } from "@/utils/fakeServer";
+import { getHygraphPosts } from "@/utils/getHygraphPosts";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import { slugCreator } from "@/utils/slugCreator";
+import { verifySlug } from "@/utils/verifySlug";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
@@ -89,30 +91,26 @@ interface DicaPageProps {
 }
 
 export default function DicaPage({ params }: DicaPageProps) {
-  const {} = useContext(DataContext)
+  const { posts } = useContext(DataContext);
   const [selectedPost, setSelectedPost] = useState<HygraphPostProps>();
   const [relatedProducts, setRelatedProducts] =
     useState<HygraphProductProps[]>();
 
   useEffect(() => {
-    function verifySlug(content) {
-      const slug = slugCreator(content?.title);
-      return slug === params.slug;
-    }
-
-    const getPosts = async () => {
-      const { posts } = await getFakeData("hygraphPosts");
-      const selected: HygraphPostProps = posts.filter((post) =>
-        verifySlug(post)
+    const getPost = async () => {
+      const dicasPosts = posts.length > 0 ? posts : await getHygraphPosts();
+      console.log(dicasPosts);
+      const selected = dicasPosts.filter((post: HygraphPostProps) =>
+        verifySlug({ post, params })
       )[0];
-      console.log(selected.products);
+      console.log(selected);
       if (selected) {
         setSelectedPost(selected);
         setRelatedProducts(selected.products);
       }
     };
-    getPosts();
-  }, []);
+    getPost();
+  }, [params, posts]);
 
   return (
     selectedPost && (

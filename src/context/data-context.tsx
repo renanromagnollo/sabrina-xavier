@@ -1,57 +1,29 @@
-import {
-  HygraphAboutStudioProps,
-  HygraphHomeProps,
-  HygraphPostProps,
-} from "@/types/hygraph-types";
+import { data, dataProps, reducer } from "@/store";
+import { postsAdd, homeAdd, instagramPostsAdd } from "../../src/store/actions";
+import { HygraphHomeProps, HygraphPostProps } from "@/types/hygraph-types";
 import { InstagramPostProps } from "@/types/post-instagram-types";
-import { ReactNode, createContext, useEffect, useState } from "react";
-
-interface dataProps {
-  instagramPosts: InstagramPostProps[];
-  setInstagramPosts: (posts: InstagramPostProps[]) => void;
-  hygraphHome: HygraphHomeProps | {};
-  setHygraphHome: (hygraphHome: HygraphHomeProps) => void;
-  // setHomeContext: (hygraphHome: HygraphHomeProps, posts: InstagramPostProps[]) => void
-  posts: HygraphPostProps[];
-  setPosts: (posts: HygraphPostProps[]) => void;
-}
-
-const data: dataProps = {
-  instagramPosts: [],
-  setInstagramPosts: () => {},
-  hygraphHome: {},
-  setHygraphHome: () => {},
-  posts: [],
-  setPosts: () => {},
-};
+import { ReactNode, createContext, useEffect, useReducer } from "react";
 
 export const DataContext = createContext<dataProps>(data);
 
 function DataProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState(data);
+  const [state, dispatch] = useReducer(reducer, data);
 
   useEffect(() => {
-    console.log("state of DataProvider: ", state);
+    console.log("state of DataProvider: ", state.posts);
   }, [state]);
-
-  function updateState(key: string, value: any) {
-    console.log("values: ", value);
-    setState((prevState) => ({
-      ...prevState,
-      [key]: value,
-    }));
-  }
 
   return (
     <DataContext.Provider
       value={{
         instagramPosts: state.instagramPosts,
-        setInstagramPosts: (posts) => updateState("instagramPosts", posts),
+        setInstagramPosts: (instagramPosts: InstagramPostProps[]) =>
+          instagramPostsAdd(dispatch, instagramPosts),
         hygraphHome: state.hygraphHome,
-        setHygraphHome: (hygraphHome) =>
-          updateState("hygraphHome", hygraphHome),
+        setHygraphHome: (hygraphHome: HygraphHomeProps) =>
+          homeAdd(dispatch, hygraphHome),
         posts: state.posts,
-        setPosts: (posts) => updateState("posts", posts),
+        setPosts: (posts: HygraphPostProps[]) => postsAdd(dispatch, posts),
       }}
     >
       {children}
