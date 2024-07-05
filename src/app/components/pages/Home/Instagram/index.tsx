@@ -1,12 +1,10 @@
-'use client'
+"use client";
 
-import styled from "styled-components"
-import { Feedback } from "./Feedback"
-import { InstaPhotos } from "./InstaPhotos"
+import styled from "styled-components";
+import { Testimonial } from "./Testimonial";
+import { InstaPhotos } from "./InstaPhotos";
 
-interface InstagramProps {
-
-}
+interface InstagramProps {}
 
 const InstagramSection = styled.section`
   width: 100vw;
@@ -14,14 +12,12 @@ const InstagramSection = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-
-`
-export function Instagram(props : InstagramProps){
-    return(
-        <InstagramSection>
-          <Feedback/>
-          <InstaPhotos/>
-        </InstagramSection>
-    )
+`;
+export function Instagram(props: InstagramProps) {
+  return (
+    <InstagramSection>
+      <Testimonial />
+      <InstaPhotos />
+    </InstagramSection>
+  );
 }

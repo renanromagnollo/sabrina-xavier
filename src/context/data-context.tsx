@@ -1,6 +1,15 @@
 import { data, dataProps, reducer } from "@/store";
-import { postsAdd, homeAdd, instagramPostsAdd } from "../../src/store/actions";
-import { HygraphHomeProps, HygraphPostProps } from "@/types/hygraph-types";
+import {
+  postsAdd,
+  homeAdd,
+  instagramPostsAdd,
+  testimonialsAdd,
+} from "../../src/store/actions";
+import {
+  HygraphHomeProps,
+  HygraphPostProps,
+  HygraphTestimonialProps,
+} from "@/types/hygraph-types";
 import { InstagramPostProps } from "@/types/post-instagram-types";
 import { ReactNode, createContext, useEffect, useReducer } from "react";
 
@@ -24,6 +33,9 @@ function DataProvider({ children }: { children: ReactNode }) {
           homeAdd(dispatch, hygraphHome),
         posts: state.posts,
         setPosts: (posts: HygraphPostProps[]) => postsAdd(dispatch, posts),
+        testimonials: state.testimonials,
+        setTestimonials: (testimonials: HygraphTestimonialProps[]) =>
+          testimonialsAdd(dispatch, testimonials),
       }}
     >
       {children}

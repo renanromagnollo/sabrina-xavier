@@ -1,4 +1,8 @@
-import { HygraphHomeProps, HygraphPostProps } from "@/types/hygraph-types";
+import {
+  HygraphHomeProps,
+  HygraphPostProps,
+  HygraphTestimonialProps,
+} from "@/types/hygraph-types";
 import { InstagramPostProps } from "@/types/post-instagram-types";
 import { reducer } from "./reducers";
 
@@ -10,6 +14,8 @@ export interface dataProps {
   // setHomeContext: (hygraphHome: HygraphHomeProps, posts: InstagramPostProps[]) => void
   posts: HygraphPostProps[];
   setPosts: (posts: HygraphPostProps[]) => void;
+  testimonials: HygraphTestimonialProps[];
+  setTestimonials: (testimonials: HygraphTestimonialProps[]) => void;
 }
 
 const data: dataProps = {
@@ -19,6 +25,8 @@ const data: dataProps = {
   setHygraphHome: () => {},
   posts: [],
   setPosts: () => {},
+  testimonials: [],
+  setTestimonials: () => {},
 };
 
 export { reducer, data };

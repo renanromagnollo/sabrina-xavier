@@ -7,6 +7,9 @@ export function reducer(state, action) {
     case "instagramPostsAdd": {
       return { ...state, instagramPosts: action.payload };
     }
+    case "testimonialsAdd": {
+      return { ...state, comments: action.payload };
+    }
     default:
       return state;
   }

@@ -21,8 +21,13 @@ import { getHygraphPosts } from "@/utils/getHygraphPosts";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
-  const { setInstagramPosts, setHygraphHome, setPosts } =
-    useContext(DataContext);
+  const {
+    setInstagramPosts,
+    setHygraphHome,
+    setPosts,
+    setTestimonials,
+    hygraphHome,
+  } = useContext(DataContext);
 
   useEffect(() => {
     const getDatas = async () => {
@@ -38,8 +43,8 @@ export default function Home() {
       if (dataHygraphHome) {
         const postsWithSlug = await getHygraphPosts();
         console.log("data HygraphHome", dataHygraphHome);
-        setPosts(postsWithSlug);
         setHygraphHome(dataHygraphHome);
+        setPosts(postsWithSlug);
       }
     };
     getDatas();
