@@ -24,8 +24,8 @@ const Container = styled.div`
 `;
 
 const ProfileImage = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid ${({ theme }) => theme.colors.primary.light};
@@ -74,8 +74,8 @@ export function Testimonial() {
           <Image
             src={testimonial.image.url ?? `http://picsum.photos//300/300`}
             alt="profile-image"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             sizes="100%"
             style={{ objectFit: "cover", textAlign: "center" }}
             unoptimized

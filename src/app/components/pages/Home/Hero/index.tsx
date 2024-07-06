@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { Logotipo } from "@/components/Logo/Logotipo";
 import Image from "next/image";
@@ -6,11 +6,10 @@ import styled from "styled-components";
 import { Featured } from "./Featured";
 import { MenuHero } from "./MenuHero";
 
-interface HeroProps {
-
-}
+interface HeroProps {}
 
 const HeroContainer = styled.section`
+  margin-top: 70px;
   width: 80vw;
   height: 70vh;
   /* padding-top: 40px; */
@@ -18,7 +17,7 @@ const HeroContainer = styled.section`
   justify-content: space-between;
   /* align-items: center; */
   /* background-color: pink; */
-  
+
   @media (max-width: 1400px) {
     width: 90vw;
   }
@@ -27,13 +26,12 @@ const HeroContainer = styled.section`
     justify-content: space-evenly;
     padding: 0 20px;
   }
-
-`
-export function Hero(props : HeroProps){
-    return(
-      <HeroContainer>
-        <Featured/>
-        <MenuHero/>
-      </HeroContainer>
-    )
+`;
+export function Hero(props: HeroProps) {
+  return (
+    <HeroContainer>
+      <Featured />
+      <MenuHero />
+    </HeroContainer>
+  );
 }
