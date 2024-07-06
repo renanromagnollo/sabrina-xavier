@@ -1,36 +1,60 @@
-'use client'
+"use client";
 
-import { UserIcon } from "@/components/Icons/UserIcon"
-import styled from "styled-components"
+import { UserIcon } from "@/components/Icons/UserIcon";
+import styled from "styled-components";
+import { MenuTop } from "../Menus/MenuTop";
+import { useEffect, useState } from "react";
 
-interface HeaderProps {
-
+interface HeaderContainerProps {
+  opacity: boolean;
 }
 
-const HeaderContainer = styled.header`
-  /* display: block; */
-  /* width: 100%; */
+const HeaderContainer = styled.header<HeaderContainerProps>`
+  width: 100%;
   height: 38px;
-  background-color: ${({theme}) => theme.colors.primary.light};
+  background-color: ${({ theme }) => theme.colors.primary.light};
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 30px;
   margin-bottom: 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  opacity: ${({ opacity }) => (opacity ? 0.9 : "none")};
 
   svg {
-    color: ${({theme}) => theme.colors.primary.default};
+    color: ${({ theme }) => theme.colors.primary.default};
   }
 
   @media (max-width: 700px) {
     margin-bottom: 15px;
   }
+`;
 
-`
-export function Header(props : HeaderProps){
-    return(
-        <HeaderContainer>
-          <UserIcon/>
-        </HeaderContainer>
-    )
+export function Header() {
+  const [showTopMenu, setShowTopMenu] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = document.documentElement.scrollTop;
+      if (scrollTop >= 240 && !showTopMenu) {
+        setShowTopMenu(true);
+      } else if (scrollTop < 240 && showTopMenu) {
+        setShowTopMenu(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [showTopMenu]);
+
+  return (
+    <HeaderContainer opacity={showTopMenu}>
+      <MenuTop show={showTopMenu} />
+      <UserIcon />
+    </HeaderContainer>
+  );
 }
