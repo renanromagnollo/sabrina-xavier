@@ -4,6 +4,7 @@ import { UserIcon } from "@/components/Icons/UserIcon";
 import styled from "styled-components";
 import { MenuTop } from "../Menus/MenuTop";
 import { useEffect, useState } from "react";
+import { ButtonBurguer } from "../Buttons/ButtonBurguer";
 
 interface HeaderContainerProps {
   opacity: boolean;
@@ -57,6 +58,7 @@ export function Header() {
 
   return (
     <HeaderContainer opacity={showTopMenu}>
+      <ButtonBurguer />
       <MenuTop show={showTopMenu} />
       <UserIcon />
     </HeaderContainer>

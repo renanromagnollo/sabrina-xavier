@@ -26,7 +26,7 @@ interface showNavList {
 }
 
 const NavList = styled.nav<showNavList>`
-  /* display: flex; */
+  display: flex;
   width: 100%;
   display: flex;
   justify-content: center;

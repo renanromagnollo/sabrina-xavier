@@ -1,0 +1,77 @@
+import { useState } from "react";
+import styled from "styled-components";
+import { DefaultTheme } from "styled-components/dist/types";
+
+interface ButtonBurguerProps {
+  actived: boolean;
+}
+
+const COLOR_DEFAULT = ({ theme }: { theme: DefaultTheme }) =>
+  theme.colors.primary.dark;
+
+const ButtonArea = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 100%;
+  cursor: pointer;
+  visibility: hidden;
+
+  @media (max-width: 600px) {
+    visibility: visible;
+  }
+`;
+
+const Burguer = styled.span<ButtonBurguerProps>`
+  display: block;
+  width: inherit;
+  transition: 0.5s;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: inherit;
+    height: 2px;
+    background: ${COLOR_DEFAULT};
+    transition: 0.5s ease-in;
+  }
+
+  &::after {
+    transform: ${({ actived }) => (actived ? "rotate(135deg) " : "none")};
+    top: ${({ actived }) => (actived ? "-7px" : "0px")};
+  }
+  &::before {
+    transform: ${({ actived }) => (actived ? "rotate(-135deg) " : "none")};
+    top: ${({ actived }) => (actived ? "7px" : "0px")};
+  }
+`;
+
+const MainLine = styled.div<ButtonBurguerProps>`
+  width: ${({ actived }) => (actived ? "0px" : "inherit")};
+  height: 2px;
+  text-align: right;
+  background-color: ${({ actived }) =>
+    actived ? "transparent" : COLOR_DEFAULT};
+  transition: ${({ actived }) => (actived ? "0.3s ease-out" : "1s ease-in")};
+  margin: 5px 0;
+  margin-left: ${({ actived }) => (actived ? "50%" : "0")};
+`;
+
+export function ButtonBurguer() {
+  const [state, setState] = useState(false);
+
+  function toogleState() {
+    setState((prevState) => !prevState);
+  }
+  return (
+    <ButtonArea>
+      <Burguer actived={state} onClick={() => toogleState()}>
+        <MainLine actived={state} />
+      </Burguer>
+    </ButtonArea>
+  );
+}
