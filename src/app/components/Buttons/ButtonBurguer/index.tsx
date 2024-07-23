@@ -2,8 +2,12 @@ import { useState } from "react";
 import styled from "styled-components";
 import { DefaultTheme } from "styled-components/dist/types";
 
-interface ButtonBurguerProps {
+interface ButtonBurguerStyledProps {
   actived: boolean;
+}
+
+interface ButtonBurguerProps extends ButtonBurguerStyledProps {
+  setShowMenu: (state: any) => void;
 }
 
 const COLOR_DEFAULT = ({ theme }: { theme: DefaultTheme }) =>
@@ -24,7 +28,7 @@ const ButtonArea = styled.div`
   }
 `;
 
-const Burguer = styled.span<ButtonBurguerProps>`
+const Burguer = styled.span<ButtonBurguerStyledProps>`
   display: block;
   width: inherit;
   transition: 0.5s;
@@ -50,7 +54,7 @@ const Burguer = styled.span<ButtonBurguerProps>`
   }
 `;
 
-const MainLine = styled.div<ButtonBurguerProps>`
+const MainLine = styled.div<ButtonBurguerStyledProps>`
   width: ${({ actived }) => (actived ? "0px" : "inherit")};
   height: 2px;
   text-align: right;
@@ -61,16 +65,19 @@ const MainLine = styled.div<ButtonBurguerProps>`
   margin-left: ${({ actived }) => (actived ? "50%" : "0")};
 `;
 
-export function ButtonBurguer() {
-  const [state, setState] = useState(false);
+export function ButtonBurguer({ actived, setShowMenu }: ButtonBurguerProps) {
+  // const [state, setState] = useState(false);
 
-  function toogleState() {
-    setState((prevState) => !prevState);
-  }
+  // function toogleState() {
+  //   setShowMenu((prev: boolean) => !prev);
+  // }
   return (
     <ButtonArea>
-      <Burguer actived={state} onClick={() => toogleState()}>
-        <MainLine actived={state} />
+      <Burguer
+        actived={actived}
+        onClick={() => setShowMenu((prevState: any) => !prevState)}
+      >
+        <MainLine actived={actived} />
       </Burguer>
     </ButtonArea>
   );

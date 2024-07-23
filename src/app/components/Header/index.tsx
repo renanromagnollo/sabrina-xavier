@@ -15,7 +15,7 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
   height: 38px;
   background-color: ${({ theme }) => theme.colors.primary.light};
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 30px;
   margin-bottom: 30px;
@@ -35,16 +35,17 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
 `;
 
 export function Header() {
-  const [showTopMenu, setShowTopMenu] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       console.log(scrollTop);
-      if (scrollTop >= 240 && !showTopMenu) {
-        setShowTopMenu(true);
-      } else if (scrollTop < 240 && showTopMenu) {
-        setShowTopMenu(false);
+      console.log(typeof window.innerWidth);
+      if (scrollTop >= 240 && !showMenu && window.innerWidth > 600) {
+        setShowMenu(true);
+      } else if (scrollTop < 240 && showMenu) {
+        setShowMenu(false);
       }
     };
 
@@ -54,12 +55,12 @@ export function Header() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("touchmove", handleScroll);
     };
-  }, [showTopMenu]);
+  }, [showMenu]);
 
   return (
-    <HeaderContainer opacity={showTopMenu}>
-      <ButtonBurguer />
-      <MenuTop show={showTopMenu} />
+    <HeaderContainer opacity={showMenu}>
+      <ButtonBurguer actived={showMenu} setShowMenu={setShowMenu} />
+      <MenuTop show={showMenu} />
       <UserIcon />
     </HeaderContainer>
   );
