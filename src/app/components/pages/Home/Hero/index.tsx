@@ -3,8 +3,10 @@
 import { Logotipo } from "@/components/Logo/Logotipo";
 import Image from "next/image";
 import styled from "styled-components";
-import { Featured } from "./Featured";
+import { SabrinaXavier } from "./SabrinaXavier";
 import { MenuHero } from "./MenuHero";
+import { useState } from "react";
+import { ModalHero } from "./SabrinaXavier/ModalAboutMe";
 
 interface HeroProps {}
 
@@ -28,9 +30,10 @@ const HeroContainer = styled.section`
   }
 `;
 export function Hero(props: HeroProps) {
+  function openModal() {}
   return (
     <HeroContainer>
-      <Featured />
+      <SabrinaXavier />
       <MenuHero />
     </HeroContainer>
   );

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import GlobalStyle from '../styles/global'
+import GlobalStyle from "../styles/global";
 import StyledComponentsRegistry from "../../lib/registry";
 import Providers from "@/providers";
 import Analytics from "@/components/Analytics";
 import { Header } from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
+console.log(inter);
 
 export const metadata: Metadata = {
   title: "Sabrina Xavier",
@@ -21,15 +22,14 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-          {/* <StyledComponentsRegistry> */}
-        <Providers>
-            <GlobalStyle/>
-            <Header/>
+        <StyledComponentsRegistry>
+          <Providers>
+            <GlobalStyle />
+            <Header />
             {children}
-        </Providers>
-        <Analytics/>
-          {/* </StyledComponentsRegistry> */}
-
+          </Providers>
+          <Analytics />
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
