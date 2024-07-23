@@ -4,6 +4,7 @@ import { UserIcon } from "@/components/Icons/UserIcon";
 import styled from "styled-components";
 import { MenuTop } from "../Menus/MenuTop";
 import { useEffect, useState } from "react";
+import { ButtonBurguer } from "../Buttons/ButtonBurguer";
 
 interface HeaderContainerProps {
   opacity: boolean;
@@ -14,7 +15,7 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
   height: 38px;
   background-color: ${({ theme }) => theme.colors.primary.light};
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 0 30px;
   margin-bottom: 30px;
@@ -22,6 +23,7 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
   top: 0;
   z-index: 1000;
   opacity: ${({ opacity }) => (opacity ? 0.9 : "none")};
+  transition: opacity 1s ease;
 
   svg {
     color: ${({ theme }) => theme.colors.primary.default};
@@ -33,27 +35,32 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
 `;
 
 export function Header() {
-  const [showTopMenu, setShowTopMenu] = useState<boolean>(false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = document.documentElement.scrollTop;
-      if (scrollTop >= 240 && !showTopMenu) {
-        setShowTopMenu(true);
-      } else if (scrollTop < 240 && showTopMenu) {
-        setShowTopMenu(false);
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      console.log(scrollTop);
+      console.log(typeof window.innerWidth);
+      if (scrollTop >= 240 && !showMenu && window.innerWidth > 600) {
+        setShowMenu(true);
+      } else if (scrollTop < 240 && showMenu) {
+        setShowMenu(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("touchmove", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("touchmove", handleScroll);
     };
-  }, [showTopMenu]);
+  }, [showMenu]);
 
   return (
-    <HeaderContainer opacity={showTopMenu}>
-      <MenuTop show={showTopMenu} />
+    <HeaderContainer opacity={showMenu}>
+      <ButtonBurguer actived={showMenu} setShowMenu={setShowMenu} />
+      <MenuTop show={showMenu} />
       <UserIcon />
     </HeaderContainer>
   );
