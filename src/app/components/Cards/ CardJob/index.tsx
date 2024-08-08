@@ -1,15 +1,13 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { cleanText } from "../../../../../../utils/cleanText";
 import { InstagramPostProps } from "@/types/post-instagram-types";
+import { cleanText } from "@/utils/cleanText";
 
 interface CardJobProps {
   width?: number;
   height?: number;
-  // src?: string
   rotate?: string;
   post: InstagramPostProps;
-  // text?: string
   clicked: (post: InstagramPostProps) => void;
 }
 
@@ -26,36 +24,24 @@ const CardBox = styled.div<CardBoxProps>`
   transform: rotate(${(props) => props.rotate});
   justify-content: flex-start;
   align-items: center;
-  /* border: 3px solid ${({ theme }) => theme.colors.primary.default}; */
   background-color: ${({ theme }) => theme.colors.light.default};
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
 `;
 const ImgCard = styled.div`
   width: 100%;
   height: 85%;
-  /* margin: 10px; */
-  /* flex-grow: 2; */
   overflow: hidden;
   writing-mode: vertical-rl;
-  /* img {
-        image-resolution: from-image;
-
-    } */
-  /* image-resolution: 300dpi;
-    image-resolution: from-image 300dpi;
-    image-resolution: 300dpi snap; */
 `;
 
 const TextCard = styled.div`
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   padding: 10px;
   width: 100%;
   height: 25%;
   color: ${({ theme }) => theme.colors.primary.dark};
-  /* background-color: blue; */
   h2 {
     font-size: 2.6rem;
     line-height: 100%;
@@ -66,9 +52,6 @@ const TextCard = styled.div`
     -webkit-line-clamp: 2;
     display: -webkit-box;
     text-align: center;
-
-    /* white-space: nowrap; */
-    /* text-overflow: ellipsis; */
   }
 `;
 
@@ -83,13 +66,7 @@ export function CardJob({
   post,
   clicked,
 }: CardJobProps) {
-  // console.log('src: ', src)
-  // const wordsOfText = text?.split(' ')
-  // console.log(wordsOfText?.filter(word => word.includes('@')))
-  // const clientInstagram = wordsOfText?.filter(word => word.includes('@'))
   const clientInstagram = post.caption?.match(/@[\.a-z0-9_-]{2,}/g);
-  // const regexHashsNArrobas = /(@[\.a-z0-9_-]{2,})|(#.\S{2,})/g
-  // console.log(filteringHashsNArrobas)
   const cleanedText = cleanText(post.caption);
   return (
     post && (
