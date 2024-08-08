@@ -10,35 +10,37 @@ interface CarrouselProps {
 }
 
 const Container = styled.div`
-  /* position: relative; */
   width: 100%;
   overflow: hidden;
-  /* margin: 20px 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; */
-  /* background-color: darkmagenta; */
 `;
 
-const Gallery = styled.div`
-  /* position: relative; */
-  width: 80vw;
-  padding: 30px 30px;
+const Gallery = styled.div<{ scrollX: number }>`
+  width: 100%;
+  margin: 30px 30px;
   display: flex;
-  transition: transform 0.5s ease;
-  /* gap: 100px;
-  flex-wrap: nowrap;
-  margin-top: 10px;
-  justify-content: space-evenly; */
+  transition: 0.5s ease;
+  gap: 80px;
+  margin-left: ${({ scrollX }) => `${scrollX}px`};
+`;
+
+const ButtonsCarousel = styled.div`
+  width: 100%;
+  /* height: 200px; */
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
 `;
 export function Carrousel({ posts }: CarrouselProps) {
   const [modalOpened, setModalOpened] = useState(false);
   const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(
     null
   );
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransition, setIsTransition] = useState(false);
+  // const [isTransition, setIsTransition] = useState(false);
   const [displayItems, setDisplayItems] = useState([]);
+  const [scrollX, setScrollX] = useState(30);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -54,51 +56,57 @@ export function Carrousel({ posts }: CarrouselProps) {
     }
   }, [posts]);
 
-  useEffect(() => {
-    if (isTransition) {
-      function handleTransitionEnd() {
-        if (currentIndex === 0) {
-          wrapperRef.current.style.transition = "none";
-          setCurrentIndex(displayItems.length - 2);
-        } else if (currentIndex === displayItems.length - 1) {
-          wrapperRef.current.style.transition = "none";
-          setCurrentIndex(1);
-        }
-        setIsTransition(false);
-      }
-      const wrapperNode = wrapperRef.current;
-      wrapperNode.addEventListener("transitionend", handleTransitionEnd);
+  // useEffect(() => {
+  //   if (isTransition) {
+  //     function handleTransitionEnd() {
+  //       if (currentIndex === 0) {
+  //         wrapperRef.current.style.transition = "none";
+  //         setCurrentIndex(displayItems.length - 2);
+  //       } else if (currentIndex === displayItems.length - 1) {
+  //         wrapperRef.current.style.transition = "none";
+  //         setCurrentIndex(1);
+  //       }
+  //       setIsTransition(false);
+  //     }
+  //     const wrapperNode = wrapperRef.current;
+  //     wrapperNode.addEventListener("transitionend", handleTransitionEnd);
 
-      return () => {
-        wrapperNode.removeEventListener("transitionend", handleTransitionEnd);
-      };
-    }
-  }, [isTransition, currentIndex, displayItems.length]);
+  //     return () => {
+  //       wrapperNode.removeEventListener("transitionend", handleTransitionEnd);
+  //     };
+  //   }
+  // }, [isTransition, displayItems.length]);
+
+  // useEffect(() => {
+  //   if (isTransition) {
+  //     function handleTransitionEnd() {
+  //       // setScrollX(wrapperRef.current?.style.marginLeft);
+  //       setIsTransition(false);
+  //     }
+  //     const wrapperNode = wrapperRef.current;
+  //     wrapperNode.addEventListener("transitionend", handleTransitionEnd);
+
+  //     return () => {
+  //       wrapperNode.removeEventListener("transitionend", handleTransitionEnd);
+  //     };
+  //   }
+  // }, [isTransition]);
 
   function nextSlide() {
-    console.log(currentIndex);
-    console.log(isTransition);
-    console.log(wrapperRef?.current?.style);
-    if (!isTransition && wrapperRef.current) {
-      setIsTransition(true);
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-      wrapperRef.current.style.transition = "transform 0.5s ease";
-      wrapperRef.current.style.transform = `translateX(-${
-        (currentIndex + 1) * 100
-      }%)`;
+    if (wrapperRef.current) {
+      setScrollX(
+        -(wrapperRef.current?.scrollWidth - wrapperRef.current?.clientWidth) -
+          30
+      );
     }
   }
   function prevSlide() {
-    console.log(currentIndex);
-    console.log("div pressed");
-    if (!isTransition && wrapperRef.current) {
-      setIsTransition(true);
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-      wrapperRef.current.style.transition = "transform 0.5s ease";
-      wrapperRef.current.style.transform = `translateX(-${
-        (currentIndex - 1) * 100
-      }%)`;
-      console.log(wrapperRef.current.style.left);
+    if (wrapperRef.current) {
+      let x = +(
+        wrapperRef.current?.clientWidth / 2 -
+        (wrapperRef.current?.scrollWidth - wrapperRef.current?.clientWidth)
+      );
+      setScrollX(x > 0 ? 30 : x);
     }
   }
 
@@ -106,10 +114,6 @@ export function Carrousel({ posts }: CarrouselProps) {
     setClickedImage(post);
     setModalOpened(true);
   }
-
-  //   const galleryPhotos = displayItems?.filter(
-  //     (post) => post.media_type !== "VIDEO" && post.caption.includes("@")
-  //   );
   return (
     <>
       <ModalInsta
@@ -119,10 +123,7 @@ export function Carrousel({ posts }: CarrouselProps) {
         closeModal={(close) => setModalOpened(close)}
       />
       <Container>
-        <div onClick={prevSlide}>
-          <ArrowRounded direction="left" />
-        </div>
-        <Gallery ref={wrapperRef}>
+        <Gallery ref={wrapperRef} scrollX={scrollX}>
           {displayItems?.map((post, i) => {
             if (post?.caption?.includes("@")) {
               return (
@@ -136,9 +137,14 @@ export function Carrousel({ posts }: CarrouselProps) {
             }
           })}
         </Gallery>
-        <div onClick={nextSlide}>
-          <ArrowRounded />
-        </div>
+        <ButtonsCarousel>
+          <div onClick={prevSlide}>
+            <ArrowRounded direction="left" />
+          </div>
+          <div onClick={nextSlide}>
+            <ArrowRounded />
+          </div>
+        </ButtonsCarousel>
       </Container>
     </>
   );

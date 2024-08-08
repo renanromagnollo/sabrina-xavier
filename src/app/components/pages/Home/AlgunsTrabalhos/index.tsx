@@ -9,6 +9,7 @@ import { InstagramPostProps } from "@/types/post-instagram-types";
 import { getFakeData } from "@/utils/fakeServer";
 import { ContentCards } from "./ContentCards";
 import { Carrousel } from "@/components/Carrousel";
+import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 
 interface AlgunsTrabalhosProps {}
 
@@ -41,16 +42,6 @@ const ContentJobs = styled.div`
   /* width: 100%; */
 `;
 
-const Carroussel = styled.div`
-  /* position: relative; */
-  /* width: 100vw; */
-  margin: 20px 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* background-color: darkmagenta; */
-`;
-
 const TitleSection = styled.div`
   /* width: 100vw; */
   margin: 0 20px;
@@ -63,6 +54,7 @@ export function AlgunsTrabalhos(props: AlgunsTrabalhosProps) {
   const rotate = ["-4deg", "3deg", "-6deg"];
 
   const { instagramPosts } = useContext(DataContext);
+  // const instagramPosts = [];
 
   useEffect(() => {
     console.log("posts uped: ", instagramPosts);
@@ -71,11 +63,29 @@ export function AlgunsTrabalhos(props: AlgunsTrabalhosProps) {
   return (
     <ContainerTrabalhos>
       <BGContainer />
+
       <ContentJobs>
         <TitleSection>
           <h2>Alguns Trabalhos</h2>
         </TitleSection>
-        <Carrousel posts={instagramPosts} />
+        {instagramPosts.length === 0 ? (
+          <div
+            style={{
+              height: "400px",
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              position: "relative",
+              zIndex: 20000,
+            }}
+          >
+            <LoadingCircle />
+          </div>
+        ) : (
+          <Carrousel posts={instagramPosts} />
+        )}
       </ContentJobs>
     </ContainerTrabalhos>
   );
