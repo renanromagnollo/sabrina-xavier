@@ -11,6 +11,7 @@ interface CarrouselProps {
 
 const Container = styled.div`
   width: 100%;
+  height: 500px;
   overflow: hidden;
 `;
 
@@ -21,6 +22,16 @@ const Gallery = styled.div<{ scrollX: number }>`
   transition: 0.5s ease;
   gap: 80px;
   margin-left: ${({ scrollX }) => `${scrollX}px`};
+  animation: entrance 1s ease-out;
+
+  @keyframes entrance {
+    0% {
+      margin-left: 100vw;
+    }
+    100% {
+      margin-left: 30px;
+    }
+  }
 `;
 
 const ButtonsCarousel = styled.div`
@@ -42,19 +53,32 @@ export function Carrousel({ posts }: CarrouselProps) {
   const [displayItems, setDisplayItems] = useState([]);
   const [scrollX, setScrollX] = useState(30);
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const wrapperNode = wrapperRef.current;
 
   useEffect(() => {
     if (posts.length > 0) {
       const galleryPhotos = posts?.filter(
         (post) => post.media_type !== "VIDEO"
       );
-      setDisplayItems([
-        galleryPhotos[galleryPhotos.length - 1],
-        ...galleryPhotos,
-        galleryPhotos[0],
-      ]);
+      setDisplayItems([...galleryPhotos, ...galleryPhotos]);
     }
-  }, [posts]);
+
+    // wrapperNode?.addEventListener("transitionstart", () =>
+    //   setIsTransition(true)
+    // );
+    // wrapperNode?.addEventListener("transitionend", () =>
+    //   setIsTransition(false)
+    // );
+
+    // return () => {
+    //   wrapperNode?.removeEventListener("transitionstart", () =>
+    //     setIsTransition(true)
+    //   );
+    //   wrapperNode?.removeEventListener("transitionstart", () =>
+    //     setIsTransition(false)
+    //   );
+    // };
+  }, [posts, wrapperNode]);
 
   // useEffect(() => {
   //   if (isTransition) {
@@ -92,21 +116,27 @@ export function Carrousel({ posts }: CarrouselProps) {
   //   }
   // }, [isTransition]);
 
+  useEffect(() => {
+    console.log(window.innerWidth);
+    // console.log(wrapperRef.current?.clientWidth);
+    console.log(wrapperRef.current?.scrollWidth);
+    console.log(wrapperRef.current?.style.marginLeft);
+    console.log(scrollX);
+  }, [scrollX]);
+
   function nextSlide() {
     if (wrapperRef.current) {
-      setScrollX(
-        -(wrapperRef.current?.scrollWidth - wrapperRef.current?.clientWidth) -
-          30
-      );
+      let x = scrollX - window.innerWidth / 2;
+      if (window.innerWidth - wrapperRef.current.scrollWidth > x) {
+        x = window.innerWidth - wrapperRef.current.scrollWidth - 30;
+      }
+      setScrollX(x);
     }
   }
   function prevSlide() {
     if (wrapperRef.current) {
-      let x = +(
-        wrapperRef.current?.clientWidth / 2 -
-        (wrapperRef.current?.scrollWidth - wrapperRef.current?.clientWidth)
-      );
-      setScrollX(x > 0 ? 30 : x);
+      let x = scrollX + window.innerWidth / 2;
+      setScrollX(x > 30 ? 30 : x);
     }
   }
 
@@ -123,7 +153,11 @@ export function Carrousel({ posts }: CarrouselProps) {
         closeModal={(close) => setModalOpened(close)}
       />
       <Container>
-        <Gallery ref={wrapperRef} scrollX={scrollX}>
+        <Gallery
+          ref={wrapperRef}
+          scrollX={scrollX}
+          style={{ marginLeft: `${scrollX}px` }}
+        >
           {displayItems?.map((post, i) => {
             if (post?.caption?.includes("@")) {
               return (
