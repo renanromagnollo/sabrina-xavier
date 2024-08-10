@@ -1,9 +1,10 @@
 import { ModalInsta } from "@/app/components/ModalInsta";
 import { InstagramPostProps } from "@/types/post-instagram-types";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { ArrowRounded } from "../Icons/ArrowRounded";
 import { CardJob } from "@/app/components/Cards/ CardJob";
+import { ModalInstagramContext } from "@/context/modal-instagram-context";
 
 interface CarrouselProps {
   posts: InstagramPostProps[];
@@ -45,11 +46,12 @@ const ButtonsCarousel = styled.div`
   /* background-color: blue; */
 `;
 export function Carrousel({ posts }: CarrouselProps) {
-  const [modalOpened, setModalOpened] = useState(false);
-  const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(
-    null
-  );
+  // const [modalOpened, setModalOpened] = useState(false);
+  // const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(
+  //   null
+  // );
   // const [isTransition, setIsTransition] = useState(false);
+  const { setModalItem } = useContext(ModalInstagramContext);
   const [displayItems, setDisplayItems] = useState([]);
   const [scrollX, setScrollX] = useState(30);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -140,18 +142,12 @@ export function Carrousel({ posts }: CarrouselProps) {
     }
   }
 
-  function showOnModal(post: InstagramPostProps) {
-    setClickedImage(post);
-    setModalOpened(true);
-  }
+  // function showOnModal(post: InstagramPostProps) {
+  //   setClickedImage(post);
+  //   setModalOpened(true);
+  // }
   return (
     <>
-      <ModalInsta
-        key={clickedImage?.id}
-        isOpen={modalOpened}
-        post={clickedImage}
-        closeModal={(close) => setModalOpened(close)}
-      />
       <Container>
         <Gallery
           ref={wrapperRef}
@@ -162,7 +158,7 @@ export function Carrousel({ posts }: CarrouselProps) {
             if (post?.caption?.includes("@")) {
               return (
                 <CardJob
-                  clicked={(post) => showOnModal(post)}
+                  clicked={(post) => setModalItem(post)}
                   key={i}
                   rotate={""}
                   post={post}

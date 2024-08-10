@@ -18,6 +18,7 @@ import { Dicas } from "./components/pages/Home/Dicas";
 import { MakeUp } from "./components/pages/Home/MakeUp";
 import { HygraphHomeProps } from "@/types/hygraph-types";
 import { getHygraphPosts } from "@/utils/getHygraphPosts";
+import { ModalInsta } from "./components/ModalInsta";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
@@ -63,6 +64,7 @@ export default function Home() {
         alignItems: "center",
       }}
     >
+      <ModalInsta />
       <Hero />
       <AlgunsTrabalhos />
       <Studio />
