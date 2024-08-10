@@ -5,6 +5,7 @@ import StyledComponentsRegistry from "../../lib/registry";
 import Providers from "@/providers";
 import Analytics from "@/components/Analytics";
 import { Header } from "./components/Header";
+import { ModalInsta } from "./components/ModalInsta";
 
 const inter = Inter({ subsets: ["latin"] });
 console.log(inter);
@@ -26,6 +27,7 @@ export default function RootLayout({
           <Providers>
             <GlobalStyle />
             <Header />
+
             {children}
           </Providers>
           <Analytics />

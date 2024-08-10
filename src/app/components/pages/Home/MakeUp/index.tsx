@@ -4,6 +4,7 @@ import { useContext, useEffect, useRef } from "react";
 import { DataContext } from "@/context/data-context";
 import { randomInstaPosts } from "@/utils/randomInstaPosts";
 import { useObserver } from "@/hooks/useObserver";
+import { TitleSection } from "@/app/components/TitleSection";
 
 interface MakeUpProps {}
 
@@ -13,6 +14,8 @@ const SectionArea = styled.section`
   justify-content: center;
   align-items: center;
   margin: 40px 0;
+  padding: 50px 0;
+  background-color: ${({ theme }) => theme.colors.primary.default};
 `;
 
 const Container = styled.div`
@@ -23,13 +26,14 @@ const Container = styled.div`
 `;
 const TextArea = styled.div`
   width: 50%;
-  color: ${({ theme }) => theme.colors.primary.default};
+  color: ${({ theme }) => theme.colors.light.default};
+  text-shadow: 2px 2px 1px ${({ theme }) => theme.colors.primary.dark};
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 70px;
+    gap: 40px;
 
     * {
       animation: show 1s ease-out forwards;
@@ -37,7 +41,7 @@ const TextArea = styled.div`
   }
 
   h3 {
-    color: ${({ theme }) => theme.colors.secundary.default};
+    color: ${({ theme }) => theme.colors.light.default};
   }
 
   @keyframes show {
@@ -75,12 +79,12 @@ export function MakeUp(props: MakeUpProps) {
       <Container>
         <TextArea ref={textRef}>
           {isVisibled && (
-            <div>
-              <h2>Make Up</h2>
-              <h1>
+            <div style={{}}>
+              <TitleSection title="Make Up" />
+              <h3>
                 "Realce sua beleza natural com maquiagens e sobrancelhas
                 perfeitas para você."
-              </h1>
+              </h3>
             </div>
           )}
         </TextArea>

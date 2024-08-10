@@ -1,5 +1,5 @@
 import { InstagramPostProps } from "@/types/post-instagram-types";
-import { ReactNode, useState, createContext } from "react";
+import { ReactNode, useState, createContext, useEffect } from "react";
 
 interface ModalProps {
   modalItem: InstagramPostProps | {};
@@ -22,13 +22,20 @@ function ModalProvider({ children }: { children: ReactNode }) {
     });
   }
 
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
+
   return (
     <ModalInstagramContext.Provider
       value={{
         modalItem: state.modalItem,
-        setModalItem: (item: InstagramPostProps) => updateState("item", item),
+        setModalItem: (item: InstagramPostProps) =>
+          updateState("modalItem", item),
       }}
-    ></ModalInstagramContext.Provider>
+    >
+      {children}
+    </ModalInstagramContext.Provider>
   );
 }
 

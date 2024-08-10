@@ -1,5 +1,6 @@
 "use client";
 
+import { TitleSection } from "@/app/components/TitleSection";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { DataContext } from "@/context/data-context";
 import { useObserver } from "@/hooks/useObserver";
@@ -18,6 +19,7 @@ const Container = styled.section`
   padding: 60px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 30px;
   color: ${({ theme }) => theme.colors.primary.dark};
   background-color: ${({ theme }) => theme.colors.light.dark};
@@ -30,6 +32,7 @@ const TextsArea = styled.div`
   justify-content: space-between;
   padding: 30px 0;
   animation: enter 1.5s ease-out forwards;
+  gap: 10px;
 
   p {
     text-align: justify;
@@ -95,7 +98,7 @@ export function Studio(props: StudioProps) {
               />
             </ImageArea>
             <TextsArea>
-              <h2>{aboutStudioHygraph?.title}</h2>
+              <TitleSection title={aboutStudioHygraph?.title} />
               <RichTextHygraph content={aboutStudioHygraph?.text.raw} />
             </TextsArea>
           </>

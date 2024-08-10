@@ -2,6 +2,7 @@ import { HygraphHairStyleProps } from "@/types/hygraph-types";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import Image from "next/image";
 import styled from "styled-components";
+import { ButtonUnselected } from "../../Buttons/ButtonUnselected";
 
 interface HairStyleCardProps {
   item: HygraphHairStyleProps;
@@ -50,11 +51,15 @@ const Bg = styled.div`
   z-index: 1;
   width: 100%;
   height: 80%;
+  border-radius: 5px;
   background-color: ${({ theme }) => theme.colors.light.dark};
+  box-shadow: 2px 2px 3px 1px ${({ theme }) => theme.colors.dark.default};
   bottom: 0;
 `;
 
 const ImageArea = styled.div`
+  width: 250px;
+  height: 300px;
   margin-top: -10;
   animation: mount 1s ease-out forwards;
 
@@ -67,6 +72,10 @@ const ImageArea = styled.div`
     }
   }
 `;
+
+const IntroText = styled.h6`
+  text-align: center;
+`;
 export function HairStyleCard({ item }: HairStyleCardProps) {
   return (
     <BoxCard>
@@ -74,16 +83,16 @@ export function HairStyleCard({ item }: HairStyleCardProps) {
         <ImageArea>
           <Image
             alt="hair-style-image"
-            width={250}
-            height={250}
+            width={300}
+            height={300}
             style={{ objectFit: "cover" }}
             src={item.image.url ?? `http://picsum.photos//250/250`}
           />
         </ImageArea>
         <h3>{item.title ?? "Title"}</h3>
         {/* <h5><RichTextHygraph content={item.text.raw}/></h5> */}
-        <h5>{item.introText}</h5>
-        <button>Saiba mais</button>
+        <IntroText>{item.introText}</IntroText>
+        <ButtonUnselected>Saiba mais</ButtonUnselected>
       </Content>
       <Bg />
     </BoxCard>

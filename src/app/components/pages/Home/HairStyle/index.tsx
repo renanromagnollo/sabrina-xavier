@@ -1,4 +1,5 @@
 import { HairStyleCard } from "@/app/components/Cards/HairStyleCard";
+import { TitleSection } from "@/app/components/TitleSection";
 import { LoadingCard } from "@/components/Loadings/LoadingCard";
 import { DataContext } from "@/context/data-context";
 import { HygraphHairStyleProps, HygraphHomeProps } from "@/types/hygraph-types";
@@ -8,10 +9,13 @@ import styled from "styled-components";
 const SectionArea = styled.section`
   width: 90vw;
   display: flex;
+  padding-top: 30px;
+  padding-bottom: 50px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${({ theme }) => theme.colors.primary.dark};
+  color: ${({ theme }) => theme.colors.light.default};
+  background-color: ${({ theme }) => theme.colors.dark.light};
   /* justify-content: center; */
 `;
 const ContainerCards = styled.div`
@@ -29,7 +33,10 @@ export function HairStyle() {
   const hairStyleServices: HygraphHairStyleProps[] = hygraphHome.hairStyles;
   return (
     <SectionArea>
-      <h2>Hair Style</h2>
+      <TitleSection
+        title="Hair Style"
+        subtitle="Os melhores tratamentos para o seu cabelo"
+      />
       <ContainerCards>
         {!hairStyleServices ? (
           <>
