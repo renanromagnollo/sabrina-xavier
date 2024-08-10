@@ -38,6 +38,7 @@ const Container = styled.section`
   /* opacity: 0.9; */
   overflow-y: scroll;
   box-shadow: 0 0 30px 0 ${({ theme }) => theme.colors.primary.light};
+
   /* overflow: scroll; */
 `;
 

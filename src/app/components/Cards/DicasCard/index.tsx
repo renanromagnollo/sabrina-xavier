@@ -13,7 +13,7 @@ interface DicasCardProps {
 
 const CardBox = styled.div`
   width: 290px;
-  /* height: 330px; */
+  height: 330px;
   overflow: hidden;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.light.default};
@@ -76,7 +76,7 @@ const TagBG = styled.div`
   color: ${({ theme }) => theme.colors.light.default};
 `;
 
-const Title = styled.h5`
+const Title = styled.h6`
   color: ${({ theme }) => theme.colors.secundary.dark};
   text-align: center;
 `;

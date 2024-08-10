@@ -13,7 +13,7 @@ interface StudioProps {}
 
 const Container = styled.section`
   width: 100vw;
-  height: 500px;
+  /* height: 500px; */
   margin: 40px 0;
   padding: 60px;
   display: flex;
@@ -71,36 +71,7 @@ export function Studio(props: StudioProps) {
   useEffect(() => {
     setElement(elementRef);
   }, [elementRef, setElement]);
-  // const [isVisibled, setIsVisibled] = useState(false);
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       if (entry.intersectionRatio === 1) {
-  //         setIsVisibled(true);
-  //       } else if (entry.intersectionRatio > 0) {
-  //         setIsVisibled(true);
-  //       } else {
-  //         setIsVisibled(false);
-  //       }
-  //     },
-  //     {
-  //       root: null,
-  //       rootMargin: "0px",
-  //       threshold: [0, 0.5, 1],
-  //     }
-  //   );
-
-  //   if (elementRef.current) {
-  //     observer.observe(elementRef.current);
-  //   }
-
-  //   return () => {
-  //     if (elementRef.current) {
-  //       observer.unobserve(elementRef.current);
-  //     }
-  //   };
-  // }, []);
   return (
     <Container ref={elementRef}>
       {!aboutStudioHygraph ? (
