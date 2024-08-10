@@ -2,6 +2,7 @@
 
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { DataContext } from "@/context/data-context";
+import { useObserver } from "@/hooks/useObserver";
 import { HygraphAboutStudioProps } from "@/types/hygraph-types";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import Image from "next/image";
@@ -64,37 +65,42 @@ export function Studio(props: StudioProps) {
   const { hygraphHome } = useContext(DataContext);
   const aboutStudioHygraph: HygraphAboutStudioProps = hygraphHome?.aboutStudio;
 
-  const elementRef = useRef(null);
-  const [isVisibled, setIsVisibled] = useState(false);
+  const elementRef = useRef<HTMLElement>(null);
+  const { isVisibled, setElement } = useObserver();
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.intersectionRatio === 1) {
-          setIsVisibled(true);
-        } else if (entry.intersectionRatio > 0) {
-          setIsVisibled(true);
-        } else {
-          setIsVisibled(false);
-        }
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: [0, 0.5, 1],
-      }
-    );
+    setElement(elementRef);
+  }, [elementRef, setElement]);
+  // const [isVisibled, setIsVisibled] = useState(false);
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       if (entry.intersectionRatio === 1) {
+  //         setIsVisibled(true);
+  //       } else if (entry.intersectionRatio > 0) {
+  //         setIsVisibled(true);
+  //       } else {
+  //         setIsVisibled(false);
+  //       }
+  //     },
+  //     {
+  //       root: null,
+  //       rootMargin: "0px",
+  //       threshold: [0, 0.5, 1],
+  //     }
+  //   );
 
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
-    };
-  }, []);
+  //   if (elementRef.current) {
+  //     observer.observe(elementRef.current);
+  //   }
+
+  //   return () => {
+  //     if (elementRef.current) {
+  //       observer.unobserve(elementRef.current);
+  //     }
+  //   };
+  // }, []);
   return (
     <Container ref={elementRef}>
       {!aboutStudioHygraph ? (
