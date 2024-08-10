@@ -55,7 +55,7 @@ export function Dicas(props: DicasProps) {
     <SectionArea>
       <TitleSection>
         <hr />
-        <h3>Dicas</h3>
+        <h2>Dicas</h2>
         <hr />
       </TitleSection>
       <Container>

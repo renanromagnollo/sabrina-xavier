@@ -51,7 +51,7 @@ export function MakeUp(props: MakeUpProps) {
     <SectionArea>
       <Container>
         <TextArea>
-          <h3>Make Up</h3>
+          <h2>Make Up</h2>
           <h1>
             "Realce sua beleza natural com maquiagens e sobrancelhas perfeitas
             para você."

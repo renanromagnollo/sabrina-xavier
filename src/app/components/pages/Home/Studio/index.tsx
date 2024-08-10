@@ -5,7 +5,7 @@ import { DataContext } from "@/context/data-context";
 import { HygraphAboutStudioProps } from "@/types/hygraph-types";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 interface StudioProps {}
@@ -18,7 +18,7 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   gap: 30px;
-  color: ${({ theme }) => theme.colors.dark.light};
+  color: ${({ theme }) => theme.colors.primary.dark};
   background-color: ${({ theme }) => theme.colors.light.dark};
 `;
 
@@ -62,36 +62,67 @@ const ImageArea = styled.div`
 `;
 export function Studio(props: StudioProps) {
   const { hygraphHome } = useContext(DataContext);
-
   const aboutStudioHygraph: HygraphAboutStudioProps = hygraphHome?.aboutStudio;
+
+  const elementRef = useRef(null);
+  const [isVisibled, setIsVisibled] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.intersectionRatio === 1) {
+          setIsVisibled(true);
+        } else if (entry.intersectionRatio > 0) {
+          setIsVisibled(true);
+        } else {
+          setIsVisibled(false);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: [0, 0.5, 1],
+      }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      if (elementRef.current) {
+        observer.unobserve(elementRef.current);
+      }
+    };
+  }, []);
   return (
-    <Container>
+    <Container ref={elementRef}>
       {!aboutStudioHygraph ? (
         <LoadingCircle />
       ) : (
-        <>
-          <ImageArea>
-            <Image
-              src={
-                aboutStudioHygraph?.imageMain.url ??
-                `http://picsum.photos//${572}/${296}`
-              }
-              alt="studio-image"
-              width={572}
-              height={296}
-              sizes="100%"
-              style={{ objectFit: "cover" }}
-              priority
-              unoptimized
-            />
-          </ImageArea>
-          <TextsArea>
-            <h2>{aboutStudioHygraph?.title}</h2>
-            <p>
+        isVisibled && (
+          <>
+            <ImageArea>
+              <Image
+                src={
+                  aboutStudioHygraph?.imageMain.url ??
+                  `http://picsum.photos//${572}/${296}`
+                }
+                alt="studio-image"
+                width={572}
+                height={296}
+                sizes="100%"
+                style={{ objectFit: "cover" }}
+                priority
+                unoptimized
+              />
+            </ImageArea>
+            <TextsArea>
+              <h2>{aboutStudioHygraph?.title}</h2>
               <RichTextHygraph content={aboutStudioHygraph?.text.raw} />
-            </p>
-          </TextsArea>
-        </>
+            </TextsArea>
+          </>
+        )
       )}
     </Container>
   );
