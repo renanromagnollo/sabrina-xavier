@@ -67,9 +67,9 @@ export default function Home() {
       <ModalInsta />
       <Hero />
       <AlgunsTrabalhos />
-      <Studio />
-      <HairStyle />
       <MakeUp />
+      <HairStyle />
+      <Studio />
       <Instagram />
       <Dicas />
       <Products />

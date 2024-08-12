@@ -10,6 +10,7 @@ import { getFakeData } from "@/utils/fakeServer";
 import { ContentCards } from "./ContentCards";
 import { Carrousel } from "@/components/Carrousel";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
+import { TitleSection } from "@/app/components/TitleSection";
 
 interface AlgunsTrabalhosProps {}
 
@@ -33,7 +34,10 @@ const BGContainer = styled.div`
 
 const ContentJobs = styled.div`
   position: relative;
-  /* width: 100vw; */
+  /* background-color: blue; */
+  /* display: flex; */
+  /* justify-content: center; */
+  width: 100vw;
   height: 100%;
   margin-top: 10px;
   /* top: 0; */
@@ -42,11 +46,12 @@ const ContentJobs = styled.div`
   /* width: 100%; */
 `;
 
-const TitleSection = styled.div`
-  /* width: 100vw; */
-  margin: 0 20px;
+const TitleContainer = styled.div`
+  width: 100%;
+  /* margin: 0 20px; */
   display: flex;
   justify-content: center;
+  align-items: center;
   color: ${({ theme }) => theme.colors.primary.dark};
 `;
 
@@ -65,9 +70,12 @@ export function AlgunsTrabalhos(props: AlgunsTrabalhosProps) {
       <BGContainer />
 
       <ContentJobs>
-        <TitleSection>
-          <h2>Alguns Trabalhos</h2>
-        </TitleSection>
+        <TitleContainer>
+          <TitleSection
+            title="Alguns Trabalhos"
+            subtitle="Veja o resultado de alguns trabalhos realizados"
+          />
+        </TitleContainer>
         {instagramPosts.length === 0 ? (
           <div
             style={{
