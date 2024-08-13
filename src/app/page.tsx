@@ -19,6 +19,7 @@ import { MakeUp } from "./components/pages/Home/MakeUp";
 import { HygraphHomeProps } from "@/types/hygraph-types";
 import { getHygraphPosts } from "@/utils/getHygraphPosts";
 import { ModalInsta } from "./components/ModalInsta";
+import { Address } from "@/components/Address";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
@@ -72,7 +73,9 @@ export default function Home() {
       <Studio />
       <Instagram />
       <Dicas />
-      <Products />
+      <Address />
+
+      {/* <Products /> */}
       {/* <UnderConstruction/> */}
     </div>
     // </ThemeProvider>

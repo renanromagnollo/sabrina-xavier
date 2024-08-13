@@ -6,6 +6,7 @@ import Providers from "@/providers";
 import Analytics from "@/components/Analytics";
 import { Header } from "./components/Header";
 import { ModalInsta } from "./components/ModalInsta";
+import { Address } from "@/components/Address";
 
 const inter = Inter({ subsets: ["latin"] });
 console.log(inter);
