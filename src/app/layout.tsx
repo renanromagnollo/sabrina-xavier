@@ -7,6 +7,9 @@ import Analytics from "@/components/Analytics";
 import { Header } from "./components/Header";
 import { ModalInsta } from "./components/ModalInsta";
 import { Address } from "@/components/Address";
+// import { Footer } from "@/components/Footer";
+import dynamic from "next/dynamic";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 console.log(inter);
@@ -28,8 +31,8 @@ export default function RootLayout({
           <Providers>
             <GlobalStyle />
             <Header />
-
             {children}
+            <Footer />
           </Providers>
           <Analytics />
         </StyledComponentsRegistry>

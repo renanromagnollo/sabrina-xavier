@@ -3,6 +3,7 @@
 import { DicasCard } from "@/app/components/Cards/DicasCard";
 import { ProductCard } from "@/app/components/Cards/ProductCard";
 import { Products } from "@/app/components/Products";
+import { TitleSection } from "@/app/components/TitleSection";
 import { Dicas } from "@/app/components/pages/Home/Dicas";
 import { DataContext } from "@/context/data-context";
 import { HygraphPostProps, HygraphProductProps } from "@/types/hygraph-types";
@@ -22,6 +23,7 @@ const PageArea = styled.div`
 
 const MainArea = styled.main`
   /* width: 100%; */
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,6 +66,10 @@ const AreaTitle = styled.h4`
 
 const PostArea = styled.section`
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   /* padding: 10px 5vw; */
   color: ${({ theme }) => theme.colors.primary.dark};
   /* background-color: purple; */
@@ -84,6 +90,7 @@ const PostArea = styled.section`
     /* align-self: center; */
   }
 `;
+
 interface DicaPageProps {
   params: {
     slug: string;
@@ -117,6 +124,7 @@ export default function DicaPage({ params }: DicaPageProps) {
       <PageArea>
         <MainArea>
           <PostArea>
+            <h1>{selectedPost.title}</h1>
             <Image
               src={selectedPost.image.url}
               alt={`image_${slugCreator(selectedPost.title)}`}
@@ -124,7 +132,6 @@ export default function DicaPage({ params }: DicaPageProps) {
               height={500}
               style={{ objectFit: "contain" }}
             />
-            <h1>{selectedPost.title}</h1>
             <p>
               <RichTextHygraph content={selectedPost.text.raw} />
             </p>

@@ -10,9 +10,11 @@ interface AddressProps {}
 
 const SectionArea = styled.section`
   width: 100vw;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
   /* margin: 0 40px; */
   padding: 40px 0;
   color: ${({ theme }) => theme.colors.primary.default};
@@ -50,19 +52,19 @@ const Phone = styled.h5`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 `;
 
+const ContactsArea = styled.div`
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: blue; */
+`;
 const SocialsArea = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: space-evenly; */
   align-items: flex-start;
   gap: 10px;
-`;
-
-const ContactsArea = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 `;
 
 const SocialAddress = styled.h6``;

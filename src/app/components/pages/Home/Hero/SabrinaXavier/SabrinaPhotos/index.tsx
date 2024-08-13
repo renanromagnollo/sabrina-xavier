@@ -13,8 +13,8 @@ const PhotosContainer = styled.div`
   /* margin-left: 0; */
   /* background-color: darkred; */
   div {
-    filter: blur(0px) sepia(100%) brightness(90%) contrast(150%) grayscale(10%)
-      hue-rotate(0deg) invert(0%) opacity(100%) saturate(60%);
+    filter: blur(0px) sepia(100%) brightness(90%) contrast(90%) grayscale(10%)
+      hue-rotate(0deg) invert(0%) opacity(100%) saturate(90%);
     transition: filter 1s ease-in-out;
     animation: mounting 1s ease-in-out forwards;
 

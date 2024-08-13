@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { MenuTop } from "../Menus/MenuTop";
 import { useEffect, useState } from "react";
 import { ButtonBurguer } from "../Buttons/ButtonBurguer";
+import { usePathname } from "next/navigation";
 
 interface HeaderContainerProps {
   opacity: boolean;
@@ -36,6 +37,7 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
 
 export function Header() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const path = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,6 +50,11 @@ export function Header() {
         setShowMenu(false);
       }
     };
+    console.log(path);
+    if (path !== "/") {
+      setShowMenu(true);
+      return;
+    }
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("touchmove", handleScroll);
@@ -55,7 +62,7 @@ export function Header() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("touchmove", handleScroll);
     };
-  }, [showMenu]);
+  }, [showMenu, path]);
 
   return (
     <HeaderContainer opacity={showMenu}>
