@@ -10,7 +10,7 @@ interface ButtonUnselectedProps extends ComponentProps<"button"> {
 
 interface ButtonCSSProps {
   width?: string;
-  color?: "primary" | "secundary" | "dark";
+  color?: "primary" | "secundary" | "dark" | "inherit";
 }
 
 const ButtonBox = styled.button<ButtonCSSProps>`
@@ -22,6 +22,8 @@ const ButtonBox = styled.button<ButtonCSSProps>`
         return props.theme.colors.secundary.dark;
       case "dark":
         return props.theme.colors.dark.light;
+      case "inherit":
+        return "inherit";
       default:
         return props.theme.colors.dark.light;
     }
@@ -46,7 +48,7 @@ export function ButtonUnselected(props: ButtonUnselectedProps) {
   return (
     <ButtonBox
       width={props.width ?? "100px"}
-      color={props.color ?? "dark"}
+      color={props.color ?? "inherit"}
       {...props}
     >
       {props.children ?? "Read more"}

@@ -56,24 +56,27 @@ const TagArea = styled.div`
   opacity: 0.9;
 `;
 
-const TagType = styled.h5`
-  left: 20px;
-  bottom: -180px;
+const TagType = styled.h6`
+  left: 10px;
+  font-weight: bold;
+  bottom: -185px;
   position: relative;
   z-index: 1000;
   color: ${({ theme }) => theme.colors.light.default};
 `;
 
-const TagBG = styled.div`
+const TagBG = styled.div<{ name: string }>`
+  --color-default: ${({ name, theme }) =>
+    name === "Make" ? theme.colors.secundary.dark : theme.colors.primary.dark};
   width: 60%;
   height: 30%;
   bottom: -160px;
   left: -30px;
   position: relative;
   z-index: 50;
-  background-color: ${({ theme }) => theme.colors.secundary.dark};
-  transform: rotate(30deg);
   color: ${({ theme }) => theme.colors.light.default};
+  background-color: var(--color-default);
+  transform: rotate(30deg);
 `;
 
 const Title = styled.h6`
@@ -83,14 +86,15 @@ const Title = styled.h6`
 
 export function DicasCard({ item }: DicasCardProps) {
   const slug = item?.slug ?? slugCreator(item?.title);
-  console.log(slug);
+  const tagName = item?.typeServices[0].name;
+  console.log(tagName);
   return (
     <Link href={`/dicas/${slug}`}>
       <CardBox>
         <ImageArea>
           <TagArea>
-            <TagType>{item?.typeServices[0].name}</TagType>
-            <TagBG />
+            <TagType>{tagName}</TagType>
+            <TagBG name={tagName} />
           </TagArea>
           <Image
             width={290}

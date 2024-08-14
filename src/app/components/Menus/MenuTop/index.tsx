@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import { NavItem } from "../NavItem";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
+  {
+    label: "Página Inicial",
+    href: "/",
+  },
   {
     label: "Serviços",
     href: "/servicos",
@@ -13,7 +18,7 @@ const NAV_ITEMS = [
   },
   {
     label: "Dicas",
-    href: "/posts",
+    href: "/dicas",
   },
   {
     label: "Contatos",
@@ -63,11 +68,13 @@ const NavList = styled.nav<showNavList>`
 `;
 
 export function MenuTop({ show }: { show: boolean }) {
+  const path = usePathname();
   return (
     <NavList visibility={show}>
-      {NAV_ITEMS.map((item) => (
-        <NavItem {...item} key={item.label} />
-      ))}
+      {NAV_ITEMS.map((item) => {
+        if (item.href === "/" && path === "/") return;
+        return <NavItem {...item} key={item.label} />;
+      })}
     </NavList>
   );
 }
