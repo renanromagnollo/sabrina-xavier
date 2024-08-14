@@ -110,7 +110,11 @@ export function DicasCard({ item }: DicasCardProps) {
           {/* <h5><RichTextHygraph content={item?.text?.raw}/></h5> */}
         </Content>
         <ButtonArea>
-          <ButtonUnselected color={"secundary"}>Leia</ButtonUnselected>
+          <ButtonUnselected
+            color={tagName === "Make" ? "secundary" : "primary"}
+          >
+            Leia
+          </ButtonUnselected>
         </ButtonArea>
       </CardBox>
     </Link>

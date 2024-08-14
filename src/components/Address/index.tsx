@@ -90,7 +90,7 @@ export function Address(props: AddressProps) {
             alignItems: "center",
           }}
         >
-          <MapPin size={40} />
+          <MapPin size={30} />
           <h5>Rua Santo Antônio, 11 - Palmeiras</h5>
           <h6>Ponte Nova / MG</h6>
         </div>

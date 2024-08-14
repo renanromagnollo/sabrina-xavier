@@ -1,15 +1,19 @@
 interface LogoRenanRomagnolloProps {
   theme?: string;
+  // width?: string;
+  height?: string;
 }
 
 export function LogoRenanRomagnollo({
   theme = "dark",
+  // width = "299",
+  height = "31",
 }: LogoRenanRomagnolloProps) {
   if (theme === "dark") {
     return (
       <svg
-        width="299"
-        height="31"
+        // width={width}
+        height={height}
         viewBox="0 0 299 31"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

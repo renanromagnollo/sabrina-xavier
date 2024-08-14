@@ -12,7 +12,7 @@ const FooterSection = styled.section`
   position: relative;
   width: 100vw;
   height: 40px;
-  color: ${({ theme }) => theme.colors.light.default};
+  color: ${({ theme }) => theme.colors.primary.default};
   background-color: ${({ theme }) => theme.colors.dark.default};
 `;
 
@@ -28,14 +28,18 @@ const Copyright = styled.h6`
 `;
 
 const Renan = styled.div`
-  width: 40px;
+  width: 30px;
   overflow: hidden;
   position: absolute;
   right: 50px;
-  transition: width 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0.8;
+  filter: saturate(0);
 
   &:hover {
-    width: 300px;
+    width: 250px;
+    opacity: 1;
+    filter: saturate(100%);
   }
 `;
 export function Footer(props: FooterProps) {
@@ -44,7 +48,7 @@ export function Footer(props: FooterProps) {
     <FooterSection>
       <Copyright>© {year}</Copyright>
       <Renan>
-        <LogoRenanRomagnollo />
+        <LogoRenanRomagnollo height="25px" />
       </Renan>
     </FooterSection>
   );

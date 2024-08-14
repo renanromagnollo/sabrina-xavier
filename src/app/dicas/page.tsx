@@ -8,6 +8,7 @@ import { DicasCard } from "../components/Cards/DicasCard";
 import { useContext } from "react";
 import { DataContext } from "@/context/data-context";
 import { TitleSection } from "../components/TitleSection";
+import { Products } from "../components/Products";
 
 interface DicasPageProps {}
 
@@ -41,18 +42,23 @@ const getDicasData = async (fake: boolean): Promise<HygraphPostProps> => {
   return fetchHygraphQuery(query);
 };
 
-const DicasSection = styled.section`
+const PageArea = styled.div`
   color: ${({ theme }) => theme.colors.primary.dark};
-  /* width: 100%; */
-  margin: 50px 20px;
+  margin: 10px 20px;
   display: flex;
   gap: 20px;
   flex-direction: column;
   justify-content: center;
+`;
+
+const DicasSection = styled.section`
+  color: inherit;
+  /* width: 100%; */
   /* align-items: center; */
 `;
 
 const CardsArea = styled.div`
+  color: inherit;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -62,6 +68,7 @@ const CardsArea = styled.div`
 `;
 
 const CardsList = styled.div`
+  color: inherit;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -73,19 +80,22 @@ export default function DicasPage() {
   const { posts } = useContext(DataContext);
   console.log(posts);
   return (
-    <DicasSection>
+    <PageArea>
       <TitleSection
         title="Dicas"
         subtitle="Veja as melhores dicas para o seu dia-a-dia"
         width="100%"
       />
-      <CardsArea>
-        <CardsList>
-          {posts.map((dica, i) => (
-            <DicasCard item={dica} key={i} />
-          ))}
-        </CardsList>
-      </CardsArea>
-    </DicasSection>
+      <DicasSection>
+        <CardsArea>
+          <CardsList>
+            {posts.map((dica, i) => (
+              <DicasCard item={dica} key={i} />
+            ))}
+          </CardsList>
+        </CardsArea>
+      </DicasSection>
+      {/* <Products /> */}
+    </PageArea>
   );
 }

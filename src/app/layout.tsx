@@ -10,6 +10,7 @@ import { Address } from "@/components/Address";
 // import { Footer } from "@/components/Footer";
 import dynamic from "next/dynamic";
 import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "./components/Breadcrumbs";
 
 const inter = Inter({ subsets: ["latin"] });
 console.log(inter);
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Providers>
             <GlobalStyle />
             <Header />
+            <Breadcrumbs />
             {children}
             <Footer />
           </Providers>
