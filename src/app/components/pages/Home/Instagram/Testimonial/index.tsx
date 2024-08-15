@@ -14,7 +14,7 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 80%;
   margin: 50px;
-  /* padding: 20px; */
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

@@ -6,6 +6,9 @@ import { MenuTop } from "../Menus/MenuTop";
 import { useEffect, useState } from "react";
 import { ButtonBurguer } from "../Buttons/ButtonBurguer";
 import { usePathname } from "next/navigation";
+import { LogoName } from "@/components/Logo/LogoName";
+import { Logotipo } from "@/components/Logo/Logotipo";
+import { LogoHorizontal } from "@/components/Logo/LogoHorizontal";
 
 interface HeaderContainerProps {
   opacity: boolean;
@@ -66,8 +69,17 @@ export function Header() {
 
   return (
     <HeaderContainer opacity={showMenu}>
+      {showMenu && <LogoHorizontal nameSize={160} />}
       <ButtonBurguer actived={showMenu} setShowMenu={setShowMenu} />
-      <MenuTop show={showMenu} />
+      <div
+        style={{
+          position: "absolute",
+          left: "50%",
+          transform: "translateX(-50%)",
+        }}
+      >
+        <MenuTop show={showMenu} />
+      </div>
       <UserIcon />
     </HeaderContainer>
   );

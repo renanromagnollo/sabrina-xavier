@@ -1,5 +1,6 @@
 "use client";
 
+import { ButtonUnselected } from "@/app/components/Buttons/ButtonUnselected";
 import { TitleSection } from "@/app/components/TitleSection";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { DataContext } from "@/context/data-context";
@@ -100,6 +101,12 @@ export function Studio(props: StudioProps) {
             <TextsArea>
               <TitleSection title={aboutStudioHygraph?.title} />
               <RichTextHygraph content={aboutStudioHygraph?.text.raw} />
+              <a
+                href="https://maps.app.goo.gl/Lc2y7K3PHB382iccA"
+                target="_blank"
+              >
+                <ButtonUnselected>Localização</ButtonUnselected>
+              </a>
             </TextsArea>
           </>
         )
