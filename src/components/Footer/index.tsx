@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import { LogoRenanRomagnollo } from "../Logo/RenanRomagnollo";
+import { Logotipo } from "../Logo/Logotipo";
 
 interface FooterProps {}
 
@@ -16,11 +17,18 @@ const FooterSection = styled.section`
   background-color: ${({ theme }) => theme.colors.dark.default};
 `;
 
-const Copyright = styled.h6`
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+const CopyrightArea = styled.div`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+`;
+
+const Copyright = styled.h6`
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   display: flex;
   justify-self: center;
   align-items: baseline;
@@ -46,7 +54,10 @@ export function Footer(props: FooterProps) {
   const year = new Date().getFullYear();
   return (
     <FooterSection>
-      <Copyright>© {year}</Copyright>
+      <CopyrightArea>
+        <Copyright>© {year} - </Copyright>
+        <Logotipo size={30} />
+      </CopyrightArea>
       <Renan>
         <LogoRenanRomagnollo height="25px" />
       </Renan>
