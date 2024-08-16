@@ -1,5 +1,9 @@
 [x] add: Logo horizontal no menutop e no rodapé
 [x] fix: padding da imagem no depoimento
+<<<<<<< HEAD
+=======
+TODO:[] feat: STUDIO - inserir botão Localização
+>>>>>>> servicos
 TODO:[] feat: página Serviços
 TODO:[] feat: página do serviço: imagem; texto explicativo; galeria de imagens correspondente ao serviço
 TODO:[] feat: formulário de contato
