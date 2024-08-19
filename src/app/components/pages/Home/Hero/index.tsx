@@ -30,7 +30,6 @@ const HeroContainer = styled.section`
   }
 `;
 export function Hero(props: HeroProps) {
-  function openModal() {}
   return (
     <HeroContainer>
       <SabrinaXavier />

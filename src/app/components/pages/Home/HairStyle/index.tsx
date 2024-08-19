@@ -2,6 +2,7 @@ import { HairStyleCard } from "@/app/components/Cards/HairStyleCard";
 import { TitleSection } from "@/app/components/TitleSection";
 import { LoadingCard } from "@/components/Loadings/LoadingCard";
 import { DataContext } from "@/context/data-context";
+import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { HygraphHairStyleProps, HygraphHomeProps } from "@/types/hygraph-types";
 import { useContext } from "react";
 import styled from "styled-components";
@@ -27,10 +28,9 @@ const ContainerCards = styled.div`
 `;
 
 export function HairStyle() {
-  const { hygraphHome } = useContext(DataContext);
-  // console.log(hygraphHome.hairStyles)
-
+  const { data: hygraphHome } = useHygraphQuery(true, "home");
   const hairStyleServices: HygraphHairStyleProps[] = hygraphHome.hairStyles;
+
   return (
     <SectionArea>
       <TitleSection

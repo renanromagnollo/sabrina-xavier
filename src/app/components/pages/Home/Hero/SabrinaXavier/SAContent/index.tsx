@@ -11,8 +11,7 @@ import { randomPhrases } from "@/utils/randomPhrases";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import { ModalAboutMe } from "../ModalAboutMe";
 import { LoadingFeatText } from "@/components/Loadings/LoadingFeatText";
-
-interface SAContentProps {}
+import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 
 const SAContainer = styled.div`
   position: relative;
@@ -156,15 +155,11 @@ const Author = styled.h2`
   font-weight: 400;
 `;
 
-export function SAContent(props: SAContentProps) {
+export function SAContent() {
   const [modalOpened, setModalOpened] = useState(false);
 
-  const { hygraphHome } = useContext(DataContext);
+  const { data: hygraphHome } = useHygraphQuery(true, "home");
   const phrases = randomPhrases(hygraphHome?.powerPhrases);
-  if (phrases) {
-    console.log(phrases);
-    const { phrase, author } = phrases;
-  }
 
   function openModal() {
     setModalOpened(true);

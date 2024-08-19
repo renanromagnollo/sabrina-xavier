@@ -4,6 +4,7 @@ import { ButtonUnselected } from "@/app/components/Buttons/ButtonUnselected";
 import { TitleSection } from "@/app/components/TitleSection";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { DataContext } from "@/context/data-context";
+import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { useObserver } from "@/hooks/useObserver";
 import { HygraphAboutStudioProps } from "@/types/hygraph-types";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
@@ -66,7 +67,7 @@ const ImageArea = styled.div`
   }
 `;
 export function Studio(props: StudioProps) {
-  const { hygraphHome } = useContext(DataContext);
+  const { data: hygraphHome } = useHygraphQuery(true, "home");
   const aboutStudioHygraph: HygraphAboutStudioProps = hygraphHome?.aboutStudio;
 
   const elementRef = useRef<HTMLElement>(null);
