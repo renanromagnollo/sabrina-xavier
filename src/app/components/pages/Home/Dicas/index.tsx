@@ -1,6 +1,7 @@
 import { DicasCard } from "@/app/components/Cards/DicasCard";
 import { TitleSection } from "@/app/components/TitleSection";
 import { DataContext } from "@/context/data-context";
+import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { HygraphPostProps } from "@/types/hygraph-types";
 import { useContext } from "react";
 import styled from "styled-components";
@@ -46,7 +47,9 @@ const TitleSectionContainer = styled.div`
 `;
 
 export function Dicas(props: DicasProps) {
-  const { posts } = useContext(DataContext);
+  // const { posts } = useContext(DataContext);
+  const { data } = useHygraphQuery(true, "home");
+  const posts = data?.posts;
 
   const listDicas = posts?.slice(0, 3);
   return (

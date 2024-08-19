@@ -29,7 +29,7 @@ const ContainerCards = styled.div`
 
 export function HairStyle() {
   const { data: hygraphHome } = useHygraphQuery(true, "home");
-  const hairStyleServices: HygraphHairStyleProps[] = hygraphHome.hairStyles;
+  const hairStyleServices: HygraphHairStyleProps[] = hygraphHome?.hairStyles;
 
   return (
     <SectionArea>

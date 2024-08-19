@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { DataContext } from "@/context/data-context";
+import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { dataProps } from "@/store";
 import {
   HygraphHomeProps,
@@ -57,11 +58,11 @@ const Text = styled.div`
   }
 `;
 export function Testimonial() {
-  const { hygraphHome } = useContext(DataContext);
+  const { data: hygraphHome } = useHygraphQuery(true, "home");
   const [testimonial, setTestimonial] = useState<HygraphTestimonialProps>();
 
   useEffect(() => {
-    const testimonials = hygraphHome.testimonials;
+    const testimonials = hygraphHome?.testimonials;
     console.log(testimonials);
     const sortedTestimonial: HygraphTestimonialProps =
       randomTestimonial(testimonials);
