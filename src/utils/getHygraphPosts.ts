@@ -4,7 +4,7 @@ import { slugCreator } from "./slugCreator";
 
 export async function getHygraphPosts() {
   try {
-    const { posts } = await getFakeData("hygraphPosts");
+    const { posts } = await getFakeData("hygraphHome");
     return posts.map((post: HygraphPostProps) => ({
       ...post,
       slug: slugCreator(post.title),

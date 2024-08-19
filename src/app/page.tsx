@@ -20,9 +20,15 @@ import { HygraphHomeProps } from "@/types/hygraph-types";
 import { getHygraphPosts } from "@/utils/getHygraphPosts";
 import { ModalInsta } from "./components/ModalInsta";
 import { Address } from "@/components/Address";
+import { useReactQuery } from "@/hooks/useReactQuery";
+import { useHygraphQuery } from "@/hooks/useHygraphQuery";
+
+// const URL_FETCH = "http://localhost:3333/";
 
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
+  // const { query, setReqParams } = useReactQuery();
+  const { data } = useHygraphQuery();
   const {
     setInstagramPosts,
     setHygraphHome,
@@ -32,8 +38,13 @@ export default function Home() {
   } = useContext(DataContext);
 
   useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+  useEffect(() => {
     const getDatas = async () => {
       const dataInstagramPosts = await getFakeData("instagramPosts");
+
       const dataHygraphHome: HygraphHomeProps = await getFakeData(
         "hygraphHome"
       );
@@ -45,6 +56,7 @@ export default function Home() {
       if (dataHygraphHome) {
         const postsWithSlug = await getHygraphPosts();
         console.log("data HygraphHome", dataHygraphHome);
+        console.log(postsWithSlug);
         setHygraphHome(dataHygraphHome);
         setPosts(postsWithSlug);
       }

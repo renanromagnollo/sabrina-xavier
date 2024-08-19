@@ -7,7 +7,7 @@ export const fetchHygraphQuery = async (
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      Authorization: `Bearer ${process.env.HYGRAPH_TOKNE}`,
+      Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`,
     },
     body: JSON.stringify({ query }),
     next: {
