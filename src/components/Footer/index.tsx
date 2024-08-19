@@ -59,6 +59,7 @@ export function Footer(props: FooterProps) {
         <Logotipo size={30} />
       </CopyrightArea>
       <Renan>
+        {/* <h6>Desenvolvido por</h6> */}
         <LogoRenanRomagnollo height="25px" />
       </Renan>
     </FooterSection>

@@ -157,8 +157,8 @@ const fetchHygraphFake = async (query: string) => {
     };
   }
   if (query === "hygraphPosts") {
-    console.log(data);
-    const postsWithSlug = setSlugInPosts(data);
+    const postsWithSlug = setSlugInPosts(data?.posts);
+    console.log(postsWithSlug);
     return postsWithSlug;
   }
   return data;
@@ -172,7 +172,6 @@ function getHygraph(fake: boolean, schema: string) {
           return fetchHygraphFake("hygraphHome");
         case "posts":
           return fetchHygraphFake("hygraphPosts");
-          break;
         case "testmonials":
           return fetchHygraphFake("hygraphTestimonials");
         default:

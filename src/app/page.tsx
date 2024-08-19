@@ -28,7 +28,6 @@ import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 export default function Home() {
   // const [theme, setTheme] = useState<DefaultTheme>(light)
   // const { query, setReqParams } = useReactQuery();
-  const { data } = useHygraphQuery();
   const {
     setInstagramPosts,
     setHygraphHome,
@@ -36,10 +35,6 @@ export default function Home() {
     setTestimonials,
     hygraphHome,
   } = useContext(DataContext);
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   useEffect(() => {
     const getDatas = async () => {

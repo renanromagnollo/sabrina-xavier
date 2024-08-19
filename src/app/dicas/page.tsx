@@ -9,38 +9,39 @@ import { useContext } from "react";
 import { DataContext } from "@/context/data-context";
 import { TitleSection } from "../components/TitleSection";
 import { Products } from "../components/Products";
+import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 
-interface DicasPageProps {}
+// interface DicasPageProps {}
 
-const getDicasData = async (fake: boolean): Promise<HygraphPostProps> => {
-  const query = `
-          query Posts {
-              posts {
-              typeServices {
-                  name
-              }
-              image {
-                  url
-              }
-              title
-              text {
-                  raw
-              }
-              products {
-                  id
-                  name
-                  image {
-                  url
-                  }
-                  introText
-                  linkAffiliate
-              }
-              }
-  }
-      `;
-  if (fake) return getFakeData("hygraphPosts");
-  return fetchHygraphQuery(query);
-};
+// const getDicasData = async (fake: boolean): Promise<HygraphPostProps> => {
+//   const query = `
+//           query Posts {
+//               posts {
+//               typeServices {
+//                   name
+//               }
+//               image {
+//                   url
+//               }
+//               title
+//               text {
+//                   raw
+//               }
+//               products {
+//                   id
+//                   name
+//                   image {
+//                   url
+//                   }
+//                   introText
+//                   linkAffiliate
+//               }
+//               }
+//   }
+//       `;
+//   if (fake) return getFakeData("hygraphPosts");
+//   return fetchHygraphQuery(query);
+// };
 
 const PageArea = styled.div`
   color: ${({ theme }) => theme.colors.primary.dark};
@@ -77,7 +78,8 @@ const CardsList = styled.div`
 `;
 
 export default function DicasPage() {
-  const { posts } = useContext(DataContext);
+  const { data: posts } = useHygraphQuery(true, "posts");
+  // const posts = data?.posts;
   console.log(posts);
   return (
     <PageArea>
@@ -89,7 +91,7 @@ export default function DicasPage() {
       <DicasSection>
         <CardsArea>
           <CardsList>
-            {posts.map((dica, i) => (
+            {posts?.map((dica, i) => (
               <DicasCard item={dica} key={i} />
             ))}
           </CardsList>

@@ -14,5 +14,9 @@ export function slugCreator(text) {
 }
 
 export function setSlugInPosts(posts) {
-  return posts.map((post) => ({ ...post, slug: slugCreator(post.title) }));
+  const postsWithSlug = posts.map((post) => ({
+    ...post,
+    slug: slugCreator(post.title),
+  }));
+  return postsWithSlug;
 }

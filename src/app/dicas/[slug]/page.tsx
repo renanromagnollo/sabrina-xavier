@@ -5,7 +5,9 @@ import { ProductCard } from "@/app/components/Cards/ProductCard";
 import { Products } from "@/app/components/Products";
 import { TitleSection } from "@/app/components/TitleSection";
 import { Dicas } from "@/app/components/pages/Home/Dicas";
+import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { DataContext } from "@/context/data-context";
+import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { HygraphPostProps, HygraphProductProps } from "@/types/hygraph-types";
 import { getFakeData } from "@/utils/fakeServer";
 import { getHygraphPosts } from "@/utils/getHygraphPosts";
@@ -98,28 +100,16 @@ interface DicaPageProps {
 }
 
 export default function DicaPage({ params }: DicaPageProps) {
-  const { posts } = useContext(DataContext);
-  const [selectedPost, setSelectedPost] = useState<HygraphPostProps>();
-  const [relatedProducts, setRelatedProducts] =
-    useState<HygraphProductProps[]>();
+  const { data: posts, isFetching } = useHygraphQuery(true, "posts");
 
-  useEffect(() => {
-    const getPost = async () => {
-      const dicasPosts = posts.length > 0 ? posts : await getHygraphPosts();
-      console.log(dicasPosts);
-      const selected = dicasPosts.filter((post: HygraphPostProps) =>
-        verifySlug({ post, params })
-      )[0];
-      console.log(selected);
-      if (selected) {
-        setSelectedPost(selected);
-        setRelatedProducts(selected.products);
-      }
-    };
-    getPost();
-  }, [params, posts]);
+  const selectedPost = posts?.filter((post: HygraphPostProps) =>
+    verifySlug({ post, params })
+  )[0];
+  const relatedProducts = selectedPost?.products;
 
-  return (
+  return isFetching ? (
+    <h1>Carregando</h1>
+  ) : (
     selectedPost && (
       <PageArea>
         <MainArea>
