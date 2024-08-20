@@ -1,5 +1,6 @@
 import { DicasCard } from "@/app/components/Cards/DicasCard";
 import { TitleSection } from "@/app/components/TitleSection";
+import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { DataContext } from "@/context/data-context";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { HygraphPostProps } from "@/types/hygraph-types";
@@ -58,10 +59,13 @@ export function Dicas(props: DicasProps) {
         <TitleSection title="Dicas" subtitle="Saiba como se cuidar melhor" />
       </TitleSectionContainer>
       <ContentContainer>
-        {listDicas &&
+        {!listDicas ? (
+          <LoadingCircle />
+        ) : (
           listDicas.map((item: HygraphPostProps, i: number) => (
             <DicasCard key={i} item={item} />
-          ))}
+          ))
+        )}
       </ContentContainer>
       <hr />
     </SectionArea>

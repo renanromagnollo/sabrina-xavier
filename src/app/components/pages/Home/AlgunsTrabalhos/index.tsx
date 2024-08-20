@@ -11,6 +11,7 @@ import { ContentCards } from "./ContentCards";
 import { Carrousel } from "@/components/Carrousel";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { TitleSection } from "@/app/components/TitleSection";
+import { useInstagramQuery } from "@/hooks/useInstagramQuery";
 
 interface AlgunsTrabalhosProps {}
 
@@ -58,12 +59,7 @@ const TitleContainer = styled.div`
 export function AlgunsTrabalhos(props: AlgunsTrabalhosProps) {
   const rotate = ["-4deg", "3deg", "-6deg"];
 
-  const { instagramPosts } = useContext(DataContext);
-  // const instagramPosts = [];
-
-  useEffect(() => {
-    console.log("posts uped: ", instagramPosts);
-  }, [instagramPosts]);
+  const { data: instagramPosts, isFetching } = useInstagramQuery();
 
   return (
     <ContainerTrabalhos>
@@ -76,7 +72,7 @@ export function AlgunsTrabalhos(props: AlgunsTrabalhosProps) {
             subtitle="Veja o resultado de alguns trabalhos realizados"
           />
         </TitleContainer>
-        {instagramPosts.length === 0 ? (
+        {isFetching ? (
           <div
             style={{
               height: "400px",

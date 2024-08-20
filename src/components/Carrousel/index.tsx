@@ -58,7 +58,7 @@ export function Carrousel({ posts }: CarrouselProps) {
   const wrapperNode = wrapperRef.current;
 
   useEffect(() => {
-    if (posts.length > 0) {
+    if (posts?.length > 0) {
       const galleryPhotos = posts?.filter(
         (post) => post.media_type !== "VIDEO"
       );

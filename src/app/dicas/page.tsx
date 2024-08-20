@@ -10,6 +10,7 @@ import { DataContext } from "@/context/data-context";
 import { TitleSection } from "../components/TitleSection";
 import { Products } from "../components/Products";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
+import { LoadingPage } from "@/components/Loadings/LoadingPage";
 
 // interface DicasPageProps {}
 
@@ -78,10 +79,12 @@ const CardsList = styled.div`
 `;
 
 export default function DicasPage() {
-  const { data: posts } = useHygraphQuery(true, "posts");
+  const { data: posts, isFetching } = useHygraphQuery(true, "posts");
   // const posts = data?.posts;
   console.log(posts);
-  return (
+  return isFetching ? (
+    <LoadingPage />
+  ) : (
     <PageArea>
       <TitleSection
         title="Dicas"

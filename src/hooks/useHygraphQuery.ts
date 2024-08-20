@@ -205,6 +205,7 @@ export function useHygraphQuery(
   const query = useQuery({
     queryKey: [schema],
     queryFn: () => getHygraph(fake, schema),
+    refetchOnWindowFocus: false,
     enabled: !!schema,
   });
   return query;

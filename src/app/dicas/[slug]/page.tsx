@@ -6,6 +6,7 @@ import { Products } from "@/app/components/Products";
 import { TitleSection } from "@/app/components/TitleSection";
 import { Dicas } from "@/app/components/pages/Home/Dicas";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
+import { LoadingPage } from "@/components/Loadings/LoadingPage";
 import { DataContext } from "@/context/data-context";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { HygraphPostProps, HygraphProductProps } from "@/types/hygraph-types";
@@ -108,7 +109,7 @@ export default function DicaPage({ params }: DicaPageProps) {
   const relatedProducts = selectedPost?.products;
 
   return isFetching ? (
-    <h1>Carregando</h1>
+    <LoadingPage />
   ) : (
     selectedPost && (
       <PageArea>

@@ -17,7 +17,7 @@ import { Products } from "./components/Products";
 import { Dicas } from "./components/pages/Home/Dicas";
 import { MakeUp } from "./components/pages/Home/MakeUp";
 import { HygraphHomeProps } from "@/types/hygraph-types";
-import { getHygraphPosts } from "@/utils/getHygraphPosts";
+// import { getHygraphPosts } from "@/utils/getHygraphPosts";
 import { ModalInsta } from "./components/ModalInsta";
 import { Address } from "@/components/Address";
 import { useReactQuery } from "@/hooks/useReactQuery";
@@ -26,40 +26,6 @@ import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 // const URL_FETCH = "http://localhost:3333/";
 
 export default function Home() {
-  // const [theme, setTheme] = useState<DefaultTheme>(light)
-  // const { query, setReqParams } = useReactQuery();
-  const {
-    setInstagramPosts,
-    setHygraphHome,
-    setPosts,
-    setTestimonials,
-    hygraphHome,
-  } = useContext(DataContext);
-
-  useEffect(() => {
-    const getDatas = async () => {
-      const dataInstagramPosts = await getFakeData("instagramPosts");
-
-      const dataHygraphHome: HygraphHomeProps = await getFakeData(
-        "hygraphHome"
-      );
-      if (dataInstagramPosts) {
-        console.log("data InstagramPosts: ", dataInstagramPosts);
-        setInstagramPosts(dataInstagramPosts);
-        // console.log(postsWithSlug[0]);
-      }
-      if (dataHygraphHome) {
-        const postsWithSlug = await getHygraphPosts();
-        console.log("data HygraphHome", dataHygraphHome);
-        console.log(postsWithSlug);
-        setHygraphHome(dataHygraphHome);
-        setPosts(postsWithSlug);
-      }
-    };
-    getDatas();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     // <ThemeProvider theme={theme}>
     <div

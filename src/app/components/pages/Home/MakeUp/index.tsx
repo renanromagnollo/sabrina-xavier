@@ -5,6 +5,7 @@ import { DataContext } from "@/context/data-context";
 import { randomInstaPosts } from "@/utils/randomInstaPosts";
 import { useObserver } from "@/hooks/useObserver";
 import { TitleSection } from "@/app/components/TitleSection";
+import { useInstagramQuery } from "@/hooks/useInstagramQuery";
 
 interface MakeUpProps {}
 
@@ -60,7 +61,8 @@ const ImagesArea = styled.div`
   gap: 40px;
 `;
 export function MakeUp(props: MakeUpProps) {
-  const { instagramPosts } = useContext(DataContext);
+  // const { instagramPosts } = useContext(DataContext);
+  const { data: instagramPosts } = useInstagramQuery();
   const { isVisibled, setElement } = useObserver();
 
   const textRef = useRef<HTMLDivElement>(null);
@@ -89,7 +91,7 @@ export function MakeUp(props: MakeUpProps) {
           )}
         </TextArea>
         <ImagesArea>
-          {selectedRandomPosts.map((post, i) => {
+          {selectedRandomPosts?.map((post, i) => {
             let rotateDegree = i % 2 == 0 ? "5" : "3";
             return <CardMakeup key={i} post={post} rotate={rotateDegree} />;
           })}
