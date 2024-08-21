@@ -4,6 +4,7 @@ import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { DataContext } from "@/context/data-context";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { HygraphPostProps } from "@/types/hygraph-types";
+import { useParams } from "next/navigation";
 import { useContext } from "react";
 import styled from "styled-components";
 
@@ -50,6 +51,7 @@ const TitleSectionContainer = styled.div`
 export function Dicas(props: DicasProps) {
   // const { posts } = useContext(DataContext);
   const { data } = useHygraphQuery(true, "home");
+  const { slug } = useParams();
   const posts = data?.posts;
 
   const listDicas = posts?.slice(0, 3);
@@ -62,9 +64,10 @@ export function Dicas(props: DicasProps) {
         {!listDicas ? (
           <LoadingCircle />
         ) : (
-          listDicas.map((item: HygraphPostProps, i: number) => (
-            <DicasCard key={i} item={item} />
-          ))
+          listDicas.map((item: HygraphPostProps, i: number) => {
+            if (item.slug !== slug) return <DicasCard key={i} item={item} />;
+            return;
+          })
         )}
       </ContentContainer>
       <hr />

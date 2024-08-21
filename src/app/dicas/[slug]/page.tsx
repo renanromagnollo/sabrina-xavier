@@ -4,8 +4,8 @@ import { DicasCard } from "@/app/components/Cards/DicasCard";
 import { ProductCard } from "@/app/components/Cards/ProductCard";
 import { Products } from "@/app/components/Products";
 import { TitleSection } from "@/app/components/TitleSection";
-import { Dicas } from "@/app/components/pages/Home/Dicas";
-import { LayoutPagePost } from "@/app/components/pages/LayoutPagePost";
+import { Dicas } from "@/app/components/Dicas";
+import { LayoutArticlePage } from "@/app/components/pages/LayoutArticlePage";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
 import { LoadingPage } from "@/components/Loadings/LoadingPage";
 import { DataContext } from "@/context/data-context";
@@ -38,7 +38,10 @@ export default function DicaPage({ params }: DicaPageProps) {
     <LoadingPage />
   ) : (
     selectedPost && (
-      <LayoutPagePost post={selectedPost} relatedProducts={relatedProducts} />
+      <LayoutArticlePage
+        article={selectedPost}
+        relatedProducts={relatedProducts}
+      />
     )
   );
 }

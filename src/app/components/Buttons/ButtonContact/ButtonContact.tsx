@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ButtonArea = styled.div`
-  width: 120px;
+  /* width: 120px; */
   height: 30px;
   overflow: hidden;
   :hover {
@@ -13,6 +13,7 @@ const Button = styled.button`
   /* padding: 5px 10px; */
   width: 100%;
   height: 100%;
+  padding: 10px;
   border: none;
   color: ${({ theme }) => theme.colors.light.default};
   background-color: ${({ theme }) => theme.colors.secundary.dark};
@@ -32,16 +33,14 @@ const Button = styled.button`
 `;
 
 interface ButtonContactProps {}
-export function ButtonContact(props: ButtonContactProps) {
+export function ButtonContact({ children }: { children: any }) {
   return (
     <ButtonArea>
       <a
         href="https://api.whatsapp.com/send?phone=5531983954695"
         target="_blank"
       >
-        <Button>
-          <span>contato</span>
-        </Button>
+        <Button>{children ?? <span>contato</span>}</Button>
       </a>
     </ButtonArea>
   );

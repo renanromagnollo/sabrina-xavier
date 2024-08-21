@@ -1,5 +1,5 @@
 "use client";
-import { LayoutPagePost } from "@/app/components/pages/LayoutPagePost";
+import { LayoutArticlePage } from "@/app/components/pages/LayoutArticlePage";
 import { LoadingPage } from "@/components/Loadings/LoadingPage";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
@@ -20,6 +20,6 @@ export default function ServicoPage({ params }: ServicosProps) {
   return !selectedService ? (
     <LoadingPage />
   ) : (
-    <LayoutPagePost post={selectedService} />
+    <LayoutArticlePage article={selectedService} />
   );
 }

@@ -14,7 +14,7 @@ import { DataContext } from "@/context/data-context";
 import { getFakeData } from "@/utils/fakeServer";
 import { HairStyle } from "./components/HairStyle";
 import { Products } from "./components/Products";
-import { Dicas } from "./components/pages/Home/Dicas";
+import { Dicas } from "./components/Dicas";
 import { MakeUp } from "./components/MakeUp";
 import { HygraphHomeProps } from "@/types/hygraph-types";
 // import { getHygraphPosts } from "@/utils/getHygraphPosts";
@@ -46,6 +46,7 @@ export default function Home() {
       <Studio />
       <Instagram />
       <Dicas />
+      <Address />
 
       {/* <Products /> */}
       {/* <UnderConstruction/> */}

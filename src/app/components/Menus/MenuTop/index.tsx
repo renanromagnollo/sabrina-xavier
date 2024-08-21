@@ -13,10 +13,6 @@ const NAV_ITEMS = [
     href: "/servicos",
   },
   {
-    label: "Estúdio",
-    href: "/studio",
-  },
-  {
     label: "Dicas",
     href: "/dicas",
   },

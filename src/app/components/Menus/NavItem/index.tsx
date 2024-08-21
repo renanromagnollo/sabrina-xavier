@@ -16,7 +16,9 @@ const LinkArea = styled.div`
 export const NavItem = ({ label, href }: NavItemProps) => {
   return (
     <LinkArea>
-      <Link href={href}>{label}</Link>
+      <Link href={href}>
+        <h6>{label}</h6>
+      </Link>
     </LinkArea>
   );
 };

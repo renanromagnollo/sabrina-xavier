@@ -3,8 +3,11 @@ import { slugCreator } from "@/utils/slugCreator";
 import Image from "next/image";
 import { ReactNode } from "react";
 import styled from "styled-components";
-import { Dicas } from "../Home/Dicas";
+import { Dicas } from "../../Dicas";
 import { ProductCard } from "../../Cards/ProductCard";
+import { useParams, usePathname } from "next/navigation";
+import { HairStyle } from "../../HairStyle";
+import { ButtonContact } from "../../Buttons/ButtonContact/ButtonContact";
 
 const PageArea = styled.div`
   width: 100%;
@@ -82,28 +85,56 @@ const PostArea = styled.section`
 `;
 
 interface LayoutPostProps {
-  post: any;
+  article: any;
   relatedProducts?: any;
 }
 
-export function LayoutPagePost({ post, relatedProducts }: LayoutPostProps) {
+export function LayoutArticlePage({
+  article,
+  relatedProducts,
+}: LayoutPostProps) {
+  const path = usePathname();
+
+  function othersArticles() {
+    if (path.includes("dicas")) {
+      return <Dicas />;
+    } else if (path.includes("servicos")) {
+      return (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "20px",
+            marginTop: "20px",
+          }}
+        >
+          <ButtonContact>Clique aqui e marque o seu horário</ButtonContact>
+          <HairStyle />
+        </div>
+      );
+    }
+    return;
+  }
+  console.log(path.includes("servicos"));
   return (
     <PageArea>
       <MainArea>
         <PostArea>
-          <h1>{post?.title}</h1>
+          <h1>{article?.title}</h1>
           <Image
-            src={post?.image.url}
-            alt={`image_${slugCreator(post?.title)}`}
+            src={article?.image.url}
+            alt={`image_${slugCreator(article?.title)}`}
             width={600}
             height={500}
             style={{ objectFit: "contain" }}
           />
           <p>
-            <RichTextHygraph content={post?.text.raw} />
+            <RichTextHygraph content={article?.text.raw} />
           </p>
         </PostArea>
-        <Dicas />
+        {othersArticles()}
       </MainArea>
       <RightArea>
         {relatedProducts && relatedProducts.length > 0 && (
