@@ -34,6 +34,7 @@ export default function RootLayout({
             <Header />
             <Breadcrumbs />
             {children}
+            <Address />
             <Footer />
           </Providers>
           <Analytics />

@@ -3,6 +3,7 @@ import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import Image from "next/image";
 import styled from "styled-components";
 import { ButtonUnselected } from "../../Buttons/ButtonUnselected";
+import Link from "next/link";
 
 interface HairStyleCardProps {
   item: HygraphHairStyleProps;
@@ -92,7 +93,9 @@ export function HairStyleCard({ item }: HairStyleCardProps) {
         <h3>{item.title ?? "Title"}</h3>
         {/* <h5><RichTextHygraph content={item.text.raw}/></h5> */}
         <IntroText>{item.introText}</IntroText>
-        <ButtonUnselected>Saiba mais</ButtonUnselected>
+        <Link href={`/servicos/${item?.slug}`}>
+          <ButtonUnselected>Saiba mais</ButtonUnselected>
+        </Link>
       </Content>
       <Bg />
     </BoxCard>

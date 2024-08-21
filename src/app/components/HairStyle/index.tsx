@@ -8,7 +8,7 @@ import { useContext } from "react";
 import styled from "styled-components";
 
 const SectionArea = styled.section`
-  width: 90vw;
+  width: 100vw;
   display: flex;
   padding-top: 30px;
   padding-bottom: 50px;

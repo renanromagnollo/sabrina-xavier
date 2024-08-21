@@ -12,10 +12,10 @@ import { Studio } from "./components/pages/Home/Studio";
 import { Instagram } from "./components/pages/Home/Instagram";
 import { DataContext } from "@/context/data-context";
 import { getFakeData } from "@/utils/fakeServer";
-import { HairStyle } from "./components/pages/Home/HairStyle";
+import { HairStyle } from "./components/HairStyle";
 import { Products } from "./components/Products";
 import { Dicas } from "./components/pages/Home/Dicas";
-import { MakeUp } from "./components/pages/Home/MakeUp";
+import { MakeUp } from "./components/MakeUp";
 import { HygraphHomeProps } from "@/types/hygraph-types";
 // import { getHygraphPosts } from "@/utils/getHygraphPosts";
 import { ModalInsta } from "./components/ModalInsta";
@@ -46,7 +46,6 @@ export default function Home() {
       <Studio />
       <Instagram />
       <Dicas />
-      <Address />
 
       {/* <Products /> */}
       {/* <UnderConstruction/> */}

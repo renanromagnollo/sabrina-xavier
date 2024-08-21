@@ -7,7 +7,9 @@ interface verifySlugProps {
 }
 
 export function verifySlug({ post, params }: verifySlugProps): boolean {
+  console.log(post);
   if (post?.slug!.length > 0) {
+    console.log(post.slug === params.slug);
     return post.slug === params.slug;
   }
   const postWithAddedSlug = slugCreator(post?.title);
