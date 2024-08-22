@@ -38,7 +38,7 @@ interface HygraphPostProps {
   typeServices: { name: string }[];
   image: { url: string };
   title: string;
-  text: { raw: RichTextContent };
+  text: { raw: RichTextContent; text: string };
   products: HygraphProductProps[];
 }
 

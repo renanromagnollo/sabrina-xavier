@@ -16,8 +16,15 @@ const inter = Inter({ subsets: ["latin"] });
 console.log(inter);
 
 export const metadata: Metadata = {
-  title: "Sabrina Xavier",
-  description: "Estúdio de beleza",
+  title: {
+    default: "Sabrina Xavier",
+    template: "%s | Sabrina Xavier",
+  },
+  icons: [
+    {
+      url: "/favicon.ico",
+    },
+  ],
 };
 
 export default function RootLayout({

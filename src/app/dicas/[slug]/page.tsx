@@ -1,47 +1,14 @@
-"use client";
+import { LayoutPageDica } from "@/app/components/pages/dicas/layout/LayoutPageDica";
+import { generateMetadata } from "./metadata";
 
-import { DicasCard } from "@/app/components/Cards/DicasCard";
-import { ProductCard } from "@/app/components/Cards/ProductCard";
-import { Products } from "@/app/components/Products";
-import { TitleSection } from "@/app/components/TitleSection";
-import { Dicas } from "@/app/components/Dicas";
-import { LayoutArticlePage } from "@/app/components/pages/LayoutArticlePage";
-import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
-import { LoadingPage } from "@/components/Loadings/LoadingPage";
-import { DataContext } from "@/context/data-context";
-import { useHygraphQuery } from "@/hooks/useHygraphQuery";
-import { HygraphPostProps, HygraphProductProps } from "@/types/hygraph-types";
-import { getFakeData } from "@/utils/fakeServer";
-import { getHygraphPosts } from "@/utils/getHygraphPosts";
-import { RichTextHygraph } from "@/utils/richtTextHygraph";
-import { slugCreator } from "@/utils/slugCreator";
-import { verifySlug } from "@/utils/verifySlug";
-import Image from "next/image";
-import { useContext, useEffect, useState } from "react";
-import styled from "styled-components";
-
-interface DicaPageProps {
+export interface PageDicaProps {
   params: {
     slug: string;
   };
 }
 
-export default function DicaPage({ params }: DicaPageProps) {
-  const { data: posts, isFetching } = useHygraphQuery(true, "posts");
-
-  const selectedPost = posts?.filter((post: HygraphPostProps) =>
-    verifySlug({ post, params })
-  )[0];
-  const relatedProducts = selectedPost?.products;
-
-  return isFetching ? (
-    <LoadingPage />
-  ) : (
-    selectedPost && (
-      <LayoutArticlePage
-        article={selectedPost}
-        relatedProducts={relatedProducts}
-      />
-    )
-  );
+export default function DicaPage({ params }: PageDicaProps) {
+  return <LayoutPageDica params={params} />;
 }
+
+export { generateMetadata };
