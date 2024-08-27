@@ -3,7 +3,7 @@ import { NavItem } from "../NavItem";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-const NAV_ITEMS = [
+export const NAV_ITEMS = [
   {
     label: "Página Inicial",
     href: "/",
@@ -18,7 +18,7 @@ const NAV_ITEMS = [
   },
   {
     label: "Contatos",
-    href: "/contacts",
+    href: "/contatos",
   },
 ];
 

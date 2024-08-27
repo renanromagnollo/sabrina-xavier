@@ -1,3 +1,6 @@
+import { NAV_ITEMS } from "@/app/components/Menus/MenuTop";
+import { NavItem } from "@/app/components/Menus/NavItem";
+import { usePathname } from "next/navigation";
 import styled from "styled-components";
 
 interface MenuVerticalProps {}
@@ -34,21 +37,14 @@ const DivMenu = styled.div`
   }
 `;
 export function MenuHero(props: MenuVerticalProps) {
+  const path = usePathname();
   return (
     <DivMenu>
       <Menu>
-        <div>
-          <h3>Serviços</h3>
-        </div>
-        <div>
-          <h3>Estúdio</h3>
-        </div>
-        <div>
-          <h3>Dicas</h3>
-        </div>
-        <div>
-          <h3>Contato</h3>
-        </div>
+        {NAV_ITEMS.map((item) => {
+          if (item.href === "/" && path === "/") return;
+          return <NavItem {...item} key={item.label} />;
+        })}
       </Menu>
     </DivMenu>
   );
