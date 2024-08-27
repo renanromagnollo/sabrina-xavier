@@ -7,7 +7,7 @@ interface ButtonBurguerStyledProps {
 }
 
 interface ButtonBurguerProps extends ButtonBurguerStyledProps {
-  setShowMenu: (state: any) => void;
+  setOpenMenu: (state: any) => void;
 }
 
 const COLOR_DEFAULT = ({ theme }: { theme: DefaultTheme }) =>
@@ -65,17 +65,17 @@ const MainLine = styled.div<ButtonBurguerStyledProps>`
   margin-left: ${({ actived }) => (actived ? "50%" : "0")};
 `;
 
-export function ButtonBurguer({ actived, setShowMenu }: ButtonBurguerProps) {
+export function ButtonBurguer({ actived, setOpenMenu }: ButtonBurguerProps) {
   // const [state, setState] = useState(false);
 
   // function toogleState() {
-  //   setShowMenu((prev: boolean) => !prev);
+  //   setOpenMenu((prev: boolean) => !prev);
   // }
   return (
     <ButtonArea>
       <Burguer
         actived={actived}
-        onClick={() => setShowMenu((prevState: any) => !prevState)}
+        onClick={() => setOpenMenu((prevState: any) => !prevState)}
       >
         <MainLine actived={actived} />
       </Burguer>

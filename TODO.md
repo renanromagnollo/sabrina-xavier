@@ -5,12 +5,13 @@
 [x] feat: página do serviço: imagem; texto explicativo; galeria de imagens correspondente ao serviço
 [x] fix: menutop - corrigir fonte
 [x] feat: seo servicos
-FIXME:[] del: menutop - retirar "Estúdio"
-FIXME:[] fix: menutop - corrigir aparição ao voltar para a home
-FIXME:[] fix: menutop - corrigir lista
+[x] del: menutop - retirar "Estúdio"
+[x] fix: menutop - corrigir aparição ao voltar para a home
+[x] fix: menutop - corrigir lista
 TODO:[] feat: formulário de contato
-FIXME:[] fix: melhorar animação da minha logo no rodapé
-TODO:[] feat: RESPONSIVITY - revisar
+FIXME: [] fix: DicasCard - corrigir zindex de tag
 FIXME:[] fix: corrigir textos e formatações
+TODO:[] feat: RESPONSIVITY - revisar
+FIXME:[] fix: melhorar animação da minha logo no rodapé
 TODO:[] feat: ANIMATION - revisar
 TODO:[] feat: requisições produção

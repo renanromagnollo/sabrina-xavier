@@ -23,7 +23,8 @@ export const NAV_ITEMS = [
 ];
 
 interface showNavList {
-  visibility: boolean;
+  // showOnHeader: boolean;
+  burguerOpened: boolean;
 }
 
 const NavList = styled.nav<showNavList>`
@@ -35,18 +36,26 @@ const NavList = styled.nav<showNavList>`
   gap: 20px;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-size: 1.6rem;
-  visibility: ${({ visibility }) => (visibility ? "visible" : "hidden")};
-  opacity: ${({ visibility }) => (visibility ? 1 : 0)};
+  /* visibility: ${({ showOnHeader }) =>
+    showOnHeader ? "visible" : "hidden"}; */
+  /* opacity: ${({ showOnHeader, burguerOpened }) =>
+    showOnHeader || burguerOpened ? 1 : 0}; */
   transition: opacity 1s ease;
 
   @media (max-width: 600px) {
+    visibility: ${({ burguerOpened }) =>
+      burguerOpened ? "visible" : "hidden"};
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    right: 0;
+    width: 100vw;
     height: 100vh;
+    right: 0;
+    /* bottom: 0; */
     top: 38px;
     position: absolute;
+    z-index: 500;
     background-color: ${({ theme }) => theme.colors.primary.light};
 
     & > * {
@@ -63,13 +72,27 @@ const NavList = styled.nav<showNavList>`
   }
 `;
 
-export function MenuTop({ show }: { show: boolean }) {
+export function MenuTop({
+  showOnHeader,
+  burguerOpened,
+  setBurguerOpened,
+}: {
+  showOnHeader: boolean;
+  burguerOpened: boolean;
+  setBurguerOpened: (situation: boolean) => void;
+}) {
   const path = usePathname();
   return (
-    <NavList visibility={show}>
+    <NavList showOnHeader={showOnHeader} burguerOpened={burguerOpened}>
       {NAV_ITEMS.map((item) => {
         if (item.href === "/" && path === "/") return;
-        return <NavItem {...item} key={item.label} />;
+        return (
+          <NavItem
+            {...item}
+            key={item.label}
+            setBurguerOpened={setBurguerOpened}
+          />
+        );
       })}
     </NavList>
   );

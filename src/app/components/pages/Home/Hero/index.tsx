@@ -12,7 +12,7 @@ interface HeroProps {}
 
 const HeroContainer = styled.section`
   margin-top: 70px;
-  width: 80vw;
+  width: 70vw;
   height: 70vh;
   /* padding-top: 40px; */
   display: flex;
@@ -33,7 +33,7 @@ export function Hero(props: HeroProps) {
   return (
     <HeroContainer>
       <SabrinaXavier />
-      <MenuHero />
+      {/* <MenuHero /> */}
     </HeroContainer>
   );
 }

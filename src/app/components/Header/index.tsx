@@ -39,7 +39,8 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
 `;
 
 export function Header() {
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showOnHeader, setShowOnHeader] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
   const path = usePathname();
 
   useEffect(() => {
@@ -47,15 +48,15 @@ export function Header() {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       console.log(scrollTop);
       console.log(typeof window.innerWidth);
-      if (scrollTop >= 240 && !showMenu && window.innerWidth > 600) {
-        setShowMenu(true);
-      } else if (scrollTop < 240 && showMenu) {
-        setShowMenu(false);
+      if (scrollTop >= 240 && !showOnHeader) {
+        setShowOnHeader(true);
+      } else if (scrollTop < 240 && showOnHeader) {
+        setShowOnHeader(false);
       }
     };
     console.log(path);
     if (path !== "/") {
-      setShowMenu(true);
+      setShowOnHeader(true);
       return;
     }
 
@@ -65,22 +66,18 @@ export function Header() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("touchmove", handleScroll);
     };
-  }, [showMenu, path]);
+  }, [showOnHeader, path]);
 
   return (
-    <HeaderContainer opacity={showMenu}>
-      {showMenu && <LogoHorizontal nameSize={160} />}
-      <ButtonBurguer actived={showMenu} setShowMenu={setShowMenu} />
-      <div
-        style={{
-          position: "absolute",
-          left: "50%",
-          transform: "translateX(-50%)",
-        }}
-      >
-        <MenuTop show={showMenu} />
-      </div>
-      <UserIcon />
+    <HeaderContainer opacity={showOnHeader}>
+      <LogoHorizontal nameSize={160} show={showOnHeader} />
+      <MenuTop
+        // showOnHeader={showOnHeader}
+        burguerOpened={openMenu}
+        setBurguerOpened={setOpenMenu}
+      />
+      <ButtonBurguer actived={openMenu} setOpenMenu={setOpenMenu} />
+      {/* <UserIcon /> */}
     </HeaderContainer>
   );
 }
