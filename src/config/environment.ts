@@ -1,0 +1,8 @@
+const Env = {
+  GA_TRACKING: process.env.GA_TRACKING,
+
+  HYGRAPH_URL: process.env.HYGRAPH_URL,
+  HYGRAPH_TOKEN: process.env.HYGRAPH_TOKEN,
+
+  INSTAGRAM_FEED_TOKEN: process.env.INSTAGRAM_FEED_TOKEN,
+};
