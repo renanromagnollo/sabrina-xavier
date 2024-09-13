@@ -80,7 +80,6 @@ export function FormContact() {
     register,
     handleSubmit,
     setValue,
-    setError,
     formState: { errors },
   } = useForm<DataProps>({
     mode: 'onSubmit',
