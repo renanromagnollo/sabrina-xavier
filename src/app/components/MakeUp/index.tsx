@@ -5,6 +5,7 @@ import { randomInstaPosts } from '@/utils/randomInstaPosts';
 import { useObserver } from '@/hooks/useObserver';
 import { TitleSection } from '@/app/components/TitleSection';
 import { useQueryInstagram } from '@/hooks/useQueryInstagram';
+import { InstagramPostProps } from '@/types/post-instagram-types';
 
 interface MakeUpProps {}
 
@@ -65,7 +66,8 @@ export function MakeUp(props: MakeUpProps) {
 
   const textRef = useRef<HTMLDivElement>(null);
   const selectMakePosts = instagramPosts?.filter(
-    (post) => post?.caption?.includes('make') && post.media_type !== 'VIDEO'
+    (post: InstagramPostProps) =>
+      post?.caption?.includes('make') && post.media_type !== 'VIDEO'
   );
 
   let selectedRandomPosts = randomInstaPosts(selectMakePosts, 2);
