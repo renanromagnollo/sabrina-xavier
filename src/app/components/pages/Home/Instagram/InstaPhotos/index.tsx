@@ -1,10 +1,9 @@
-import styled from "styled-components";
-import { CardInstaPhoto } from "./CardInstaPhoto";
-import { useContext, useEffect, useState } from "react";
-import { DataContext } from "@/context/data-context";
-import { InstagramPostProps } from "@/types/post-instagram-types";
-import { filterInstagramVideos } from "@/utils/filterInstagramVideos";
-import { useInstagramQuery } from "@/hooks/useInstagramQuery";
+import styled from 'styled-components';
+import { CardInstaPhoto } from './CardInstaPhoto';
+import { useEffect, useState } from 'react';
+import { InstagramPostProps } from '@/types/post-instagram-types';
+import { filterInstagramVideos } from '@/utils/filterInstagramVideos';
+import { useQueryInstagram } from '@/hooks/useQueryInstagram';
 
 const Container = styled.section`
   width: 80%;
@@ -15,14 +14,9 @@ const Container = styled.section`
   flex-wrap: wrap;
 `;
 export function InstaPhotos() {
-  // const {instagramPosts} = useContext(DataContext)
-  const { data: instagramPosts } = useInstagramQuery();
-  const [instagramVideos, setInstagramVideos] = useState<InstagramPostProps[]>(
-    []
-  );
-  const [selectedVideos, setSelectedVideos] = useState<InstagramPostProps[]>(
-    []
-  );
+  const { data: instagramPosts } = useQueryInstagram();
+  const [instagramVideos, setInstagramVideos] = useState<InstagramPostProps[]>([]);
+  const [selectedVideos, setSelectedVideos] = useState<InstagramPostProps[]>([]);
 
   function selectingVideos(
     videos: InstagramPostProps[],
@@ -38,9 +32,11 @@ export function InstaPhotos() {
   }
 
   useEffect(() => {
-    const filteredVideos = filterInstagramVideos(instagramPosts);
-    console.log(filteredVideos);
-    if (filteredVideos) setInstagramVideos(filteredVideos);
+    if (instagramPosts) {
+      const filteredVideos = filterInstagramVideos(instagramPosts);
+      console.log(filteredVideos);
+      if (filteredVideos) setInstagramVideos(filteredVideos);
+    }
   }, [instagramPosts]);
 
   useEffect(() => {

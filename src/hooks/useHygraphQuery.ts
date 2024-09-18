@@ -1,7 +1,7 @@
 // import { HygraphHomeProps, HygraphPostProps } from "@/fakes/hygraph-fakes";
-import { getFakeData } from "@/utils/fakeServer";
-import { setSlugInPosts } from "@/utils/slugCreator";
-import { useQuery } from "@tanstack/react-query";
+import { getFakeData } from '@/utils/fakeServer';
+import { setSlugInPosts } from '@/utils/slugCreator';
+import { useQuery } from '@tanstack/react-query';
 
 const queryHome = `
 Home {
@@ -128,10 +128,10 @@ Testimonials {
 
 const fetchHygraph = async (query: string, revalidate = 60 * 60 * 24) => {
   const response = await fetch(process.env.HYGRAPH_URL!, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
       Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`,
     },
     body: JSON.stringify({ query }),
@@ -147,7 +147,8 @@ const fetchHygraph = async (query: string, revalidate = 60 * 60 * 24) => {
 
 const fetchHygraphFake = async (query: string) => {
   const data = await getFakeData(query);
-  if (query === "hygraphHome") {
+  // const data = await fetchHygraph(query);
+  if (query === 'hygraphHome') {
     const { posts } = data;
     const postsWithSlug = setSlugInPosts(posts);
     console.log(postsWithSlug);
@@ -156,7 +157,7 @@ const fetchHygraphFake = async (query: string) => {
       posts: postsWithSlug,
     };
   }
-  if (query === "hygraphPosts") {
+  if (query === 'hygraphPosts') {
     const postsWithSlug = setSlugInPosts(data?.posts);
     console.log(postsWithSlug);
     return postsWithSlug;
@@ -168,14 +169,14 @@ function getHygraph(fake: boolean, schema: string) {
   if (fake) {
     try {
       switch (schema) {
-        case "home":
-          return fetchHygraphFake("hygraphHome");
-        case "posts":
-          return fetchHygraphFake("hygraphPosts");
-        case "testmonials":
-          return fetchHygraphFake("hygraphTestimonials");
+        case 'home':
+          return fetchHygraphFake('hygraphHome');
+        case 'posts':
+          return fetchHygraphFake('hygraphPosts');
+        case 'testmonials':
+          return fetchHygraphFake('hygraphTestimonials');
         default:
-          throw new Error("Invalid fake provided to getHygraph");
+          throw new Error('Invalid fake provided to getHygraph');
       }
     } catch (error) {
       console.error(error);
@@ -183,14 +184,14 @@ function getHygraph(fake: boolean, schema: string) {
   } else {
     try {
       switch (schema) {
-        case "home":
+        case 'home':
           return fetchHygraph(queryHome);
-        case "posts":
+        case 'posts':
           return fetchHygraph(queryPosts);
-        case "testmonials":
+        case 'testmonials':
           return fetchHygraph(queryTestimonials);
         default:
-          throw new Error("Invalid fake provided to getHygraph");
+          throw new Error('Invalid fake provided to getHygraph');
       }
     } catch (error) {
       console.error(error);
@@ -198,10 +199,7 @@ function getHygraph(fake: boolean, schema: string) {
   }
 }
 
-export function useHygraphQuery(
-  fake = true,
-  schema: "home" | "posts" | "testimonials"
-) {
+export function useHygraphQuery(fake = true, schema: 'home' | 'posts' | 'testimonials') {
   const query = useQuery({
     queryKey: [schema],
     queryFn: () => getHygraph(fake, schema),

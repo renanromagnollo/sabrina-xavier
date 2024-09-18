@@ -1,10 +1,10 @@
-import { ModalInsta } from "@/app/components/ModalInsta";
-import { InstagramPostProps } from "@/types/post-instagram-types";
-import { useContext, useEffect, useRef, useState } from "react";
-import styled from "styled-components";
-import { ArrowRounded } from "../Icons/ArrowRounded";
-import { CardJob } from "@/app/components/Cards/ CardJob";
-import { ModalInstagramContext } from "@/context/modal-instagram-context";
+import { ModalInsta } from '@/app/components/ModalInsta';
+import { InstagramPostProps } from '@/types/post-instagram-types';
+import { useContext, useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+import { ArrowRounded } from '../Icons/ArrowRounded';
+import { CardJob } from '@/app/components/Cards/ CardJob';
+import { ModalInstagramContext } from '@/context/modal-instagram-context';
 
 interface CarrouselProps {
   posts: InstagramPostProps[];
@@ -52,17 +52,15 @@ export function Carrousel({ posts }: CarrouselProps) {
   // );
   // const [isTransition, setIsTransition] = useState(false);
   const { setModalItem } = useContext(ModalInstagramContext);
-  const [displayItems, setDisplayItems] = useState([]);
+  const [displayItems, setDisplayItems] = useState();
   const [scrollX, setScrollX] = useState(30);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const wrapperNode = wrapperRef.current;
 
   useEffect(() => {
     if (posts?.length > 0) {
-      const galleryPhotos = posts?.filter(
-        (post) => post.media_type !== "VIDEO"
-      );
-      setDisplayItems([...galleryPhotos, ...galleryPhotos]);
+      const galleryPhotos = posts?.filter((post) => post.media_type !== 'VIDEO');
+      setDisplayItems(galleryPhotos);
     }
 
     // wrapperNode?.addEventListener("transitionstart", () =>
@@ -155,12 +153,12 @@ export function Carrousel({ posts }: CarrouselProps) {
           style={{ marginLeft: `${scrollX}px` }}
         >
           {displayItems?.map((post, i) => {
-            if (post?.caption?.includes("@")) {
+            if (post?.caption?.includes('@')) {
               return (
                 <CardJob
                   clicked={(post) => setModalItem(post)}
                   key={i}
-                  rotate={""}
+                  rotate={''}
                   post={post}
                 />
               );
