@@ -5,12 +5,6 @@ import Image from 'next/image';
 import { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-// interface ModalInstaProps {
-//   isOpen: boolean;
-//   post: InstagramPostProps | undefined;
-//   closeModal: (opened: boolean) => void;
-// }
-
 const ContainerModal = styled.div`
   background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
@@ -49,26 +43,29 @@ export function ModalInsta() {
   const { modalItem, setModalItem } = useContext(ModalInstagramContext);
   const [modalOpened, setModalOpened] = useState(false);
   const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(null);
-  console.log(clickedImage);
+
+  // Função para exibir conteúdo no modal
   function showOnModal(post: InstagramPostProps) {
     setClickedImage(post);
     setModalOpened(true);
   }
 
+  // Verifica se modalItem é válido e chama a função para abrir o modal
   useEffect(() => {
-    if (modalItem && Object.keys(modalItem).length > 0) {
+    if (modalItem && Object.keys(modalItem).length > 0 && modalItem.media_url) {
       showOnModal(modalItem);
     }
   }, [modalItem]);
 
+  // Função para fechar o modal
   function closeModal() {
     setModalOpened(false);
     setClickedImage(null);
     setModalItem(null);
   }
 
+  // Função para renderizar a mídia do post (imagem ou vídeo)
   function mediaRender(item: InstagramPostProps) {
-    console.log(item);
     switch (item.media_type) {
       case 'IMAGE':
       case 'CAROUSEL_ALBUM':
@@ -76,7 +73,6 @@ export function ModalInsta() {
           <Image
             src={item.media_url}
             alt="image-instagram"
-            // sizes="(max-width: 168px) 90vw, (max-width: 1200px) 50vw, 33vw"
             width={500}
             height={500}
             style={{ objectFit: 'cover', objectPosition: 'top' }}
@@ -92,17 +88,22 @@ export function ModalInsta() {
         return null;
     }
   }
+
+  // Fecha o modal ao rolar a página
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      closeModal();
-      return;
-    });
+    const handleScroll = () => closeModal();
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
   return (
     modalOpened && (
-      <ContainerModal onClick={() => closeModal()}>
+      <ContainerModal onClick={closeModal}>
         {clickedImage && (
-          <ContainerContent>
+          <ContainerContent onClick={(e) => e.stopPropagation()}>
             {mediaRender(clickedImage)}
             <Text>{cleanText(clickedImage.caption)}</Text>
             <InstagramProfile>
