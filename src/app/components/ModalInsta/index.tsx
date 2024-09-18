@@ -44,27 +44,34 @@ export function ModalInsta() {
   const [modalOpened, setModalOpened] = useState(false);
   const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(null);
 
-  // Função para exibir conteúdo no modal
   function showOnModal(post: InstagramPostProps) {
     setClickedImage(post);
     setModalOpened(true);
   }
 
-  // Verifica se modalItem é válido e chama a função para abrir o modal
+  function isInstagramPostProps(item: any): item is InstagramPostProps {
+    return (
+      item &&
+      typeof item === 'object' &&
+      'media_url' in item &&
+      'media_type' in item &&
+      'caption' in item &&
+      'timestamp' in item
+    );
+  }
+
   useEffect(() => {
-    if (modalItem && Object.keys(modalItem).length > 0 && modalItem.media_url) {
+    if (isInstagramPostProps(modalItem)) {
       showOnModal(modalItem);
     }
   }, [modalItem]);
 
-  // Função para fechar o modal
   function closeModal() {
     setModalOpened(false);
     setClickedImage(null);
     setModalItem(null);
   }
 
-  // Função para renderizar a mídia do post (imagem ou vídeo)
   function mediaRender(item: InstagramPostProps) {
     switch (item.media_type) {
       case 'IMAGE':
@@ -89,7 +96,6 @@ export function ModalInsta() {
     }
   }
 
-  // Fecha o modal ao rolar a página
   useEffect(() => {
     const handleScroll = () => closeModal();
     window.addEventListener('scroll', handleScroll);
