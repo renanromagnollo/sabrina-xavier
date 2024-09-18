@@ -147,7 +147,6 @@ const fetchHygraph = async (query: string, revalidate = 60 * 60 * 24) => {
 
 const fetchHygraphFake = async (query: string) => {
   const data = await getFakeData(query);
-  // const data = await fetchHygraph(query);
   if (query === 'hygraphHome') {
     const { posts } = data;
     const postsWithSlug = setSlugInPosts(posts);
@@ -199,12 +198,13 @@ function getHygraph(fake: boolean, schema: string) {
   }
 }
 
-export function useHygraphQuery(fake = true, schema: 'home' | 'posts' | 'testimonials') {
+export function useHygraphQuery(fake = false, schema: 'home' | 'posts' | 'testimonials') {
   const query = useQuery({
     queryKey: [schema],
     queryFn: () => getHygraph(fake, schema),
     refetchOnWindowFocus: false,
     enabled: !!schema,
+    staleTime: 1000 * 60 * 60 * 24,
   });
   return query;
 }
