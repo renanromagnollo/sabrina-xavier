@@ -1,29 +1,28 @@
-import styled from "styled-components";
-import { NavItem } from "../NavItem";
-import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import styled from 'styled-components';
+import { NavItem } from '../NavItem';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export const NAV_ITEMS = [
   {
-    label: "Página Inicial",
-    href: "/",
+    label: 'Página Inicial',
+    href: '/',
   },
   {
-    label: "Serviços",
-    href: "/servicos",
+    label: 'Serviços',
+    href: '/servicos',
   },
   {
-    label: "Dicas",
-    href: "/dicas",
+    label: 'Dicas',
+    href: '/dicas',
   },
   {
-    label: "Contatos",
-    href: "/contatos",
+    label: 'Contatos',
+    href: '/contatos',
   },
 ];
 
 interface showNavList {
-  // showOnHeader: boolean;
   burguerOpened: boolean;
 }
 
@@ -31,20 +30,14 @@ const NavList = styled.nav<showNavList>`
   position: relative;
   display: flex;
   width: 100%;
-  /* display: flex; */
   justify-content: center;
   gap: 20px;
   color: ${({ theme }) => theme.colors.primary.dark};
   font-size: 1.6rem;
-  /* visibility: ${({ showOnHeader }) =>
-    showOnHeader ? "visible" : "hidden"}; */
-  /* opacity: ${({ showOnHeader, burguerOpened }) =>
-    showOnHeader || burguerOpened ? 1 : 0}; */
   transition: opacity 1s ease;
 
   @media (max-width: 600px) {
-    visibility: ${({ burguerOpened }) =>
-      burguerOpened ? "visible" : "hidden"};
+    visibility: ${({ burguerOpened }) => (burguerOpened ? 'visible' : 'hidden')};
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -52,7 +45,6 @@ const NavList = styled.nav<showNavList>`
     width: 100vw;
     height: 100vh;
     right: 0;
-    /* bottom: 0; */
     top: 38px;
     position: absolute;
     z-index: 500;
@@ -83,16 +75,10 @@ export function MenuTop({
 }) {
   const path = usePathname();
   return (
-    <NavList showOnHeader={showOnHeader} burguerOpened={burguerOpened}>
+    <NavList burguerOpened={burguerOpened}>
       {NAV_ITEMS.map((item) => {
-        if (item.href === "/" && path === "/") return;
-        return (
-          <NavItem
-            {...item}
-            key={item.label}
-            setBurguerOpened={setBurguerOpened}
-          />
-        );
+        if (item.href === '/' && path === '/') return;
+        return <NavItem {...item} key={item.label} setBurguerOpened={setBurguerOpened} />;
       })}
     </NavList>
   );

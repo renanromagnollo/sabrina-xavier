@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import { CardMakeup } from './CardMakeup';
-import { useContext, useEffect, useRef } from 'react';
-import { DataContext } from '@/context/data-context';
+import { useEffect, useRef } from 'react';
 import { randomInstaPosts } from '@/utils/randomInstaPosts';
 import { useObserver } from '@/hooks/useObserver';
 import { TitleSection } from '@/app/components/TitleSection';
-import { useInstagramQuery } from '@/hooks/useInstagramQuery';
 import { useQueryInstagram } from '@/hooks/useQueryInstagram';
+import { InstagramPostProps } from '@/types/post-instagram-types';
 
 interface MakeUpProps {}
 
@@ -62,20 +61,20 @@ const ImagesArea = styled.div`
   gap: 40px;
 `;
 export function MakeUp(props: MakeUpProps) {
-  // const { instagramPosts } = useContext(DataContext);
   const { data: instagramPosts } = useQueryInstagram();
   const { isVisibled, setElement } = useObserver();
 
   const textRef = useRef<HTMLDivElement>(null);
   const selectMakePosts = instagramPosts?.filter(
-    (post) => post?.caption?.includes('make') && post.media_type !== 'VIDEO'
+    (post: InstagramPostProps) =>
+      post?.caption?.includes('make') && post.media_type !== 'VIDEO'
   );
-  // console.log(ImagesMake.length)
+
   let selectedRandomPosts = randomInstaPosts(selectMakePosts, 2);
 
   useEffect(() => {
     setElement(textRef);
-  }, [textRef]);
+  }, [textRef, setElement]); // Incluindo setElement como dependência
 
   return (
     <SectionArea>
@@ -85,8 +84,8 @@ export function MakeUp(props: MakeUpProps) {
             <div style={{}}>
               <TitleSection title="Make Up" />
               <h3>
-                "Realce sua beleza natural com maquiagens e sobrancelhas perfeitas para
-                você."
+                &quot;Realce sua beleza natural com maquiagens e sobrancelhas perfeitas
+                para você.&quot; {/* Escapando as aspas */}
               </h3>
             </div>
           )}
@@ -96,8 +95,6 @@ export function MakeUp(props: MakeUpProps) {
             let rotateDegree = i % 2 == 0 ? '5' : '3';
             return <CardMakeup key={i} post={post} rotate={rotateDegree} />;
           })}
-          {/* <CardMakeup/>
-                    <CardMakeup/> */}
         </ImagesArea>
       </Container>
     </SectionArea>
