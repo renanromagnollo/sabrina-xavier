@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { UserIcon } from "@/components/Icons/UserIcon";
-import styled from "styled-components";
-import { MenuTop } from "../Menus/MenuTop";
-import { useEffect, useState } from "react";
-import { ButtonBurguer } from "../Buttons/ButtonBurguer";
-import { usePathname } from "next/navigation";
-import { LogoName } from "@/components/Logo/LogoName";
-import { Logotipo } from "@/components/Logo/Logotipo";
-import { LogoHorizontal } from "@/components/Logo/LogoHorizontal";
+import { UserIcon } from '@/components/Icons/UserIcon';
+import styled from 'styled-components';
+import { MenuTop } from '../Menus/MenuTop';
+import { useEffect, useState } from 'react';
+import { ButtonBurguer } from '../Buttons/ButtonBurguer';
+import { usePathname } from 'next/navigation';
+import { LogoName } from '@/components/Logo/LogoName';
+import { Logotipo } from '@/components/Logo/Logotipo';
+import { LogoHorizontal } from '@/components/Logo/LogoHorizontal';
 
 interface HeaderContainerProps {
   opacity: boolean;
@@ -26,7 +26,7 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
   position: fixed;
   top: 0;
   z-index: 1000;
-  opacity: ${({ opacity }) => (opacity ? 0.9 : "none")};
+  opacity: ${({ opacity }) => (opacity ? 0.9 : 'none')};
   transition: opacity 1s ease;
 
   svg {
@@ -55,16 +55,16 @@ export function Header() {
       }
     };
     console.log(path);
-    if (path !== "/") {
+    if (path !== '/') {
       setShowOnHeader(true);
       return;
     }
 
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("touchmove", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('touchmove', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("touchmove", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('touchmove', handleScroll);
     };
   }, [showOnHeader, path]);
 
@@ -72,7 +72,7 @@ export function Header() {
     <HeaderContainer opacity={showOnHeader}>
       <LogoHorizontal nameSize={160} show={showOnHeader} />
       <MenuTop
-        // showOnHeader={showOnHeader}
+        showOnHeader={showOnHeader}
         burguerOpened={openMenu}
         setBurguerOpened={setOpenMenu}
       />
