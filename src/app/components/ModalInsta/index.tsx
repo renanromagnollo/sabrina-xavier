@@ -1,9 +1,9 @@
-import { ModalInstagramContext } from "@/context/modal-instagram-context";
-import { InstagramPostProps } from "@/types/post-instagram-types";
-import { cleanText } from "@/utils/cleanText";
-import Image from "next/image";
-import { useContext, useEffect, useState } from "react";
-import styled from "styled-components";
+import { ModalInstagramContext } from '@/context/modal-instagram-context';
+import { InstagramPostProps } from '@/types/post-instagram-types';
+import { cleanText } from '@/utils/cleanText';
+import Image from 'next/image';
+import { useContext, useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 // interface ModalInstaProps {
 //   isOpen: boolean;
@@ -48,9 +48,7 @@ const InstagramProfile = styled.h5`
 export function ModalInsta() {
   const { modalItem, setModalItem } = useContext(ModalInstagramContext);
   const [modalOpened, setModalOpened] = useState(false);
-  const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(
-    null
-  );
+  const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(null);
   console.log(clickedImage);
   function showOnModal(post: InstagramPostProps) {
     setClickedImage(post);
@@ -72,8 +70,8 @@ export function ModalInsta() {
   function mediaRender(item: InstagramPostProps) {
     console.log(item);
     switch (item.media_type) {
-      case "IMAGE":
-      case "CAROUSEL_ALBUM":
+      case 'IMAGE':
+      case 'CAROUSEL_ALBUM':
         return (
           <Image
             src={item.media_url}
@@ -81,12 +79,12 @@ export function ModalInsta() {
             // sizes="(max-width: 168px) 90vw, (max-width: 1200px) 50vw, 33vw"
             width={500}
             height={500}
-            style={{ objectFit: "cover", objectPosition: "top" }}
+            style={{ objectFit: 'cover', objectPosition: 'top' }}
           />
         );
-      case "VIDEO":
+      case 'VIDEO':
         return (
-          <video controls autoPlay loop height={"80%"}>
+          <video controls autoPlay loop height={'80%'}>
             <source src={item.media_url} type="video/mp4" />
           </video>
         );
@@ -95,7 +93,7 @@ export function ModalInsta() {
     }
   }
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       closeModal();
       return;
     });
