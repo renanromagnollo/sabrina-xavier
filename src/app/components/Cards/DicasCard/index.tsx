@@ -1,11 +1,11 @@
-import Image from "next/image";
-import styled from "styled-components";
-import { ButtonTagType } from "../../Buttons/ButtonTagType";
-import { HygraphPostProps } from "@/types/hygraph-types";
-import { RichTextHygraph } from "@/utils/richtTextHygraph";
-import { ButtonUnselected } from "../../Buttons/ButtonUnselected";
-import { slugCreator } from "@/utils/slugCreator";
-import Link from "next/link";
+import Image from 'next/image';
+import styled from 'styled-components';
+import { ButtonTagType } from '../../Buttons/ButtonTagType';
+import { HygraphPostProps } from '@/types/hygraph-types';
+import { RichTextHygraph } from '@/utils/richtTextHygraph';
+import { ButtonUnselected } from '../../Buttons/ButtonUnselected';
+import { slugCreator } from '@/utils/slugCreator';
+import Link from 'next/link';
 
 interface DicasCardProps {
   item?: HygraphPostProps;
@@ -67,7 +67,7 @@ const TagType = styled.h6`
 
 const TagBG = styled.div<{ name: string }>`
   --color-default: ${({ name, theme }) =>
-    name === "Make" ? theme.colors.secundary.dark : theme.colors.primary.dark};
+    name === 'Make' ? theme.colors.secundary.dark : theme.colors.primary.dark};
   width: 60%;
   height: 30%;
   bottom: -160px;
@@ -94,25 +94,23 @@ export function DicasCard({ item }: DicasCardProps) {
         <ImageArea>
           <TagArea>
             <TagType>{tagName}</TagType>
-            <TagBG name={tagName} />
+            <TagBG name={tagName ?? ''} />
           </TagArea>
           <Image
             width={290}
             height={215}
             alt="dica-image"
-            src={item?.image?.url ?? "http://picsum.photos//290/215"}
-            style={{ objectFit: "cover", width: "100%" }}
+            src={item?.image?.url ?? 'http://picsum.photos//290/215'}
+            style={{ objectFit: 'cover', width: '100%' }}
           />
         </ImageArea>
         <Content>
           {/* <ButtonTagType type='hair'/> */}
-          <Title>{item?.title ?? "Title"}</Title>
+          <Title>{item?.title ?? 'Title'}</Title>
           {/* <h5><RichTextHygraph content={item?.text?.raw}/></h5> */}
         </Content>
         <ButtonArea>
-          <ButtonUnselected
-            color={tagName === "Make" ? "secundary" : "primary"}
-          >
+          <ButtonUnselected color={tagName === 'Make' ? 'secundary' : 'primary'}>
             Leia
           </ButtonUnselected>
         </ButtonArea>
