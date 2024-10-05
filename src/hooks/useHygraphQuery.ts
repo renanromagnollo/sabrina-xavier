@@ -198,13 +198,14 @@ function getHygraph(fake: boolean, schema: string) {
   }
 }
 
-export function useHygraphQuery(fake = false, schema: 'home' | 'posts' | 'testimonials') {
+export function useHygraphQuery(fake = true, schema: 'home' | 'posts' | 'testimonials') {
   const query = useQuery({
     queryKey: [schema],
     queryFn: () => getHygraph(fake, schema),
     refetchOnWindowFocus: false,
-    enabled: !!schema,
+    // enabled: !!schema,
     staleTime: 1000 * 60 * 60 * 24,
   });
+  console.log(query);
   return query;
 }

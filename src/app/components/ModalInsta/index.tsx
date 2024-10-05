@@ -60,6 +60,7 @@ export function ModalInsta() {
   // Verifica se modalItem é válido e chama a função para abrir o modal
   useEffect(() => {
     if (isInstagramPostProps(modalItem)) {
+      console.log(modalItem);
       showOnModal(modalItem);
     }
   }, [modalItem]);
@@ -68,15 +69,15 @@ export function ModalInsta() {
   function closeModal() {
     setModalOpened(false);
     setClickedImage(null);
-    setModalItem({
-      media_type: '',
-      timestamp: '',
-      media_url: '',
-      thumbnail_url: '',
-      caption: '',
-      permalink: '',
-      id: '',
-    });
+    // setModalItem({
+    //   media_type: '',
+    //   timestamp: '',
+    //   media_url: '',
+    //   thumbnail_url: '',
+    //   caption: '',
+    //   permalink: '',
+    //   id: '',
+    // });
   }
 
   // Função para renderizar a mídia do post (imagem ou vídeo)
