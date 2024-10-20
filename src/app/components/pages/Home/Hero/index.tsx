@@ -6,9 +6,9 @@ import styled from "styled-components";
 import { SabrinaXavier } from "./SabrinaXavier";
 import { MenuHero } from "./MenuHero";
 import { useState } from "react";
-import { ModalHero } from "./SabrinaXavier/ModalAboutMe";
+// import { ModalHero } from "./SabrinaXavier/ModalAboutMe";
 
-interface HeroProps {}
+interface HeroProps { }
 
 const HeroContainer = styled.section`
   margin-top: 70px;

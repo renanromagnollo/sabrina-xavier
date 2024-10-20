@@ -6,9 +6,9 @@ import { SAContent } from "../SabrinaXavier/SAContent";
 import { PhotoSquare } from "@/components/PhotoSquare";
 import { LogoVertical } from "@/components/Logo/LogoVertical";
 import { useState } from "react";
-import { ModalHero } from "./ModalAboutMe";
+// import { ModalHero } from "./ModalAboutMe";
 
-interface FeaturedProps {}
+interface FeaturedProps { }
 
 const Container = styled.div`
   width: 70%;

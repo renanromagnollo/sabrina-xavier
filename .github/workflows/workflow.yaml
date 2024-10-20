@@ -14,5 +14,5 @@ jobs:
           node-version: 20.x
       - name: run install, build
         run: |
-          num install
+          npm install
           npm run build

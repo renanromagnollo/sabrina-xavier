@@ -4,7 +4,7 @@ import styled from "styled-components";
 interface NavItemProps {
   label: string;
   href: string;
-  setBurguerOpened: (situation: boolean) => void;
+  setBurguerOpened?: (situation: boolean) => void;
 }
 
 const LinkArea = styled.div`
@@ -16,7 +16,7 @@ const LinkArea = styled.div`
 
 export const NavItem = ({ label, href, setBurguerOpened }: NavItemProps) => {
   return (
-    <LinkArea onClick={() => setBurguerOpened(false)}>
+    <LinkArea onClick={() => { if (setBurguerOpened !== undefined) setBurguerOpened(false) }}>
       <Link href={href}>
         <h6>{label}</h6>
       </Link>

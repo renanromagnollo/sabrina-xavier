@@ -2,7 +2,7 @@ import { ButtonContact } from "@/app/components/Buttons/ButtonContact/ButtonCont
 import { ButtonUnselected } from "@/app/components/Buttons/ButtonUnselected";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { ModalHero } from "../../ModalAboutMe";
+// import { ModalHero } from "../../ModalAboutMe";
 
 const ButtonsContent = styled.div`
   display: flex;

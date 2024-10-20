@@ -1,4 +1,4 @@
-import { RichTextContent } from "@graphcms/rich-text-react-renderer";
+import { RichTextContent } from "@graphcms/rich-text-types";
 
 interface HygraphAboutmeProps {
   imgAbout: {

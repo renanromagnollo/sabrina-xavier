@@ -9,7 +9,7 @@ import { reducer } from "./reducers";
 export interface dataProps {
   instagramPosts: InstagramPostProps[];
   setInstagramPosts: (posts: InstagramPostProps[]) => void;
-  hygraphHome: HygraphHomeProps | {};
+  hygraphHome: HygraphHomeProps;
   setHygraphHome: (hygraphHome: HygraphHomeProps) => void;
   // setHomeContext: (hygraphHome: HygraphHomeProps, posts: InstagramPostProps[]) => void
   posts: HygraphPostProps[];
@@ -20,13 +20,13 @@ export interface dataProps {
 
 const data: dataProps = {
   instagramPosts: [],
-  setInstagramPosts: () => {},
+  setInstagramPosts: () => { },
   hygraphHome: {},
-  setHygraphHome: () => {},
+  setHygraphHome: () => { },
   posts: [],
-  setPosts: () => {},
+  setPosts: () => { },
   testimonials: [],
-  setTestimonials: () => {},
+  setTestimonials: () => { },
 };
 
 export { reducer, data };

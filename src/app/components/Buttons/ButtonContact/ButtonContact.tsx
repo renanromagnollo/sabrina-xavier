@@ -32,8 +32,7 @@ const Button = styled.button`
   } */
 `;
 
-interface ButtonContactProps {}
-export function ButtonContact({ children }: { children: any }) {
+export function ButtonContact({ children }: { children?: any }) {
   return (
     <ButtonArea>
       <a

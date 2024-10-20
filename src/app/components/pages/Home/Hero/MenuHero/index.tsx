@@ -3,7 +3,6 @@ import { NavItem } from "@/app/components/Menus/NavItem";
 import { usePathname } from "next/navigation";
 import styled from "styled-components";
 
-interface MenuVerticalProps {}
 
 const Menu = styled.nav`
   margin-top: 30px;
@@ -36,7 +35,7 @@ const DivMenu = styled.div`
     display: none;
   }
 `;
-export function MenuHero(props: MenuVerticalProps) {
+export function MenuHero() {
   const path = usePathname();
   return (
     <DivMenu>
