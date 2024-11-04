@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import { Carrousel } from '@/components/Carrousel';
 import { LoadingCircle } from '@/components/Loadings/LoadingCircle';
 import { TitleSection } from '@/app/components/TitleSection';
-import { useQueryInstagram } from '@/hooks/useQueryInstagram';
+import { useInstagramQuery } from '@/hooks/useInstagramQuery';
 
-interface AlgunsTrabalhosProps {}
+interface AlgunsTrabalhosProps { }
 
 const ContainerTrabalhos = styled.section`
   width: 100vw;
@@ -52,7 +52,7 @@ const TitleContainer = styled.div`
 export function AlgunsTrabalhos(props: AlgunsTrabalhosProps) {
   const rotate = ['-4deg', '3deg', '-6deg'];
 
-  const { data: instagramPosts, isFetching } = useQueryInstagram();
+  const { data: instagramPosts, isFetching } = useInstagramQuery();
 
   return (
     <ContainerTrabalhos>

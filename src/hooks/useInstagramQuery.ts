@@ -1,4 +1,5 @@
 import { Env } from '@/config/environments';
+import { getFakeData } from '@/utils/fakeServer';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
@@ -14,12 +15,12 @@ async function fetchInstagramMediaData() {
   return response?.data.data;
 }
 
-export function useQueryInstagram() {
+export function useInstagramQuery() {
   const query = useQuery({
     queryKey: ['query-instagram'],
-    queryFn: fetchInstagramMediaData,
+    queryFn: () => getFakeData('instagramPosts'),
     refetchOnWindowFocus: false,
-    staleTime: 100 * 60 * 60 * 24,
+    staleTime: 0,
   });
   return query;
 }

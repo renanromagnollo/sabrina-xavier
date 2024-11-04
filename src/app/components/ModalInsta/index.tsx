@@ -1,3 +1,5 @@
+'use client'
+
 import { ModalInstagramContext } from '@/context/modal-instagram-context';
 import { InstagramPostProps } from '@/types/post-instagram-types';
 import { cleanText } from '@/utils/cleanText';

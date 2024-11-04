@@ -4,11 +4,8 @@ import { Logotipo } from "@/components/Logo/Logotipo";
 import styled from "styled-components";
 import { ButtonsSA } from "./ButtonsSA";
 import { LogoVertical } from "@/components/Logo/LogoVertical";
-import { Suspense, useContext, useState } from "react";
-import { DataContext } from "@/context/data-context";
-import { HygraphHomeProps } from "@/types/hygraph-types";
+import { useState } from "react";
 import { randomPhrases } from "@/utils/randomPhrases";
-import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import { ModalAboutMe } from "../ModalAboutMe";
 import { LoadingFeatText } from "@/components/Loadings/LoadingFeatText";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
@@ -159,6 +156,8 @@ export function SAContent() {
   const [modalOpened, setModalOpened] = useState(false);
 
   const { data: hygraphHome } = useHygraphQuery(true, "home");
+  // const api: API = new HygraphAPI()
+  // const hygraphHome: THygraphHome = await api.getHygraphHome(true)
   const phrases = randomPhrases(hygraphHome?.powerPhrases);
 
   function openModal() {

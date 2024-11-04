@@ -2,7 +2,6 @@
 
 import { ReactNode } from "react";
 import StyledComponentsProvider from "./StyledComponentsProvider";
-import DataProvider from "@/context/data-context";
 import ModalInstagramProvider from "@/context/modal-instagram-context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -16,7 +15,7 @@ export default function Providers(props: ProvidersProps) {
     <StyledComponentsProvider>
       <QueryClientProvider client={client}>
         <ModalInstagramProvider>
-          <DataProvider>{props.children}</DataProvider>
+          {props.children}
         </ModalInstagramProvider>
       </QueryClientProvider>
     </StyledComponentsProvider>

@@ -3,7 +3,7 @@ import { CardInstaPhoto } from './CardInstaPhoto';
 import { useEffect, useState } from 'react';
 import { InstagramPostProps } from '@/types/post-instagram-types';
 import { filterInstagramVideos } from '@/utils/filterInstagramVideos';
-import { useQueryInstagram } from '@/hooks/useQueryInstagram';
+import { useInstagramQuery } from '@/hooks/useInstagramQuery';
 
 const Container = styled.section`
   width: 80%;
@@ -14,7 +14,7 @@ const Container = styled.section`
   flex-wrap: wrap;
 `;
 export function InstaPhotos() {
-  const { data: instagramPosts } = useQueryInstagram();
+  const { data: instagramPosts } = useInstagramQuery();
   const [instagramVideos, setInstagramVideos] = useState<InstagramPostProps[]>([]);
   const [selectedVideos, setSelectedVideos] = useState<InstagramPostProps[]>([]);
 
