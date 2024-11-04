@@ -1,14 +1,14 @@
+'use client'
+
 import { DicasCard } from "@/app/components/Cards/DicasCard";
 import { TitleSection } from "@/app/components/TitleSection";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
-import { DataContext } from "@/context/data-context";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
-import { HygraphPostProps } from "@/types/hygraph-types";
+import { TRawHygraphPost } from "@/types/hygraph-types";
 import { useParams } from "next/navigation";
-import { useContext } from "react";
 import styled from "styled-components";
 
-interface DicasProps {}
+interface DicasProps { }
 
 const SectionArea = styled.section`
   width: 100%;
@@ -64,7 +64,7 @@ export function Dicas(props: DicasProps) {
         {!listDicas ? (
           <LoadingCircle />
         ) : (
-          listDicas.map((item: HygraphPostProps, i: number) => {
+          listDicas.map((item: TRawHygraphPost, i: number) => {
             if (item.slug !== slug) return <DicasCard key={i} item={item} />;
             return;
           })

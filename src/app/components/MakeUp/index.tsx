@@ -1,13 +1,15 @@
+'use client'
+
 import styled from 'styled-components';
 import { CardMakeup } from './CardMakeup';
 import { useEffect, useRef } from 'react';
 import { randomInstaPosts } from '@/utils/randomInstaPosts';
 import { useObserver } from '@/hooks/useObserver';
 import { TitleSection } from '@/app/components/TitleSection';
-import { useQueryInstagram } from '@/hooks/useQueryInstagram';
+import { useInstagramQuery } from '@/hooks/useInstagramQuery';
 import { InstagramPostProps } from '@/types/post-instagram-types';
 
-interface MakeUpProps {}
+interface MakeUpProps { }
 
 const SectionArea = styled.section`
   width: 100%;
@@ -61,7 +63,7 @@ const ImagesArea = styled.div`
   gap: 40px;
 `;
 export function MakeUp(props: MakeUpProps) {
-  const { data: instagramPosts } = useQueryInstagram();
+  const { data: instagramPosts } = useInstagramQuery();
   const { isVisibled, setElement } = useObserver();
 
   const textRef = useRef<HTMLDivElement>(null);
