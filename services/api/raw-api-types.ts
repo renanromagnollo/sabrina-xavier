@@ -15,7 +15,7 @@ export type RawHygraphPost = {
   image: { url: string }
   title: string
   text: {
-    raw: RichTextProps,
+    raw: RichTextProps
     text: string
   }
   products: RawHygraphPoduct[]
@@ -77,6 +77,16 @@ export type RawHygraphHome = {
   posts: RawHygraphPost[]
   products: RawHygraphPoduct[]
   hairStyles: RawHygraphHairstyleItem[]
+}
+
+export type RawHygraphPortfolio = {
+  id: string
+  link: string
+  stage: string
+  texto: { raw: RichTextProps }
+  typeService: { name: string }[]
+  imagem: { url: string }
+  video: { url: string }
 }
 
 //TODO: Alterar o schema HaiStyle no Hygraph para ServiceWork e apenas inserir uma escolha de type dos tipos de serviço hair ou make.
