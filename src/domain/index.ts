@@ -1,0 +1,10 @@
+export { type Portfolio } from './portfolio';
+export { type Testimonial } from './testmonial'
+export { type Post } from './post'
+export { type Product } from './product'
+export { type Phrase } from './phrase'
+export { type Aboutme } from './aboutme'
+export { type Aboutstudio } from './aboutstudio'
+export { type Makeup } from './makeup'
+export { type Hairstyles } from './hairstyles'
+export { type Powerphrases } from './powerphrases'

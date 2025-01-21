@@ -1,9 +1,9 @@
-import { HygraphPowerPhraseProps } from "@/types/hygraph-types";
+import { Powerphrases } from "@/domain";
 
 export function randomPhrases(
-  listPhrases: HygraphPowerPhraseProps[],
+  listPhrases: Powerphrases[],
   number = 1
-): HygraphPowerPhraseProps {
+): Powerphrases | undefined {
   // const length = listPosts.length
   if (!listPhrases) {
     return;

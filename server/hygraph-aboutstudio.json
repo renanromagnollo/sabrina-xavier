@@ -1,0 +1,51 @@
+{
+  "data": {
+    "aboutStudio": {
+      "imageMain": {
+        "url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxoxmz5z07qm07lwgw2a9mw5"
+      },
+      "title": "Studio",
+      "text": {
+        "raw": {
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Bem-vindo ao nosso salão de beleza, onde o seu bem-estar é a nossa prioridade. Aqui, você encontra um ambiente moderno e aconchegante, perfeito para relaxar e se cuidar."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Nossa equipe é formada por profissionais qualificados, prontos para oferecer um atendimento de excelência e resultados incríveis. Utilizamos produtos e técnicas de alta qualidade para garantir que você saia daqui se sentindo renovado e satisfeito."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Venha nos visitar e experimente um novo padrão de cuidado e atenção. Estamos ansiosos para receber você!"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "imagesGallery": [
+        {
+          "url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxoxrsbc082t07khhzsabhka"
+        },
+        {
+          "url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxoxrsbh07uj07lwfb9rc6iu"
+        },
+        {
+          "url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxoxrsaz07ui07kive5w3lf8"
+        }
+      ]
+    }
+  }
+}

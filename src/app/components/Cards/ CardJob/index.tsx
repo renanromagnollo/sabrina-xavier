@@ -1,14 +1,15 @@
 import Image from "next/image";
 import styled from "styled-components";
-import { InstagramPostProps } from "@/types/post-instagram-types";
-import { cleanText } from "@/utils/cleanText";
+import { cleanText, extractHygraphRichText } from "@/utils";
+import { Portfolio } from "@/domain";
+import { RichTextProps } from "@graphcms/rich-text-react-renderer";
 
 interface CardJobProps {
   width?: number;
   height?: number;
   rotate?: string;
-  post: InstagramPostProps;
-  clicked: (post: InstagramPostProps) => void;
+  item: Portfolio;
+  clicked: (item: Portfolio) => void;
 }
 
 interface CardBoxProps {
@@ -63,32 +64,36 @@ export function CardJob({
   width = 280,
   height = 310,
   rotate,
-  post,
+  item,
   clicked,
 }: CardJobProps) {
-  const clientInstagram = post.caption?.match(/@[\.a-z0-9_-]{2,}/g);
-  const cleanedText = cleanText(post.caption);
+  const richtextExtracted = extractHygraphRichText(item.text.raw)
+  const instagramProfiles = richtextExtracted.match(/@[\.a-z0-9_-]{2,}/g);
+  const oneProfile = instagramProfiles ? instagramProfiles[0] : ''
+  const cleanedText = cleanText(richtextExtracted);
   return (
-    post && (
-      <CardBox rotate={rotate} onClick={() => clicked(post)}>
+    item && (
+      <CardBox rotate={rotate} onClick={() => clicked(item)}>
         <ImgCard>
           <Image
-            src={post.media_url ?? `http://picsum.photos//${width}/${height}`}
+            src={item.image ?? `http://picsum.photos//${width}/${height}`}
             width={width}
             height={height}
             alt="job-image"
             // sizes="100%"
             style={{ objectFit: "cover", objectPosition: "top" }}
-            // quality={100}
-            // unoptimized
-            // priority
+            quality={100}
+          // unoptimized
+          // priority
           />
         </ImgCard>
         <TextCard>
           <h2>{cleanedText}</h2>
         </TextCard>
-        <Instagram>{clientInstagram ?? clientInstagram}</Instagram>
+        <Instagram>{oneProfile}</Instagram>
       </CardBox>
     )
   );
 }
+
+

@@ -32,7 +32,7 @@ const ContainerCards = styled.div`
 export function HairStyle() {
   const { data: hygraphHome } = useHygraphQuery(true, "home");
   const { slug } = useParams();
-  const hairStyleServices: TRawHygraphHairStyle[] = hygraphHome?.hairStyles;
+  const hairstyleServices: TRawHygraphHairStyle[] = hygraphHome?.hairstyles;
 
   return (
     <SectionArea>
@@ -41,7 +41,7 @@ export function HairStyle() {
         subtitle="Os melhores tratamentos para o seu cabelo"
       />
       <ContainerCards>
-        {!hairStyleServices ? (
+        {!hairstyleServices ? (
           <>
             <LoadingCard />
             <LoadingCard />
@@ -49,7 +49,7 @@ export function HairStyle() {
             <LoadingCard />
           </>
         ) : (
-          hairStyleServices?.map((item: TRawHygraphHairStyle, i: number) => {
+          hairstyleServices?.map((item: TRawHygraphHairStyle, i: number) => {
             if (item.slug !== slug) {
               return <HairStyleCard key={i} item={item} />;
             }

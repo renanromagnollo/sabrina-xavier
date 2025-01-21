@@ -5,8 +5,8 @@ import { Carrousel } from '@/components/Carrousel';
 import { LoadingCircle } from '@/components/Loadings/LoadingCircle';
 import { TitleSection } from '@/app/components/TitleSection';
 import { useInstagramQuery } from '@/hooks/useInstagramQuery';
+import { useHygraphQuery } from '@/hooks/useHygraphQuery';
 
-interface AlgunsTrabalhosProps { }
 
 const ContainerTrabalhos = styled.section`
   width: 100vw;
@@ -49,10 +49,12 @@ const TitleContainer = styled.div`
   color: ${({ theme }) => theme.colors.primary.dark};
 `;
 
-export function AlgunsTrabalhos(props: AlgunsTrabalhosProps) {
+export function AlgunsTrabalhos() {
   const rotate = ['-4deg', '3deg', '-6deg'];
 
-  const { data: instagramPosts, isFetching } = useInstagramQuery();
+  // const { data: instagramPosts, isFetching } = useInstagramQuery();
+  const { data: portfolio, isFetching } = useHygraphQuery("portfolio");
+  console.log(portfolio)
 
   return (
     <ContainerTrabalhos>
@@ -81,7 +83,7 @@ export function AlgunsTrabalhos(props: AlgunsTrabalhosProps) {
             <LoadingCircle />
           </div>
         ) : (
-          <Carrousel posts={instagramPosts} />
+          <Carrousel portfolio={portfolio} />
         )}
       </ContentJobs>
     </ContainerTrabalhos>

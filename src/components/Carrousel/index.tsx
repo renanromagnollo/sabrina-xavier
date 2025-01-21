@@ -5,9 +5,10 @@ import styled from 'styled-components';
 import { ArrowRounded } from '../Icons/ArrowRounded';
 import { CardJob } from '@/app/components/Cards/ CardJob';
 import { ModalInstagramContext } from '@/context/modal-instagram-context';
+import { Portfolio } from '@/domain';
 
 interface CarrouselProps {
-  posts: InstagramPostProps[];
+  portfolio: Portfolio[];
 }
 
 const Container = styled.div`
@@ -45,22 +46,26 @@ const ButtonsCarousel = styled.div`
   align-items: center;
   /* background-color: blue; */
 `;
-export function Carrousel({ posts }: CarrouselProps) {
+export function Carrousel({ portfolio }: CarrouselProps) {
   // const [modalOpened, setModalOpened] = useState(false);
   // const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(
   //   null
   // );
   // const [isTransition, setIsTransition] = useState(false);
   const { setModalItem } = useContext(ModalInstagramContext);
-  const [displayItems, setDisplayItems] = useState();
+  const [displayItems, setDisplayItems] = useState<Portfolio[]>();
   const [scrollX, setScrollX] = useState(30);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const wrapperNode = wrapperRef.current;
 
   useEffect(() => {
-    if (posts?.length > 0) {
-      const galleryPhotos = posts?.filter((post) => post.media_type !== 'VIDEO');
-      setDisplayItems(galleryPhotos);
+    // if (portfolio?.length > 0) {
+    //   const galleryPhotos = portfolio?.filter((post) => post.media_type !== 'VIDEO');
+    //   setDisplayItems(galleryPhotos);
+    // }
+
+    if (portfolio?.length) {
+      setDisplayItems(portfolio)
     }
 
     // wrapperNode?.addEventListener("transitionstart", () =>
@@ -78,7 +83,7 @@ export function Carrousel({ posts }: CarrouselProps) {
     //     setIsTransition(false)
     //   );
     // };
-  }, [posts, wrapperNode]);
+  }, [portfolio, wrapperNode]);
 
   // useEffect(() => {
   //   if (isTransition) {
@@ -133,6 +138,7 @@ export function Carrousel({ posts }: CarrouselProps) {
       setScrollX(x);
     }
   }
+
   function prevSlide() {
     if (wrapperRef.current) {
       let x = scrollX + window.innerWidth / 2;
@@ -152,17 +158,17 @@ export function Carrousel({ posts }: CarrouselProps) {
           scrollX={scrollX}
           style={{ marginLeft: `${scrollX}px` }}
         >
-          {displayItems?.map((post, i) => {
-            if (post?.caption?.includes('@')) {
-              return (
-                <CardJob
-                  clicked={(post) => setModalItem(post)}
-                  key={i}
-                  rotate={''}
-                  post={post}
-                />
-              );
-            }
+          {displayItems?.map((item, i) => {
+            // if (item?.caption?.includes('@')) {
+            return (
+              <CardJob
+                clicked={(item) => setModalItem(item)}
+                key={i}
+                rotate={''}
+                item={item}
+              />
+            );
+            // }
           })}
         </Gallery>
         <ButtonsCarousel>
