@@ -126,8 +126,30 @@ Testimonials {
 }
 `;
 
+const queryPortfolio = `
+Portfolios {
+  porfolios {
+    id
+    link
+    stage
+    texto {
+      raw
+    }
+    typeService {
+      name
+    }
+    imagem {
+      url
+    }
+    video {
+      url
+    }
+  }
+}
+`
+
 const fetchHygraph = async (query: string, revalidate = 60 * 60 * 24) => {
-  const response = await fetch(process.env.HYGRAPH_URL!, {
+  const response = await fetch(process.env.HYGRAPH_API_URL!, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -174,6 +196,9 @@ function getHygraph(fake: boolean, schema: string) {
           return fetchHygraphFake('hygraphPosts');
         case 'testmonials':
           return fetchHygraphFake('hygraphTestimonials');
+        case 'portfolio':
+          return fetchHygraphFake('hygraphPortfolio');
+
         default:
           throw new Error('Invalid fake provided to getHygraph');
       }

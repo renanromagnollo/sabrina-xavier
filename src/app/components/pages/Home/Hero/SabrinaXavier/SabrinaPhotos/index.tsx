@@ -2,7 +2,7 @@ import { PhotoSquare } from "@/components/PhotoSquare";
 import Image from "next/image";
 import styled from "styled-components";
 
-interface SabrinaPhotosProps {}
+interface SabrinaPhotosProps { }
 
 const PhotosContainer = styled.div`
   width: 50%;
@@ -13,14 +13,14 @@ const PhotosContainer = styled.div`
   /* margin-left: 0; */
   /* background-color: darkred; */
   div {
-    filter: blur(0px) sepia(100%) brightness(90%) contrast(90%) grayscale(10%)
-      hue-rotate(0deg) invert(0%) opacity(100%) saturate(90%);
+    filter: blur(0px) sepia(0%) brightness(100%) contrast(90%) grayscale(0%)
+      hue-rotate(0deg) invert(0%) opacity(100%) saturate(80%);
     transition: filter 1s ease-in-out;
     animation: mounting 1s ease-in-out forwards;
 
     &:hover {
       filter: blur(0px) sepia(0%) brightness(100%) contrast(100%) grayscale(0%)
-        hue-rotate(0deg) invert(0%) opacity(100%) saturate(80%);
+        hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%);
     }
   }
 
@@ -53,7 +53,7 @@ export function SabrinaPhotos(props: SabrinaPhotosProps) {
   return (
     <PhotosContainer>
       <PhotoSquare
-        src="/images/s1.jpg"
+        src="/images/s1.png"
         width={370}
         height={447}
         position="absolute"
