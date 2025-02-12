@@ -29,12 +29,12 @@ export default function Home() {
       <ModalInsta />
       <Hero />
       <AlgunsTrabalhos />
-      <MakeUp />
-      <HairStyle />
-      <Studio />
-      <Instagram />
-      <Dicas />
-      <Address />
+      {/* <MakeUp /> */}
+      {/* <HairStyle /> */}
+      {/* <Studio /> */}
+      {/* <Instagram /> */}
+      {/* <Dicas /> */}
+      {/* <Address /> */}
 
       {/* <Products /> */}
       {/* <UnderConstruction/> */}

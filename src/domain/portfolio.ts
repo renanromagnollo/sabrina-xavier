@@ -4,8 +4,8 @@ export type Portfolio = {
   id: string
   link: string
   stage: string
-  texto: { raw: RichTextProps }
+  text: { raw: RichTextProps }
   typeService: { name: 'Make' | 'Hair' }[]
-  imagem: { url: string }
-  video: { url: string }
+  image: string
+  video: string
 }

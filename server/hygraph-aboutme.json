@@ -1,0 +1,159 @@
+{
+  "data": {
+    "aboutMe": {
+      "imgAbout": {
+        "url": "https://sa-east-1.graphassets.com/clxl9bwnp087n07m08oivga54/clxnojtd105kr07kjssistjdh"
+      },
+      "textAboutMe": {
+        "raw": {
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Oi, eu sou a Sabrina Xavier! Transformar beleza em autoconfiança é minha paixão, e estou aqui para ajudar você a se sentir incrível. Com mais de 10 anos de experiência no mundo da estética, sou graduada em Estética e especializada em cabelo feminino e maquiagem. Adoro ver o brilho nos olhos das minhas clientes quando se veem lindas e seguras de si."
+                }
+              ]
+            },
+            {
+              "type": "heading-four",
+              "children": [
+                {
+                  "text": "Minha História"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Desde jovem, já amava me maquiar e maquiar minhas amigas, cuidar e pintar os cabelos delas. Essa paixão só cresceu e, na vida adulta, comecei a atender em casa e na casa das clientes. Decidi profissionalizar essa vocação e me formei em Estética, fazendo inúmeros cursos extras para me especializar e aprimorar minhas técnicas. Estou sempre em busca de novidades, participando de novos cursos e me atualizando constantemente para trazer o que há de melhor para você."
+                }
+              ]
+            },
+            {
+              "type": "heading-four",
+              "children": [
+                {
+                  "text": "O Que Me Torna Única"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "O meu diferencial? A combinação perfeita de experiência e modernidade. Entendo que cada mulher é única e merece um atendimento personalizado. Dedico tempo para conhecer você, suas necessidades e desejos, adaptando minhas técnicas para realçar o que você tem de mais bonito."
+                }
+              ]
+            },
+            {
+              "type": "heading-four",
+              "children": [
+                {
+                  "text": "Serviços que Ofereço"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "No meu espaço, você encontra:"
+                }
+              ]
+            },
+            {
+              "type": "bulleted-list",
+              "children": [
+                {
+                  "type": "list-item",
+                  "children": [
+                    {
+                      "type": "list-item-child",
+                      "children": [
+                        {
+                          "bold": true,
+                          "text": "Cabelo Feminino"
+                        },
+                        {
+                          "text": ": Cortes, coloração, tratamentos capilares e penteados que destacam sua beleza natural."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list-item",
+                  "children": [
+                    {
+                      "type": "list-item-child",
+                      "children": [
+                        {
+                          "bold": true,
+                          "text": "Maquiagem"
+                        },
+                        {
+                          "text": ": Para todas as ocasiões – desde eventos especiais até o dia a dia – com técnicas que evidenciam seus traços e sua personalidade."
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "heading-four",
+              "children": [
+                {
+                  "text": "Minha Missão"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Minha missão é simples: fazer você se sentir maravilhosa. Cada atendimento é feito com carinho e atenção aos detalhes, garantindo que você saia daqui se sentindo a melhor versão de si mesma."
+                }
+              ]
+            },
+            {
+              "type": "heading-four",
+              "children": [
+                {
+                  "text": "Vamos Conversar?"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "Quer um atendimento de qualidade, feito por uma profissional experiente e apaixonada pelo que faz? Eu adoraria te conhecer! Vamos juntas descobrir como realçar ainda mais a sua beleza."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "bold": true,
+                  "text": "Agende seu horário e venha viver essa experiência transformadora comigo!"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "No meu site, você encontra todos os detalhes sobre os serviços que ofereço, depoimentos de clientes satisfeitas e pode marcar sua consulta. Estou ansiosa para te receber e ajudar você a se sentir ainda mais especial."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

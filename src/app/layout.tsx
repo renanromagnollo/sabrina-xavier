@@ -43,7 +43,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </Providers>
-          <Analytics />
+          {/* <Analytics /> */}
         </StyledComponentsRegistry>
       </body>
     </html>

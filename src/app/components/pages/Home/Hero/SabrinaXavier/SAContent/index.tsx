@@ -9,6 +9,7 @@ import { randomPhrases } from "@/utils/randomPhrases";
 import { ModalAboutMe } from "../ModalAboutMe";
 import { LoadingFeatText } from "@/components/Loadings/LoadingFeatText";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
+import { useQuery } from "@tanstack/react-query";
 
 const SAContainer = styled.div`
   position: relative;
@@ -155,10 +156,11 @@ const Author = styled.h2`
 export function SAContent() {
   const [modalOpened, setModalOpened] = useState(false);
 
-  const { data: hygraphHome } = useHygraphQuery(true, "home");
+  const { data } = useHygraphQuery("powerphrases");
   // const api: API = new HygraphAPI()
   // const hygraphHome: THygraphHome = await api.getHygraphHome(true)
-  const phrases = randomPhrases(hygraphHome?.powerPhrases);
+
+  const phrase = randomPhrases(data);
 
   function openModal() {
     setModalOpened(true);
@@ -187,12 +189,12 @@ export function SAContent() {
         <DivLogoVertical>
           <LogoVertical width={400} />
         </DivLogoVertical>
-        {!phrases ? (
+        {!phrase ? (
           <LoadingFeatText />
         ) : (
           <TextFeat>
-            <Phrase>{phrases && phrases.phrase}</Phrase>
-            <Author>{phrases && `- ${phrases.author}`}</Author>
+            <Phrase>{phrase && phrase.phrase}</Phrase>
+            <Author>{phrase && `- ${phrase.author}`}</Author>
             <ButtonsSA openModal={openModal} />
           </TextFeat>
         )}
