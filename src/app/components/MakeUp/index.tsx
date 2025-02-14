@@ -2,12 +2,14 @@
 
 import styled from 'styled-components';
 import { CardMakeup } from './CardMakeup';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { randomInstaPosts } from '@/utils/randomInstaPosts';
 import { useObserver } from '@/hooks/useObserver';
 import { TitleSection } from '@/app/components/TitleSection';
 import { useInstagramQuery } from '@/hooks/useInstagramQuery';
 import { InstagramPostProps } from '@/types/post-instagram-types';
+import { useHygraphQuery } from '@/hooks/useHygraphQuery';
+import { Portfolio } from '@/domain';
 
 interface MakeUpProps { }
 
@@ -63,26 +65,39 @@ const ImagesArea = styled.div`
   gap: 40px;
 `;
 export function MakeUp(props: MakeUpProps) {
-  const { data: instagramPosts } = useInstagramQuery();
-  const { isVisibled, setElement } = useObserver();
+  // const { data: instagramPosts } = useInstagramQuery();
+  const { data: portfolio, isFetching } = useHygraphQuery("portfolio");
+  // const { isVisibled, setElement } = useObserver();
+  const [itemsSelected, setItemsSelected] = useState<Portfolio[]>([])
 
-  const textRef = useRef<HTMLDivElement>(null);
-  const selectMakePosts = instagramPosts?.filter(
-    (post: InstagramPostProps) =>
-      post?.caption?.includes('make') && post.media_type !== 'VIDEO'
-  );
+  // const textRef = useRef<HTMLDivElement>(null);
+  // const makesPortfolio = instagramPosts?.filter(
+  //   (post: InstagramPostProps) =>
+  //     post?.caption?.includes('make') && post.media_type !== 'VIDEO'
+  // );
 
-  let selectedRandomPosts = randomInstaPosts(selectMakePosts, 2);
+
+
+  // let selectedRandomPosts = randomInstaPosts(makesPortfolio, 2);
+
+  // useEffect(() => {
+  //   setElement(textRef);
+  //   console.log(portfolio)
+  // }, [textRef, setElement, portfolio]); // Incluindo setElement como dependência
 
   useEffect(() => {
-    setElement(textRef);
-  }, [textRef, setElement]); // Incluindo setElement como dependência
+    const makesPortfolio: Portfolio[] = portfolio?.filter(
+      (post: Portfolio) => post?.typeService?.some(service => service.name === 'Make')
+    )
+    const selectedRandomPosts = randomInstaPosts(makesPortfolio, 2);
+    if (selectedRandomPosts) setItemsSelected(selectedRandomPosts)
+  }, [portfolio])
 
   return (
     <SectionArea>
       <Container>
-        <TextArea ref={textRef}>
-          {isVisibled && (
+        <TextArea>
+          {!isFetching && (
             <div style={{}}>
               <TitleSection title="Make Up" />
               <h3>
@@ -93,7 +108,7 @@ export function MakeUp(props: MakeUpProps) {
           )}
         </TextArea>
         <ImagesArea>
-          {selectedRandomPosts?.map((post, i) => {
+          {itemsSelected?.map((post, i) => {
             let rotateDegree = i % 2 == 0 ? '5' : '3';
             return <CardMakeup key={i} post={post} rotate={rotateDegree} />;
           })}

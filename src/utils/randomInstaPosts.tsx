@@ -1,9 +1,9 @@
-import { InstagramPostProps } from '@/types/post-instagram-types';
+import { Portfolio } from '@/domain';
 
 export function randomInstaPosts(
-  listPosts: InstagramPostProps[],
+  listPosts: Portfolio[],
   number: number
-): InstagramPostProps[] | undefined {
+): Portfolio[] | undefined {
   // const length = listPosts.length
   console.log(listPosts);
   if (listPosts) {
