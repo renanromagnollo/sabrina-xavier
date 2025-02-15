@@ -419,15 +419,15 @@ export class HygraphAPI implements API {
   }
 
   async getAboutStudio(): Promise<Aboutstudio> {
-    const response: RawHygraphAboutstudio = this.env.app.env === 'development'
+    const { aboutStudio } = this.env.app.env === 'development'
       ? await this.fakeFetchHygraph('hygraphAboutStudio')
       : await this.queryHygraph('aboutstudio');
 
     return {
-      image: response.imageMain.url,
-      title: response.title,
-      text: response.text.raw,
-      gallery: response.imagesGallery.map(item => item.url)
+      image: aboutStudio.imageMain.url,
+      title: aboutStudio.title,
+      text: aboutStudio.text.raw,
+      gallery: aboutStudio.imagesGallery.map(item => item.url)
     };
   }
 

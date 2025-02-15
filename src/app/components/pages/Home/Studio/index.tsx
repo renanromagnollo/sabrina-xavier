@@ -12,7 +12,6 @@ import Image from "next/image";
 import { useContext, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
-interface StudioProps {}
 
 const Container = styled.section`
   width: 100vw;
@@ -66,9 +65,11 @@ const ImageArea = styled.div`
     }
   }
 `;
-export function Studio(props: StudioProps) {
-  const { data: hygraphHome } = useHygraphQuery(true, "home");
-  const aboutStudioHygraph: HygraphAboutStudioProps = hygraphHome?.aboutStudio;
+export function Studio() {
+  // const { data: hygraphHome } = useHygraphQuery(true, "home");
+  // const aboutstudio: HygraphAboutStudioProps = hygraphHome?.aboutStudio;
+
+  const { data: aboutstudio, isFetching } = useHygraphQuery("aboutstudio");
 
   const elementRef = useRef<HTMLElement>(null);
   const { isVisibled, setElement } = useObserver();
@@ -79,7 +80,7 @@ export function Studio(props: StudioProps) {
 
   return (
     <Container ref={elementRef}>
-      {!aboutStudioHygraph ? (
+      {isFetching ? (
         <LoadingCircle />
       ) : (
         isVisibled && (
@@ -87,7 +88,7 @@ export function Studio(props: StudioProps) {
             <ImageArea>
               <Image
                 src={
-                  aboutStudioHygraph?.imageMain.url ??
+                  aboutstudio?.image ??
                   `http://picsum.photos//${572}/${296}`
                 }
                 alt="studio-image"
@@ -100,9 +101,8 @@ export function Studio(props: StudioProps) {
               />
             </ImageArea>
             <TextsArea>
-              <TitleSection title={aboutStudioHygraph?.title} />
-              <RichTextHygraph content={aboutStudioHygraph?.text.raw} />
-              <a
+              <TitleSection title={aboutstudio?.title} />
+              <RichTextHygraph content={aboutstudio?.text} />            <a
                 href="https://maps.app.goo.gl/Lc2y7K3PHB382iccA"
                 target="_blank"
               >
