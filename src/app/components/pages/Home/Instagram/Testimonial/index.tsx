@@ -58,22 +58,23 @@ const Text = styled.div`
   }
 `;
 export function Testimonial() {
-  const { data: hygraphHome } = useHygraphQuery(true, "home");
+  // const { data: hygraphHome } = useHygraphQuery(true, "home");
+  const { data: testimonials, isFetching } = useHygraphQuery("testimonials");
   const [testimonial, setTestimonial] = useState<HygraphTestimonialProps>();
 
   useEffect(() => {
-    const testimonials = hygraphHome?.testimonials;
+    // const testimonials = hygraphHome?.testimonials;
     console.log(testimonials);
     const sortedTestimonial: HygraphTestimonialProps =
       randomTestimonial(testimonials);
     setTestimonial(sortedTestimonial);
-  }, [hygraphHome]);
+  }, [testimonials]);
   return (
     testimonial && (
       <Container>
         <ProfileImage>
           <Image
-            src={testimonial.image.url ?? `http://picsum.photos//300/300`}
+            src={testimonial.image ?? `http://picsum.photos//300/300`}
             alt="profile-image"
             width={150}
             height={150}
@@ -86,7 +87,7 @@ export function Testimonial() {
           <span>"</span>
           <Text>
             <a href={testimonial.linkPost} target="_blank">
-              <RichTextHygraph content={testimonial.text.raw} />
+              <RichTextHygraph content={testimonial.text} />
             </a>
 
             <h5>{testimonial.author}</h5>

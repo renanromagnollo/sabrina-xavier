@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { Testimonial } from "./Testimonial";
 import { InstaPhotos } from "./InstaPhotos";
 
-interface InstagramProps {}
 
 const InstagramSection = styled.section`
   width: 100vw;
@@ -13,11 +12,11 @@ const InstagramSection = styled.section`
   justify-content: flex-start;
   align-items: center;
 `;
-export function Instagram(props: InstagramProps) {
+export function Instagram() {
   return (
     <InstagramSection>
       <Testimonial />
-      <InstaPhotos />
+      {/* <InstaPhotos /> */}
     </InstagramSection>
   );
 }

@@ -32,7 +32,7 @@ export default function Home() {
       <MakeUp />
       <HairStyle />
       <Studio />
-      {/* <Instagram /> */}
+      <Instagram />
       {/* <Dicas /> */}
       {/* <Address /> */}
 

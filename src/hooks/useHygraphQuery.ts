@@ -213,7 +213,7 @@ async function getHygraph(schema: string, env: Environment) {
         return apiHygraph.getAboutStudio();
       case 'posts':
         return apiHygraph.getPosts();
-      case 'testmonials':
+      case 'testimonials':
         return apiHygraph.getTestimonials()
       case 'powerphrases':
         return apiHygraph.getPowerphrases();

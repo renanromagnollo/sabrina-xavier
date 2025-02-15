@@ -385,11 +385,11 @@ export class HygraphAPI implements API {
   }
 
   async getTestimonials(): Promise<Testimonial[]> {
-    const response = this.env.app.env === 'development' ?
+    const { testimonials } = this.env.app.env === 'development' ?
       await this.fakeFetchHygraph('hygraphTestimonials')
       :
       await this.queryHygraph('testimonials')
-    return response.map(this.mapRawToTestimonials)
+    return testimonials.map(this.mapRawToTestimonials)
   }
 
   async getPosts(): Promise<Post[]> {
