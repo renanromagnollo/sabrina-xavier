@@ -196,12 +196,17 @@ async function getHygraph(schema: string, env: Environment) {
       case 'home':
         return Promise.all([
           apiHygraph.getPowerphrases(),
+          apiHygraph.getHairstyles()
           // apiHygraph.getAboutMe(),
           // apiHygraph.getAboutStudio(),
           // apiHygraph.getPosts(),
           // apiHygraph.getTestimonials(),
           // apiHygraph.getPortfolio()
         ])
+      case 'portfolio':
+        return apiHygraph.getPortfolio();
+      case 'hairstyles':
+        return apiHygraph.getHairstyles();
       case 'aboutme':
         return apiHygraph.getAboutMe();
       case 'aboutstudio':
@@ -210,8 +215,6 @@ async function getHygraph(schema: string, env: Environment) {
         return apiHygraph.getPosts();
       case 'testmonials':
         return apiHygraph.getTestimonials()
-      case 'portfolio':
-        return apiHygraph.getPortfolio();
       case 'powerphrases':
         return apiHygraph.getPowerphrases();
 

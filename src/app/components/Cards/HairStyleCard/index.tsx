@@ -4,6 +4,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import { ButtonUnselected } from "../../Buttons/ButtonUnselected";
 import Link from "next/link";
+import { Hairstyles } from "@/domain";
 
 interface HairStyleCardProps {
   item: HygraphHairStyleProps;
@@ -77,7 +78,8 @@ const ImageArea = styled.div`
 const IntroText = styled.h6`
   text-align: center;
 `;
-export function HairStyleCard({ item }: HairStyleCardProps) {
+export function HairStyleCard({ item }: { item: Hairstyles }) {
+  console.log(item)
   return (
     <BoxCard>
       <Content>
@@ -87,10 +89,10 @@ export function HairStyleCard({ item }: HairStyleCardProps) {
             width={300}
             height={300}
             style={{ objectFit: "cover" }}
-            src={item.image.url ?? `http://picsum.photos//250/250`}
+            src={item.image ?? `http://picsum.photos//250/250`}
           />
         </ImageArea>
-        <h3>{item.title ?? "Title"}</h3>
+        <h4>{item.title ?? "Title"}</h4>
         {/* <h5><RichTextHygraph content={item.text.raw}/></h5> */}
         <IntroText>{item.introText}</IntroText>
         <Link href={`/servicos/${item?.slug}`}>

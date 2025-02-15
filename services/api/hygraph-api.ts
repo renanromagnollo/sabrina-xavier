@@ -303,6 +303,7 @@ export class HygraphAPI implements API {
   }
 
   private mapRawHygraphHairstylesToHairstyle(item: RawHygraphHairstyleItem): Hairstyles {
+    console.log(item)
     return {
       slug: item.slug,
       image: item.image.url,
@@ -439,11 +440,11 @@ export class HygraphAPI implements API {
   }
 
   async getHairstyles(): Promise<Hairstyles> {
-    const response = this.env.app.env === 'development'
+    const { hairStyles } = this.env.app.env === 'development'
       ? await this.fakeFetchHygraph('hygraphHairstyles')
       : await this.queryHygraph('hairstyles');
 
-    return response.map(this.mapRawHygraphHairstylesToHairstyle);
+    return hairStyles.map(this.mapRawHygraphHairstylesToHairstyle);
   }
 
   async getProducts(): Promise<Product[]> {

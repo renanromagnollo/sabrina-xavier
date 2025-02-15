@@ -3,10 +3,11 @@
 import { HairStyleCard } from "@/app/components/Cards/HairStyleCard";
 import { TitleSection } from "@/app/components/TitleSection";
 import { LoadingCard } from "@/components/Loadings/LoadingCard";
+import { Hairstyles } from "@/domain";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { TRawHygraphHairStyle, THygraphHome } from "@/types/hygraph-types";
 import { useParams } from "next/navigation";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import styled from "styled-components";
 
 const SectionArea = styled.section`
@@ -30,9 +31,13 @@ const ContainerCards = styled.div`
 `;
 
 export function HairStyle() {
-  const { data: hygraphHome } = useHygraphQuery(true, "home");
+  // const { data: hygraphHome } = useHygraphQuery(true, "home");
+  const { data: hairstyleServices, isFetching } = useHygraphQuery("hairstyles");
   const { slug } = useParams();
-  const hairstyleServices: TRawHygraphHairStyle[] = hygraphHome?.hairstyles;
+  // const hairstyleServices: TRawHygraphHairStyle[] = hygraphHome?.hairstyles;
+  useEffect(() => {
+    console.log(hairstyleServices)
+  }, [hairstyleServices])
 
   return (
     <SectionArea>
@@ -41,7 +46,7 @@ export function HairStyle() {
         subtitle="Os melhores tratamentos para o seu cabelo"
       />
       <ContainerCards>
-        {!hairstyleServices ? (
+        {isFetching ? (
           <>
             <LoadingCard />
             <LoadingCard />
@@ -49,9 +54,9 @@ export function HairStyle() {
             <LoadingCard />
           </>
         ) : (
-          hairstyleServices?.map((item: TRawHygraphHairStyle, i: number) => {
+          hairstyleServices?.map((item: Hairstyles, i: number) => {
             if (item.slug !== slug) {
-              return <HairStyleCard key={i} item={item} />;
+              return <HairStyleCard item={item} />;
             }
             return;
           })

@@ -2,9 +2,11 @@ import { Aboutme, Hairstyles, Powerphrases, Makeup, Portfolio, Post, Product, Te
 
 export type SchemaType =
   'home'
+  | 'portfolio'
+  | 'makeup'
+  | 'hairstyles'
   | 'posts'
   | 'testimonials'
-  | 'portfolio'
   | 'aboutstudio'
   | 'aboutme'
   | 'products'

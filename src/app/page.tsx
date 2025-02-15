@@ -30,7 +30,7 @@ export default function Home() {
       <Hero />
       <AlgunsTrabalhos />
       <MakeUp />
-      {/* <HairStyle /> */}
+      <HairStyle />
       {/* <Studio /> */}
       {/* <Instagram /> */}
       {/* <Dicas /> */}
