@@ -2,6 +2,7 @@
 
 import { LayoutArticlePage } from "@/app/components/pages/LayoutArticlePage";
 import { LoadingPage } from "@/components/Loadings/LoadingPage";
+import { Post } from "@/domain";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { HygraphPostProps, HygraphProductProps } from "@/types/hygraph-types";
 import { verifySlug } from "@/utils/verifySlug";
@@ -13,9 +14,9 @@ interface PageDicaProps {
 }
 
 export function LayoutPageDica({ params }: PageDicaProps) {
-  const { data: posts, isFetching } = useHygraphQuery(true, "posts");
+  const { data: posts, isFetching } = useHygraphQuery("posts");
 
-  const selectedPost = posts?.filter((post: HygraphPostProps) =>
+  const selectedPost = posts?.filter((post: Post) =>
     verifySlug({ post, params })
   )[0];
   const relatedProducts = selectedPost?.products;

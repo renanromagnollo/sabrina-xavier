@@ -7,5 +7,5 @@ export type Post = {
   image: string
   title: string
   text: RichTextProps
-  products: Product[]
+  // products: Product[]
 }

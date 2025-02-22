@@ -86,21 +86,21 @@ const Title = styled.h6`
 
 export function DicasCard({ item }: DicasCardProps) {
   const slug = item?.slug ?? slugCreator(item?.title);
-  const tagName = item?.typeServices[0].name;
-  console.log(tagName);
+  // const tagName = item?.type[0].name;
+  // console.log(tagName);
   return (
     <Link href={`/dicas/${slug}`}>
       <CardBox>
         <ImageArea>
-          <TagArea>
+          {/* <TagArea>
             <TagType>{tagName}</TagType>
             <TagBG name={tagName ?? ''} />
-          </TagArea>
+          </TagArea> */}
           <Image
             width={290}
             height={215}
             alt="dica-image"
-            src={item?.image?.url ?? 'http://picsum.photos//290/215'}
+            src={item?.image ?? 'http://picsum.photos//290/215'}
             style={{ objectFit: 'cover', width: '100%' }}
           />
         </ImageArea>
@@ -110,7 +110,8 @@ export function DicasCard({ item }: DicasCardProps) {
           {/* <h5><RichTextHygraph content={item?.text?.raw}/></h5> */}
         </Content>
         <ButtonArea>
-          <ButtonUnselected color={tagName === 'Make' ? 'secundary' : 'primary'}>
+          {/* <ButtonUnselected color={tagName === 'Make' ? 'secundary' : 'primary'}> */}
+          <ButtonUnselected color={'primary'}>
             Leia
           </ButtonUnselected>
         </ButtonArea>

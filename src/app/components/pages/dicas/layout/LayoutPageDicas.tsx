@@ -45,7 +45,7 @@ const CardsList = styled.div`
 `;
 
 export function LayoutPageDicas() {
-  const { data: posts, isFetching } = useHygraphQuery(true, "posts");
+  const { data: posts, isFetching } = useHygraphQuery("posts");
   // const posts = data?.posts;
   console.log(posts);
   return isFetching ? (

@@ -279,18 +279,19 @@ export class HygraphAPI implements API {
       // next: { revalidate: 0 },
     });
     const { data } = await fakeResponse.json();
-    console.log('data: ', data)
+    console.log(data)
     return data;
   }
 
   private mapRawHygraphPostToPost(post: RawHygraphPost & { slug: string }): Post {
+    console.log(post)
     return {
       slug: post.slug,
       type: post.typeServices,
       image: post.image.url,
       title: post.title,
       text: post.text.raw,
-      products: post.products?.map(this.mapRawHygraphProductToProduct) ?? []
+      // products: post.products?.map(this.mapRawHygraphProductToProduct) ?? []
     };
   }
 
@@ -394,15 +395,18 @@ export class HygraphAPI implements API {
 
   async getPosts(): Promise<Post[]> {
     // await this.getProducts()
-    const response = this.env.app.env === 'development'
+    const { posts } = this.env.app.env === 'development'
       ? await this.fakeFetchHygraph('hygraphPosts')
       : await this.queryHygraph('posts');
 
-    console.log('posts: ', response?.posts)
+    console.log('posts: ', posts)
 
-    const postsWithSlugs = setSlugInPosts(response?.posts)
+    const postsWithSlugs = setSlugInPosts(posts)
+
+    console.log(postsWithSlugs)
 
     return postsWithSlugs.map(this.mapRawHygraphPostToPost);
+    // return postsWithSlugs
   }
 
   async getAboutMe(): Promise<Aboutme> {

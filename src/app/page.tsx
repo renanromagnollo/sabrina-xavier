@@ -33,7 +33,7 @@ export default function Home() {
       <HairStyle />
       <Studio />
       <Instagram />
-      {/* <Dicas /> */}
+      <Dicas />
       {/* <Address /> */}
 
       {/* <Products /> */}

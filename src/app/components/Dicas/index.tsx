@@ -3,12 +3,13 @@
 import { DicasCard } from "@/app/components/Cards/DicasCard";
 import { TitleSection } from "@/app/components/TitleSection";
 import { LoadingCircle } from "@/components/Loadings/LoadingCircle";
+import { Post } from "@/domain";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { TRawHygraphPost } from "@/types/hygraph-types";
 import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-interface DicasProps { }
 
 const SectionArea = styled.section`
   width: 100%;
@@ -48,23 +49,31 @@ const TitleSectionContainer = styled.div`
   }
 `;
 
-export function Dicas(props: DicasProps) {
+export function Dicas() {
   // const { posts } = useContext(DataContext);
-  const { data } = useHygraphQuery(true, "home");
+  // const { data } = useHygraphQuery(true, "home");
+  const { data: posts, isFetching } = useHygraphQuery("posts");
+  const [listDicas, setListDicas] = useState([])
   const { slug } = useParams();
-  const posts = data?.posts;
+  // const posts = data?.posts;
 
-  const listDicas = posts?.slice(0, 3);
+  useEffect(() => {
+    console.log(posts)
+    if (posts) {
+      setListDicas(posts.slice(0, 3))
+    }
+  }, [posts])
+
   return (
     <SectionArea>
       <TitleSectionContainer>
         <TitleSection title="Dicas" subtitle="Saiba como se cuidar melhor" />
       </TitleSectionContainer>
       <ContentContainer>
-        {!listDicas ? (
+        {isFetching ? (
           <LoadingCircle />
         ) : (
-          listDicas.map((item: TRawHygraphPost, i: number) => {
+          listDicas?.map((item: TRawHygraphPost, i: number) => {
             if (item.slug !== slug) return <DicasCard key={i} item={item} />;
             return;
           })
