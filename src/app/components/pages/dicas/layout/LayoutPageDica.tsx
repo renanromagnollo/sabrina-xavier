@@ -4,8 +4,8 @@ import { LayoutArticlePage } from "@/app/components/pages/LayoutArticlePage";
 import { LoadingPage } from "@/components/Loadings/LoadingPage";
 import { Post } from "@/domain";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
-import { HygraphPostProps, HygraphProductProps } from "@/types/hygraph-types";
 import { verifySlug } from "@/utils/verifySlug";
+import { useEffect, useState } from "react";
 
 interface PageDicaProps {
   params: {
@@ -14,12 +14,17 @@ interface PageDicaProps {
 }
 
 export function LayoutPageDica({ params }: PageDicaProps) {
-  const { data: posts, isFetching } = useHygraphQuery("posts");
+  const { data: posts, isFetching } = useHygraphQuery("posts", 12);
+  const [selectedPost, setSelectedPost] = useState<Post>()
+  console.log(posts)
+  console.log(selectedPost)
 
-  const selectedPost = posts?.filter((post: Post) =>
-    verifySlug({ post, params })
-  )[0];
-  const relatedProducts = selectedPost?.products;
+  useEffect(() => {
+    if (!posts) return;
+    const filteredPost = posts.find((post: Post) => verifySlug({ post, params }));
+    setSelectedPost(filteredPost);
+
+  }, [posts, params]);
 
   return isFetching ? (
     <LoadingPage />
@@ -27,7 +32,7 @@ export function LayoutPageDica({ params }: PageDicaProps) {
     selectedPost && (
       <LayoutArticlePage
         article={selectedPost}
-        relatedProducts={relatedProducts}
+      // relatedProducts={relatedProducts}
       />
     )
   );

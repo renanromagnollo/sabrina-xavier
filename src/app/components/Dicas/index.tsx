@@ -13,6 +13,7 @@ import styled from "styled-components";
 
 const SectionArea = styled.section`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,7 +53,7 @@ const TitleSectionContainer = styled.div`
 export function Dicas() {
   // const { posts } = useContext(DataContext);
   // const { data } = useHygraphQuery(true, "home");
-  const { data: posts, isFetching } = useHygraphQuery("posts");
+  const { data: posts, isFetching } = useHygraphQuery("posts", 12);
   const [listDicas, setListDicas] = useState([])
   const { slug } = useParams();
   // const posts = data?.posts;

@@ -19,7 +19,7 @@ export default function Home() {
     <div
       style={{
         width: "100vw",
-        // height: "100vh",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
@@ -34,7 +34,7 @@ export default function Home() {
       <Studio />
       <Instagram />
       <Dicas />
-      {/* <Address /> */}
+      <Address />
 
       {/* <Products /> */}
       {/* <UnderConstruction/> */}

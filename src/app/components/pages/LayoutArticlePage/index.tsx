@@ -1,13 +1,12 @@
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import { slugCreator } from "@/utils/slugCreator";
 import Image from "next/image";
-import { ReactNode } from "react";
 import styled from "styled-components";
 import { Dicas } from "../../Dicas";
-import { ProductCard } from "../../Cards/ProductCard";
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { HairStyle } from "../../HairStyle";
 import { ButtonContact } from "../../Buttons/ButtonContact/ButtonContact";
+import { Post } from "@/domain";
 
 const PageArea = styled.div`
   width: 100%;
@@ -15,13 +14,11 @@ const PageArea = styled.div`
 `;
 
 const MainArea = styled.main`
-  /* width: 100%; */
+  width: 100%;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* background-color: blue; */
 `;
 
 const RightArea = styled.section`
@@ -85,15 +82,16 @@ const PostArea = styled.section`
 `;
 
 interface LayoutPostProps {
-  article: any;
-  relatedProducts?: any;
+  article: Post;
+  // relatedProducts?: any;
 }
 
 export function LayoutArticlePage({
   article,
-  relatedProducts,
+  // relatedProducts,
 }: LayoutPostProps) {
   const path = usePathname();
+  console.log(path)
 
   function othersArticles() {
     if (path.includes("dicas")) {
@@ -102,6 +100,7 @@ export function LayoutArticlePage({
       return (
         <div
           style={{
+            // height: '100%',
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -117,26 +116,25 @@ export function LayoutArticlePage({
     }
     return;
   }
-  console.log(path.includes("servicos"));
   return (
     <PageArea>
       <MainArea>
         <PostArea>
           <h1>{article?.title}</h1>
           <Image
-            src={article?.image.url}
+            src={article?.image}
             alt={`image_${slugCreator(article?.title)}`}
             width={600}
             height={500}
             style={{ objectFit: "contain" }}
           />
           <p>
-            <RichTextHygraph content={article?.text.raw} />
+            <RichTextHygraph content={article?.text} />
           </p>
         </PostArea>
         {othersArticles()}
       </MainArea>
-      <RightArea>
+      {/* <RightArea>
         {relatedProducts && relatedProducts.length > 0 && (
           <ProductsArea>
             <AreaTitle>
@@ -149,7 +147,7 @@ export function LayoutArticlePage({
             ))}
           </ProductsArea>
         )}
-      </RightArea>
+      </RightArea> */}
     </PageArea>
   );
 }
