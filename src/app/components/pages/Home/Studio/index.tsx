@@ -88,12 +88,12 @@ export function Studio() {
             <ImageArea>
               <Image
                 src={
-                  aboutstudio?.image ??
-                  `http://picsum.photos//${572}/${296}`
+                  // aboutstudio?.image ??
+                  `/images/studio.jpeg`
                 }
                 alt="studio-image"
-                width={572}
-                height={296}
+                width={372}
+                height={400}
                 sizes="100%"
                 style={{ objectFit: "cover" }}
                 priority
