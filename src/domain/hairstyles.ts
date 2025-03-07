@@ -5,5 +5,5 @@ export type Hairstyles = {
   image: string
   title: string
   introText: string
-  text: { raw: RichTextProps }
+  text: RichTextProps
 }

@@ -12,10 +12,10 @@ interface LayoutPageServicoProps {
 }
 
 export function LayoutPageServico({ params }: LayoutPageServicoProps) {
-  const { data } = useHygraphQuery(true, "home");
+  const { data: hairStyles } = useHygraphQuery('hairstyles');
   console.log(params.slug);
   //   const { hairStyles } = data?.hairStyles;
-  const selectedService = data?.hairStyles?.filter((service) =>
+  const selectedService = hairStyles?.filter((service) =>
     verifySlug({ post: service, params })
   )[0];
   return !selectedService ? (

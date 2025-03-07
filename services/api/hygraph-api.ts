@@ -310,7 +310,7 @@ export class HygraphAPI implements API {
       image: item.image.url,
       title: item.title,
       introText: item.introText,
-      text: item.text
+      text: item.text.raw
     }
   }
 
