@@ -36,7 +36,7 @@ export function ButtonContact({ children }: { children?: any }) {
   return (
     <ButtonArea>
       <a
-        href="https://api.whatsapp.com/send?phone=5531983954695"
+        href="https://api.whatsapp.com/send?phone=5531985865002"
         target="_blank"
       >
         <Button>{children ?? <span>contato</span>}</Button>

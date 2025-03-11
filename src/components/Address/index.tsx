@@ -6,7 +6,7 @@ import { LogoVertical } from "../Logo/LogoVertical";
 import { IconInstagram } from "../Icons/Instagram";
 import { IconWhatsapp } from "../Icons/IconWhatsapp";
 
-interface AddressProps {}
+interface AddressProps { }
 
 const SectionArea = styled.section`
   width: 100vw;
@@ -108,10 +108,10 @@ export function Address(props: AddressProps) {
           </ProfileArea>
           <ProfileArea>
             <a
-              href="https://api.whatsapp.com/send?phone=5531983954695"
+              href="https://api.whatsapp.com/send?phone=5531985865002"
               target="_blank"
             >
-              <IconWhatsapp /> <Phone>(31) 9 8395-4695</Phone>
+              <IconWhatsapp /> <Phone>(31) 9 8586-5002</Phone>
             </a>
           </ProfileArea>
           <ProfileArea>
