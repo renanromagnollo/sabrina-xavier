@@ -1,4 +1,6 @@
-import { RichTextProps } from "@graphcms/rich-text-react-renderer"
+// import { RichTextProps } from "@graphcms/rich-text-react-renderer"
+import { RichTextContent } from "@graphcms/rich-text-types";
+
 import { Product } from "."
 
 export type Post = {
@@ -6,6 +8,6 @@ export type Post = {
   type: { name: string }[]
   image: string
   title: string
-  text: RichTextProps
+  text: RichTextContent
   // products: Product[]
 }
