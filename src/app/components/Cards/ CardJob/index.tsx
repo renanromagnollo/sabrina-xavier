@@ -21,6 +21,7 @@ const CardBox = styled.div<CardBoxProps>`
   height: 370px;
   display: flex;
   flex-direction: column;
+  margin: 0 35px;
   padding: 5px;
   transform: rotate(${(props) => props.rotate});
   justify-content: flex-start;

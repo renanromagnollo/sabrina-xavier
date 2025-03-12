@@ -6,6 +6,7 @@ import { ArrowRounded } from '../Icons/ArrowRounded';
 import { CardJob } from '@/app/components/Cards/ CardJob';
 import { ModalInstagramContext } from '@/context/modal-instagram-context';
 import { Portfolio } from '@/domain';
+import { useCarousel } from '@/hooks/useCarousel';
 
 interface CarrouselProps {
   portfolio: Portfolio[];
@@ -17,13 +18,12 @@ const Container = styled.div`
   overflow: hidden;
 `;
 
-const Gallery = styled.div<{ scrollX: number }>`
+const Gallery = styled.div`
   width: 100%;
-  margin: 30px 30px;
+  margin: 30px 0;
   display: flex;
-  transition: 0.5s ease;
-  gap: 80px;
-  margin-left: ${({ scrollX }) => `${scrollX}px`};
+  /* gap: 80px; */
+  /* transition: 0.5s ease;
   animation: entrance 1s ease-out;
 
   @keyframes entrance {
@@ -33,7 +33,7 @@ const Gallery = styled.div<{ scrollX: number }>`
     100% {
       margin-left: 30px;
     }
-  }
+  } */
 `;
 
 const ButtonsCarousel = styled.div`
@@ -46,105 +46,58 @@ const ButtonsCarousel = styled.div`
   align-items: center;
   /* background-color: blue; */
 `;
+
 export function Carrousel({ portfolio }: CarrouselProps) {
   // const [modalOpened, setModalOpened] = useState(false);
   // const [clickedImage, setClickedImage] = useState<InstagramPostProps | null>(
   //   null
   // );
   // const [isTransition, setIsTransition] = useState(false);
+  const { emblaRef, scrollPrev, scrollNext } = useCarousel({
+    loop: true,
+    align: 'center',
+    slidesToScroll: 1,
+    // speed: 300,
+    breakpoints: {
+      '(min-width: 768px)': { slidesToScroll: 3 }
+    }
+  })
   const { setModalItem } = useContext(ModalInstagramContext);
   const [displayItems, setDisplayItems] = useState<Portfolio[]>();
-  const [scrollX, setScrollX] = useState(30);
+  // const [scrollX, setScrollX] = useState(30);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const wrapperNode = wrapperRef.current;
 
   useEffect(() => {
-    // if (portfolio?.length > 0) {
-    //   const galleryPhotos = portfolio?.filter((post) => post.media_type !== 'VIDEO');
-    //   setDisplayItems(galleryPhotos);
-    // }
-
     if (portfolio?.length) {
       setDisplayItems(portfolio)
     }
-
-    // wrapperNode?.addEventListener("transitionstart", () =>
-    //   setIsTransition(true)
-    // );
-    // wrapperNode?.addEventListener("transitionend", () =>
-    //   setIsTransition(false)
-    // );
-
-    // return () => {
-    //   wrapperNode?.removeEventListener("transitionstart", () =>
-    //     setIsTransition(true)
-    //   );
-    //   wrapperNode?.removeEventListener("transitionstart", () =>
-    //     setIsTransition(false)
-    //   );
-    // };
   }, [portfolio, wrapperNode]);
 
-  // useEffect(() => {
-  //   if (isTransition) {
-  //     function handleTransitionEnd() {
-  //       if (currentIndex === 0) {
-  //         wrapperRef.current.style.transition = "none";
-  //         setCurrentIndex(displayItems.length - 2);
-  //       } else if (currentIndex === displayItems.length - 1) {
-  //         wrapperRef.current.style.transition = "none";
-  //         setCurrentIndex(1);
-  //       }
-  //       setIsTransition(false);
-  //     }
-  //     const wrapperNode = wrapperRef.current;
-  //     wrapperNode.addEventListener("transitionend", handleTransitionEnd);
-
-  //     return () => {
-  //       wrapperNode.removeEventListener("transitionend", handleTransitionEnd);
-  //     };
-  //   }
-  // }, [isTransition, displayItems.length]);
 
   // useEffect(() => {
-  //   if (isTransition) {
-  //     function handleTransitionEnd() {
-  //       // setScrollX(wrapperRef.current?.style.marginLeft);
-  //       setIsTransition(false);
+  //   console.log(window.innerWidth);
+  //   console.log(wrapperRef.current?.scrollWidth);
+  //   console.log(wrapperRef.current?.style.marginLeft);
+  //   console.log(scrollX);
+  // }, [scrollX]);
+
+  // function nextSlide() {
+  //   if (wrapperRef.current) {
+  //     let x = scrollX - window.innerWidth / 2;
+  //     if (window.innerWidth - wrapperRef.current.scrollWidth > x) {
+  //       x = window.innerWidth - wrapperRef.current.scrollWidth - 30;
   //     }
-  //     const wrapperNode = wrapperRef.current;
-  //     wrapperNode.addEventListener("transitionend", handleTransitionEnd);
-
-  //     return () => {
-  //       wrapperNode.removeEventListener("transitionend", handleTransitionEnd);
-  //     };
+  //     setScrollX(x);
   //   }
-  // }, [isTransition]);
+  // }
 
-  useEffect(() => {
-    console.log(window.innerWidth);
-    // console.log(wrapperRef.current?.clientWidth);
-    console.log(wrapperRef.current?.scrollWidth);
-    console.log(wrapperRef.current?.style.marginLeft);
-    console.log(scrollX);
-  }, [scrollX]);
-
-  function nextSlide() {
-    if (wrapperRef.current) {
-      let x = scrollX - window.innerWidth / 2;
-      if (window.innerWidth - wrapperRef.current.scrollWidth > x) {
-        x = window.innerWidth - wrapperRef.current.scrollWidth - 30;
-      }
-      setScrollX(x);
-    }
-  }
-
-  function prevSlide() {
-    if (wrapperRef.current) {
-      let x = scrollX + window.innerWidth / 2;
-      setScrollX(x > 30 ? 30 : x);
-    }
-  }
+  // function prevSlide() {
+  //   if (wrapperRef.current) {
+  //     let x = scrollX + window.innerWidth / 2;
+  //     setScrollX(x > 30 ? 30 : x);
+  //   }
+  // }
 
   // function showOnModal(post: InstagramPostProps) {
   //   setClickedImage(post);
@@ -152,11 +105,9 @@ export function Carrousel({ portfolio }: CarrouselProps) {
   // }
   return (
     <>
-      <Container>
+      <Container ref={emblaRef}>
         <Gallery
           ref={wrapperRef}
-          scrollX={scrollX}
-          style={{ marginLeft: `${scrollX}px` }}
         >
           {displayItems?.map((item, i) => {
             // if (item?.caption?.includes('@')) {
@@ -172,10 +123,10 @@ export function Carrousel({ portfolio }: CarrouselProps) {
           })}
         </Gallery>
         <ButtonsCarousel>
-          <div onClick={prevSlide}>
+          <div onClick={scrollPrev}>
             <ArrowRounded direction="left" />
           </div>
-          <div onClick={nextSlide}>
+          <div onClick={scrollNext}>
             <ArrowRounded />
           </div>
         </ButtonsCarousel>
