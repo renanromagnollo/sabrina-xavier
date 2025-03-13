@@ -5,9 +5,10 @@ interface ModalProps {
   modalItem: InstagramPostProps | {};
   setModalItem: (item: InstagramPostProps) => void;
 }
+
 const modalInstagramContent: ModalProps = {
   modalItem: {},
-  setModalItem: () => {},
+  setModalItem: () => { },
 };
 
 export const ModalInstagramContext = createContext(modalInstagramContent);

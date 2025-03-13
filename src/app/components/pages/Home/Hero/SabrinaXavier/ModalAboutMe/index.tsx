@@ -1,4 +1,4 @@
-import { HygraphHomeProps } from "@/types/hygraph-types";
+import { Aboutme } from "@/domain";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
 import { X } from "lucide-react";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import { ReactNode } from "react";
 import styled from "styled-components";
 
 interface ModalHeroProps {
-  data: HygraphHomeProps;
+  data: Aboutme;
   closeModal: (param: boolean) => void;
 }
 
@@ -82,7 +82,7 @@ export function ModalAboutMe({ data, closeModal }: ModalHeroProps) {
           <ImageCard>
             <Image
               alt="sabrina-photo"
-              src={data.aboutMe.imgAbout.url}
+              src={data.image}
               unoptimized
               width={400}
               height={600}
@@ -90,7 +90,7 @@ export function ModalAboutMe({ data, closeModal }: ModalHeroProps) {
             />
           </ImageCard>
           <Text>
-            <RichTextHygraph content={data.aboutMe.textAboutMe.raw} />
+            <RichTextHygraph content={data.text} />
           </Text>
         </ContentArea>
       </Container>

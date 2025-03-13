@@ -1,4 +1,5 @@
-import { RichTextProps } from '@graphcms/rich-text-react-renderer'
+// import { RichTextProps } from '@graphcms/rich-text-react-renderer'
+import { RichTextContent } from '@graphcms/rich-text-types'
 
 export type RawInstagramPost = {
   media_type: string
@@ -15,7 +16,7 @@ export type RawHygraphPost = {
   image: { url: string }
   title: string
   text: {
-    raw: RichTextProps
+    raw: RichTextContent
   }
   products: RawHygraphPoduct[]
 }
@@ -26,7 +27,7 @@ export type RawHygraphPoduct = {
   name: string
   size: string
   introText: string
-  text: { raw: RichTextProps }
+  text: { raw: RichTextContent }
   imagesGallery: any
   linkAffiliate: string
   adsenses: any
@@ -36,7 +37,7 @@ export type RawHygraphPoduct = {
 
 export type RawHygraphTestimonial = {
   image: { url: string }
-  text: { raw: RichTextProps }
+  text: { raw: RichTextContent }
   author: string
   linkProfile: string
   linkPost: string
@@ -44,7 +45,7 @@ export type RawHygraphTestimonial = {
 
 export type RawHygraphAboutme = {
   imgAbout: { url: string }
-  textAbout: { raw: RichTextProps }
+  textAbout: { raw: RichTextContent }
 }
 
 export type RawHygraphPowerphrase = {
@@ -55,7 +56,7 @@ export type RawHygraphPowerphrase = {
 export type RawHygraphAboutstudio = {
   imageMain: { url: string }
   title: string
-  text: { raw: RichTextProps }
+  text: { raw: RichTextContent }
   imagesGallery: { url: string }[]
 }
 
@@ -64,7 +65,7 @@ export type RawHygraphHairstyleItem = {
   image: { url: string }
   title: string
   introText: string
-  text: { raw: RichTextProps }
+  text: { raw: RichTextContent }
 }
 
 export type RawHygraphHome = {
@@ -82,7 +83,7 @@ export type RawHygraphPortfolio = {
   id: string
   link: string
   stage: string
-  texto: { raw: RichTextProps }
+  texto: { raw: RichTextContent }
   typeService: { name: 'Make' | 'Hair' }[]
   imagem: { url: string }
   video: { url: string }

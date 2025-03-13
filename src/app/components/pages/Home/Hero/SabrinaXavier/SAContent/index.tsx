@@ -4,7 +4,7 @@ import { Logotipo } from "@/components/Logo/Logotipo";
 import styled from "styled-components";
 import { ButtonsSA } from "./ButtonsSA";
 import { LogoVertical } from "@/components/Logo/LogoVertical";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { randomPhrases } from "@/utils/randomPhrases";
 import { ModalAboutMe } from "../ModalAboutMe";
 import { LoadingFeatText } from "@/components/Loadings/LoadingFeatText";
@@ -156,11 +156,12 @@ const Author = styled.h2`
 export function SAContent() {
   const [modalOpened, setModalOpened] = useState(false);
 
-  const { data } = useHygraphQuery("powerphrases");
+  const { data: phrases } = useHygraphQuery("powerphrases");
+  const { data: aboutMe } = useHygraphQuery("aboutme");
   // const api: API = new HygraphAPI()
   // const hygraphHome: THygraphHome = await api.getHygraphHome(true)
 
-  const phrase = randomPhrases(data);
+  const phrase = randomPhrases(phrases);
 
   function openModal() {
     setModalOpened(true);
@@ -172,7 +173,7 @@ export function SAContent() {
   return (
     <SAContainer>
       {modalOpened && (
-        <ModalAboutMe data={hygraphHome} closeModal={closeModal} />
+        <ModalAboutMe data={aboutMe} closeModal={closeModal} />
       )}
 
       <LogotipoArea>
