@@ -1,10 +1,10 @@
-import { RichTextProps } from "@graphcms/rich-text-react-renderer"
+import { RichTextContent } from "@graphcms/rich-text-types";
 
 export type Portfolio = {
   id: string
   link: string
   stage: string
-  text: { raw: RichTextProps }
+  text: RichTextContent
   typeService: { name: 'Make' | 'Hair' }[]
   image: string
   video: string

@@ -8,7 +8,7 @@ import { Dicas } from "./components/Dicas";
 import { MakeUp } from "./components/MakeUp";
 // import { HygraphHomeProps } from "@/types/hygraph-types";
 // import { getHygraphPosts } from "@/utils/getHygraphPosts";
-import { ModalInsta } from "./components/ModalInsta";
+import { ModalDefault } from "./components/ModalDefault";
 import { Address } from "@/components/Address";
 
 // const URL_FETCH = "http://localhost:3333/";
@@ -26,7 +26,7 @@ export default function Home() {
         alignItems: "center",
       }}
     >
-      <ModalInsta />
+      <ModalDefault />
       <Hero />
       <AlgunsTrabalhos />
       <MakeUp />

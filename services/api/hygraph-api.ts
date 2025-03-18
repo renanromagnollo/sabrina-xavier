@@ -336,7 +336,7 @@ export class HygraphAPI implements API {
       id: portfolio.id,
       link: portfolio.link,
       stage: portfolio.stage,
-      text: portfolio.texto,
+      text: portfolio.texto.raw,
       typeService: portfolio.typeService,
       image: portfolio.imagem.url,
       video: portfolio.video.url
@@ -375,13 +375,15 @@ export class HygraphAPI implements API {
         id: portfolio.id,
         link: portfolio.link,
         stage: portfolio.stage,
-        text: portfolio.texto,
+        text: portfolio.texto.raw,
         typeService: portfolio.typeService,
         image: portfolio.imagem.url,
         // video: portfolio.video.url
       }
-    })
-    console.log(data)
+    }
+    )
+    // return porfolios.map(this.mapRawToPortfolio)
+    // console.log(data)
     return data
   }
 

@@ -68,7 +68,7 @@ export function CardJob({
   item,
   clicked,
 }: CardJobProps) {
-  const richtextExtracted = extractHygraphRichText(item.text.raw)
+  const richtextExtracted = extractHygraphRichText(item.text)
   const instagramProfiles = richtextExtracted.match(/@[\.a-z0-9_-]{2,}/g);
   const oneProfile = instagramProfiles ? instagramProfiles[0] : ''
   const cleanedText = cleanText(richtextExtracted);

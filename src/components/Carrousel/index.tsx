@@ -1,10 +1,10 @@
-import { ModalInsta } from '@/app/components/ModalInsta';
+import { ModalDefault } from '@/app/components/ModalDefault';
 import { InstagramPostProps } from '@/types/post-instagram-types';
 import { useContext, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { ArrowRounded } from '../Icons/ArrowRounded';
 import { CardJob } from '@/app/components/Cards/ CardJob';
-import { ModalInstagramContext } from '@/context/modal-instagram-context';
+import { ModalDefaultContext } from '@/context/modal-default-context';
 import { Portfolio } from '@/domain';
 import { useCarousel } from '@/hooks/useCarousel';
 
@@ -62,7 +62,7 @@ export function Carrousel({ portfolio }: CarrouselProps) {
       '(min-width: 768px)': { slidesToScroll: 3 }
     }
   })
-  const { setModalItem } = useContext(ModalInstagramContext);
+  const { setModalItem } = useContext(ModalDefaultContext);
   const [displayItems, setDisplayItems] = useState<Portfolio[]>();
   // const [scrollX, setScrollX] = useState(30);
   const wrapperRef = useRef<HTMLDivElement>(null);
