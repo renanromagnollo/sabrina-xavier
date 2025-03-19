@@ -87,7 +87,7 @@ export function ModalDefault() {
     } else {
       return (
         <video controls autoPlay loop height={'80%'}>
-          <source src={item.video} type="video/mp4" />
+          <source src={item.video.url} type="video/mp4" />
         </video>
       );
     }

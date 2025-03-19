@@ -7,5 +7,5 @@ export type Portfolio = {
   text: RichTextContent
   typeService: { name: 'Make' | 'Hair' }[]
   image: string
-  video: string
+  video: { url: string }
 }

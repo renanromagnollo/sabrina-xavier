@@ -28,6 +28,7 @@ const CardBox = styled.div<CardBoxProps>`
   align-items: center;
   background-color: ${({ theme }) => theme.colors.light.default};
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 `;
 const ImgCard = styled.div`
   width: 100%;
