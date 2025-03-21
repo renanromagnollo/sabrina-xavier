@@ -24,6 +24,14 @@ const CardBox = styled.div<CardBoxProps>`
 
 const ImageBox = styled.div`
     padding: 15px;
+
+    @media (max-width: 480px) {
+        padding: 10px;
+        img {
+            max-width: 160px;
+            max-height: 250px;
+        }
+    }
     
 `
 export function CardMakeup({ post, rotate }: CardMakeupProps) {

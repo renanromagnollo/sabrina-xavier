@@ -6,7 +6,7 @@ import { InstaPhotos } from "./InstaPhotos";
 
 
 const InstagramSection = styled.section`
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

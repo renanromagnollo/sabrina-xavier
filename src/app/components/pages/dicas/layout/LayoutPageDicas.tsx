@@ -23,6 +23,7 @@ const DicasSection = styled.section`
   color: inherit;
   /* width: 100%; */
   /* align-items: center; */
+  
 `;
 
 const CardsArea = styled.div`
@@ -33,6 +34,7 @@ const CardsArea = styled.div`
   justify-content: center;
   align-items: center;
   /* background-color: blue; */
+  
 `;
 
 const CardsList = styled.div`

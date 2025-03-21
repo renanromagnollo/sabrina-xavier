@@ -28,6 +28,10 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 900px) {
+    width: 80%;
+  }
 `;
 const TextArea = styled.div`
   width: 50%;
@@ -42,6 +46,13 @@ const TextArea = styled.div`
 
     * {
       animation: show 1s ease-out forwards;
+    }
+
+    @media (max-width: 480px) {
+      h3 {
+        text-align: center;
+        font-size: 2.6rem;
+      }
     }
   }
 

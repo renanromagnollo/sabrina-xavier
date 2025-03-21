@@ -24,6 +24,10 @@ const Container = styled.section`
   gap: 30px;
   color: ${({ theme }) => theme.colors.primary.dark};
   background-color: ${({ theme }) => theme.colors.light.dark};
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const TextsArea = styled.div`

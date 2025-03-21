@@ -32,11 +32,18 @@ const SectionArea = styled.section`
 const ContentContainer = styled.div`
   /* width: 80%; */
   display: flex;
+  /* overflow: hidden; */
   justify-content: flex-start;
-  flex-wrap: nowrap;
+  /* flex-wraps: wrap; */
   align-items: flex-start;
   gap: 60px;
   margin: 40px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const TitleSectionContainer = styled.div`
@@ -47,6 +54,10 @@ const TitleSectionContainer = styled.div`
   align-items: center;
   hr {
     border-color: ${({ theme }) => theme.colors.secundary.light};
+  }
+
+  @media (max-width: 480px) {
+    width: 90%;
   }
 `;
 

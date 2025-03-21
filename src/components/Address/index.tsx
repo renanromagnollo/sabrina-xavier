@@ -10,7 +10,7 @@ interface AddressProps { }
 
 const SectionArea = styled.section`
   width: 100vw;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -18,6 +18,12 @@ const SectionArea = styled.section`
   /* margin: 0 40px; */
   padding: 40px 0;
   color: ${({ theme }) => theme.colors.primary.default};
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 
 const AddressArea = styled.div`
@@ -26,6 +32,10 @@ const AddressArea = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const MapArea = styled.div`

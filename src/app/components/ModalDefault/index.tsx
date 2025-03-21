@@ -36,6 +36,10 @@ const Text = styled.h2`
   font-size: 3.5rem;
   text-align: center;
   color: ${({ theme }) => theme.colors.light.default};
+  
+  @media (max-width: 768px) {
+    font-size: 2.7rem;
+  }
 `;
 
 const InstagramProfile = styled.h5`

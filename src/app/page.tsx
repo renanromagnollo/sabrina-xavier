@@ -18,12 +18,13 @@ export default function Home() {
     // <ThemeProvider theme={theme}>
     <div
       style={{
-        width: "100vw",
-        height: "100vh",
+        width: "100%",
+        height: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         alignItems: "center",
+        // paddingBottom: '20px'
       }}
     >
       <ModalDefault />
