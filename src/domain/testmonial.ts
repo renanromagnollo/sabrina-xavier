@@ -1,8 +1,8 @@
-import { RichTextProps } from "@graphcms/rich-text-react-renderer"
+import { RichTextContent } from "@graphcms/rich-text-types"
 
 export type Testimonial = {
   image: string
-  text: RichTextProps
+  text: RichTextContent
   author: string
   linkProfile: string
   linkPost: string

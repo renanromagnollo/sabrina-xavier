@@ -1,4 +1,4 @@
-import { Aboutme, Hairstyles, Powerphrases, Makeup, Portfolio, Post, Product, Testimonial } from "@/domain";
+import { Aboutme, Hairstyles, Powerphrases, Makeup, Portfolio, Post, Product, Testimonial, Aboutstudio } from "@/domain";
 
 export type SchemaType =
   'home'
@@ -9,7 +9,6 @@ export type SchemaType =
   | 'testimonials'
   | 'aboutstudio'
   | 'aboutme'
-  | 'products'
   | 'powerphrases'
 
 export interface API {
@@ -17,10 +16,9 @@ export interface API {
   getTestimonials(): Promise<Testimonial[]>
   getPosts(): Promise<Post[]>
   getAboutMe(): Promise<Aboutme>
-  getAboutStudio(): Promise<Aboutme>
+  getAboutStudio(): Promise<Aboutstudio>
   getMakeup(): Promise<Makeup>
   getHairstyles(): Promise<Hairstyles>
-  getProducts(): Promise<Product[]>
   getPowerphrases(): Promise<Powerphrases[]>
 }
 

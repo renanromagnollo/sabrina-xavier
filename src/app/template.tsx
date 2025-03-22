@@ -6,9 +6,6 @@ interface TemplateProps {
   children: ReactNode;
 }
 
-// const FooterDynamic = dynamic(() => import("../components/Footer"), {
-//   ssr: false,
-// });
 export default function Template(props: TemplateProps) {
   return (
     <div>

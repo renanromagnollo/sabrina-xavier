@@ -1,10 +1,9 @@
 import { Environment } from "@/config";
 import { API, SchemaType } from "./api";
 import { Aboutme, Aboutstudio, Hairstyles, Makeup, Portfolio, Post, Powerphrases, Product, Testimonial } from "@/domain";
-import { RawHygraphAboutme, RawHygraphAboutstudio, RawHygraphHairstyleItem, RawHygraphPoduct, RawHygraphPortfolio, RawHygraphPost, RawHygraphPowerphrase, RawHygraphTestimonial } from "./raw-api-types";
+import { RawHygraphHairstyleItem, RawHygraphPortfolio, RawHygraphPost, RawHygraphPowerphrase, RawHygraphTestimonial } from "./raw-api-types";
 import { setSlugInPosts } from "@/utils";
 import axios from "axios";
-
 
 
 export class HygraphAPI implements API {
@@ -246,7 +245,6 @@ export class HygraphAPI implements API {
 
   private async queryHygraph(queryName: SchemaType): Promise<any> {
     try {
-      console.log('development env: ', this.env.app.env)
       if (this.env.app.env === "development") {
         return await this.fakeFetchHygraph(queryName)
       } else {
@@ -265,7 +263,6 @@ export class HygraphAPI implements API {
         return response.data.data; // Acessa o `data` dentro do resultado retornado
 
       }
-      // console.log('data query:', response.data)
     } catch (error) {
       console.error('Erro na consulta Hygraph:', error);
       throw error; // Lança o erro para ser tratado posteriormente
@@ -273,38 +270,24 @@ export class HygraphAPI implements API {
   }
 
   private async fakeFetchHygraph(queryFake: string): Promise<any> {
-    console.log('entrou no fetch')
     const fakeResponse = await fetch("http://localhost:3333/" + queryFake, {
-      //TODO: verificar esse revalidate do fetch, de acordo com o React Query da api
-      // next: { revalidate: 0 },
     });
     const { data } = await fakeResponse.json();
-    console.log(data)
     return data;
   }
 
   private mapRawHygraphPostToPost(post: RawHygraphPost & { slug: string }): Post {
-    console.log(post)
     return {
       slug: post.slug,
       type: post.typeServices,
       image: post.image.url,
       title: post.title,
       text: post.text.raw,
-      // products: post.products?.map(this.mapRawHygraphProductToProduct) ?? []
     };
   }
 
-  private mapRawHygraphProductToProduct(product: RawHygraphPoduct): Product {
-    return {
-      ...product,
-      image: product.image.url,
-      posts: product.posts?.map(this.mapRawHygraphPostToPost) ?? []
-    };
-  }
 
   private mapRawHygraphHairstylesToHairstyle(item: RawHygraphHairstyleItem): Hairstyles {
-    console.log(item)
     return {
       slug: item.slug,
       image: item.image.url,
@@ -314,36 +297,21 @@ export class HygraphAPI implements API {
     }
   }
 
-  private mapRawProductsToProducts(product: RawHygraphPoduct): Product {
-    return {
-      typeProducts: product.typeProducts,
-      image: product.image.url,
-      name: product.name,
-      size: product.size,
-      introText: product.introText,
-      text: product.text,
-      imagesGallery: product.imagesGallery,
-      linkAffiliate: product.linkAffiliate,
-      adsenses: product.adsenses,
-      posts: product.posts?.map(this.mapRawHygraphPostToPost) ?? []
-    }
-  }
 
-  private mapRawToPortfolio(portfolio: RawHygraphPortfolio): Portfolio {
-    console.log(portfolio)
 
-    const data = {
-      id: portfolio.id,
-      link: portfolio.link,
-      stage: portfolio.stage,
-      text: portfolio.texto.raw,
-      typeService: portfolio.typeService,
-      image: portfolio.imagem.url,
-      video: portfolio.video.url
-    }
-    console.log(data)
-    return data
-  }
+  // private mapRawToPortfolio(portfolio: RawHygraphPortfolio): Portfolio {
+
+  //   const data = {
+  //     id: portfolio.id,
+  //     link: portfolio.link,
+  //     stage: portfolio.stage,
+  //     text: portfolio.texto.raw,
+  //     typeService: portfolio.typeService,
+  //     image: portfolio.imagem.url,
+  //     video: portfolio.video.url
+  //   }
+  //   return data
+  // }
 
   private mapRawToTestimonials(testimonial: RawHygraphTestimonial): Testimonial {
     return {
@@ -368,8 +336,6 @@ export class HygraphAPI implements API {
       :
       await this.queryHygraph('portfolio')
 
-    console.log(porfolios)
-    // const data = porfolios.map(this.mapRawToPortfolio)
     const data = porfolios.map((portfolio: RawHygraphPortfolio) => {
       return {
         id: portfolio.id,
@@ -382,8 +348,6 @@ export class HygraphAPI implements API {
       }
     }
     )
-    // return porfolios.map(this.mapRawToPortfolio)
-    console.log(data)
     return data
   }
 
@@ -401,11 +365,9 @@ export class HygraphAPI implements API {
       ? await this.fakeFetchHygraph('hygraphPosts')
       : await this.queryHygraph('posts');
 
-    console.log('posts: ', posts)
 
     const postsWithSlugs = setSlugInPosts(posts)
 
-    console.log(postsWithSlugs)
 
     return postsWithSlugs.map(this.mapRawHygraphPostToPost);
     // return postsWithSlugs
@@ -417,7 +379,6 @@ export class HygraphAPI implements API {
       ? await this.fakeFetchHygraph('hygraphAboutMe')
       : await this.queryHygraph('aboutme')
 
-    console.log(aboutMe)
 
     return {
       image: aboutMe.imgAbout.url,
@@ -434,7 +395,7 @@ export class HygraphAPI implements API {
       image: aboutStudio.imageMain.url,
       title: aboutStudio.title,
       text: aboutStudio.text.raw,
-      gallery: aboutStudio.imagesGallery.map(item => item.url)
+      gallery: aboutStudio.imagesGallery.map((item: { url: string; }) => item.url)
     };
   }
 
@@ -454,16 +415,7 @@ export class HygraphAPI implements API {
     return hairStyles.map(this.mapRawHygraphHairstylesToHairstyle);
   }
 
-  async getProducts(): Promise<Product[]> {
-    const response = this.env.app.env === 'development'
-      ? await this.fakeFetchHygraph('hygraphProducts')
-      : await this.queryHygraph('products');
-
-    return response.map(this.mapRawProductsToProducts);
-  }
-
   async getPowerphrases(): Promise<any> {
-    //TODO: Verificar se a requisição de produção tb vai retornar o powerPhrases
     const data = this.env.app.env === 'development'
       ? await this.fakeFetchHygraph('hygraphPowerphrases')
       : await this.queryHygraph('powerphrases');

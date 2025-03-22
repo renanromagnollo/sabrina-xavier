@@ -23,10 +23,6 @@ function ModalProvider({ children }: { children: ReactNode }) {
     });
   }
 
-  useEffect(() => {
-    console.log(state);
-  }, [state]);
-
   return (
     <ModalDefaultContext.Provider
       value={{

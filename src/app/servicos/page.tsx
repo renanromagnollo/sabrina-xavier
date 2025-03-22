@@ -1,10 +1,9 @@
 "use client";
 
 import styled from "styled-components";
-import { TitleSection } from "../components/TitleSection";
-import { HairStyle } from "../components/HairStyle";
-import { MakeUp } from "../components/MakeUp";
-import { Address } from "@/components/Address";
+import { TitleSection } from "../_components/TitleSection";
+import { HairStyle } from "../_components/HairStyle";
+import { MakeUp } from "../_components/MakeUp";
 
 const Container = styled.div`
   width: 100%;
@@ -26,7 +25,7 @@ const Header = styled.div`
   }
 `;
 
-interface ServicosPageProps {}
+interface ServicosPageProps { }
 export default function ServicosPage(props: ServicosPageProps) {
   return (
     <Container>

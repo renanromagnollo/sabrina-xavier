@@ -1,6 +1,5 @@
-import { Address } from '@/components/Address';
-import { FormContact } from '../components/Forms/FormContact';
-import { TitleSection } from '../components/TitleSection';
+import { Address } from "../_components/Address";
+import { TitleSection } from "../_components/TitleSection";
 
 interface ContatoProps { }
 export default function Contato(props: ContatoProps) {
@@ -16,7 +15,6 @@ export default function Contato(props: ContatoProps) {
       }}
     >
       <TitleSection title="Contato" subtitle="Entre em contato conosco" />
-      {/* <FormContact /> */}
       <Address />
     </div>
   );

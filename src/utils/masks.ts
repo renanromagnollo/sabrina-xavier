@@ -1,6 +1,5 @@
 export function maskZapPhoneNumberOnChangeInput(value: string) {
   let input = value;
-  console.log('mask: ', input);
   input = input.replace(/\D/g, '');
   return input;
 }

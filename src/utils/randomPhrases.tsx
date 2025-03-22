@@ -8,7 +8,6 @@ export function randomPhrases(
   if (!listPhrases) {
     return;
   }
-  console.log(listPhrases);
   let shuffledPosts = listPhrases
     .map((value) => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)

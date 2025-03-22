@@ -14,7 +14,6 @@ export async function findPostBySlug(
       case "posts":
         ({ data } = await axios.get(urlToGet + "hygraphPosts"));
         const posts: TRawHygraphPost[] = data?.data.posts;
-        // console.log(data.data.posts);
         return posts?.filter((item: TRawHygraphPost) => {
           const postSlug = slugCreator(item.title);
           return postSlug === slug;
@@ -22,14 +21,11 @@ export async function findPostBySlug(
       case "services":
         ({ data } = await axios.get(urlToGet + "hygraphHome"));
         const services = data?.data.hairStyles;
-        console.log(services);
         return services?.filter((item: TRawHygraphHairStyle) => {
           const postSlug = slugCreator(item.title);
-          console.log(postSlug);
           return postSlug === slug;
         })[0];
       default:
-        console.log("Erro!");
         return null;
     }
   } catch (error) { }

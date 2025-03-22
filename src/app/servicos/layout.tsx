@@ -1,5 +1,5 @@
-import { Address } from "@/components/Address";
 import { ReactNode } from "react";
+import { Address } from "../_components/Address";
 
 interface LayoutProps {
   children: ReactNode;

@@ -1,4 +1,4 @@
-import { LayoutPageServico } from "@/app/components/pages/servicos/layout/LayoutPageServico";
+import { LayoutPageServico } from "@/app/_components/pages/servicos/layout/LayoutPageServico";
 import { generateMetadata } from "./metadata";
 
 interface ServicosProps {

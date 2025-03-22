@@ -1,4 +1,4 @@
-import { LayoutPageDicas } from "../components/pages/dicas/layout/LayoutPageDicas";
+import { LayoutPageDicas } from "../_components/pages/dicas/layout/LayoutPageDicas";
 
 export const metadata = {
   title: "Dicas",

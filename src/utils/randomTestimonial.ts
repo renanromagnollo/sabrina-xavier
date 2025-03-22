@@ -2,7 +2,6 @@ import { Testimonial } from "@/domain";
 
 export function randomTestimonial(testimonials: Testimonial[]) {
   // const length = listPosts.length
-  console.log(testimonials);
   if (testimonials) {
     let shuffledPosts = testimonials
       .map((value) => ({ value, sort: Math.random() }))

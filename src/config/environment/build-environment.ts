@@ -4,7 +4,6 @@ import { Environment } from "./environment";
 export function buildEnvironment(): Environment {
 
   const appEnv = (process.env.APP_ENV || process.env.NEXT_PUBLIC_APP_ENV) as AppEnvType
-  console.log('appEnv: ', appEnv)
 
   return {
     app: {
