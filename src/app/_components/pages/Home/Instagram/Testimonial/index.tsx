@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Testimonial as TTestimonial } from "@/domain";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { randomTestimonial } from "@/utils/randomTestimonial";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
@@ -53,14 +54,17 @@ const Text = styled.div`
 export function Testimonial() {
   // const { data: hygraphHome } = useHygraphQuery(true, "home");
   const { data: testimonials, isFetching } = useHygraphQuery("testimonials");
-  const [testimonial, setTestimonial] = useState<HygraphTestimonialProps>();
+  const [testimonial, setTestimonial] = useState<TTestimonial>();
 
   useEffect(() => {
     // const testimonials = hygraphHome?.testimonials;
-    const sortedTestimonial: HygraphTestimonialProps =
-      randomTestimonial(testimonials);
-    setTestimonial(sortedTestimonial);
-  }, [testimonials]);
+    if (testimonial) {
+      const sortedTestimonial =
+        randomTestimonial(testimonials);
+      setTestimonial(sortedTestimonial);
+
+    }
+  }, [testimonial, testimonials]);
   return (
     testimonial && (
       <Container>

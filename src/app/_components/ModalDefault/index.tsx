@@ -2,7 +2,7 @@
 
 import { ModalDefaultContext } from '@/context/modal-default-context';
 import { Portfolio } from '@/domain';
-import { extractHygraphRichText } from '@/utils';
+import { cleanText, extractHygraphRichText } from '@/utils';
 import Image from 'next/image';
 import { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -49,6 +49,7 @@ export function ModalDefault() {
   const { modalItem, setModalItem } = useContext(ModalDefaultContext);
   const [modalOpened, setModalOpened] = useState(false);
   const [clickedImage, setClickedImage] = useState<Portfolio | null>(null);
+  const [textToModal, setTextToModal] = useState('')
 
   function showOnModal(post: Portfolio) {
     const richtextExtracted = extractHygraphRichText(post.text)
@@ -65,6 +66,17 @@ export function ModalDefault() {
     }
   }, [modalItem]);
 
+  useEffect(() => {
+    if (clickedImage?.text) {
+      console.log(clickedImage.text)
+      // const textExtracted = extractHygraphRichText(clickedImage.text)
+      const text = cleanText(clickedImage.text)
+      console.log(text)
+      setTextToModal(text)
+    }
+  }, [clickedImage])
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function closeModal() {
     setModalOpened(false);
     setClickedImage(null);
@@ -72,7 +84,7 @@ export function ModalDefault() {
   }
 
   function mediaRender(item: Portfolio) {
-    if (!item.video || item.video.length === 0) {
+    if (!item.video || item.video.url.length === 0) {
       return (
         <Image
           src={item.image}
@@ -97,7 +109,7 @@ export function ModalDefault() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [closeModal]);
 
   return (
     modalOpened && (
@@ -110,9 +122,10 @@ export function ModalDefault() {
           }>
             {mediaRender(clickedImage)}
             {/* <Text>{cleanText(clickedImage.text)}</Text> */}
-            <Text>{clickedImage.text}</Text>
+            <Text>{textToModal}</Text>
+            {/* <RichTextHygraph content={clickedImage.text} /> */}
             <InstagramProfile>
-              {clickedImage.caption?.match(/@[\.a-z0-9_-]{2,}/g)}
+              {textToModal?.match(/@[\.a-z0-9_-]{2,}/g)}
             </InstagramProfile>
           </ContainerContent>
         )}

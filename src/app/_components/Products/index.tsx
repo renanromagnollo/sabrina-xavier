@@ -25,14 +25,15 @@ const ProductsArea = styled.div`
 
 export function Products(props: HairProductsProps) {
 
-    const { hygraphHome } = useContext(DataContext)
+    // const { hygraphHome } = useContext(DataContext)
 
-    const listProducts: HygraphProductProps[] = hygraphHome?.products?.slice(0, 3)
+    // const listProducts: HygraphProductProps[] = hygraphHome?.products?.slice(0, 3)
 
     return (
         <Container>
             <ProductsArea>
-                {listProducts?.map((item, i) => <ProductCard key={i} item={item} />)}
+                {/* {listProducts?.map((item, i) => <ProductCard key={i} item={item} />)} */}
+                products
             </ProductsArea>
         </Container>
     )

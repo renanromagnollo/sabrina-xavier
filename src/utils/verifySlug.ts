@@ -1,7 +1,7 @@
-import { Post } from "@/domain";
+import { Hairstyles, Post } from "@/domain";
 
 interface verifySlugProps {
-  post: Post;
+  post: Post | Hairstyles;
   params: { slug: string };
 }
 

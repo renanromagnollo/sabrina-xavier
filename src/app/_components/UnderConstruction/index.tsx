@@ -36,13 +36,13 @@ const InstagramButton = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid ${({theme}) => theme.colors.primary.dark};
+    border: 2px solid ${({ theme }) => theme.colors.primary.dark};
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
 
     svg {
-        color: ${({theme}) => theme.colors.primary.dark};
+        color: ${({ theme }) => theme.colors.primary.dark};
     }
     /* background-color: gray; */
     /* border-radius: 25px; */
@@ -54,41 +54,41 @@ const InstagramButton = styled.a`
         
     }
 `
-export function UnderConstruction(props : UnderConstructionProps){
-    return(
+export function UnderConstruction(props: UnderConstructionProps) {
+    return (
         <Container>
-            <LogoVertical width="300px"/>
-                <h4>Olá! O site está em fase de desenvolvimento.</h4>
-                <h4>Estaremos divulgando a data de lançamento em nosso Instagram.
-                </h4>
-                <br/>
-                <Constructors>
-                    <Image 
-                        alt="constructor-bye" 
-                        src='/constructor_working.gif'
-                        width='150'
-                        height='150'
-                        unoptimized
-                        />
-                    <Image 
-                        alt="constructor-bye" 
-                        src='/alert.gif'
-                        width='200'
-                        height='200'
-                        unoptimized
-                    />
+            <LogoVertical width={300} />
+            <h4>Olá! O site está em fase de desenvolvimento.</h4>
+            <h4>Estaremos divulgando a data de lançamento em nosso Instagram.
+            </h4>
+            <br />
+            <Constructors>
+                <Image
+                    alt="constructor-bye"
+                    src='/constructor_working.gif'
+                    width='150'
+                    height='150'
+                    unoptimized
+                />
+                <Image
+                    alt="constructor-bye"
+                    src='/alert.gif'
+                    width='200'
+                    height='200'
+                    unoptimized
+                />
 
-                </Constructors>
-                <h5>Clique no link abaixo e siga o nosso perfil e acompanhe nosso trabalho!</h5>
-                <InstagramButton href="https://www.instagram.com/sabrinaxxavier/" target="_blank">
-                    
-                        <IconInstagram/><h4>sabrinaxxavier</h4>
-                    {/* <a href="https://www.instagram.com/sabrinaxxavier/" target="_blank">
+            </Constructors>
+            <h5>Clique no link abaixo e siga o nosso perfil e acompanhe nosso trabalho!</h5>
+            <InstagramButton href="https://www.instagram.com/sabrinaxxavier/" target="_blank">
+
+                <IconInstagram /><h4>sabrinaxxavier</h4>
+                {/* <a href="https://www.instagram.com/sabrinaxxavier/" target="_blank">
                         <IconInstagram/><h4>sabrinaxxavier</h4>
                     </a> */}
 
-                </InstagramButton>
-                
+            </InstagramButton>
+
 
         </Container>
     )

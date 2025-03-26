@@ -62,7 +62,7 @@ const TitleSectionContainer = styled.div`
 `;
 
 export function Dicas() {
-  const { data: posts, isFetching } = useHygraphQuery("posts", 12);
+  const { data: posts, isFetching } = useHygraphQuery<Post[]>("posts", 12);
   const [listDicas, setListDicas] = useState<Post[]>([])
   const { slug } = useParams();
 

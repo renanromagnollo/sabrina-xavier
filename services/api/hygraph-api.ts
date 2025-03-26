@@ -337,6 +337,8 @@ export class HygraphAPI implements API {
       await this.queryHygraph('portfolio')
 
     const data = porfolios.map((portfolio: RawHygraphPortfolio) => {
+
+
       return {
         id: portfolio.id,
         link: portfolio.link,

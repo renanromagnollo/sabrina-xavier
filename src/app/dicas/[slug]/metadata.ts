@@ -1,19 +1,21 @@
 import { Metadata } from "next";
 import { findPostBySlug } from "../../../utils/findPostBySlug";
 import { PageDicaProps } from "./page";
-import { HygraphPostProps } from "@/types/hygraph-types";
+import { Post } from "@/domain";
+import { cleanText } from "@/utils";
 
 export async function generateMetadata({
   params: { slug },
 }: PageDicaProps): Promise<Metadata> {
-  const post: HygraphPostProps = await findPostBySlug(slug, "posts");
+  const post: Post = await findPostBySlug(slug, "posts");
+  const text = cleanText(post.text)
   return {
     title: post?.title,
-    description: post.text.text,
+    description: text,
     openGraph: {
       images: [
         {
-          url: post.image.url,
+          url: post.image,
           width: 1200,
           height: 630,
         },

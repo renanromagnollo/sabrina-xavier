@@ -5,6 +5,7 @@ import { useHygraphQuery } from "@/hooks/useHygraphQuery";
 import { LoadingPage } from "@/app/_components/Loadings/LoadingPage";
 import { TitleSection } from "@/app/_components/TitleSection";
 import { DicasCard } from "@/app/_components/Cards/DicasCard";
+import { Post } from "@/domain";
 
 const PageArea = styled.div`
   color: ${({ theme }) => theme.colors.primary.dark};
@@ -52,7 +53,7 @@ export function LayoutPageDicas() {
       <DicasSection>
         <CardsArea>
           <CardsList>
-            {posts?.map((dica, i) => (
+            {posts?.map((dica: Post, i: number) => (
               <DicasCard item={dica} key={i} />
             ))}
           </CardsList>

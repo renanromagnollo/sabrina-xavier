@@ -28,7 +28,7 @@ const ContainerCards = styled.div`
 `;
 
 export function HairStyle() {
-  const { data: hairstyleServices, isFetching } = useHygraphQuery("hairstyles");
+  const { data: hairstyleServices, isFetching } = useHygraphQuery<Hairstyles[]>("hairstyles");
   const { slug } = useParams();
 
   return (

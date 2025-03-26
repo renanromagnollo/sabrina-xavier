@@ -64,7 +64,7 @@ export function Header() {
 
   return (
     <HeaderContainer opacity={showOnHeader ? 0.9 : 0}>
-      <LogoHorizontal nameSize={160} show={showOnHeader} />
+      <LogoHorizontal nameSize={160} $show={showOnHeader} />
       <MenuTop
         showOnHeader={showOnHeader}
         burguerOpened={openMenu}

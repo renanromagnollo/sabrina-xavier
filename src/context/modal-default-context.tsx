@@ -16,7 +16,7 @@ export const ModalDefaultContext = createContext(modalDefaultContent);
 function ModalProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState(modalDefaultContent);
 
-  function updateState(key: string, value: Portfolio) {
+  function updateState(key: string, value: Portfolio | null) {
     setState({
       ...state,
       [key]: value,
@@ -27,7 +27,7 @@ function ModalProvider({ children }: { children: ReactNode }) {
     <ModalDefaultContext.Provider
       value={{
         modalItem: state.modalItem,
-        setModalItem: (item: Portfolio) =>
+        setModalItem: (item: Portfolio | null) =>
           updateState("modalItem", item),
       }}
     >

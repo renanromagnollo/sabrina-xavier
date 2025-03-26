@@ -2,7 +2,6 @@
 
 import styled from "styled-components";
 import { Testimonial } from "./Testimonial";
-import { InstaPhotos } from "./InstaPhotos";
 
 
 const InstagramSection = styled.section`

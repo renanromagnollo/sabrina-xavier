@@ -4,7 +4,7 @@ import { HygraphAPI } from '../../services/api/hygraph-api';
 import { buildEnvironment, Environment } from '@/config';
 
 
-async function getHygraph(schema: string, env: Environment) {
+async function getHygraph<T = any>(schema: string, env: Environment): Promise<T> {
 
   const apiHygraph: API = new HygraphAPI(env)
 
@@ -12,38 +12,39 @@ async function getHygraph(schema: string, env: Environment) {
     switch (schema) {
 
       case 'portfolio':
-        return apiHygraph.getPortfolio();
+        return (await apiHygraph.getPortfolio()) as T;
       case 'hairstyles':
-        return apiHygraph.getHairstyles();
+        return (await apiHygraph.getHairstyles()) as T;
       case 'aboutme':
-        return apiHygraph.getAboutMe();
+        return (await apiHygraph.getAboutMe()) as T;
       case 'aboutstudio':
-        return apiHygraph.getAboutStudio();
+        return (await apiHygraph.getAboutStudio()) as T;
       case 'posts':
-        return apiHygraph.getPosts();
+        return (await apiHygraph.getPosts()) as T;
       case 'testimonials':
-        return apiHygraph.getTestimonials()
+        return (await apiHygraph.getTestimonials()) as T;
       case 'powerphrases':
-        return apiHygraph.getPowerphrases();
+        return (await apiHygraph.getPowerphrases()) as T;
 
       default:
         throw new Error('Invalid request to Hygraph API');
     }
   } catch (error) {
     console.error(error);
+    throw error
   }
 }
 
 
 
-export function useHygraphQuery(schema: SchemaType, revalidate = 0, refetchOnFocus = false) {
+export function useHygraphQuery<T = any>(schema: SchemaType, revalidate = 0, refetchOnFocus = false) {
   const env: Environment = buildEnvironment()
-  const queryClient = useQueryClient()
+  // const queryClient = useQueryClient()
 
-  const query = useQuery({
+  const query = useQuery<T>({
     queryKey: [schema],
     queryFn: async () => {
-      const data = await getHygraph(schema, env)
+      const data = await getHygraph<T>(schema, env)
 
       return data
     },
