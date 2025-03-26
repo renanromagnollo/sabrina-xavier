@@ -1,4 +1,3 @@
-import { DefaultTheme } from "styled-components";
 import {
   Alex_Brush,
   Playfair_Display,
@@ -30,7 +29,6 @@ const abel = Abel({
   weight: "400",
 });
 
-console.log(alex.style.fontFamily);
 
 export function fontAtributes(
   fontFamily: string,

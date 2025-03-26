@@ -1,8 +1,7 @@
-import { Address } from '@/components/Address';
-import { FormContact } from '../components/Forms/FormContact';
-import { TitleSection } from '../components/TitleSection';
+import { Address } from "../_components/Address";
+import { TitleSection } from "../_components/TitleSection";
 
-interface ContatoProps {}
+interface ContatoProps { }
 export default function Contato(props: ContatoProps) {
   return (
     <div
@@ -10,13 +9,12 @@ export default function Contato(props: ContatoProps) {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'flex-start',
+        justifyContent: 'space-between',
         alignItems: 'center',
         gap: '20px',
       }}
     >
       <TitleSection title="Contato" subtitle="Entre em contato conosco" />
-      <FormContact />
       <Address />
     </div>
   );

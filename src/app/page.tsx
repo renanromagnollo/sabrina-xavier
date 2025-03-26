@@ -1,27 +1,15 @@
-"use client";
-
-import Image from "next/image";
-import styles from "./page.module.css";
-import { UnderConstruction } from "@/components/UnderConstruction";
-import { DefaultTheme, ThemeProvider } from "styled-components";
 // import light from "@/styles/themes/light";
-import { useContext, useEffect, useState } from "react";
-import { Hero } from "./components/pages/Home/Hero";
-import { AlgunsTrabalhos } from "./components/pages/Home/AlgunsTrabalhos";
-import { Studio } from "./components/pages/Home/Studio";
-import { Instagram } from "./components/pages/Home/Instagram";
-import { DataContext } from "@/context/data-context";
-import { getFakeData } from "@/utils/fakeServer";
-import { HairStyle } from "./components/HairStyle";
-import { Products } from "./components/Products";
-import { Dicas } from "./components/Dicas";
-import { MakeUp } from "./components/MakeUp";
-import { HygraphHomeProps } from "@/types/hygraph-types";
+import { Hero } from "./_components/pages/Home/Hero";
+import { AlgunsTrabalhos } from "./_components/pages/Home/AlgunsTrabalhos";
+import { Studio } from "./_components/pages/Home/Studio";
+import { Instagram } from "./_components/pages/Home/Instagram";
+import { HairStyle } from "./_components/HairStyle";
+import { Dicas } from "./_components/Dicas";
+import { MakeUp } from "./_components/MakeUp";
+// import { HygraphHomeProps } from "@/types/hygraph-types";
 // import { getHygraphPosts } from "@/utils/getHygraphPosts";
-import { ModalInsta } from "./components/ModalInsta";
-import { Address } from "@/components/Address";
-import { useReactQuery } from "@/hooks/useReactQuery";
-import { useHygraphQuery } from "@/hooks/useHygraphQuery";
+import { ModalDefault } from "./_components/ModalDefault";
+import { Address } from "./_components/Address";
 
 // const URL_FETCH = "http://localhost:3333/";
 
@@ -30,15 +18,15 @@ export default function Home() {
     // <ThemeProvider theme={theme}>
     <div
       style={{
-        width: "100vw",
-        // height: "100vh",
+        width: "100%",
+        height: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "flex-start",
+        justifyContent: "space-between",
         alignItems: "center",
       }}
     >
-      <ModalInsta />
+      <ModalDefault />
       <Hero />
       <AlgunsTrabalhos />
       <MakeUp />

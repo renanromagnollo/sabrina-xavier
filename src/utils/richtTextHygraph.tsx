@@ -1,9 +1,10 @@
-import { ComponentProps } from "react";
 import { RichText as CMSRichText } from "@graphcms/rich-text-react-renderer";
+import { RichTextContent } from "@graphcms/rich-text-types";
 
-type RichTextProps = ComponentProps<typeof CMSRichText>
+interface RichTextHygraphProps {
+    content: RichTextContent;
+}
 
-
-export function RichTextHygraph({...props}: RichTextProps) {
-    return <CMSRichText{...props}/>
+export function RichTextHygraph({ content }: RichTextHygraphProps) {
+    return <CMSRichText content={content} />;
 }

@@ -1,4 +1,4 @@
-import { LayoutPageDica } from "@/app/components/pages/dicas/layout/LayoutPageDica";
+import { LayoutPageDica } from "@/app/_components/pages/dicas/layout/LayoutPageDica";
 import { generateMetadata } from "./metadata";
 
 export interface PageDicaProps {

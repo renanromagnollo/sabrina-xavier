@@ -1,18 +1,18 @@
-import { RichTextContent } from "@graphcms/rich-text-react-renderer";
+import { RichTextContent } from '@graphcms/rich-text-types';
 
-interface HygraphAboutmeProps {
+export type TRawHygraphAboutme = {
   imgAbout: {
     url: string;
   };
   textAboutMe: { raw: RichTextContent };
 }
 
-interface HygraphPowerPhraseProps {
+export type TRawHygraphPowerPhrase = {
   phrase: string;
   author: string;
 }
 
-interface HygraphAboutStudioProps {
+export type TRawHygraphAboutStudio = {
   imageMain: {
     url: string;
   };
@@ -21,11 +21,11 @@ interface HygraphAboutStudioProps {
   imagesGallery: { url: string }[];
 }
 
-interface HygraphMakeUpProps {
+export type TRawHygraphMakeUp = {
   text: string;
 }
 
-interface HygraphTestimonialProps {
+export type TRawHygraphTestimonial = {
   image: { url: string };
   text: { raw: RichTextContent };
   author: string;
@@ -33,16 +33,16 @@ interface HygraphTestimonialProps {
   linkPost: string;
 }
 
-interface HygraphPostProps {
+export type TRawHygraphPost = {
   slug?: string;
   typeServices: { name: string }[];
   image: { url: string };
   title: string;
   text: { raw: RichTextContent; text: string };
-  products: HygraphProductProps[];
+  products: TRawHygraphProduct[];
 }
 
-interface HygraphProductProps {
+export type TRawHygraphProduct = {
   typeProducts: { title: string }[];
   image: { url: string };
   name: string;
@@ -52,7 +52,7 @@ interface HygraphProductProps {
   linkAffiliate?: string;
 }
 
-interface HygraphHairStyleProps {
+export type TRawHygraphHairStyle = {
   slug: string;
   image: { url: string };
   title: string;
@@ -60,25 +60,13 @@ interface HygraphHairStyleProps {
   text: { raw: RichTextContent };
 }
 
-interface HygraphHomeProps {
-  aboutMe: HygraphAboutmeProps;
-  powerPhrases: HygraphPowerPhraseProps[];
-  aboutStudio: HygraphAboutStudioProps;
-  makeUp: HygraphMakeUpProps;
-  testimonials: HygraphTestimonialProps[];
-  posts: HygraphPostProps[];
-  products: HygraphProductProps[];
-  hairStyles: HygraphHairStyleProps[];
+export type THygraphHome = {
+  aboutMe: TRawHygraphAboutme;
+  powerPhrases: TRawHygraphPowerPhrase[];
+  aboutStudio: TRawHygraphAboutStudio;
+  makeUp: TRawHygraphMakeUp;
+  testimonials: TRawHygraphTestimonial[];
+  posts: TRawHygraphPost[];
+  products: TRawHygraphProduct[];
+  hairStyles: TRawHygraphHairStyle[];
 }
-
-export type {
-  HygraphAboutmeProps,
-  HygraphPowerPhraseProps,
-  HygraphAboutStudioProps,
-  HygraphMakeUpProps,
-  HygraphTestimonialProps,
-  HygraphPostProps,
-  HygraphProductProps,
-  HygraphHairStyleProps,
-  HygraphHomeProps,
-};

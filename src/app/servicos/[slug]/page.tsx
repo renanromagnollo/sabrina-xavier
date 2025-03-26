@@ -1,12 +1,12 @@
-import { LayoutPageServico } from "@/app/components/pages/servicos/layout/LayoutPageServico";
+import { LayoutPageServico } from "@/app/_components/pages/servicos/layout/LayoutPageServico";
 import { generateMetadata } from "./metadata";
 
-interface ServicosProps {
+export interface PageServicosProps {
   params: {
     slug: string;
   };
 }
-export default function ServicoPage({ params }: ServicosProps) {
+export default function ServicoPage({ params }: PageServicosProps) {
   return <LayoutPageServico params={params} />;
 }
 

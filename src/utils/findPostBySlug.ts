@@ -1,6 +1,6 @@
 import axios from "axios";
 import { slugCreator } from "./slugCreator";
-import { HygraphHomeProps, HygraphPostProps } from "@/types/hygraph-types";
+import { THygraphHome, TRawHygraphHairStyle, TRawHygraphPost } from "@/types/hygraph-types";
 
 export async function findPostBySlug(
   slug: string,
@@ -13,24 +13,20 @@ export async function findPostBySlug(
     switch (category) {
       case "posts":
         ({ data } = await axios.get(urlToGet + "hygraphPosts"));
-        const posts: HygraphPostProps[] = data?.data.posts;
-        // console.log(data.data.posts);
-        return posts?.filter((item: HygraphPostProps) => {
+        const posts: TRawHygraphPost[] = data?.data.posts;
+        return posts?.filter((item: TRawHygraphPost) => {
           const postSlug = slugCreator(item.title);
           return postSlug === slug;
         })[0];
       case "services":
         ({ data } = await axios.get(urlToGet + "hygraphHome"));
         const services = data?.data.hairStyles;
-        console.log(services);
-        return services?.filter((item) => {
+        return services?.filter((item: TRawHygraphHairStyle) => {
           const postSlug = slugCreator(item.title);
-          console.log(postSlug);
           return postSlug === slug;
         })[0];
       default:
-        console.log("Erro!");
         return null;
     }
-  } catch (error) {}
+  } catch (error) { }
 }
