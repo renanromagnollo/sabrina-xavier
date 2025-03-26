@@ -43,7 +43,7 @@ export function SabrinaXavier(props: FeaturedProps) {
       </MobileLogo>
       <MobilePhoto>
         <PhotoSquare
-          src="/images/s1.jpg"
+          src="/images/s1.png"
           width={170}
           height={247}
           rotate="2deg"

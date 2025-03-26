@@ -13,8 +13,8 @@ export function buildEnvironment(): Environment {
       gaTracking: process.env.GOOGLE_ANALYTICS_TRACKING as string
     },
     hygraph: {
-      accessToken: process.env.HYGRAPH_ACCESS_TOKEN as string,
-      apiUrl: process.env.HYGRAPH_API_URL as string
+      accessToken: process.env.NEXT_PUBLIC_HYGRAPH_ACCESS_TOKEN as string,
+      apiUrl: process.env.NEXT_PUBLIC_HYGRAPH_API_URL as string
     }
   }
 }

@@ -2,12 +2,10 @@ import Image from "next/image";
 import styled from "styled-components";
 import { cleanText, extractHygraphRichText } from "@/utils";
 import { Portfolio } from "@/domain";
-import { RichTextProps } from "@graphcms/rich-text-react-renderer";
 
 interface CardJobProps {
   width?: number;
   height?: number;
-  rotate?: string;
   item: Portfolio;
   clicked: (item: Portfolio) => void;
 }
@@ -21,14 +19,18 @@ const CardBox = styled.div<CardBoxProps>`
   height: 370px;
   display: flex;
   flex-direction: column;
-  margin: 0 35px;
+  margin: 0 15px;
   padding: 5px;
-  transform: rotate(${(props) => props.rotate});
   justify-content: flex-start;
   align-items: center;
   background-color: ${({ theme }) => theme.colors.light.default};
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: auto;
+  }
 `;
 const ImgCard = styled.div`
   width: 100%;
@@ -65,7 +67,6 @@ const Instagram = styled.h6`
 export function CardJob({
   width = 280,
   height = 310,
-  rotate,
   item,
   clicked,
 }: CardJobProps) {
@@ -75,7 +76,7 @@ export function CardJob({
   const cleanedText = cleanText(richtextExtracted);
   return (
     item && (
-      <CardBox rotate={rotate} onClick={() => clicked(item)}>
+      <CardBox onClick={() => clicked(item)}>
         <ImgCard>
           <Image
             src={item.image ?? `http://picsum.photos//${width}/${height}`}

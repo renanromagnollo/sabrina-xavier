@@ -37,9 +37,9 @@ async function getHygraph<T = any>(schema: string, env: Environment): Promise<T>
 
 
 
-export function useHygraphQuery<T = any>(schema: SchemaType, revalidate = 0, refetchOnFocus = false) {
+export function useHygraphQuery<T = any>(schema: SchemaType, revalidate = 1, refetchOnFocus = false) {
   const env: Environment = buildEnvironment()
-  // const queryClient = useQueryClient()
+  const queryClient = useQueryClient()
 
   const query = useQuery<T>({
     queryKey: [schema],
@@ -50,7 +50,9 @@ export function useHygraphQuery<T = any>(schema: SchemaType, revalidate = 0, ref
     },
     refetchOnWindowFocus: refetchOnFocus,
     enabled: !!schema,
-    staleTime: 1000 * 60 * 60 * revalidate,
+    staleTime: Math.max(1000 * 60 * 60 * revalidate, 1000 * 10),
+
   });
+
   return query;
 }

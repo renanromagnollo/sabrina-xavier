@@ -77,7 +77,6 @@ export function Carrousel({ portfolio }: CarrouselProps) {
               <CardJob
                 clicked={(item) => setModalItem(item)}
                 key={i}
-                rotate={''}
                 item={item}
               />
             );

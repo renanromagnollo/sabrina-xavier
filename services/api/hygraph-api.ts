@@ -13,7 +13,7 @@ export class HygraphAPI implements API {
   constructor(private readonly env: Environment) {
     this.queries = {
       portfolio: `
-        Portfolios {
+        query Portfolios {
           porfolios {
             id
             link
@@ -33,88 +33,8 @@ export class HygraphAPI implements API {
           }
         }
       `,
-      //       home: `
-      //         Home {
-      //   aboutMe(where: {slug: "sabrina"}) {
-      //     imgAbout {
-      //       url
-      //     }
-      //     textAboutMe {
-      //       raw
-      //     }
-      //   }
-      //   powerPhrases {
-      //     phrase
-      //     author
-      //   }
-      //   aboutStudio(where: {slug: "studio"}) {
-      //     imageMain {
-      //       url
-      //     }
-      //     title
-      //     text {
-      //       raw
-      //     }
-      //     imagesGallery {
-      //       url
-      //     }
-      //   }
-      //   makeUp(where: {slug: "makeup"}) {
-      //     text
-      //   }
-      //   testimonials {
-      //     image {
-      //       url
-      //     }
-      //     text {
-      //       raw
-      //     }
-      //     author
-      //     linkProfile
-      //     linkPost
-      //   }
-      //   posts {
-      //     fakeServices {
-      //       name
-      //     }
-      //     image {
-      //       url
-      //     }
-      //     title
-      //     text {
-      //       raw
-      //     }
-      //   }
-      //   products {
-      //     fakeProducts {
-      //       title
-      //     }
-      //     image {
-      //       url
-      //     }
-      //     name
-      //     size
-      //     introText
-      //     text {
-      //       raw
-      //     }
-      //     linkAffiliate
-      //   }
-      //   hairStyles {
-      //     slug
-      //     image {
-      //       url
-      //     }
-      //     title
-      //     introText
-      //     text {
-      //       raw
-      //     }
-      //   }
-      // }
-      //       `,
       posts: `
-        Posts {
+        query Posts {
           posts {
             typeServices {
               name
@@ -137,10 +57,9 @@ export class HygraphAPI implements API {
               }
             }
           }
-        }
       `,
       testimonials: `
-        Testimonials {
+        query Testimonials {
           testimonials {
             image {
               url
@@ -155,7 +74,7 @@ export class HygraphAPI implements API {
         }
       `,
       aboutme: `
-        AboutMe {
+        query AboutMe {
           aboutMe(where: {slug: "sabrina"}) {
             imgAbout {
               url
@@ -167,7 +86,7 @@ export class HygraphAPI implements API {
         }
       `,
       aboutstudio: `
-        AboutStudio {
+        query AboutStudio {
           aboutStudio(where: {slug: "studio"}) {
             imageMain {
               url
@@ -183,7 +102,7 @@ export class HygraphAPI implements API {
         }
       `,
       powerphrases: `
-        PowerPhrases {
+        query PowerPhrases {
           powerPhrases {
             phrase
             author
@@ -191,14 +110,14 @@ export class HygraphAPI implements API {
         }
       `,
       makeup: `
-        Makeup {
+        query Makeup {
           makeUp(where: {slug: "makeup"}) {
             text
           }
         }
       `,
       hairstyles: `
-        Hairstyles {
+        query Hairstyles {
           hairStyles {
             slug
             image {
@@ -213,7 +132,7 @@ export class HygraphAPI implements API {
         }
       `,
       products: `
-        Products {
+        query Products {
           products {
           typeProducts {
             title
@@ -243,8 +162,11 @@ export class HygraphAPI implements API {
     return query
   }
 
-  private async queryHygraph(queryName: SchemaType): Promise<any> {
+  private async queryHygraph(queryName: SchemaType, delay: number = 1): Promise<any> {
     try {
+      if (delay > 0) {
+        await new Promise(resolve => setTimeout(resolve, delay * 1000))
+      }
       if (this.env.app.env === "development") {
         return await this.fakeFetchHygraph(queryName)
       } else {
@@ -335,6 +257,7 @@ export class HygraphAPI implements API {
       await this.fakeFetchHygraph('hygraphPortfolio')
       :
       await this.queryHygraph('portfolio')
+    console.log(porfolios)
 
     const data = porfolios.map((portfolio: RawHygraphPortfolio) => {
 
@@ -345,11 +268,12 @@ export class HygraphAPI implements API {
         stage: portfolio.stage,
         text: portfolio.texto.raw,
         typeService: portfolio.typeService,
-        image: portfolio.imagem.url,
+        image: portfolio.imagem?.url,
         video: portfolio.video
       }
     }
     )
+    console.log(data)
     return data
   }
 
