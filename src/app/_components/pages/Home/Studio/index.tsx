@@ -82,7 +82,7 @@ export function Studio() {
       {isFetching ? (
         <LoadingCircle />
       ) : (
-        isVisibled && (
+        aboutstudio && (
           <>
             <ImageArea>
               <Image

@@ -25,8 +25,14 @@ const MobilePhoto = styled.div`
   display: none;
 
   @media (max-width: 768px) {
-    display: block;
+    display: flex;
     margin-bottom: 15px;
+
+    img {
+      width: 100%;
+      transform: translate('50%', '50%');
+      padding: 5px;
+    }
   }
 `;
 
@@ -34,7 +40,7 @@ const MobileLogo = styled.div`
   display: none;
 
   @media (max-width: 768px) {
-    display: block;
+    display: flex;
     margin-bottom: 25px;
   }
 `;
