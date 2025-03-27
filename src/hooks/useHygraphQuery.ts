@@ -37,7 +37,7 @@ async function getHygraph<T = any>(schema: string, env: Environment): Promise<T>
 
 
 
-export function useHygraphQuery<T = any>(schema: SchemaType, revalidate = 1, refetchOnFocus = false) {
+export function useHygraphQuery<T = any>(schema: SchemaType, revalidate = 12, refetchOnFocus = false) {
   const env: Environment = buildEnvironment()
   const queryClient = useQueryClient()
 

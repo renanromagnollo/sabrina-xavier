@@ -86,7 +86,6 @@ export function Studio() {
           <>
             <ImageArea >
               <Image
-                data-aos="fade-up"
                 src={
                   `/images/studio.jpeg`
                 }

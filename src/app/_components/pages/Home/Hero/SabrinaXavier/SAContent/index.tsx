@@ -193,16 +193,14 @@ export function SAContent() {
         <DivLogoVertical>
           <LogoVertical width={400} />
         </DivLogoVertical>
-        {!phrase ? (
-          <LoadingFeatText />
-        ) : (
+        {phrase && (
           <TextFeat>
             <Phrase data-aos="fade-left"
               data-aos-duration="3000"
               data-aos-delay="300">{phrase && phrase.phrase}</Phrase>
             <Author data-aos="fade-right"
               data-aos-duration="3000"
-              data-aos-delay="400">{phrase && `- ${phrase.author}`}</Author>
+              data-aos-delay="200">{phrase && `- ${phrase.author}`}</Author>
             <ButtonsSA openModal={openModal} />
           </TextFeat>
         )}
