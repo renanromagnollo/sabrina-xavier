@@ -33,14 +33,14 @@ const TextsArea = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 30px 0;
-  animation: enter 1.5s ease-out forwards;
+  /* animation: enter 1.5s ease-out forwards; */
   gap: 10px;
 
   p {
     text-align: justify;
   }
 
-  @keyframes enter {
+  /* @keyframes enter {
     from {
       margin-left: 20px;
       opacity: 0;
@@ -49,7 +49,7 @@ const TextsArea = styled.div`
       margin-left: 0;
       opacity: 1;
     }
-  }
+  } */
 `;
 
 const ImageArea = styled.div`
@@ -99,9 +99,10 @@ export function Studio() {
                 unoptimized
               />
             </ImageArea>
-            <TextsArea data-aos="fade-right">
+            <TextsArea data-aos="fade-left">
               <TitleSection title={aboutstudio?.title} />
-              <RichTextHygraph content={aboutstudio?.text} />            <a
+              <RichTextHygraph content={aboutstudio?.text} />
+              <a
                 href="https://maps.app.goo.gl/Lc2y7K3PHB382iccA"
                 target="_blank"
               >

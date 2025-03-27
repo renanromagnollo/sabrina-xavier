@@ -71,7 +71,8 @@ export function Testimonial() {
   return (
     testimonial && (
       <Container>
-        <ProfileImage>
+        <ProfileImage data-aos="fade-up"
+          data-aos-duration="3000">
           <Image
             src={testimonial.image ?? `http://picsum.photos//300/300`}
             alt="profile-image"
@@ -82,7 +83,7 @@ export function Testimonial() {
             unoptimized
           />
         </ProfileImage>
-        <Content>
+        <Content data-aos="fade-down">
           <span>"</span>
           <Text>
             <a href={testimonial.linkPost} target="_blank">

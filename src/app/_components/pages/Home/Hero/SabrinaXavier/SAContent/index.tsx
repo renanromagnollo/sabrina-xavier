@@ -176,13 +176,16 @@ export function SAContent() {
         <ModalAboutMe data={aboutMe} closeModal={closeModal} />
       )}
 
-      <LogotipoArea>
+      <LogotipoArea data-aos="fade-down"
+        data-aos-duration="3000">
         <Logotipo />
       </LogotipoArea>
       <TextsContainer>
         <NameStyleMake>
           <LogoName />
-          <LogoSub>
+          <LogoSub data-aos="fade-right"
+            data-aos-duration="3000"
+            data-aos-delay="1000">
             hair style <br />
             <span>&</span> make up
           </LogoSub>
@@ -194,8 +197,12 @@ export function SAContent() {
           <LoadingFeatText />
         ) : (
           <TextFeat>
-            <Phrase>{phrase && phrase.phrase}</Phrase>
-            <Author>{phrase && `- ${phrase.author}`}</Author>
+            <Phrase data-aos="fade-left"
+              data-aos-duration="3000"
+              data-aos-delay="300">{phrase && phrase.phrase}</Phrase>
+            <Author data-aos="fade-right"
+              data-aos-duration="3000"
+              data-aos-delay="400">{phrase && `- ${phrase.author}`}</Author>
             <ButtonsSA openModal={openModal} />
           </TextFeat>
         )}

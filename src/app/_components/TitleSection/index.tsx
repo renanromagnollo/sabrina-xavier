@@ -66,10 +66,11 @@ export function TitleSection({
   return (
     <TitleArea width={width}>
       <Content>
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
+        <Title data-aos="fade-right">{title}</Title>
+        <Subtitle data-aos="fade-left">{subtitle}</Subtitle>
       </Content>
-      <Line />
+      <Line data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom" />
     </TitleArea>
   );
 }

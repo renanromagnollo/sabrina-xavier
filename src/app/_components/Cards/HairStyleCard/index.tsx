@@ -76,7 +76,7 @@ export function HairStyleCard({ item }: { item: Hairstyles }) {
   return (
     <BoxCard>
       <Content>
-        <ImageArea>
+        <ImageArea data-aos="fade-down">
           <Image
             alt="hair-style-image"
             width={300}
@@ -85,14 +85,14 @@ export function HairStyleCard({ item }: { item: Hairstyles }) {
             src={item.image ?? `http://picsum.photos//250/250`}
           />
         </ImageArea>
-        <h4>{item.title ?? "Title"}</h4>
+        <h4 data-aos="zoom-in-up">{item.title ?? "Title"}</h4>
         {/* <h5><RichTextHygraph content={item.text.raw}/></h5> */}
-        <IntroText>{item.introText}</IntroText>
+        <IntroText data-aos="zoom-in-up">{item.introText}</IntroText>
         <Link href={`/servicos/${item?.slug}`}>
-          <ButtonUnselected>Saiba mais</ButtonUnselected>
+          <ButtonUnselected data-aos="zoom-in-up">Saiba mais</ButtonUnselected>
         </Link>
       </Content>
-      <Bg />
+      <Bg data-aos="fade-up" />
     </BoxCard>
   );
 }

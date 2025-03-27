@@ -22,7 +22,9 @@ export function ButtonsSA({
   openModal: (param: boolean) => void;
 }) {
   return (
-    <ButtonsContent>
+    <ButtonsContent data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="1500">
       <ButtonUnselected
         onClick={() => openModal(true)}
         width="120px"

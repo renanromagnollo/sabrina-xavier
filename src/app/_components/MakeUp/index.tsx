@@ -90,7 +90,7 @@ export function MakeUp(props: MakeUpProps) {
   return (
     <SectionArea>
       <Container>
-        <TextArea>
+        <TextArea data-aos="fade-up">
           {!isFetching && (
             <div style={{}}>
               <TitleSection title="Make Up" />
@@ -101,7 +101,7 @@ export function MakeUp(props: MakeUpProps) {
             </div>
           )}
         </TextArea>
-        <ImagesArea>
+        <ImagesArea data-aos="fade-left">
           {itemsSelected?.map((post, i) => {
             let rotateDegree = i % 2 == 0 ? '5' : '3';
             return <CardMakeup key={i} post={post} rotate={rotateDegree} />;
