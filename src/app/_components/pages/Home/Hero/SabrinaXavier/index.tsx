@@ -8,19 +8,23 @@ interface FeaturedProps { }
 
 const Container = styled.div`
   width: 70%;
+  /* height: auto; */
   display: flex;
   flex-grow: 2;
-
-  @media (max-width: 700px) {
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    /* height: auto; */
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    /* flex-grow: 1; */
   }
 `;
 const MobilePhoto = styled.div`
   display: none;
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     display: block;
     margin-bottom: 15px;
   }
@@ -29,9 +33,9 @@ const MobilePhoto = styled.div`
 const MobileLogo = styled.div`
   display: none;
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 `;
 

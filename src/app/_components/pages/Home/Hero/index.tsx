@@ -11,14 +11,18 @@ const HeroContainer = styled.section`
   height: 70vh;
   display: flex;
   justify-content: space-between;
-
+  
   @media (max-width: 1400px) {
     width: 90vw;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 768px) {
+    margin-top: 50px;
     width: 100vw;
-    justify-content: space-evenly;
-    padding: 0 20px;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    /* padding: 0 20px; */
   }
 `;
 export function Hero(props: HeroProps) {

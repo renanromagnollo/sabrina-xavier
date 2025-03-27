@@ -13,12 +13,12 @@ import { LoadingFeatText } from "@/app/_components/Loadings/LoadingFeatText";
 const SAContainer = styled.div`
   position: relative;
   width: 70%;
-  height: 60vh;
+  /* height: 60vh; */
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
 
-  @media (max-width: 1400px) {
+  /* @media (max-width: 1400px) {
     justify-content: center;
   }
   @media (max-width: 1200px) {
@@ -26,9 +26,12 @@ const SAContainer = styled.div`
   }
   @media (max-width: 1100px) {
     width: 50%;
-  }
-  @media (max-width: 700px) {
+  } */
+  @media (max-width: 768) {
     width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 `;
 
@@ -52,16 +55,19 @@ const TextsContainer = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   margin-right: 10px;
-
-  @media (max-width: 1400px) {
+  
+  /* @media (max-width: 1400px) {
     width: 80%;
   }
   @media (max-width: 1100px) {
     width: 90%;
-  }
-  @media (max-width: 700px) {
-    width: 90%;
-    justify-content: center;
+  } */
+  @media (max-width: 768px) {
+    width: 100%;
+    /* height: auto; */
+    margin-right: 0;
+    align-items: center;
+    justify-content: flex-start;
   }
 `;
 
@@ -71,26 +77,28 @@ const TextFeat = styled.div`
   justify-content: flex-end;
   align-items: flex-end;
   color: ${({ theme }) => theme.colors.primary.default};
-
+  
   @media (max-width: 810px) {
     align-items: center;
-
+    
     h1 {
       font-size: 4rem;
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: flex-start;
     justify-content: center;
     > h1 {
       font-size: 3.5rem;
       text-align: center;
     }
   }
-  @media (max-width: 470px) {
+  /* @media (max-width: 470px) {
     > h1 {
       font-size: 3rem;
     }
-  }
+  } */
 `;
 
 const LogotipoArea = styled.div`
