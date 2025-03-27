@@ -8,6 +8,7 @@ import { Header } from "./_components/Header";
 import dynamic from "next/dynamic";
 import { Footer } from "./_components/Footer";
 import { Breadcrumbs } from "./_components/Breadcrumbs";
+import { AosInit } from "./_components/_aos/aos-init";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,7 +41,9 @@ export default function RootLayout({
             <Footer />
           </Providers>
           <Analytics />
+          <AosInit />
         </StyledComponentsRegistry>
+
       </body>
     </html>
   );

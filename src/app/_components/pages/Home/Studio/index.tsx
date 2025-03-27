@@ -84,8 +84,9 @@ export function Studio() {
       ) : (
         aboutstudio && (
           <>
-            <ImageArea>
+            <ImageArea >
               <Image
+                data-aos="fade-up"
                 src={
                   `/images/studio.jpeg`
                 }
@@ -98,7 +99,7 @@ export function Studio() {
                 unoptimized
               />
             </ImageArea>
-            <TextsArea>
+            <TextsArea data-aos="fade-right">
               <TitleSection title={aboutstudio?.title} />
               <RichTextHygraph content={aboutstudio?.text} />            <a
                 href="https://maps.app.goo.gl/Lc2y7K3PHB382iccA"
