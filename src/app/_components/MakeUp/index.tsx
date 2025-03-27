@@ -27,7 +27,7 @@ const Container = styled.div`
   align-items: center;
 
   @media (max-width: 900px) {
-    width: 80%;
+    width: 90%;
   }
 `;
 
