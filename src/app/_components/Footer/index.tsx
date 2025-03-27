@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { LogoRenanRomagnollo } from "../Logo/RenanRomagnollo";
 import { Logotipo } from "../Logo/Logotipo";
 
-interface FooterProps {}
+interface FooterProps { }
 
 const FooterSection = styled.section`
   display: flex;
@@ -25,6 +25,10 @@ const CopyrightArea = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
+  @media (max-width: 768px) {
+    left: 10px;
+    transform: none;
+  }
 `;
 
 const Copyright = styled.h6`

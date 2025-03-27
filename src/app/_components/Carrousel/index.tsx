@@ -14,12 +14,16 @@ const Container = styled.div`
   width: 100%;
   height: 500px;
   overflow: hidden;
+  @media (max-width: 768px) {
+    min-height: 400px;
+  }
 `;
 
 const Gallery = styled.div`
   width: 100%;
   margin: 30px 0;
   display: flex;
+  
   /* gap: 80px; */
   /* transition: 0.5s ease;
   animation: entrance 1s ease-out;

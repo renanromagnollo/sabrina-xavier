@@ -58,13 +58,16 @@ export function Testimonial() {
 
   useEffect(() => {
     // const testimonials = hygraphHome?.testimonials;
-    if (testimonial) {
+    console.log(testimonials)
+    console.log(testimonial)
+    if (testimonials) {
       const sortedTestimonial =
         randomTestimonial(testimonials);
       setTestimonial(sortedTestimonial);
 
     }
-  }, [testimonial, testimonials]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [testimonials]);
   return (
     testimonial && (
       <Container>

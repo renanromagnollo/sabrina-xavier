@@ -15,7 +15,7 @@ interface CardBoxProps {
 }
 
 const CardBox = styled.div<CardBoxProps>`
-  width: 290px;
+  min-width: 290px;
   height: 370px;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ const CardBox = styled.div<CardBoxProps>`
 
   @media (max-width: 768px) {
     width: 90%;
-    height: auto;
+    /* height: auto; */
   }
 `;
 const ImgCard = styled.div`
