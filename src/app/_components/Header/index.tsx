@@ -12,7 +12,7 @@ interface HeaderContainerProps {
 }
 
 const HeaderContainer = styled.header<HeaderContainerProps>`
-  width: 100%;
+  width: 100vw;
   height: 38px;
   background-color: ${({ theme }) => theme.colors.primary.light};
   display: flex;
@@ -30,7 +30,7 @@ const HeaderContainer = styled.header<HeaderContainerProps>`
     color: ${({ theme }) => theme.colors.primary.default};
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     margin-bottom: 15px;
   }
 `;
