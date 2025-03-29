@@ -11,7 +11,7 @@ const FooterSection = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 40px;
   color: ${({ theme }) => theme.colors.primary.default};
   background-color: ${({ theme }) => theme.colors.dark.default};

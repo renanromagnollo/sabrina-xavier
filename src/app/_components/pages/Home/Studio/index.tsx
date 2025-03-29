@@ -12,7 +12,8 @@ import styled from "styled-components";
 
 
 const Container = styled.section`
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
   margin: 40px 0;
   padding: 60px;
   display: flex;

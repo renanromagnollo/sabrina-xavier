@@ -12,7 +12,6 @@ interface DicasCardProps {
 const CardBox = styled.div`
   width: 290px;
   height: 330px;
-  overflow: hidden;
   border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.light.default};
   display: flex;

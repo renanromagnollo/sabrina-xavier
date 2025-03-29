@@ -9,7 +9,8 @@ import { TitleSection } from "../TitleSection";
 import { HairStyleCard } from "../Cards/HairStyleCard";
 
 const SectionArea = styled.section`
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   padding-top: 30px;
   padding-bottom: 50px;

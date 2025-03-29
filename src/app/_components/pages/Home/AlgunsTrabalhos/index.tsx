@@ -10,7 +10,8 @@ import { useEffect } from 'react';
 
 
 const ContainerTrabalhos = styled.section`
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
   position: relative;
   padding: 30px 0;
   margin: 20px 0;
@@ -19,16 +20,18 @@ const ContainerTrabalhos = styled.section`
 
 const BGContainer = styled.div`
   position: absolute;
+  overflow: hidden;
   top: 0;
   z-index: 1;
-  width: 100vw;
+  width: 100%;
   height: 70%;
   background-color: ${({ theme }) => theme.colors.primary.light};
 `;
 
 const ContentJobs = styled.div`
   position: relative;
-  width: 100vw;
+  overflow: hidden;
+  width: 100%;
   height: 100%;
   margin-top: 10px;
   z-index: 20;

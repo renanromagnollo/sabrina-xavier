@@ -31,7 +31,10 @@ const ModalArea = styled.div`
 
 const Container = styled.section`
   position: relative;
-  width: 70%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
   background-color: ${({ theme }) => theme.colors.light.default};
   border-radius: 5px;
@@ -40,6 +43,13 @@ const Container = styled.section`
   box-shadow: 0 0 30px 0 ${({ theme }) => theme.colors.primary.light};
 
   /* overflow: scroll; */
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    
+  }
 `;
 
 const ContentArea = styled.div`
@@ -63,6 +73,13 @@ const ImageCard = styled.div`
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.primary.light};
   /* transform: rotate(-3deg); */
+
+  @media (max-width: 768px) {
+    float: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const CloseBG = styled.div`
@@ -75,14 +92,15 @@ export function ModalAboutMe({ data, closeModal }: ModalHeroProps) {
       <X
         onClick={() => closeModal(false)}
         size="50"
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer", position: 'absolute', left: '5vw', zIndex: '2000' }}
       />
       <Container>
         <ContentArea>
           <ImageCard>
             <Image
               alt="sabrina-photo"
-              src={data.image}
+              // src={data.image}
+              src={'images/s1.png'}
               unoptimized
               width={400}
               height={600}

@@ -12,7 +12,7 @@ interface HeaderContainerProps {
 }
 
 const HeaderContainer = styled.header<HeaderContainerProps>`
-  width: 100vw;
+  width: 100%;
   height: 38px;
   background-color: ${({ theme }) => theme.colors.primary.light};
   display: flex;

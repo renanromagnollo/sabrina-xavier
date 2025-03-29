@@ -9,7 +9,7 @@ import { IconWhatsapp } from "../Icons/IconWhatsapp";
 interface AddressProps { }
 
 const SectionArea = styled.section`
-  width: 100vw;
+  width: 100%;
   /* height: 100%; */
   display: flex;
   justify-content: space-evenly;

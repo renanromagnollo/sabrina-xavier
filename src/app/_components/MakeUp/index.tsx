@@ -12,6 +12,7 @@ interface MakeUpProps { }
 
 const SectionArea = styled.section`
   width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
