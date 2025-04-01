@@ -70,9 +70,9 @@ export function ModalDefault() {
     if (clickedImage?.text) {
       console.log(clickedImage.text)
       // const textExtracted = extractHygraphRichText(clickedImage.text)
-      const text = cleanText(clickedImage.text)
-      console.log(text)
-      setTextToModal(text)
+      // const text = cleanText(textExtracted)
+      console.log(clickedImage.text)
+      setTextToModal(clickedImage.text)
     }
   }, [clickedImage])
 
