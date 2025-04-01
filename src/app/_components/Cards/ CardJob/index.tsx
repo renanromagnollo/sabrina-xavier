@@ -29,7 +29,6 @@ const CardBox = styled.div<CardBoxProps>`
 
   @media (max-width: 768px) {
     width: 90%;
-    /* height: auto; */
   }
 `;
 const ImgCard = styled.div`
