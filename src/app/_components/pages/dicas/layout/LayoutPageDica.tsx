@@ -18,6 +18,10 @@ export function LayoutPageDica({ params }: PageDicaProps) {
   const [selectedPost, setSelectedPost] = useState<Post>()
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (!posts) return;
     const filteredPost = posts.find((post: Post) => verifySlug({ post, params }));
     setSelectedPost(filteredPost);

@@ -6,5 +6,7 @@ interface RichTextHygraphProps {
 }
 
 export function RichTextHygraph({ content }: RichTextHygraphProps) {
-    return <CMSRichText content={content} />;
+    return (
+        <CMSRichText content={content} />
+    );
 }

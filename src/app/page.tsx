@@ -11,7 +11,6 @@ import { MakeUp } from "./_components/MakeUp";
 import { ModalDefault } from "./_components/ModalDefault";
 import { Address } from "./_components/Address";
 
-// const URL_FETCH = "http://localhost:3333/";
 
 export default function Home() {
   return (

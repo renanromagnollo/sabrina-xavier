@@ -2,7 +2,6 @@
 
 import { Post } from "@/domain";
 import { useHygraphQuery } from "@/hooks/useHygraphQuery";
-import { TRawHygraphPost } from "@/types/hygraph-types";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import styled from "styled-components";

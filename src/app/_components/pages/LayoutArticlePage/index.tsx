@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { HairStyle } from "../../HairStyle";
 import { ButtonContact } from "../../Buttons/ButtonContact/ButtonContact";
 import { Post } from "@/domain";
+import { useEffect } from "react";
 
 const PageArea = styled.div`
   width: 100%;
@@ -91,6 +92,7 @@ export function LayoutArticlePage({
   // relatedProducts,
 }: LayoutPostProps) {
   const path = usePathname();
+
 
   function othersArticles() {
     if (path.includes("dicas")) {
