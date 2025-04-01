@@ -333,7 +333,7 @@ export class HygraphAPI implements API {
     return response;
   }
 
-  async getHairstyles(): Promise<Hairstyles> {
+  async getHairstyles(): Promise<Hairstyles[]> {
     const { hairStyles } = this.env.app.env === 'development'
       ? await this.fakeFetchHygraph('hygraphHairstyles')
       : await this.queryHygraph('hairstyles');

@@ -18,7 +18,7 @@ export interface API {
   getAboutMe(): Promise<Aboutme>
   getAboutStudio(): Promise<Aboutstudio>
   getMakeup(): Promise<Makeup>
-  getHairstyles(): Promise<Hairstyles>
+  getHairstyles(): Promise<Hairstyles[]>
   getPowerphrases(): Promise<Powerphrases[]>
 }
 

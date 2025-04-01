@@ -7,15 +7,15 @@ import { cleanText } from "@/utils";
 export async function generateMetadata({
   params: { slug },
 }: PageDicaProps): Promise<Metadata> {
-  const post: Post = await findPostBySlug(slug, "posts", 'https://sabrinaxavier.com.br/');
-  const text = cleanText(post.text)
+  const post = (await findPostBySlug(slug, "posts")) as Post | null;
+  const text = cleanText(post?.text)
   return {
     title: post?.title,
-    description: text,
+    description: text ?? '',
     openGraph: {
       images: [
         {
-          url: post.image,
+          url: post?.image ?? 'image/s1.png',
           width: 1200,
           height: 630,
         },
