@@ -2,13 +2,14 @@ import { Metadata } from "next";
 import { findPostBySlug } from "../../../utils/findPostBySlug";
 import { PageDicaProps } from "./page";
 import { Post } from "@/domain";
-import { cleanText } from "@/utils";
+import { cleanText, extractHygraphRichText } from "@/utils";
 
 export async function generateMetadata({
   params: { slug },
 }: PageDicaProps): Promise<Metadata> {
   const post = (await findPostBySlug(slug, "posts")) as Post | null;
-  const text = cleanText(post?.text)
+  const richtextToString = extractHygraphRichText(post?.text)
+  const text = cleanText(richtextToString)
   return {
     title: post?.title,
     description: text ?? '',

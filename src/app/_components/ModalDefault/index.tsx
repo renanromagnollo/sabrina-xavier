@@ -49,14 +49,11 @@ export function ModalDefault() {
   const { modalItem, setModalItem } = useContext(ModalDefaultContext);
   const [modalOpened, setModalOpened] = useState(false);
   const [clickedImage, setClickedImage] = useState<Portfolio | null>(null);
-  const [textToModal, setTextToModal] = useState('')
+  const [textToModal, setTextToModal] = useState<string>('')
 
   function showOnModal(post: Portfolio) {
-    const richtextExtracted = extractHygraphRichText(post.text)
-    setClickedImage({
-      ...post,
-      text: richtextExtracted
-    });
+    // const richtextExtracted = extractHygraphRichText(post.text)
+    setClickedImage(post);
     setModalOpened(true);
   }
 
@@ -69,10 +66,10 @@ export function ModalDefault() {
   useEffect(() => {
     if (clickedImage?.text) {
       console.log(clickedImage.text)
-      // const textExtracted = extractHygraphRichText(clickedImage.text)
-      // const text = cleanText(textExtracted)
-      console.log(clickedImage.text)
-      setTextToModal(clickedImage.text)
+      const textExtracted = extractHygraphRichText(clickedImage.text)
+      const text = cleanText(textExtracted)
+      console.log(text)
+      setTextToModal(text)
     }
   }, [clickedImage])
 
