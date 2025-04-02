@@ -1,5 +1,6 @@
 import { Aboutme } from "@/domain";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 import { X } from "lucide-react";
 import Image from "next/image";
 import { ReactNode } from "react";
@@ -14,7 +15,6 @@ const ModalArea = styled.div`
   color: ${({ theme }) => theme.colors.primary.dark};
   width: 100%;
   height: 100%;
-  /* right: 0; */
   overflow: hidden;
   top: 0;
   left: 0;
@@ -24,7 +24,6 @@ const ModalArea = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 45px;
-  /* padding-bottom: 5px; */
 
   background-color: transparent;
 `;
@@ -82,9 +81,9 @@ const ImageCard = styled.div`
   }
 `;
 
-const CloseBG = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary.light};
-`;
+// const CloseBG = styled.div`
+//   background-color: ${({ theme }) => theme.colors.primary.light};
+// `;
 
 export function ModalAboutMe({ data, closeModal }: ModalHeroProps) {
   return (

@@ -87,7 +87,7 @@ export default {
       "4.5rem",
       "140%"
     ),
-    h2: fontAtributes(dancing.style.fontFamily, "normal", 400, "5rem", "150%"),
+    h2: fontAtributes(dancing.style.fontFamily, "normal", 400, "4rem", "150%"),
     h3: fontAtributes(raleway.style.fontFamily, "normal", 300, "3rem", "120%"),
     h4: fontAtributes(
       raleway.style.fontFamily,

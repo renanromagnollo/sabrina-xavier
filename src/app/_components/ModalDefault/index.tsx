@@ -52,7 +52,6 @@ export function ModalDefault() {
   const [textToModal, setTextToModal] = useState<string>('')
 
   function showOnModal(post: Portfolio) {
-    // const richtextExtracted = extractHygraphRichText(post.text)
     setClickedImage(post);
     setModalOpened(true);
   }
