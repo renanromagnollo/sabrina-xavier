@@ -82,6 +82,8 @@ export function ModalDefault() {
         alt="image-modal"
         width={500}
         height={500}
+        sizes='fill'
+        quality={90}
         style={{ objectFit: 'cover', objectPosition: 'top' }}
       />
     );

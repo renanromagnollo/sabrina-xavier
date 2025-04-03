@@ -89,6 +89,8 @@ export function DicasCard({ item }: DicasCardProps) {
           <Image
             width={290}
             height={215}
+            sizes='fill'
+            quality={75}
             alt="dica-image"
             src={item?.image ?? 'http://picsum.photos//290/215'}
             style={{ objectFit: 'cover', width: '100%' }}

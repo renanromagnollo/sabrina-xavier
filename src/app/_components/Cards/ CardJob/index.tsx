@@ -83,9 +83,9 @@ export function CardJob({
             width={width}
             height={height}
             alt="job-image"
-            // sizes="100%"
+            sizes="fill"
             style={{ objectFit: "cover", objectPosition: "top" }}
-            quality={100}
+            quality={90}
           // unoptimized
           // priority
           />

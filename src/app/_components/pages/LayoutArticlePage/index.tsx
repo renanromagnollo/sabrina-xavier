@@ -128,6 +128,8 @@ export function LayoutArticlePage({
             alt={`image_${slugCreator(article?.title)}`}
             width={600}
             height={500}
+            sizes="full"
+            quality={75}
             style={{ objectFit: "contain" }}
           />
           <p>

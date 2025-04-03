@@ -90,12 +90,14 @@ export function Studio() {
                   `/images/studio.jpeg`
                 }
                 alt="studio-image"
+                placeholder="blur"
                 width={372}
                 height={400}
-                sizes="100%"
+                sizes="fill"
+                quality={75}
                 style={{ objectFit: "cover" }}
-                priority
-                unoptimized
+                blurDataURL="data:image/jpeg"
+
               />
             </ImageArea>
             <TextsArea data-aos="fade-left">

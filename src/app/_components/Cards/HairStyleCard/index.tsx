@@ -81,6 +81,8 @@ export function HairStyleCard({ item }: { item: Hairstyles }) {
             alt="hair-style-image"
             width={300}
             height={300}
+            sizes="fill"
+            quality={75}
             style={{ objectFit: "cover" }}
             src={item.image ?? `http://picsum.photos//250/250`}
           />

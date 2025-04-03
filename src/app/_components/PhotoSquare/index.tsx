@@ -68,9 +68,10 @@ export function PhotoSquare({
         height={height}
         alt="sabrina-picture"
         sizes="100%"
+        quality={75}
         style={{ objectFit: "cover" }}
         priority={true}
-        unoptimized
+        unoptimized={false}
       />
     </ImgContainer>
   );

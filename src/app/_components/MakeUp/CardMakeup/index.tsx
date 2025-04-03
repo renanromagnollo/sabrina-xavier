@@ -42,6 +42,8 @@ export function CardMakeup({ post, rotate }: CardMakeupProps) {
                     src={post ? post.image : 'http://picsum.photos/290/290'}
                     width={290}
                     height={290}
+                    sizes="fill"
+                    quality={75}
                     style={{ objectFit: 'cover', objectPosition: 'top' }}
                 />
             </ImageBox>

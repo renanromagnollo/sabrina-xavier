@@ -76,9 +76,9 @@ export function Testimonial() {
             alt="profile-image"
             width={150}
             height={150}
-            sizes="100%"
+            sizes="fill"
+            quality={75}
             style={{ objectFit: "cover", textAlign: "center" }}
-            unoptimized
           />
         </ProfileImage>
         <Content data-aos="fade-down">
