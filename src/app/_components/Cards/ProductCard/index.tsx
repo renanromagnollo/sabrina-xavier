@@ -14,26 +14,20 @@ const BoxCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* height: 450px; */
   background-color: #fff;
   box-shadow: 0px 0px 6px 0px ${({ theme }) => theme.colors.secundary.dark};
 
-  /* background-color: ${({ theme }) => theme.colors.light.default};  */
-  /* padding: 0 5px; */
   border-radius: 25px;
   overflow: hidden;
 `;
-// const Container = styled.div`
-//     width: 100%;
-//     height: 100%;
 
-// `
 const FeatureProduct = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 `;
+
 const Buttons = styled.div`
   width: 100%;
   display: flex;
@@ -42,9 +36,9 @@ const Buttons = styled.div`
   padding: 0 20px;
   margin: 10px auto;
 `;
+
 const ProductImage = styled.div`
   width: 100%;
-  /* height: 30%; */
   overflow: hidden;
   padding: 10px;
   display: flex;
@@ -61,6 +55,7 @@ const TitleArea = styled.div`
   align-items: center;
   padding: 5px 0;
 `;
+
 const Title = styled.h5`
   color: ${({ theme }) => theme.colors.light.default};
   text-align: center;
@@ -69,14 +64,12 @@ const Title = styled.h5`
 const TextArea = styled.div`
   padding: 10px;
   width: 100%;
-  /* height: 20%; */
   overflow: hidden;
 `;
 
 const Text = styled.h6`
   color: ${({ theme }) => theme.colors.secundary.dark};
   width: 100%;
-  /* text-align: justify; */
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -87,7 +80,6 @@ const DescriptionArea = styled.div`
   display: flex;
   height: 100%;
   flex-direction: column;
-  /* background-color: pink; */
   justify-content: space-between;
   align-items: center;
 `;

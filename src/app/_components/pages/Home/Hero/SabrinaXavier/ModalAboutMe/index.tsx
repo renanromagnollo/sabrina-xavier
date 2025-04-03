@@ -1,9 +1,7 @@
 import { Aboutme } from "@/domain";
 import { RichTextHygraph } from "@/utils/richtTextHygraph";
-import { RichText } from "@graphcms/rich-text-react-renderer";
 import { X } from "lucide-react";
 import Image from "next/image";
-import { ReactNode } from "react";
 import styled from "styled-components";
 
 interface ModalHeroProps {

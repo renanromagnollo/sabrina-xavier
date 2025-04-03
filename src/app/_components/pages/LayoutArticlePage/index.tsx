@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { HairStyle } from "../../HairStyle";
 import { ButtonContact } from "../../Buttons/ButtonContact/ButtonContact";
 import { Post } from "@/domain";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 
 const PageArea = styled.div`
   width: 100%;
@@ -94,7 +94,7 @@ export function LayoutArticlePage({
   const path = usePathname();
 
 
-  function othersArticles() {
+  const othersArticles = useCallback(() => {
     if (path.includes("dicas")) {
       return <Dicas />;
     } else if (path.includes("servicos")) {
@@ -116,7 +116,8 @@ export function LayoutArticlePage({
       );
     }
     return;
-  }
+  }, [path])
+
   return (
     <PageArea>
       <MainArea>

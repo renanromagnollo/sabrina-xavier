@@ -52,12 +52,10 @@ const Text = styled.div`
   }
 `;
 export function Testimonial() {
-  // const { data: hygraphHome } = useHygraphQuery(true, "home");
-  const { data: testimonials, isFetching } = useHygraphQuery("testimonials");
+  const { data: testimonials } = useHygraphQuery("testimonials");
   const [testimonial, setTestimonial] = useState<TTestimonial>();
 
   useEffect(() => {
-    // const testimonials = hygraphHome?.testimonials;
     console.log(testimonials)
     console.log(testimonial)
     if (testimonials) {

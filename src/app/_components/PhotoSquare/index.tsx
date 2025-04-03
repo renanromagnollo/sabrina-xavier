@@ -12,9 +12,11 @@ interface ImgBoxProps {
   bottom?: string;
   left?: string;
 }
+
 interface PhotoSquareProps extends ImgBoxProps {
   src?: string;
 }
+
 const ImgContainer = styled.div<PhotoSquareProps>`
   position: ${(props) => props.position};
   display: block;

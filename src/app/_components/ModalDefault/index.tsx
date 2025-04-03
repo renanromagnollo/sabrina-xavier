@@ -4,7 +4,7 @@ import { ModalDefaultContext } from '@/context/modal-default-context';
 import { Portfolio } from '@/domain';
 import { cleanText, extractHygraphRichText } from '@/utils';
 import Image from 'next/image';
-import { useContext, useEffect, useState } from 'react';
+import { useCallback, useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const ContainerModal = styled.div`
@@ -51,61 +51,54 @@ export function ModalDefault() {
   const [clickedImage, setClickedImage] = useState<Portfolio | null>(null);
   const [textToModal, setTextToModal] = useState<string>('')
 
-  function showOnModal(post: Portfolio) {
-    setClickedImage(post);
-    setModalOpened(true);
-  }
-
   useEffect(() => {
     if (modalItem !== null) {
-      showOnModal(modalItem)
+      setClickedImage(modalItem)
+      setModalOpened(true)
+
     }
   }, [modalItem]);
 
   useEffect(() => {
-    if (clickedImage?.text) {
-      console.log(clickedImage.text)
-      const textExtracted = extractHygraphRichText(clickedImage.text)
-      const text = cleanText(textExtracted)
-      console.log(text)
-      setTextToModal(text)
-    }
-  }, [clickedImage])
+    if (!clickedImage?.text) return;
+    setTextToModal(cleanText(extractHygraphRichText(clickedImage.text)));
+  }, [clickedImage]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  function closeModal() {
+  const closeModal = useCallback(() => {
     setModalOpened(false);
     setClickedImage(null);
     setModalItem(null)
-  }
+  }, [setModalItem])
 
-  function mediaRender(item: Portfolio) {
-    if (!item.video || item.video.url.length === 0) {
-      return (
-        <Image
-          src={item.image}
-          alt="image-modal"
-          width={500}
-          height={500}
-          style={{ objectFit: 'cover', objectPosition: 'top' }}
-        />
-      );
-    } else {
-      return (
-        <video controls autoPlay loop height={'80%'}>
-          <source src={item.video.url} type="video/mp4" />
-        </video>
-      );
-    }
-  }
+  const mediaRender = useCallback((item: Portfolio) => {
+    return item.video?.url ? (
+      <video controls autoPlay loop height="80%">
+        <source src={item.video.url} type="video/mp4" />
+      </video>
+    ) : (
+      <Image
+        src={item.image}
+        alt="image-modal"
+        width={500}
+        height={500}
+        style={{ objectFit: 'cover', objectPosition: 'top' }}
+      />
+    );
+  }, [])
 
   useEffect(() => {
-    const handleScroll = () => closeModal();
+    const handleScroll = () => {
+      setModalOpened(false);
+      setClickedImage(null);
+      setModalItem(null);
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [closeModal]);
+  }, [setModalItem]); // Mantendo apenas `setModalItem`, que vem do contexto
 
   return (
     modalOpened && (

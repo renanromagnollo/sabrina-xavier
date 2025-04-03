@@ -8,9 +8,7 @@ interface ButtonTagTypeProps {
 }
 
 const ButtonBox = styled.button<ButtonTagTypeProps>`
-    /* width: 70px; */
     padding: 5px;
-    /* height: 30px; */
     border-radius: 12px;
     background-color: ${props => {
         switch (props.type) {

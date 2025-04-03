@@ -29,12 +29,10 @@ const SectionArea = styled.section`
     border-color: ${({ theme }) => theme.colors.light.default};
   }
 `;
+
 const ContentContainer = styled.div`
-  /* width: 80%; */
   display: flex;
-  /* overflow: hidden; */
   justify-content: flex-start;
-  /* flex-wraps: wrap; */
   align-items: flex-start;
   gap: 60px;
   margin: 40px 0;

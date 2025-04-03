@@ -86,7 +86,7 @@ export function HairStyleCard({ item }: { item: Hairstyles }) {
           />
         </ImageArea>
         <h4 data-aos="zoom-in-up">{item.title ?? "Title"}</h4>
-        {/* <h5><RichTextHygraph content={item.text.raw}/></h5> */}
+        {/* <h5><RichTextHygraph content={item.text.raw} /></h5> */}
         <IntroText data-aos="zoom-in-up">{item.introText}</IntroText>
         <Link href={`/servicos/${item?.slug}`}>
           <ButtonUnselected data-aos="zoom-in-up">Saiba mais</ButtonUnselected>

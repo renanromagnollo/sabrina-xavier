@@ -34,7 +34,6 @@ const TextsArea = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 30px 0;
-  /* animation: enter 1.5s ease-out forwards; */
   gap: 10px;
 
   p {

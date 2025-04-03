@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const ButtonArea = styled.div`
-  /* width: 120px; */
   height: 30px;
   overflow: hidden;
   :hover {
@@ -10,7 +9,6 @@ const ButtonArea = styled.div`
 `;
 
 const Button = styled.button`
-  /* padding: 5px 10px; */
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -21,15 +19,9 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: transparent; */
-  /* box-sizing: border-box; */
   span {
     padding: 5px 10px;
   }
-
-  /* :hover {
-    background-color: ${({ theme }) => theme.colors.actions.sucess};
-  } */
 `;
 
 export function ButtonContact({ children }: { children?: any }) {

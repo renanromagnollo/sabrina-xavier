@@ -94,11 +94,6 @@ const TextFeat = styled.div`
       text-align: center;
     }
   }
-  /* @media (max-width: 470px) {
-    > h1 {
-      font-size: 3rem;
-    }
-  } */
 `;
 
 const LogotipoArea = styled.div`

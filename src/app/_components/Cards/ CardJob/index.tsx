@@ -31,6 +31,7 @@ const CardBox = styled.div<CardBoxProps>`
     width: 90%;
   }
 `;
+
 const ImgCard = styled.div`
   width: 100%;
   height: 85%;

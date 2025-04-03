@@ -5,11 +5,9 @@ import { usePathname, useRouter } from "next/navigation";
 import styled from "styled-components";
 
 const PathTag = styled.section`
-  /* position: fixed; */
   margin-top: 40px;
   margin-bottom: 5px;
   height: 30px;
-  /* padding: 10px; */
   width: 100%;
   border-top: 1px solid ${({ theme }) => theme.colors.primary.light};
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary.light};

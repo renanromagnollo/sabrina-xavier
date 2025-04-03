@@ -25,8 +25,7 @@ const Header = styled.div`
   }
 `;
 
-interface ServicosPageProps { }
-export default function ServicosPage(props: ServicosPageProps) {
+export default function ServicosPage() {
   return (
     <Container>
       <Header>

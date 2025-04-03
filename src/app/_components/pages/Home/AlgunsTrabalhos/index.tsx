@@ -6,7 +6,6 @@ import { TitleSection } from '@/app/_components/TitleSection';
 import { LoadingCircle } from '@/app/_components/Loadings/LoadingCircle';
 import { Carrousel } from '@/app/_components/Carrousel';
 import { Portfolio } from '@/domain';
-import { useEffect } from 'react';
 
 
 const ContainerTrabalhos = styled.section`
@@ -50,10 +49,6 @@ export function AlgunsTrabalhos() {
   const rotate = ['-4deg', '3deg', '-6deg'];
 
   const { data: portfolio, isFetching } = useHygraphQuery("portfolio");
-
-  useEffect(() => {
-    console.log(portfolio)
-  }, [portfolio])
 
   return (
     <ContainerTrabalhos>

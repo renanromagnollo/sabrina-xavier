@@ -21,6 +21,7 @@ const ButtonBox = styled.button`
         color: ${({ theme }) => theme.colors.actions.sucess};
     }
 `
+
 const LinkBuy = styled.a`
     display: flex;
     justify-content: space-evenly;
