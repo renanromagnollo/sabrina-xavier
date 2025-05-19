@@ -2,7 +2,8 @@
 
 Website profissional para apresentação de serviços e cursos da cabeleireira **Sabrina Xavier**, desenvolvido com foco em performance, SEO e escalabilidade.
 
-screenshot
+![sabrinaxavier](https://github.com/user-attachments/assets/3ca69487-83bd-4d53-9201-4ab4d6b16df4)
+
 
 ## 🔗 Acesse o Projeto
 
