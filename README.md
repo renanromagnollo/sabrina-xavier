@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sabrina Xavier ✂️💇‍♀️
 
-## Getting Started
+Website profissional para apresentação de serviços e cursos da cabeleireira **Sabrina Xavier**, desenvolvido com foco em performance, SEO e escalabilidade.
 
-First, run the development server:
+screenshot
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔗 Acesse o Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👉 [www.sabrinaxavier.com.br](https://www.sabrinaxavier.com.br)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📌 Sobre o Projeto
 
-## Learn More
+Este projeto tem como objetivo:
 
-To learn more about Next.js, take a look at the following resources:
+- Apresentar os serviços de salão de beleza oferecidos por Sabrina Xavier.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## ⚙️ Tecnologias Utilizadas
 
-## Deploy on Vercel
+| Tecnologia     | Descrição |
+|----------------|-----------|
+| [Next.js](https://nextjs.org/) | Framework React para aplicações web modernas |
+| [React](https://reactjs.org/) | Biblioteca JavaScript para construção de UIs |
+| [Styled Components](https://styled-components.com/) | Utilitário para estilização |
+| [Vercel](https://vercel.com/) | Deploy contínuo e hospedagem do front-end |
+| [React Query](https://tanstack.com/query) | Gerenciamento eficiente de estado assíncrono |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🚀 Funcionalidades
+
+- Página institucional com apresentação de serviços.
+- Blog integrado para SEO e tráfego orgânico.
+- Responsividade total.
+- Pronto para escalar com novos módulos.
+
+---
