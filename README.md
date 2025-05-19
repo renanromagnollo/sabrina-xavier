@@ -16,6 +16,7 @@ Website profissional para apresentação de serviços e cursos da cabeleireira *
 Este projeto tem como objetivo:
 
 - Apresentar os serviços de salão de beleza oferecidos por Sabrina Xavier.
+- Gerenciar conteúdo dinamicamente via CMS headless.
 
 ---
 
@@ -33,13 +34,14 @@ Este projeto tem como objetivo:
 | [Lucide React](https://lucide.dev/)        | Ícones modernos e customizáveis para React |
 | [Polished](https://polished.js.org/)       | Utilitários de manipulação de CSS-in-JS |
 | [AOS](https://michalsnik.github.io/aos/)   | Biblioteca de animações com scroll suave |
+| [Hygraph CMS](https://hygraph.com/)        | CMS headless com GraphQL para gerenciamento dinâmico de conteúdo |
 
 ---
 
 ## 🚀 Funcionalidades
 
 - Página institucional com apresentação de serviços.
-- Blog integrado para SEO e tráfego orgânico.
+- Blog integrado para SEO com conteúdo dinâmico via **Hygraph CMS**.
 - Responsividade total.
 - Carrosséis interativos com `embla-carousel-react`.
 - Animações suaves com `aos`.
