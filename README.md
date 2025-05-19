@@ -28,6 +28,11 @@ Este projeto tem como objetivo:
 | [Styled Components](https://styled-components.com/) | Utilitário para estilização |
 | [Vercel](https://vercel.com/) | Deploy contínuo e hospedagem do front-end |
 | [React Query](https://tanstack.com/query) | Gerenciamento eficiente de estado assíncrono |
+| [Axios](https://axios-http.com/)           | Cliente HTTP para requisições assíncronas |
+| [Embla Carousel](https://www.embla-carousel.com/react/) | Carrossel acessível e fluido para React |
+| [Lucide React](https://lucide.dev/)        | Ícones modernos e customizáveis para React |
+| [Polished](https://polished.js.org/)       | Utilitários de manipulação de CSS-in-JS |
+| [AOS](https://michalsnik.github.io/aos/)   | Biblioteca de animações com scroll suave |
 
 ---
 
@@ -36,6 +41,8 @@ Este projeto tem como objetivo:
 - Página institucional com apresentação de serviços.
 - Blog integrado para SEO e tráfego orgânico.
 - Responsividade total.
+- Carrosséis interativos com `embla-carousel-react`.
+- Animações suaves com `aos`.
 - Pronto para escalar com novos módulos.
 
 ---
