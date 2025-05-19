@@ -10,6 +10,4 @@ export function verifySlug({ post, params }: verifySlugProps): boolean {
     return post.slug === params.slug;
   }
   return false
-  // const postWithAddedSlug = slugCreator(post?.title);
-  // return postWithAddedSlug === params.slug;
 }

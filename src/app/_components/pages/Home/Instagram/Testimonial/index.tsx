@@ -56,8 +56,6 @@ export function Testimonial() {
   const [testimonial, setTestimonial] = useState<TTestimonial>();
 
   useEffect(() => {
-    console.log(testimonials)
-    console.log(testimonial)
     if (testimonials) {
       const sortedTestimonial =
         randomTestimonial(testimonials);

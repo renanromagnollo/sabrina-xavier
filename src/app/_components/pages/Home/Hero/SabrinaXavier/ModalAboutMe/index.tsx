@@ -79,10 +79,6 @@ const ImageCard = styled.div`
   }
 `;
 
-// const CloseBG = styled.div`
-//   background-color: ${({ theme }) => theme.colors.primary.light};
-// `;
-
 export function ModalAboutMe({ data, closeModal }: ModalHeroProps) {
   return (
     <ModalArea>
@@ -96,7 +92,6 @@ export function ModalAboutMe({ data, closeModal }: ModalHeroProps) {
           <ImageCard>
             <Image
               alt="sabrina-photo"
-              // src={data.image}
               src={'images/s1.png'}
               unoptimized
               width={400}

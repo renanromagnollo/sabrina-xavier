@@ -100,7 +100,7 @@ export function ModalDefault() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [setModalItem]); // Mantendo apenas `setModalItem`, que vem do contexto
+  }, [setModalItem]);
 
   return (
     modalOpened && (

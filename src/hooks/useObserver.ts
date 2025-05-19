@@ -1,8 +1,5 @@
 import { RefObject, useEffect, useState } from "react";
 
-// interface useObserverProps {
-//   element: ReactNode;
-// }
 type ElementRef = RefObject<HTMLElement>;
 
 export function useObserver() {

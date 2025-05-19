@@ -172,8 +172,8 @@ export class HygraphAPI implements API {
       } else {
         const query = this.getQuery(queryName)
         const response = await axios.post(
-          this.env.hygraph.apiUrl, // URL da API
-          { query }, // Corpo da requisição
+          this.env.hygraph.apiUrl,
+          { query },
           {
             headers: {
               'Content-Type': 'application/json',
@@ -182,12 +182,12 @@ export class HygraphAPI implements API {
             },
           }
         );
-        return response.data.data; // Acessa o `data` dentro do resultado retornado
+        return response.data.data;
 
       }
     } catch (error) {
       console.error('Erro na consulta Hygraph:', error);
-      throw error; // Lança o erro para ser tratado posteriormente
+      throw error;
     }
   }
 
@@ -219,22 +219,6 @@ export class HygraphAPI implements API {
     }
   }
 
-
-
-  // private mapRawToPortfolio(portfolio: RawHygraphPortfolio): Portfolio {
-
-  //   const data = {
-  //     id: portfolio.id,
-  //     link: portfolio.link,
-  //     stage: portfolio.stage,
-  //     text: portfolio.texto.raw,
-  //     typeService: portfolio.typeService,
-  //     image: portfolio.imagem.url,
-  //     video: portfolio.video.url
-  //   }
-  //   return data
-  // }
-
   private mapRawToTestimonials(testimonial: RawHygraphTestimonial): Testimonial {
     return {
       image: testimonial.image.url,
@@ -257,7 +241,6 @@ export class HygraphAPI implements API {
       await this.fakeFetchHygraph('hygraphPortfolio')
       :
       await this.queryHygraph('portfolio')
-    console.log(porfolios)
 
     const data = porfolios.map((portfolio: RawHygraphPortfolio) => {
 
@@ -273,7 +256,6 @@ export class HygraphAPI implements API {
       }
     }
     )
-    console.log(data)
     return data
   }
 
@@ -286,7 +268,6 @@ export class HygraphAPI implements API {
   }
 
   async getPosts(): Promise<Post[]> {
-    // await this.getProducts()
     const { posts } = this.env.app.env === 'development'
       ? await this.fakeFetchHygraph('hygraphPosts')
       : await this.queryHygraph('posts');
@@ -296,11 +277,9 @@ export class HygraphAPI implements API {
 
 
     return postsWithSlugs.map(this.mapRawHygraphPostToPost);
-    // return postsWithSlugs
   }
 
   async getAboutMe(): Promise<Aboutme> {
-    // let response: RawHygraphAboutme
     const { aboutMe } = this.env.app.env === 'development'
       ? await this.fakeFetchHygraph('hygraphAboutMe')
       : await this.queryHygraph('aboutme')

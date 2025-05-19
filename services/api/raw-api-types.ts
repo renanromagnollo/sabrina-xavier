@@ -1,4 +1,3 @@
-// import { RichTextProps } from '@graphcms/rich-text-react-renderer'
 import { RichTextContent } from '@graphcms/rich-text-types'
 
 export type RawInstagramPost = {

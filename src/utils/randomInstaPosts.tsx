@@ -4,7 +4,6 @@ export function randomInstaPosts(
   listPosts: Portfolio[],
   number: number
 ): Portfolio[] | undefined {
-  // const length = listPosts.length
   if (listPosts) {
     let shuffledPosts = listPosts
       .map((value) => ({ value, sort: Math.random() }))

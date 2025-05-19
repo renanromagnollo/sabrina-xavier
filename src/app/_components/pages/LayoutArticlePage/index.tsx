@@ -84,12 +84,10 @@ const PostArea = styled.section`
 
 interface LayoutPostProps {
   article: Post;
-  // relatedProducts?: any;
 }
 
 export function LayoutArticlePage({
   article,
-  // relatedProducts,
 }: LayoutPostProps) {
   const path = usePathname();
 
@@ -101,7 +99,6 @@ export function LayoutArticlePage({
       return (
         <div
           style={{
-            // height: '100%',
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",

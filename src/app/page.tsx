@@ -6,8 +6,6 @@ import { Instagram } from "./_components/pages/Home/Instagram";
 import { HairStyle } from "./_components/HairStyle";
 import { Dicas } from "./_components/Dicas";
 import { MakeUp } from "./_components/MakeUp";
-// import { HygraphHomeProps } from "@/types/hygraph-types";
-// import { getHygraphPosts } from "@/utils/getHygraphPosts";
 import { ModalDefault } from "./_components/ModalDefault";
 import { Address } from "./_components/Address";
 

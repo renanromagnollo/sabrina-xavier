@@ -66,11 +66,7 @@ const MainLine = styled.div<{ $actived: boolean }>`
 `;
 
 export function ButtonBurguer({ actived, setOpenMenu }: ButtonBurguerProps) {
-  // const [state, setState] = useState(false);
 
-  // function toogleState() {
-  //   setOpenMenu((prev: boolean) => !prev);
-  // }
   return (
     <ButtonArea>
       <Burguer

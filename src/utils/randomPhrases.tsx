@@ -4,7 +4,6 @@ export function randomPhrases(
   listPhrases: Powerphrases[],
   number = 1
 ): Powerphrases | undefined {
-  // const length = listPosts.length
   if (!listPhrases) {
     return;
   }

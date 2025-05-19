@@ -86,8 +86,6 @@ export function CardJob({
             sizes="fill"
             style={{ objectFit: "cover", objectPosition: "top" }}
             quality={90}
-          // unoptimized
-          // priority
           />
         </ImgCard>
         <TextCard>
